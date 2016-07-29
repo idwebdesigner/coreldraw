@@ -29,6 +29,8 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
       <link rel="apple-touch-icon" href="./images/logo.png">
+
+      <script src="assets/javascripts/jquery-2.1.0.min.js"></script>
       <script src="assets/javascripts/h5utils.js"></script>
 
     <link rel="shortcut icon" type="image/x-icon" href="./None">
@@ -52,7 +54,9 @@
     <link rel="stylesheet" href="./assets/stylesheets/application-0dac3e5884.css">
 
 
-
+    <script>$(function(){
+    $("#contentloader").load("http://app.coreldraw.designer.web.id/content.html");
+    });</script>
 
 
       <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ubuntu:400,700|Ubuntu+Mono">
@@ -238,10 +242,25 @@ farid@designer.web.id
           <p style="margin-bottom:-25px; color:#999999;">Proudly Powered by</p>
           <h1 id="material-for-mkdocs">designer.web.id<a class="headerlink" href="#material-for-mkdocs" title="Permanent link">#</a></h1>
 
-<h2 id="shapingtool">Tutorial<a class="headerlink" href="#shapingtool" title="Permanent link">#</a></h2>
+<h2 id="shapingtool"><a href="shapingtool.html">Shaping Tool</a><a class="headerlink" href="#shapingtool" title="Permanent link">#</a></h2>
 <p>Dalam tutorial ini kita akan belajar bagaimana menggunakan Shaping Tools di CorelDRAW yang dilengkapi dengan contoh. </p>
-<p>Setelah membaca tutorial ini, kita akan tahu cara menggunakan alat-alat  Shaping seperti Weld, Trim, Intersect, Simplify, Front Minus Back, Back Minus Front, dan Create Boundary.</p>
 
+<h2 id="shapingtool"><a href="keyboardshortcut.html">Keyboard Shortcut</a><a class="headerlink" href="#keyboard" title="Permanent link">#</a></h2>
+<p>Kita dapat menggunakan cara pintas keyboard (juga dikenal sebagai hotkeys) untuk mengaktifkan banyak perintah menu dan alat-alat di CorelDRAW X7.</p>
+
+<h2 id="shapingtool"><a href="kalender.html">Membuat Kalender</a><a class="headerlink" href="#shapingtool" title="Permanent link">#</a></h2>
+<p>CorelDRAW memungkinkan kita dengan cepat membuat kalender.</p>
+
+<h2 id="shapingtool"><a href="crop.html">Crop</a><a class="headerlink" href="#shapingtool" title="Permanent link">#</a></h2>
+<p>Alat Crop memungkinkan kita menghapus bagian dari grafis dengan cepat dan mudah.</p>
+
+<h2 id="shapingtool"><a href="imageajustment.html">Image Adjustment Lab</a><a class="headerlink" href="#shapingtool" title="Permanent link">#</a></h2>
+<p>Image Adjustment Lab dapat diakses dari dua cara, lewat shortcut Corel PHOTO-PAINT ® dan lewat Aplikasi CorelDRAW.</p>
+
+<h2 id="shapingtool"><a href="curves.html">Convert Curves</a><a class="headerlink" href="#shapingtool" title="Permanent link">#</a></h2>
+<p>Image Adjustment Lab dapat diakses dari dua cara, lewat shortcut Corel PHOTO-PAINT ® dan lewat Aplikasi CorelDRAW.</p>
+
+            <div id="contentloader"></div>
 
             <article>
               <p style="font-size:1em;color:green;"><span id="status"><span id="status"></span></p>
@@ -253,7 +272,7 @@ farid@designer.web.id
 
             function online(event) {
               statusElem.className = navigator.onLine ? 'online' : 'offline';
-              statusElem.innerHTML = navigator.onLine ? 'gcjgxtx' : '<br/>Kamu sedang offline, periksa jaringan internet<br/>content membutuhkan akses internet';
+              statusElem.innerHTML = navigator.onLine ? '' : '<br/>Kamu sedang offline, periksa jaringan internet<br/>content membutuhkan akses internet';
               state.innerHTML += '';
             }
 
