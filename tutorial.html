@@ -29,7 +29,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
       <link rel="apple-touch-icon" href="./images/logo.png">
-
+      <script src="assets/javascripts/h5utils.js"></script>
 
     <link rel="shortcut icon" type="image/x-icon" href="./None">
     <link rel="icon" type="image/x-icon" href="./None">
@@ -242,6 +242,25 @@ farid@designer.web.id
 <p>Dalam tutorial ini kita akan belajar bagaimana menggunakan Shaping Tools di CorelDRAW yang dilengkapi dengan contoh. </p>
 <p>Setelah membaca tutorial ini, kita akan tahu cara menggunakan alat-alat  Shaping seperti Weld, Trim, Intersect, Simplify, Front Minus Back, Back Minus Front, dan Create Boundary.</p>
 
+
+            <article>
+              <p style="font-size:1em;color:green;"><span id="status"><span id="status"></span></p>
+              <ol id="state"></ol>
+            </article>
+            <script>
+            var statusElem  = document.getElementById('status'),
+                state               = document.getElementById('state');
+
+            function online(event) {
+              statusElem.className = navigator.onLine ? 'online' : 'offline';
+              statusElem.innerHTML = navigator.onLine ? 'gcjgxtx' : '<br/>Kamu sedang offline, periksa jaringan internet<br/>content membutuhkan akses internet';
+              state.innerHTML += '';
+            }
+
+            addEvent(window, 'online', online);
+            addEvent(window, 'offline', online);
+            online({ type: 'ready' });
+            </script>
 
           <aside class="copyright" role="note">
 
