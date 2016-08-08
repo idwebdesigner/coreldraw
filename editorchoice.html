@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Learn Programming: Virtual Reality</title>
+
+        <!-- Vendor CSS -->
+        <link href="vendors/bower_components/mediaelement/build/mediaelementplayer.css" rel="stylesheet">
+        <link href="vendors/bower_components/fullcalendar/dist/fullcalendar.min.css" rel="stylesheet">
+        <link href="vendors/bower_components/animate.css/animate.min.css" rel="stylesheet">
+        <link href="vendors/bower_components/sweetalert/dist/sweetalert.css" rel="stylesheet">
+        <link href="vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
+        <link href="vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+
+        <!-- CSS -->
+        <link href="css/app_1.min.css" rel="stylesheet">
+        <link href="css/app_2.min.css" rel="stylesheet">
+
+        <script src="js/jquery-2.1.0.min.js"></script>
+        <script>$(function(){
+        $("#contentloader1").load("http://javascript.learn.designer.web.id/content-message.html");
+        $("#contentloader2").load("http://javascript.learn.designer.web.id/content-right.html");
+        });</script>
+    </head>
+    <body>
+
+        <!-- Page Loader -->
+        <div class="page-loader">
+            <div class="preloader" style="text-align:center;">
+                <svg class="pl-circular" viewBox="25 25 50 50">
+                    <circle class="plc-path" cx="50" cy="50" r="20" />
+                </svg><br/><br/>
+                <div style="font-size:8px;margin-left:-80px;width:200px" class="demo"></div>
+            </div>
+        </div>
+
+        <script src="shuffleText/js/shuffletext.jquery.min.js"></script>
+        <script>
+         $('.demo').ShuffleText([
+          'Please wait...',
+          "Connecting server...",
+          "Load Javascript Database",
+          "Build User Interface...",
+          "Please wait...",
+            ],{loop: false, delay: 1000});
+        </script>
+
+        <header id="header" class="clearfix">
+            <ul class="h-inner">
+
+                <li class="hi-logo" data-ma-action="sidebar-open" data-ma-target="#sidebar" style="margin-top:5px;">
+                    <img src="img/learnvirtualreality.png" height="25px" style="margin-left:10px;margin-right:5px;"> <span style="font-size:15px;"> Learn Virtual Reality<span>
+                </li>
+
+                <li class="pull-right">
+                    <ul class="hi-menu">
+
+                        <li style="margin-right:-15px;" class="dropdown">
+                            <a data-toggle="dropdown" href="#">
+                                <i class="him-icon zmdi zmdi-notifications-none"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-lg pull-right">
+                                <div class="list-group list-group-light">
+                                    <div class="lg-header">
+                                        LIVE DEVELOPER MESSAGES
+                                    </div>
+
+                                    <article>
+                                      <p style="text-align:center;font-size:1em;"><span id="status"><span id="status"></span></p>
+                                      <ol id="state"></ol>
+                                    </article>
+                                    <script>
+                                    var statusElem  = document.getElementById('status'),
+                                        state               = document.getElementById('state');
+
+                                    function online(event) {
+                                      statusElem.className = navigator.onLine ? 'online' : 'offline';
+                                      statusElem.innerHTML = navigator.onLine ? '' : '<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You&#39;re offline, check network connection.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;content required internet access.';
+                                      state.innerHTML += '&nbsp;';
+                                    }
+
+                                    addEvent(window, 'online', online);
+                                    addEvent(window, 'offline', online);
+                                    online({ type: 'ready' });
+                                    </script>
+
+                                    <div style="margin-top:-30px;" id="contentloader1"></div>
+                                    <a class="view-more view-more-light" href="idwebdesigner.html">Powered by IDWEBDesigner</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li style="margin-right:-15px;" class="ma-trigger" data-ma-action="sidebar-open" data-ma-target="#chat">
+                            <a data-toggle="dropdown" href="#">
+                                <i class="him-icon zmdi zmdi-favorite-outline"></i>
+                            </a>
+                        </li>
+                        <li style="margin-right:-5px;" class="dropdown">
+                            <a data-toggle="dropdown" href="#"><i class="him-icon zmdi zmdi-more-vert"></i></a>
+                            <ul class="dropdown-menu dm-icon pull-right">
+                                <li class="hidden-xs">
+                                    <a data-ma-action="fullscreen" href="#"><i class="zmdi zmdi-fullscreen"></i> Fullscreen</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:window.location.reload();"><i class="zmdi zmdi-refresh-sync"></i> Refresh</a>
+                                </li>
+                                <li>
+                                    <a href="market://details?id=id.web.designer.learn.virtualreality"><i class="zmdi zmdi-star"></i> Rate 5 Stars</a>
+                                </li>
+                                <li style="display:none;">
+                                    <a href="upgrade.html"><i class="zmdi zmdi-shopping-cart"></i> Upgrade</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="help.html"><i class="zmdi zmdi-help"></i> Help</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="hidden-xs ma-trigger" data-ma-action="sidebar-open" data-ma-target="#chat">
+                            <a href="#"><i class="him-icon zmdi zmdi-comment-alt-text"></i></a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </header>
+
+        <section id="main">
+            <ol class="breadcrumb" style="margin-left:-10px;">
+                <li><a href="developer.html">designer.web.id</a></li>
+                <li><a href="index.html">learn</a></li>
+                <li class="active">virtualreality</li>
+            </ol>
+
+            <aside id="sidebar" class="sidebar c-overflow" style="position:fixed;z-index:1000;margin-top:-70px;height:100%;">
+                <ul class="main-menu">
+                    <li class="mm-profile sub-menu">
+                        <a href="#" data-ma-action="submenu-toggle" class="media">
+                            <img class="pull-left" src="img/learnvirtualreality.png" alt="" height="25px" style="box-shadow:none;">
+                            <div class="media-body">
+                                <small>Learn Virtual Reality</small>
+                                <span style="font-size:11px;">Experience by IDWEBDesigner<br/>dev@designer.web.id</span>
+                            </div>
+                        </a>
+
+                        <ul>
+                            <li>
+                                <a href="developer.html">Indonesian Web Designer (IDWEBDesigner)</a>
+                            </li>
+                            <li>
+                                <a href="developer.html">designer.web.id</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="sub-menu">
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-home"></i> Learn Virtual Reality</a>
+                        <div style="margin-left:65px;margin-bottom:10px;font-size:12px;color:#888888;"><a href="basics.html">What's is Virtual Reality?<br/>Basics Learn</a></div>
+                    </li>
+
+                    <li><a href="index.html"><i class="zmdi zmdi-filter-center-focus"></i> Editor Choice</a></li>
+                    <li class="sub-menu toggled active">
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-language-javascript"></i> Virtual Reality</a>
+                        <div style="margin-left:65px;margin-top:10px;font-size:10px;color:#888888;">Immerse yourself in code and alternate realities with these cool VR tools.</div>
+
+                        <ul>
+
+                            <li><a href="category.html">Sort by Category</a></li>
+                            <li style="display:none;"><a href="upgrade.html"><i class="zmdi zmdi-shopping-cart"></i>&nbsp;&nbsp;Upgrade</a></li>
+                            <li class="divider"></li>
+
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-code"></i> Developer</a>
+
+                        <ul>
+                            <li><a href="developer.html">dev@designer.web.id<br/>designer.web.id</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </aside>
+
+            <aside id="chat" class="sidebar">
+
+                                    <article>
+                                      <p style="margin-top:30px;margin-left:15px;font-size:0.7em;"><span id="status2"><span id="status"></span></p>
+                                      <ol id="state2"></ol>
+                                    </article>
+                                    <script>
+                                    var statusElem  = document.getElementById('status2'),
+                                        state               = document.getElementById('state2');
+
+                                    function online(event) {
+                                      statusElem.className = navigator.onLine ? 'online' : 'offline';
+                                      statusElem.innerHTML = navigator.onLine ? '' : '<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You&#39;re offline, check network connection.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;content required internet access.';
+                                      state.innerHTML += '&nbsp;';
+                                    }
+
+                                    addEvent(window, 'online', online);
+                                    addEvent(window, 'offline', online);
+                                    online({ type: 'ready' });
+                                    </script>
+
+                <div style="margin-top:-30px;" id="contentloader2"></div>
+
+
+
+            </aside>
+
+            <section style="margin-bottom:-50px;" id="content">
+                <div class="container">
+                    <div class="block-header">
+                        <h2 style="margin-left:-10px;margin-right:-10px;"><a href="index.html"><i class="zmdi zmdi-arrow-left"></i> EDITOR CHOICE</a></h2>
+
+                        <ul class="actions">
+                            <li>
+
+                                <a href="#">
+                                    <i class="zmdi zmdi-trending-up"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="zmdi zmdi-check-all"></i>
+                                </a>
+                            </li>
+                            <li style="margin-right:-13px;" class="dropdown">
+                                <a href="#" data-toggle="dropdown">
+                                    <i class="zmdi zmdi-more-vert"></i>
+                                </a>
+
+                                <ul style="margin-right:3px;"  class="dropdown-menu dropdown-menu-right">
+                                    <li>
+                                        <a href="javascript:window.location.reload();">Refresh</a>
+                                    </li>
+                                    <li>
+                                        <a href="update.html">Check Update</a>
+                                    </li>
+                                    <li>
+                                        <a href="login.html">Edit</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-12">
+
+
+                        <div class="card-body">
+
+                            <div class="contacts clearfix row">
+                                <div class="col-md-3 col-sm-4 col-xs-6">
+                                    <div class="c-item">
+                                        <a href="aframe.html" class="ci-avatar">
+                                            <img src="img/f1.jpg" alt="">
+                                        </a>
+                                        <div class="c-footer" style="margin-top:-0px;">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3 col-sm-4 col-xs-6">
+                                    <div class="c-item">
+                                        <a href="gearvrf.html" class="ci-avatar">
+                                            <img src="img/f2.jpg" alt="">
+                                        </a>
+                                        <div class="c-footer" style="margin-top:-0px;">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3 col-sm-4 col-xs-6">
+                                    <div class="c-item">
+                                        <a href="surround360.html" class="ci-avatar">
+                                            <img src="img/f3.jpg" alt="">
+                                        </a>
+                                        <div class="c-footer" style="margin-top:-0px;">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3 col-sm-4 col-xs-6">
+                                    <div class="c-item">
+                                        <a href="revive.html" class="ci-avatar">
+                                            <img src="img/f5.jpg" alt="">
+                                        </a>
+                                        <div class="c-footer" style="margin-top:-0px;">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3 col-sm-4 col-xs-6">
+                                    <div class="c-item">
+                                        <a href="googlevr-android.html" class="ci-avatar">
+                                            <img src="img/f4.jpg" alt="">
+                                        </a>
+                                        <div class="c-footer" style="margin-top:-0px;">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+
+                        </div>
+
+                        <div class="col-sm-4">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <div><footer id="footer">
+            Copyright &copy; 2016 IDWEBDesigner
+        </footer></div>
+
+
+
+        <style>.gist .gist-data {margin-left: -10px;margin-right: -10px; background-color:#2B343A;border-bottom:0px;} .gist .gist-file {border:0px;color: #7A8083;}.gist .markdown-body p, .gist .markdown-body blockquote, .gist .markdown-body ul, .gist .markdown-body ol, .gist .markdown-body dl, .gist .markdown-body table, .gist .markdown-body pre {font-size: 12px;}.gist .markdown-body h1{font-size: 1em;border-bottom: 1px solid #444444}.gist .markdown-body h2{font-size: 0.9em;border-bottom: 1px solid #444444}.gist .markdown-body h3{font-size: 0.8em;}.gist .markdown-body h4{font-size: 0.7em;}.gist .markdown-body h5{font-size: 0.6em;}.gist .gist-meta{display: none; background-color:#2B343A}.gist .markdown-body .highlight pre, .gist .markdown-body pre{background-color:#2B343A;border: none;color: #7A8083}</style>
+
+        <!-- Javascript Libraries -->
+        <script src="vendors/bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+        <script src="vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="vendors/bower_components/Waves/dist/waves.min.js"></script>
+        <script src="vendors/bootstrap-growl/bootstrap-growl.min.js"></script>
+        <script src="vendors/bower_components/sweetalert/dist/sweetalert.min.js"></script>
+
+        <script src="vendors/bower_components/moment/min/moment.min.js"></script>
+        <script src="vendors/bower_components/fullcalendar/dist/fullcalendar.min.js"></script>
+        <script src="vendors/bower_components/simpleWeather/jquery.simpleWeather.min.js"></script>
+        <script src="vendors/bower_components/jquery.easy-pie-chart/dist/jquery.easypiechart.min.js"></script>
+        <script src="vendors/bower_components/autosize/dist/autosize.min.js"></script>
+        <script src="vendors/bower_components/mediaelement/build/mediaelement-and-player.js"></script>
+
+        <script src="js/app.min.js"></script>
+    </body>
+
+</html>

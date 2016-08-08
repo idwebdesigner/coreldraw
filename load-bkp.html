@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Learn Javascript</title>
+
+        <!-- Vendor CSS -->
+        <link href="vendors/bower_components/animate.css/animate.min.css" rel="stylesheet">
+        <link href="vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
+
+        <!-- CSS -->
+        <link href="css/welcome1.min.css" rel="stylesheet">
+        <link href="css/welcome2.min.css" rel="stylesheet">
+        <script src="js/jquery-2.1.0.min.js"></script>
+        <script src="js/h5utils.js"></script>
+        <meta http-equiv="refresh" content="1; url=http://virtualreality.learn.designer.web.id/" />
+    </head>
+
+    <body class="four-zero-content">
+        <img style="display:none;" src="http://virtualreality.learn.designer.web.id/img/learnvirtualreality.png" onerror="window.location='offline.html';">
+        <div class="four-zero" style="text-align:center;margin-top:30%">
+
+            <img src="img/learnvirtualreality.png" width="80%" style="margin-bottom:-193px;">
+
+                            <div class="preloader pl-xxl">
+                                <svg class="pl-circular" viewBox="25 25 50 50">
+                                    <circle class="plc-path" cx="50" cy="50" r="20"></circle>
+                                </svg>
+                            </div>
+                <h3><div style="margin-top:100px;"><b>Learn</b> Virtual Reality </div></h3>
+                <h5><div style="margin-top:10px;" class="demo"></div></h5>
+
+            <article>
+              <p style="font-size:0.7em;margin-left:5px;"><span id="status"><span id="status">checking...</span></p>
+              <ol id="state"></ol>
+            </article>
+            <script>
+            var statusElem  = document.getElementById('status'),
+                state               = document.getElementById('state');
+
+            function online(event) {
+              statusElem.className = navigator.onLine ? 'online' : 'offline';
+              statusElem.innerHTML = navigator.onLine ? '' : '<br/>You&#39;re offline, check network connection.<br/>content required internet access.';
+              state.innerHTML += '';
+            }
+
+            addEvent(window, 'online', online);
+            addEvent(window, 'offline', online);
+            online({ type: 'ready' });
+            </script>
+
+        </div>
+
+        <script src="js/jquery-2.1.0.min.js"></script>
+<script src="shuffleText/js/shuffletext.jquery.min.js"></script>
+<script>
+ $('.demo').ShuffleText([
+  'Starting application',
+  "Connecting database...",
+  "Load Virtual Reality",
+  "Build User Interface...",
+  "Please wait...",
+    ],{loop: false, delay: 1100});
+</script>
+    </body>
+</html>

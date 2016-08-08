@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Learn Programming: Javascript</title>
+
+        <!-- Vendor CSS -->
+        <link href="vendors/bower_components/mediaelement/build/mediaelementplayer.css" rel="stylesheet">
+        <link href="vendors/bower_components/fullcalendar/dist/fullcalendar.min.css" rel="stylesheet">
+        <link href="vendors/bower_components/animate.css/animate.min.css" rel="stylesheet">
+        <link href="vendors/bower_components/sweetalert/dist/sweetalert.css" rel="stylesheet">
+        <link href="vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
+        <link href="vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+
+        <!-- CSS -->
+        <link href="css/app_1.min.css" rel="stylesheet">
+        <link href="css/app_2.min.css" rel="stylesheet">
+
+        <script src="js/jquery-2.1.0.min.js"></script>
+        <script>$(function(){
+        $("#contentloader1").load("http://javascript.learn.designer.web.id/content-message.html");
+        $("#contentloader2").load("http://javascript.learn.designer.web.id/content-right.html");
+        });</script>
+    </head>
+    <body>
+
+        <!-- Page Loader -->
+        <div class="page-loader">
+            <div class="preloader" style="text-align:center;">
+                <svg class="pl-circular" viewBox="25 25 50 50">
+                    <circle class="plc-path" cx="50" cy="50" r="20" />
+                </svg><br/><br/>
+                <div style="font-size:8px;margin-left:-80px;width:200px" class="demo"></div>
+            </div>
+        </div>
+
+        <script src="shuffleText/js/shuffletext.jquery.min.js"></script>
+        <script>
+         $('.demo').ShuffleText([
+          'Please wait...',
+          "Connecting server...",
+          "Load Virtual Reality",
+          "Build User Interface...",
+          "Please wait...",
+            ],{loop: false, delay: 1000});
+        </script>
+
+        <header id="header" class="clearfix">
+            <ul class="h-inner">
+
+                <li class="hi-logo" data-ma-action="sidebar-open" data-ma-target="#sidebar" style="margin-top:5px;">
+                    <img src="img/learnvirtualreality.png" height="25px" style="margin-left:10px;margin-right:5px;"> <span style="font-size:15px;"> Learn Virtual Reality<span>
+                </li>
+
+                <li class="pull-right">
+                    <ul class="hi-menu">
+
+                        <li style="margin-right:-15px;" class="dropdown">
+                            <a data-toggle="dropdown" href="#">
+                                <i class="him-icon zmdi zmdi-notifications-none"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-lg pull-right">
+                                <div class="list-group list-group-light">
+                                    <div class="lg-header">
+                                        LIVE DEVELOPER MESSAGES
+                                    </div>
+
+                                    <article>
+                                      <p style="text-align:center;font-size:1em;"><span id="status"><span id="status"></span></p>
+                                      <ol id="state"></ol>
+                                    </article>
+                                    <script>
+                                    var statusElem  = document.getElementById('status'),
+                                        state               = document.getElementById('state');
+
+                                    function online(event) {
+                                      statusElem.className = navigator.onLine ? 'online' : 'offline';
+                                      statusElem.innerHTML = navigator.onLine ? '' : '<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You&#39;re offline, check network connection.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;content required internet access.';
+                                      state.innerHTML += '&nbsp;';
+                                    }
+
+                                    addEvent(window, 'online', online);
+                                    addEvent(window, 'offline', online);
+                                    online({ type: 'ready' });
+                                    </script>
+
+                                    <div style="margin-top:-30px;" id="contentloader1"></div>
+                                    <a class="view-more view-more-light" href="idwebdesigner.html">Powered by IDWEBDesigner</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li style="margin-right:-15px;" class="ma-trigger" data-ma-action="sidebar-open" data-ma-target="#chat">
+                            <a data-toggle="dropdown" href="#">
+                                <i class="him-icon zmdi zmdi-favorite-outline"></i>
+                            </a>
+                        </li>
+                        <li style="margin-right:-5px;" class="dropdown">
+                            <a data-toggle="dropdown" href="#"><i class="him-icon zmdi zmdi-more-vert"></i></a>
+                            <ul class="dropdown-menu dm-icon pull-right">
+                                <li class="hidden-xs">
+                                    <a data-ma-action="fullscreen" href="#"><i class="zmdi zmdi-fullscreen"></i> Fullscreen</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:window.location.reload();"><i class="zmdi zmdi-refresh-sync"></i> Refresh</a>
+                                </li>
+                                <li>
+                                    <a href="market://details?id=id.web.designer.learn.virtualreality"><i class="zmdi zmdi-star"></i> Rate 5 Stars</a>
+                                </li>
+                                <li style="display:none;">
+                                    <a href="upgrade.html"><i class="zmdi zmdi-shopping-cart"></i> Upgrade</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="help.html"><i class="zmdi zmdi-help"></i> Help</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="hidden-xs ma-trigger" data-ma-action="sidebar-open" data-ma-target="#chat">
+                            <a href="#"><i class="him-icon zmdi zmdi-comment-alt-text"></i></a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </header>
+
+        <section id="main">
+            <ol class="breadcrumb" style="margin-left:-10px;">
+                <li><a href="developer.html">designer.web.id</a></li>
+                <li><a href="index.html">learn</a></li>
+                <li class="active">virtualreality</li>
+            </ol>
+
+            <aside id="sidebar" class="sidebar c-overflow" style="position:fixed;z-index:1000;margin-top:-70px;height:100%;">
+                <ul class="main-menu">
+                    <li class="mm-profile sub-menu">
+                        <a href="#" data-ma-action="submenu-toggle" class="media">
+                            <img class="pull-left" src="img/learnvirtualreality.png" alt="" height="25px" style="box-shadow:none;">
+                            <div class="media-body">
+                                <small>Learn Virtual Reality</small>
+                                <span style="font-size:11px;">Experience by IDWEBDesigner<br/>dev@designer.web.id</span>
+                            </div>
+                        </a>
+
+                        <ul>
+                            <li>
+                                <a href="developer.html">Indonesian Web Designer (IDWEBDesigner)</a>
+                            </li>
+                            <li>
+                                <a href="developer.html">designer.web.id</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="sub-menu">
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-home"></i> Learn Virtual Reality</a>
+                        <div style="margin-left:65px;margin-bottom:10px;font-size:12px;color:#888888;"><a href="basics.html">What's is Virtual Reality?<br/>Basics Learn</a></div>
+                    </li>
+
+                    <li><a href="index.html"><i class="zmdi zmdi-filter-center-focus"></i> Editor Choice</a></li>
+                    <li class="sub-menu toggled active">
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-language-javascript"></i> Virtual Reality</a>
+                        <div style="margin-left:65px;margin-top:10px;font-size:10px;color:#888888;">Immerse yourself in code and alternate realities with these cool VR tools.</div>
+
+                        <ul>
+
+                            <li><a href="category.html">Sort by Category</a></li>
+                            <li style="display:none;"><a href="upgrade.html"><i class="zmdi zmdi-shopping-cart"></i>&nbsp;&nbsp;Upgrade</a></li>
+                            <li class="divider"></li>
+
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-code"></i> Developer</a>
+
+                        <ul>
+                            <li><a href="developer.html">dev@designer.web.id<br/>designer.web.id</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </aside>
+
+            <aside id="chat" class="sidebar">
+
+                                    <article>
+                                      <p style="margin-top:30px;margin-left:15px;font-size:0.7em;"><span id="status2"><span id="status"></span></p>
+                                      <ol id="state2"></ol>
+                                    </article>
+                                    <script>
+                                    var statusElem  = document.getElementById('status2'),
+                                        state               = document.getElementById('state2');
+
+                                    function online(event) {
+                                      statusElem.className = navigator.onLine ? 'online' : 'offline';
+                                      statusElem.innerHTML = navigator.onLine ? '' : '<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You&#39;re offline, check network connection.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;content required internet access.';
+                                      state.innerHTML += '&nbsp;';
+                                    }
+
+                                    addEvent(window, 'online', online);
+                                    addEvent(window, 'offline', online);
+                                    online({ type: 'ready' });
+                                    </script>
+
+                <div style="margin-top:-30px;" id="contentloader2"></div>
+
+
+
+            </aside>
+
+            <section style="margin-bottom:-50px;" id="content">
+                <div class="container">
+                    <div class="block-header">
+                        <h2 style="margin-left:-10px;margin-right:-10px;"><a href="index.html"><i class="zmdi zmdi-arrow-left"></i> A-Frame</a></h2>
+
+                        <ul class="actions">
+                            <li>
+
+                                <a href="http://aframe.io/">
+                                    <i class="zmdi zmdi-globe"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://github.com/aframevr/aframe">
+                                    <i class="zmdi zmdi-github"></i>
+                                </a>
+                            </li>
+                            <li style="margin-right:-13px;" class="dropdown">
+                                <a href="#" data-toggle="dropdown">
+                                    <i class="zmdi zmdi-more-vert"></i>
+                                </a>
+
+                                <ul style="margin-right:3px;"  class="dropdown-menu dropdown-menu-right">
+                                    <li>
+                                        <a href="javascript:window.location.reload();">Refresh</a>
+                                    </li>
+                                    <li>
+                                        <a href="update.html">Check Update</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://github.com/aframevr/aframe/archive/master.zip">Download</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-6">
+
+                            <!-- Blog Posts -->
+                            <div class="card blog-post" style="margin-bottom:-0px;">
+                                <img src="img/aframe.png" class="img-responsive" alt="">
+
+                                <a class="card-header ch-alt">
+                                    <h2><small>Building blocks for the virtual reality web. Use markup to create VR experiences that work across desktop, iOS, Android, and the Oculus Rift.</small></h2>
+                                </a>
+
+                                <div class="card-body card-padding">
+                                    <script src="https://gist.github.com/faridiot/5fb347610dcec24f5f01a1a8fc42fcd6.js"></script>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <div class="col-sm-6">
+
+
+                            <!-- Custom header -->
+                            <div class="card">
+                                <a class="card-header ch-alt">
+                                    <h2><small>Building blocks for the virtual reality web. Use markup to create VR experiences that work across desktop, iOS, Android, and the Oculus Rift.</small></h2>
+                                </a>
+
+                                <div class="card-body card-padding">
+                                    <div class="panel-group" role="tablist" aria-multiselectable="true">
+                                        <div class="panel panel-collapse">
+                                            <div class="panel-heading" role="tab" id="headingOne">
+                                                <h4 class="panel-title">
+                                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                        INSTALLATION
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                                                <div class="panel-body">
+                                                    <script src="https://gist.github.com/faridiot/10bf60c5d2bcb06c0170b46af20b7c72.js"></script>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-collapse">
+                                            <div class="panel-heading" role="tab" id="headingTwo">
+                                                <h4 class="panel-title">
+                                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                        ORGANIZATION
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                                <div class="panel-body">
+                                                    <script src="https://gist.github.com/faridiot/c1ebe132a43793e52977b44f3e195f59.js"></script>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-collapse">
+                                            <div class="panel-heading" role="tab" id="headingThree">
+                                                <h4 class="panel-title">
+                                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                        CODE OF CONDUCT
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+                                                <div class="panel-body">
+                                                    <script src="https://gist.github.com/faridiot/09bcf9932b0ae6fe57bc8ca45cd1f075.js"></script>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-collapse">
+                                            <div class="panel-heading" role="tab" id="headingFour">
+                                                <h4 class="panel-title">
+                                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                                        CHANGELOG
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapseFour" class="collapse" role="tabpanel" aria-labelledby="headingFour">
+                                                <div class="panel-body">
+                                                    <script src="https://gist.github.com/faridiot/6d6aae3e9b35b2efedf018bcf62b6023.js"></script>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-collapse">
+                                            <div class="panel-heading" role="tab" id="headingFive">
+                                                <h4 class="panel-title">
+                                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                                        CONTRIBUTING
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapseFive" class="collapse" role="tabpanel" aria-labelledby="headingFive">
+                                                <div class="panel-body">
+                                                    <script src="https://gist.github.com/faridiot/44fd28d36fc96b9bf680ce2a9a5188eb.js"></script>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-collapse">
+                                            <div class="panel-heading" role="tab" id="headingSix">
+                                                <h4 class="panel-title">
+                                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                                        LICENSE
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapseSix" class="collapse" role="tabpanel" aria-labelledby="headingSix">
+                                                <div class="panel-body">
+                                                    <script src="https://gist.github.com/faridiot/c8da78435b6520d5fe186ef96c22a9b7.js"></script>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <div><footer id="footer">
+            Copyright &copy; 2016 IDWEBDesigner
+        </footer></div>
+
+
+
+        <style>.gist .gist-data {margin-left: -10px;margin-right: -10px; background-color:#2B343A;border-bottom:0px;} .gist .gist-file {border:0px;color: #7A8083;}.gist .markdown-body p, .gist .markdown-body blockquote, .gist .markdown-body ul, .gist .markdown-body ol, .gist .markdown-body dl, .gist .markdown-body table, .gist .markdown-body pre {font-size: 12px;}.gist .markdown-body h1{font-size: 1em;border-bottom: 1px solid #444444}.gist .markdown-body h2{font-size: 0.9em;border-bottom: 1px solid #444444}.gist .markdown-body h3{font-size: 0.8em;}.gist .markdown-body h4{font-size: 0.7em;}.gist .markdown-body h5{font-size: 0.6em;}.gist .gist-meta{display: none; background-color:#2B343A}.gist .markdown-body .highlight pre, .gist .markdown-body pre{background-color:#2B343A;border: none;color: #7A8083}</style>
+
+        <!-- Javascript Libraries -->
+        <script src="vendors/bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+        <script src="vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="vendors/bower_components/Waves/dist/waves.min.js"></script>
+        <script src="vendors/bootstrap-growl/bootstrap-growl.min.js"></script>
+        <script src="vendors/bower_components/sweetalert/dist/sweetalert.min.js"></script>
+
+        <script src="vendors/bower_components/moment/min/moment.min.js"></script>
+        <script src="vendors/bower_components/fullcalendar/dist/fullcalendar.min.js"></script>
+        <script src="vendors/bower_components/simpleWeather/jquery.simpleWeather.min.js"></script>
+        <script src="vendors/bower_components/jquery.easy-pie-chart/dist/jquery.easypiechart.min.js"></script>
+        <script src="vendors/bower_components/autosize/dist/autosize.min.js"></script>
+        <script src="vendors/bower_components/mediaelement/build/mediaelement-and-player.js"></script>
+
+        <script src="js/app.min.js"></script>
+    </body>
+
+</html>
