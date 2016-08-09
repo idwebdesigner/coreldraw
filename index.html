@@ -353,10 +353,10 @@
                         <div style="background:#ffffff;height:10px;"></div>
                             <table id="grid-basic" class="table table-hover table-striped">
                                 <thead>
-                                    <tr class="active">
-                                        <th data-column-id="GroupID" data-identifier="true" data-type="text">ID</th>
-                                        <th data-column-id="GroupName" data-order="asc">Name</th>
-                                        <th data-column-id="GroupDesc">Description</th>
+                                    <tr>
+                                        <th data-column-id="id" data-type="text">MENU</th>
+                                        <th data-column-id="link" data-formatter="link" data-order="asc">COMMAND</th>
+                                        <th data-column-id="github" data-formatter="github">SHORTCUT</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -902,16 +902,6 @@
                         iconRefresh: 'zmdi-refresh',
                         iconUp: 'zmdi-sort-amount-asc'
                     },
-                formatters: {
-                    link: function(column, row)
-                    {
-                        return "<a href=\"http://" + row.link + "\">" + row.link + "</a>";
-                    },
-                    github: function(column, row)
-                    {
-                        return "<a href=\"http://github.com/" + row.github + "\">" + row.github + "</a>";
-                    }
-                }
               }
               )
             });
