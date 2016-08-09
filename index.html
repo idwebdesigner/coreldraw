@@ -31,7 +31,19 @@
           }
           //-->
         </script>
-
+    <style>.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: auto;
+	height: 200px;;
+}</style>
     </head>
     <body>
 
@@ -50,8 +62,16 @@
         <header id="header" class="clearfix container">
             <ul class="h-inner">
 
-                <li class="hi-logo" data-ma-action="sidebar-open" data-ma-target="#sidebar" style="margin-top:5px;">
-                    <img src="img/coreldraw.png" height="25px" style="margin-left:10px;margin-right:5px;"> <span style="font-size:15px;color:#ffffff;"> Tutorial CorelDraw<span>
+                <li class="hi-trigger ma-trigger" data-ma-action="sidebar-open" data-ma-target="#sidebar">
+                    <div class="line-wrap">
+                        <div class="line top"></div>
+                        <div class="line center"></div>
+                        <div class="line bottom"></div>
+                    </div>
+                </li>
+
+                <li class="hi-logo" data-ma-action="sidebar-open" data-ma-target="#sidebar" style="margin-top:8px;">
+                    <span style="font-size:15px;color:#ffffff;"> Tutorial CorelDraw<span>
                 </li>
 
                 <li class="pull-right">
@@ -230,42 +250,31 @@
                     <div class="tab-content p-20" style="background:#EDECEC;">
 
                     <div role="tabpanel" class="tab-pane animated fadeIn in active" id="tab-1">
-                        <h5>Editor's Choice</h5><span style="float:right;margin-top:-25px;color:#EEEEEF"><a href="editorchoice.html">VIEW ALL</a></span>
+                        <h5>Video Tutorials</h5><span style="float:right;margin-top:-25px;color:#EEEEEF"><a href="editorchoice.html">VIEW ALL</a></span>
 
                         <div class="card-body table-responsive">
                             <table class="table">
                                 <tbody>
                                     <tr></tr>
                                     <tr>
-                                        <td><div class="c-item" style="margin-left:-30px;">
-                                            <a href="aframe.html" >
-                                                <img src="img/f1.jpg" alt="" style="width:125px;">
-                                            </a>
+                                        <td><div class="c-item videoWrapper" style="margin-left:-30px;">
+
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/vKX_lLpOuqE/%22" frameborder="0" allowfullscreen></iframe>
                                         </div></td>
-                                        <td><div class="c-item" style="margin-left:-20px;">
-                                            <a href="gearvrf.html" class="ci-avatar">
-                                                <img src="img/f2.jpg" alt="" style="width:125px;">
-                                            </a>
+                                        <td><div class="c-item videoWrapper" style="margin-left:250px;">
+
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/jmkZ8cBN2wk" frameborder="0" allowfullscreen></iframe>
+
                                         </div></td>
-                                        <td><div class="c-item" style="margin-left:-20px;">
-                                            <a href="surround360.html" class="ci-avatar">
-                                                <img src="img/f3.jpg" alt="" style="width:125px;">
-                                            </a>
+                                        <td><div class="c-item videoWrapper" style="margin-left:280px;">
+
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/jmkZ8cBN2wk" frameborder="0" allowfullscreen></iframe>
+
                                         </div></td>
-                                        <td><div class="c-item" style="margin-left:-20px;">
-                                            <a href="googlevr-android.html" class="ci-avatar">
-                                                <img src="img/f4.jpg" alt="" style="width:125px;">
-                                            </a>
-                                        </div></td>
-                                        <td><div class="c-item" style="margin-left:-20px;">
-                                            <a href="revive.html" class="ci-avatar">
-                                                <img src="img/f5.jpg" alt="" style="width:125px;">
-                                            </a>
-                                        </div></td>
-                                        <td><div class="c-item" style="margin-left:-20px;margin-right:-30px;">
-                                            <a href="revive.html" class="ci-avatar">
-                                                <img src="img/fr.jpg" alt="" style="width:125px;">
-                                            </a>
+                                        <td><div class="c-item videoWrapper" style="margin-left:280px;">
+
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/jmkZ8cBN2wk" frameborder="0" allowfullscreen></iframe>
+
                                         </div></td>
                                     </tr>
                                 </tbody>
@@ -306,7 +315,7 @@
                                     <table class="table table-inner table-hover table-vmiddle">
                                         <thead>
                                         <tr>
-                                            <th>DESCRIPTION</th>
+                                            <th>TUTORIAL BAHASA INDONESIA</th>
                                             <th>LEARN</th>
                                         </tr>
                                         </thead>
@@ -315,16 +324,16 @@
                                             <td style="height: 100%">Tip Crop Gambar di CorelDRAW</td>
                                             <td class="f-500" style="color:#00BCD4">LEARN</td>
                                         </tr>
-                                        <tr onclick="location.href='openvr.html';" style="cursor:pointer;">
-                                            <td>OpenVR is an API and runtime that allows access to VR hardware from multiple vendors</td>
+                                        <tr onclick="location.href='curves.html';" style="cursor:pointer;">
+                                            <td>Tutorial cara mengkonversi objek atau teks menjadi Kurva</td>
                                             <td class="f-500" style="color:#00BCD4">LEARN</td>
                                         </tr>
                                         <tr onclick="location.href='googlevr-android.html';" style="cursor:pointer;">
-                                            <td>Google VR SDK for Android</td>
+                                            <td>Image Adjustment Lab, menyesuaikan keseimbangan warna dan kontras yang tidak terlalu kompleks.</td>
                                             <td class="f-500" style="color:#00BCD4">LEARN</td>
                                         </tr>
-                                        <tr onclick="location.href='googlevr-unity.html';" style="cursor:pointer;">
-                                            <td>Build virtual reality applications for Android and iOS using the Google VR SDK for Unity.</td>
+                                        <tr onclick="location.href='calendar.html';" style="cursor:pointer;">
+                                            <td>Membuat Kalender dengan CorelDRAW</td>
                                             <td class="f-500" style="color:#00BCD4">LEARN</td>
                                         </tr>
                                         </tbody>
