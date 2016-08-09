@@ -1,6 +1,34 @@
-#579706
-#579706
-#579706
+                        <div class="card-body table-responsive">
+                            <table class="table">
+                                <tbody>
+                                    <tr></tr>
+                                    <tr>
+                                        <td><div class="c-item videoWrapper" style="margin-left:-30px;">
+
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/vKX_lLpOuqE/%22" frameborder="0" allowfullscreen></iframe>
+                                        </div></td>
+                                        <td><div class="c-item videoWrapper" style="margin-left:250px;">
+
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/jmkZ8cBN2wk" frameborder="0" allowfullscreen></iframe>
+
+                                        </div></td>
+                                        <td><div class="c-item videoWrapper" style="margin-left:280px;">
+
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/jmkZ8cBN2wk" frameborder="0" allowfullscreen></iframe>
+
+                                        </div></td>
+                                        <td><div class="c-item videoWrapper" style="margin-left:280px;">
+
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/jmkZ8cBN2wk" frameborder="0" allowfullscreen></iframe>
+
+                                        </div></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+============================================================
+                        
                                 <tbody>
                                     <tr>
                                         <td>File</td>
