@@ -3,61 +3,51 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Tutorial CorelDraw Pro</title>
-
-         <script type="text/javascript">
-          <!--
-          if (screen.width >= 2800) {
-            window.location = "http://designer.web.id";
-          }
-          //-->
-        </script>
+        <title>Tutorial CorelDraw</title>
 
         <!-- Vendor CSS -->
+        <link href="../vendors/bower_components/mediaelement/build/mediaelementplayer.css" rel="stylesheet">
+        <link href="../vendors/bower_components/fullcalendar/dist/fullcalendar.min.css" rel="stylesheet">
         <link href="../vendors/bower_components/animate.css/animate.min.css" rel="stylesheet">
         <link href="../vendors/bower_components/sweetalert/dist/sweetalert.css" rel="stylesheet">
         <link href="../vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
-        <link href="../vendors/bower_components/lightgallery/dist/css/lightgallery.min.css" rel="stylesheet">
         <link href="../vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet">
-        <link href="../vendors/bootgrid/jquery.bootgrid.min.css" rel="stylesheet">
 
         <!-- CSS -->
         <link href="../css/app_1.min.css" rel="stylesheet">
         <link href="../css/app_2.min.css" rel="stylesheet">
 
-        <script src="../js/h5utils.js"></script>
         <script src="../js/jquery-2.1.0.min.js"></script>
-        <script src="../js/jquery.jscroll.min.js"></script>
         <script>$(function(){
-        $("#contentloader1").load("http://app.coreldraw.designer.web.id/content-message.html"); $("#contentloader2").load("http://app.coreldraw.designer.web.id/pro/content-right-pro.html");
+        $("#contentloader1").load("http://javascript.learn.designer.web.id/content-message.html");
+        $("#contentloader2").load("http://javascript.learn.designer.web.id/pro/content-right-pro.html");
+        $("#contenttab2").load("http://javascript.learn.designer.web.id/pro/contenttab2.html");
         });</script>
 
-        <style>.videoWrapper {
-        position: relative;
-        padding-bottom: 56.25%; /* 16:9 */
-        padding-top: 25px;
-        height: 0;}
-        .videoWrapper iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: auto;
-        height: 200px;}
-        .lcb-navigation a{background:#999999}
-        </style>
+    <style>.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}</style>
     </head>
-    <body style="background:#ffffff">
+    <body>
 
         <!-- Page Loader -->
         <div class="page-loader">
-            <div class="preloader pls-white">
+            <div class="preloader" style="text-align:center;">
                 <svg class="pl-circular" viewBox="25 25 50 50">
                     <circle class="plc-path" cx="50" cy="50" r="20" />
-                </svg>
-                <br/><br/>
+                </svg><br/><br/>
                 <div style="font-size:8px;margin-left:-80px;width:200px" class="demo"></div>
             </div>
-
         </div>
 
         <header id="header" class="clearfix container">
@@ -160,19 +150,14 @@
         </header>
 
         <section id="main">
-            <ol class="breadcrumb" style="margin-left:-10px;">
-                <li><a href="developer.html">designer.web.id</a></li>
-                <li><a href="index.html">learn</a></li>
-                <li class="active">virtualreality</li>
-            </ol>
 
             <aside id="sidebar" class="sidebar c-overflow" style="position:fixed;z-index:1000;margin-top:-70px;height:100%;background:white">
                 <ul class="main-menu">
                     <li class="mm-profile sub-menu">
                         <a href="#" data-ma-action="submenu-toggle" class="media">
-                            <img class="pull-left" src="../img/coreldraw.green.png" alt="" height="25px" style="margin-left:-40px;">
+                            <img class="pull-left" src="img/coreldraw.green.png" alt="" height="25px" style="margin-left:-40px;">
                             <div class="media-body">
-                            <div>Tutorial CorelDraw Pro</div>
+                            <div>Tutorial CorelDraw</div>
                             <span style="font-size:11px;">Experience by IDWEBDesigner<br/>dev@designer.web.id</span>
                             </div>
                         </a>
@@ -236,17 +221,17 @@
                                     online({ type: 'ready' });
                                     </script>
 
-                <div style="margin-top:-30px; width:100%" id="contentloader2"></div>
+                <div style="margin-top:-30px;" id="contentloader2"></div>
 
 
 
             </aside>
 
-            <section id="content" style="margin-bottom:-40px;">
-                <div class="container" style="margin-top:-55px;margin-left:-20px;padding-right:0px;">
-                    <div class="tab-content p-20" style="background:#ffffff;">
+            <section style="margin-bottom:-50px;margin-top:20px;" id="content">
+                <div class="container">
 
-                    <div role="tabpanel" class="tab-pane animated fadeIn in active" id="tab-1">
+                    <div class="row">
+                        <div class="col-sm-6">
 
                             <!-- Blog Posts -->
                             <div class="card blog-post" style="margin-bottom:-0px;">
@@ -298,31 +283,32 @@
                                 </div>
                             </div>
 
-                    </div>
 
-                    <div role="tabpanel" class="tab-pane animated fadeIn in" id="tab-2">
-<div style="margin-top:-30px;" id="contenttab2"></div>
-                    </div>
+                        </div>
 
-                    <div role="tabpanel" class="tab-pane animated fadeIn" id="tab-3" style="margin-top:-20px;margin-left:-20px;margin-right:-20px;background:#ffffff">
+                        <div class="col-sm-6">
 
-                    </div>
 
+                            <!-- Custom header -->
+                            <div class="card">
+                                <a class="card-header ch-alt">
+                                    <h2><small>IDWEBDesigner Yogyakarta <br/>Jl. Wahid Hasyim No.3 Gaten Condongcatur Depok Sleman Yogyakarta, Indonesia.</small></h2>
+                                </a>
+
+                            </div>
+
+                        </div>
                     </div>
                 </div>
             </section>
         </section>
 
-        <!-- Page Loader -->
-        <div class="page-loader">
-            <div class="preloader" style="text-align:center;">
-                <svg class="pl-circular" viewBox="25 25 50 50">
-                    <circle class="plc-path" cx="50" cy="50" r="20" />
-                </svg><br/><br/>
-                <div style="font-size:8px;margin-left:-80px;width:200px" class="demo"></div>
-            </div>
-        </div>
+        <div style="margin-bottom:0px;"><footer id="footer">
+            Copyright &copy; 2016 IDWEBDesigner<br/><a href="index.html">Kembali ke <i class="zmdi zmdi-home"></i> Beranda</a>
+        </footer></div>
 
+
+        <style>.gist .gist-data {margin-left: -10px;margin-right: -10px; background-color:#2B343A;border-bottom:0px;} .gist .gist-file {border:0px;color: #7A8083;}.gist .markdown-body p, .gist .markdown-body blockquote, .gist .markdown-body ul, .gist .markdown-body ol, .gist .markdown-body dl, .gist .markdown-body table, .gist .markdown-body pre {font-size: 12px;}.gist .markdown-body h1{font-size: 1em;border-bottom: 1px solid #444444}.gist .markdown-body h2{font-size: 0.9em;border-bottom: 1px solid #444444}.gist .markdown-body h3{font-size: 0.8em;}.gist .markdown-body h4{font-size: 0.7em;}.gist .markdown-body h5{font-size: 0.6em;}.gist .gist-meta{display: none; background-color:#2B343A}.gist .markdown-body .highlight pre, .gist .markdown-body pre{background-color:#2B343A;border: none;color: #7A8083}</style>
 
         <!-- Javascript Libraries -->
         <script src="../vendors/bower_components/jquery/dist/jquery.min.js"></script>
@@ -332,126 +318,15 @@
         <script src="../vendors/bower_components/Waves/dist/waves.min.js"></script>
         <script src="../vendors/bootstrap-growl/bootstrap-growl.min.js"></script>
         <script src="../vendors/bower_components/sweetalert/dist/sweetalert.min.js"></script>
-        <script src="../vendors/bower_components/lightgallery/dist/js/lightgallery-all.min.js"></script>
-        <script src="../vendors/bootgrid/jquery.bootgrid.updated.min.js"></script>
 
-        <!-- Placeholder for IE9 -->
-        <!--[if IE 9 ]>
-            <script src="vendors/bower_components/jquery-placeholder/jquery.placeholder.min.js"></script>
-        <![endif]-->
+        <script src="../vendors/bower_components/moment/min/moment.min.js"></script>
+        <script src="../vendors/bower_components/fullcalendar/dist/fullcalendar.min.js"></script>
+        <script src="../vendors/bower_components/simpleWeather/jquery.simpleWeather.min.js"></script>
+        <script src="../vendors/bower_components/jquery.easy-pie-chart/dist/jquery.easypiechart.min.js"></script>
+        <script src="../vendors/bower_components/autosize/dist/autosize.min.js"></script>
+        <script src="../vendors/bower_components/mediaelement/build/mediaelement-and-player.js"></script>
 
         <script src="../js/app.min.js"></script>
-
-        <!-- Data Table -->
-        <script>
-            $(function()
-            {
-              $("#grid-basic").bootgrid({
-                  caseSensitive: false,
-                    css: {
-                        icon: 'zmdi icon',
-                        iconColumns: 'zmdi-view-module',
-                        iconDown: 'zmdi-sort-amount-desc',
-                        iconRefresh: 'zmdi-refresh',
-                        iconUp: 'zmdi-sort-amount-asc'
-                    },
-              }
-              )
-            });
-        </script>
-
-        <script src="../shuffleText/js/shuffletext.jquery.min.js"></script>
-        <script>
-         $('.demo').ShuffleText([
-          'Please wait...',
-          "Connecting server...",
-          "Load Javascript Database",
-          "Build User Interface...",
-          "Please wait...",
-            ],{loop: false, delay: 1000});
-        </script>
-
-        <script type="text/javascript">
-            //Basic
-            $('#sa-basic').click(function(e){
-                e.preventDefault();
-                var link = $(this).attr('href');
-
-                swal({
-                    title: "Get Inspire Profesional Logos",
-                    text: "More logos sparately on our Learn Apps: Javascript, NoSQL Database, Virtual Reality, and more...",
-                    showCancelButton: true,
-                    allowOutsideClick: true,
-                },
-                function(){
-                    window.location.href = 'market://details?id=id.web.designer.learn.javascript';
-                });
-            });
-        </script>
-
-    <script type="text/javascript">
-        function getFirebaseToken() {
-             alert(android.getFirebaseToken());
-        }
-
-        function isProductPurchased() {
-            alert(android.isProductPurchased());
-        }
-
-        function createNotification(display, message) {
-            android.createNotification(display, message);
-        }
-
-        function showLoader() {
-            android.showLoader();
-        }
-
-        function hideLoader() {
-            android.hideLoader();
-        }
-
-        function fontSizeNormal() {
-            android.fontSizeNormal();
-        }
-
-        function fontSizeLarger() {
-            android.fontSizeLarger();
-        }
-
-
-        function fontSizeLargest() {
-            android.fontSizeLargest();
-        }
-
-        function fontSizeSmaller() {
-            android.fontSizeSmaller();
-        }
-
-       function fontSizeSmallest() {
-            android.fontSizeSmallest();
-       }
-        function rateApp() {
-            android.rateApp();
-       }
-
-        var currentFont = 2;
-        var fontSizeFunc = [fontSizeSmallest, fontSizeSmaller, fontSizeNormal, fontSizeLarger, fontSizeLargest]
-
-       function fontDec() {
-            if (currentFont > 0) {
-                currentFont--;
-            }
-            fontSizeFunc[currentFont]();
-       }
-
-       function fontInc() {
-            if (currentFont < 4) {
-                currentFont++;
-            }
-            fontSizeFunc[currentFont]();
-       }
-    </script>
-
     </body>
 
 </html>
