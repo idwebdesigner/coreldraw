@@ -28,7 +28,6 @@
         <script src="../js/h5utils.js"></script>
         <script src="../js/jquery-2.1.0.min.js"></script>
         <script src="../js/jquery.jscroll.min.js"></script>
-        <script src="../js/jquery.timeago.js" type="text/javascript"></script>
 
         <script>$(function(){
         $("#contentloader1").load("http://app.coreldraw.designer.web.id/content-message.html"); $("#contentloader2").load("http://app.coreldraw.designer.web.id/pro/content-right-pro.html");
@@ -36,12 +35,15 @@
         $("#contenttab2").load("http://app.coreldraw.designer.web.id/pro/contenttab2.html");
         });</script>
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-        <script type="text/javascript">
-        jQuery(document).ready(function() {
-            $("time.timeago").timeago();
-        });
-        </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="../js/jquery.timeago.js" type="text/javascript"></script>
+    <script src="../js/test_helpers.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        prepareDynamicDates();
+        $(".timeago").timeago();
+      });
+    </script>
         
 
         <style>.videoWrapper {
@@ -329,24 +331,28 @@
                                         </thead>
                                         <tbody>
                                         <tr onclick="location.href='crop.html';" style="cursor:pointer;">
-                                            <td style="height: 100%">Tip Crop Gambar di CorelDRAW disini<br/><abbr class="timeago" title="2011-12-17T09:24:17Z">December 17, 2011</abbr>
-</td>
+                                            <td style="height: 100%">Tip Crop Gambar di CorelDRAW<br/><small style="color:#999999"><time class="timeago" datetime="2017-01-18T17:17:00Z">Jan 18, 2017</time>.
+</small></td>
                                             <td class="f-500" style="color:#00BCD4">LEARN</td>
                                         </tr>
                                         <tr onclick="location.href='curves.html';" style="cursor:pointer;">
-                                            <td>Tutorial cara mengkonversi objek atau teks menjadi Kurva</td>
+                                            <td>Tutorial cara mengkonversi objek atau teks menjadi Kurva<br/><small style="color:#999999"><time class="timeago" datetime="2017-01-18T17:17:00Z">Jan 18, 2017</time>.
+</small></td>
                                             <td class="f-500" style="color:#00BCD4">LEARN</td>
                                         </tr>
                                         <tr onclick="location.href='imageajustment.html';" style="cursor:pointer;">
-                                            <td>Image Adjustment Lab, menyesuaikan keseimbangan warna dan kontras yang tidak terlalu kompleks.</td>
+                                            <td>Image Adjustment Lab, menyesuaikan keseimbangan warna dan kontras yang tidak terlalu kompleks.<br/><small style="color:#999999"><time class="timeago" datetime="2017-01-18T17:17:00Z">Jan 18, 2017</time>.
+</small></td>
                                             <td class="f-500" style="color:#00BCD4">LEARN</td>
                                         </tr>
                                         <tr onclick="location.href='calendar.html';" style="cursor:pointer;">
-                                            <td>Membuat Kalender dengan CorelDRAW</td>
+                                            <td>Membuat Kalender dengan CorelDRAW<br/><small style="color:#999999"><time class="timeago" datetime="2017-01-18T17:17:00Z">Jan 18, 2017</time>.
+</small></td>
                                             <td class="f-500" style="color:#00BCD4">LEARN</td>
                                         </tr>
                                         <tr onclick="location.href='shapingtool.html';" style="cursor:pointer;">
-                                            <td>Menggunakan Shaping Tools di CorelDRAW yang dilengkapi dengan contoh.</td>
+                                            <td>Menggunakan Shaping Tools di CorelDRAW yang dilengkapi dengan contoh.<br/><small style="color:#999999"><time class="timeago" datetime="2017-01-18T17:17:00Z">Jan 18, 2017</time>.
+</small></td>
                                             <td class="f-500" style="color:#00BCD4">LEARN</td>
                                         </tr>
                                         </tbody>
