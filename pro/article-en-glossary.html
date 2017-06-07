@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Tutorial CorelDraw Pro</title>
+
+         <script type="text/javascript">
+          <!--
+          if (screen.width >= 2800) {
+            window.location = "http://designer.web.id";
+          }
+          //-->
+        </script>
+
+        <!-- Vendor CSS -->
+        <link href="../vendors/bower_components/animate.css/animate.min.css" rel="stylesheet">
+        <link href="../vendors/bower_components/sweetalert/dist/sweetalert.css" rel="stylesheet">
+        <link href="../vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
+        <link href="../vendors/bower_components/lightgallery/dist/css/lightgallery.min.css" rel="stylesheet">
+        <link href="../vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+        <link href="../vendors/bootgrid/jquery.bootgrid.min.css" rel="stylesheet">
+
+        <!-- CSS -->
+        <link href="../css/app_1.min.css" rel="stylesheet">
+        <link href="../css/app_2.min.css" rel="stylesheet">
+
+        <script src="../js/h5utils.js"></script>
+        <script src="../js/jquery-2.1.0.min.js"></script>
+        <script src="../js/jquery.jscroll.min.js"></script>
+        <script>$(function(){
+        $("#contentloader1").load("http://app.coreldraw.designer.web.id/content-message.html"); $("#contentloader2").load("http://app.coreldraw.designer.web.id/pro/content-right-pro.html");
+        $("#contenttab1").load("http://app.coreldraw.designer.web.id/pro/contenttab2.html");
+        $("#contenttab2").load("http://app.coreldraw.designer.web.id/pro/contenttab2.html");
+        });</script>
+
+        <style>.videoWrapper {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 */
+        padding-top: 25px;
+        height: 0;}
+        .videoWrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;}
+        .lcb-navigation a{background:#999999}
+        </style>
+    </head>
+    <body style="background:#ffffff">
+
+        <!-- Page Loader -->
+        <div class="page-loader">
+            <div class="preloader pls-white">
+                <svg class="pl-circular" viewBox="25 25 50 50">
+                    <circle class="plc-path" cx="50" cy="50" r="20" />
+                </svg>
+            </div>
+
+        </div>
+
+        <header id="header" class="clearfix container">
+            <ul class="h-inner">
+
+                <li class="hi-trigger ma-trigger" data-ma-action="sidebar-open" data-ma-target="#sidebar">
+                    <div class="line-wrap">
+                        <div class="line top"></div>
+                        <div class="line center"></div>
+                        <div class="line bottom"></div>
+                    </div>
+                </li>
+
+                <li class="hi-logo" data-ma-action="sidebar-open" data-ma-target="#sidebar" style="margin-top:8px;">
+                    <span style="font-size:15px;color:#ffffff;"> Tutorial CorelDRAW<sup>&reg;</sup><span>
+                </li>
+
+                <li class="pull-right">
+                    <ul class="hi-menu">
+
+                        <li style="margin-right:-15px;" class="dropdown">
+                            <a data-toggle="dropdown" href="#">
+                                <i class="him-icon zmdi zmdi-notifications-none"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-lg pull-right">
+                                <div class="list-group list-group-light">
+                                    <div class="lg-header">
+                                        LIVE DEVELOPER MESSAGES
+                                    </div>
+
+                                    <article>
+                                      <p style="text-align:center;font-size:1em;"><span id="status"><span id="status"></span></p>
+                                      <ol id="state"></ol>
+                                    </article>
+                                    <script>
+                                    var statusElem  = document.getElementById('status'),
+                                        state               = document.getElementById('state');
+
+                                    function online(event) {
+                                      statusElem.className = navigator.onLine ? 'online' : 'offline';
+                                      statusElem.innerHTML = navigator.onLine ? '' : '<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You&#39;re offline, check network connection.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;content required internet access.';
+                                      state.innerHTML += '&nbsp;';
+                                    }
+
+                                    addEvent(window, 'online', online);
+                                    addEvent(window, 'offline', online);
+                                    online({ type: 'ready' });
+                                    </script>
+
+                                    <div style="margin-top:-30px;" id="contentloader1"></div>
+                                    <a class="view-more view-more-light" href="idwebdesigner.html">Powered by IDWEBDesigner</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li style="margin-right:-15px;" class="ma-trigger" data-ma-action="sidebar-open" data-ma-target="#chat">
+                            <a data-toggle="dropdown" href="#">
+                                <i class="him-icon zmdi zmdi-favorite-outline"></i>
+                            </a>
+                        </li>
+                        <li style="margin-right:-5px;" class="dropdown">
+                            <a data-toggle="dropdown" href="#"><i class="him-icon zmdi zmdi-more-vert"></i></a>
+                            <ul class="dropdown-menu dm-icon pull-right">
+                                <li class="hidden-xs">
+                                    <a data-ma-action="fullscreen" href="#"><i class="zmdi zmdi-fullscreen"></i> Fullscreen</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:window.location.reload();"><i class="zmdi zmdi-refresh-sync"></i> Refresh</a>
+                                </li>
+                                <li>
+                                    <a id="rate-app" onClick="rateApp()">Rate 5 Stars</a>
+                                </li>
+                                <li>
+                                    <a href="update.html"><i class="zmdi zmdi-download"></i>Check update</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="help.html"><i class="zmdi zmdi-help"></i> Help</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="hidden-xs ma-trigger" data-ma-action="sidebar-open" data-ma-target="#chat">
+                            <a href="#"><i class="him-icon zmdi zmdi-comment-alt-text"></i></a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="tab-nav tn-justified tn-icon" role="tablist" style="width:100%">
+                                        <li role="presentation">
+                                            <a class="col-sx-4" href="index.html">
+                                                INDONESIA
+                                            </a>
+                                        </li>
+                                        <li role="presentation" class="active">
+                                            <a class="col-xs-4" href="#tab-2" aria-controls="tab-2" role="tab" data-toggle="tab">
+                                                ENGLISH (PRO)
+                                            </a>
+                                        </li>
+
+                                    </ul>
+        </header>
+
+        <section id="main">
+            <ol class="breadcrumb" style="margin-left:-10px;">
+                <li><a href="developer.html">designer.web.id</a></li>
+                <li><a href="index.html">learn</a></li>
+                <li class="active">virtualreality</li>
+            </ol>
+
+            <aside id="sidebar" class="sidebar c-overflow" style="position:fixed;z-index:1000;margin-top:-70px;height:100%;background:white">
+                <ul class="main-menu">
+                    <li class="mm-profile sub-menu">
+                        <a href="#" data-ma-action="submenu-toggle" class="media">
+                            <img class="pull-left" src="../img/coreldraw.green.png" alt="" height="25px" style="margin-left:-40px;">
+                            <div class="media-body">
+                            <div>Tutorial CorelDRAW<sup>&reg;</sup></div>
+                            <span style="font-size:11px;">Experience by IDWEBDesigner<br/>dev@designer.web.id</span>
+                            </div>
+                        </a>
+
+                        <ul>
+                            <li>
+                                <a href="developer.html">Indonesia Web Designer</a>
+                            </li>
+                            <li>
+                                <div style="margin-left:65px;margin-bottom:10px;font-size:10px;color:#888888;padding-right:20px;">Jl. Wahid Hasyim No.3 Gaten Condongcatur Depok Sleman Yogyakarta, Indonesia.</div>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-info"></i> About CorelDraw</a>
+                        <div style="margin-left:65px;margin-bottom:10px;font-size:12px;color:#579706;"><a href="basics.html">What's is CorelDraw?<br/>Basics Learn</a></div>
+                    </li>
+
+                    <li><a href="index.html"><i class="zmdi zmdi-flag"></i> Tutorial Bahasa Indonesia</a></li>
+                    <li class="sub-menu toggled active">
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-android"></i> Featured Apps</a>
+                        <div style="margin-left:65px;margin-top:10px;font-size:10px;color:#888888;padding-right:20px;">Color Docker: This docker allows you to choose fill and outline colors from a color picker, color sliders, and color palettes. Found with dockers and in the Toolbox.</div>
+
+                        <ul>
+
+                            <li><a href="language.html">Bahasa Indonesia</a></li>
+                            <li style="display:none;"><a href="upgrade.html"><i class="zmdi zmdi-shopping-cart"></i>&nbsp;&nbsp;Upgrade</a></li>
+                            <li class="divider"></li>
+
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-code"></i> Developer</a>
+
+                        <ul>
+                            <li><a href="developer.html">dev@designer.web.id<br/>designer.web.id</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </aside>
+
+            <aside id="chat" class="sidebar">
+
+                                    <article>
+                                      <p style="margin-top:30px;margin-left:15px;font-size:0.7em;"><span id="status2"><span id="status"></span></p>
+                                      <ol id="state2"></ol>
+                                    </article>
+                                    <script>
+                                    var statusElem  = document.getElementById('status2'),
+                                        state               = document.getElementById('state2');
+
+                                    function online(event) {
+                                      statusElem.className = navigator.onLine ? 'online' : 'offline';
+                                      statusElem.innerHTML = navigator.onLine ? '' : '<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You&#39;re offline, check network connection.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;content required internet access.';
+                                      state.innerHTML += '&nbsp;';
+                                    }
+
+                                    addEvent(window, 'online', online);
+                                    addEvent(window, 'offline', online);
+                                    online({ type: 'ready' });
+                                    </script>
+
+                <div style="margin-top:-30px; width:100%" id="contentloader2"></div>
+
+
+
+            </aside>
+
+            <section id="content" style="margin-bottom:-40px;">
+                <div class="container" style="margin-top:-55px;margin-left:-20px;padding-right:0px;">
+                    <div class="tab-content p-20" style="background:#ffffff;">
+
+                    <div role="tabpanel" class="tab-pane animated fadeIn in active" id="tab-1">
+
+                            <!-- Blog Posts -->
+                            <div class="card blog-post" style="margin-bottom:-0px;">
+                                
+                                <div class="videoWrapper">
+                                <img width="100%" src="../images/green.png" frameborder="0" allowfullscreen></img>
+                                </div>
+
+                                <a class="card-header ch-alt">
+                                    <h2><small>Caption</small></h2>
+                                </a>
+
+                                <div class="card-body card-padding">
+
+								<p>CorelDRAW Graphics Suite's toolbox and dockers are jam-packed with useful tools, options, and settings that may be new to you or as familiar as the back of your hand. This A to Z list breaks down most of the program's tools, dockers, and functions with links to relevant tutorials showing you what fantastic things CorelDRAW can do. You can check out <a href="http://www.coreldraw.com/ca/product/graphic-design-software/" target="_self">CorelDRAW X7 for a free 30 day trial</a> to get you started with the program.</p>
+								<h2>A</h2>
+								<p><strong>Align and Distribute:&nbsp;</strong>This docker allows you to organize, align, and evenly distribute two or more selected objects along a defined line within a document. Align or distribute objects by their edges, centers, or a mix of the two. Additionally, there are options to align objects according to specific criteria.</p>
+								<p><strong><a href="http://www.coreldraw.com/us/pages/items/1200077.html" target="_self">Angular Dimension Tool</a>: </strong>A tool that allows you to draw angular dimension lines with three points of execution. Such markers inform you of the dimensions of objects within your document by giving accurate measurements between them.</p>
+								<p><strong><a href="http://design.tutsplus.com/tutorials/how-to-create-and-use-perfect-shapes-in-coreldraw--cms-22657" target="_self">Arrow Shapes</a>:&nbsp;</strong>A variety of perfect arrow shapes ready for use within your document and easily modified with the <strong>Shape</strong> and <strong>Pick</strong> tools and assorted dockers.</p>
+								<p><strong><a href="http://www.coreldraw.com/us/pages/items/14300072.html" target="_self">Artistic Media</a>: </strong>This docker is your central hub for all things<strong> Artistic Media</strong> tool related. Organize, create, and play with the variety of tool types courtesy of the <strong>Artistic Media</strong> tool. You can make custom brushes and sprayers within it too.</p>
+								<p><strong><a href="http://design.tutsplus.com/tutorials/create-custom-brushes-in-coreldraw-with-the-artistic-media-tool--cms-22668" target="_self">Artistic Media Tool</a>: </strong>This tool mimics the look of a variety of brushes and brush types. Create paintbrushes, vector brushes, sprayer brushes, and more. Use in conjunction with the <strong>Artistic Media</strong> docker for greater control and organization.</p>
+								<p><strong>Attract Tool: </strong>One of the <strong>Shape Edit</strong> tools, the<strong> Attract</strong> tool manipulates the edges of the object by pulling nodes to the center of the cursor so long as they're within the tool's nib diameter.</p>
+								<p><strong>Attributes Eyedropper: </strong>This tool samples not only the color, but other attributes (fill, outline, and more) of an object, allowing you to transfer these properties onto other objects within your document.</p>
+								<h2>B</h2>
+								<p><strong><a href="http://design.tutsplus.com/tutorials/coreldraw-basic-drawing-tools--cms-22178" target="_self">B-Spline</a>: </strong>This curve tool allows you to draw lines and curves by setting the boundaries around the curve itself rather than the nodes.</p>
+								<p><strong><a href="http://design.tutsplus.com/tutorials/how-to-create-and-use-perfect-shapes-in-coreldraw--cms-22657" target="_self">Banner Shapes</a>: </strong>An assortment of Perfect Banner Shapes ready for use within a document, with special nodes that manipulate various parts of each banner object.</p>
+								<p><strong><a href="http://design.tutsplus.com/tutorials/how-to-create-and-use-perfect-shapes-in-coreldraw--cms-22657" target="_self">Basic Shapes</a>: </strong>The basic set of perfect shapes containing a variety of geometric shapes ready for&nbsp;manipulation&nbsp;with the <strong>Pick</strong> and <strong>Shape</strong> tools, as well as special nodes that change a variety of features unique to each object.</p>
+								<p><strong><a href="http://www.coreldraw.com/us/pages/items/1600185.html" target="_self">Bevel</a>:&nbsp;</strong>This docker allows you to fully control the&nbsp;<strong>Bevel</strong> effect on a selected text object. Chose the style, offset, shadow color, and various lighting controls for a quick and easy effect.</p>
+								<p><strong><a href="http://design.tutsplus.com/tutorials/coreldraw-basic-drawing-tools--cms-22178" target="_self">Bezier Tool</a>:&nbsp;</strong>This curve tool allows you to draw one segment of a curve or line at a time. Similar to the Pen tool, users place the nodes of a line or curve manually. This tool, however, does not allow users to preview curves before placing them, unlike some of the other curve tools.</p>
+								<p><strong><a href="http://www.coreldraw.com/us/pages/items/17700680.html" target="_self">Blend</a>: </strong>This docker offers additional control to the user when creating blends with the&nbsp;<strong>Blend</strong> tool. Control the number of steps, acceleration, and style of color blend.</p>
+								<p><strong><a href="http://design.tutsplus.com/tutorials/how-to-use-the-blend-tool-in-coreldraw--cms-23123" target="_self">Blend Tool</a>:&nbsp;</strong>This tool is an interactive one that creates a progression of objects shape, size, and colors between the two objects selected with the tool. Users can control the angle and&nbsp;acceleration&nbsp;of&nbsp;the blend, as well as how many steps will be created from point A to point B.</p>
+								<h2>C</h2>
+								<p><strong><a href="http://design.tutsplus.com/tutorials/how-to-create-and-use-perfect-shapes-in-coreldraw--cms-22657" target="_self">Callout Shapes</a>:&nbsp;</strong>This is an assortment of <strong>Perfect Shapes</strong> ready for use within a document as preset objects that can be modified with the <strong>Shape</strong> and <strong>Pick</strong> tools, as well as their individual special nodes that change specific components of each&nbsp;<strong>Perfect Shape</strong>.</p>
+								<p><strong>Color Docker: </strong>This docker allows you to choose fill and outline colors from a color picker, color sliders, and color palettes. Found with dockers and in the&nbsp;<strong>Toolbox</strong>.</p>
+								<p><strong>Color Eyedropper: </strong>This tool samples an object's color and allows you to apply it to another.&nbsp;</p>
+								<p><strong><a href="http://www.coreldraw.com/us/pages/items/11600070.html" target="_self">Color Styles</a>: </strong>Use this docker to create and save color styles as well as create and save color harmonies, helping you define your document's color palette.</p>
+								<p><strong><a href="http://design.tutsplus.com/tutorials/design-and-recolor-a-flat-precious-gems-seamless-pattern-in-coreldraw--cms-23449" target="_self">Complex Star Tool</a>: </strong>This shape tool creates a star from a series of triangles. Users can define both points and sharpness of the shapes created with this tool by way of the<strong> Property Bar.</strong>
+								</p>
+								<p><strong><a href="http://www.coreldraw.com/us/pages/items/1200079.html" target="_self">Connect</a>: </strong>A content browser within <strong>CorelDRAW</strong> that syncs the user's machine, local network, and internet, so long as the files are readable by those in CorelDRAW Graphics Suite X7 applications.</p>
+								<p><strong>Contour: </strong>This docker gives you greater control over the <strong>Contour </strong>effect, defining the contour's steps and offset, color blend, and additional options.</p>
+								<p><strong>Contour Tool: </strong>This interactive tool allows you to create a&nbsp;series&nbsp;of concentric shapes&nbsp;within or around a selected object according to the settings defined either in the <strong>Contour</strong> docker or the <strong>Property Bar</strong>.</p>
+								<p><strong>Crop Tool: </strong>This tool allows you to select an area of the working document and instantly delete everything outside that selection, effectively cutting it out of the document.</p>
+								<h2>D</h2>
+								<p><strong><a href="http://design.tutsplus.com/tutorials/how-to-use-the-distort-tool-in-coreldraw--cms-23175" target="_self">Distort Tool</a>:&nbsp;</strong>This tool transforms objects by giving you the option to apply effects such as push and pull, zipper, or twister distortions through settings found in the&nbsp;<strong>Property Bar</strong>.</p>
+								<p><strong>Docker:&nbsp;</strong>The variety of windows and palettes that organize, modify, and aid designs within a user's document. You'll find they contain additional options for nearly every tool and function and are a critical part of workflow.</p>
+								<p><strong><a href="http://www.coreldraw.com/us/pages/items/1200083.html" target="_self">Document Palette</a>: </strong>This color palette contains all of the colors used throughout a document's history. It collects both fill and outline colors in a convenient docker that you can place anywhere within the application window.</p>
+								<p><strong><a href="http://design.tutsplus.com/tutorials/how-to-use-the-extrude-tool-in-coreldraw--cms-22863" target="_self">Drop Shadow Tool</a>: </strong>This interactive tool allows you to create, place, modify, and copy a drop shadow effect on objects within your documents. Define settings manually or drag the shadow out from the object itself with the tool to create drop shadows quickly and easily. You can save and load preset drop shadows as well, speeding up your productivity within the program.</p>
+								<h2>E</h2>
+								<p><strong>Edit Anchor Tool:&nbsp;</strong>This tool allows you to modify nodes within an object or line.&nbsp;</p>
+								<p><strong><a href="http://design.tutsplus.com/tutorials/coreldraw-shape-building-basics--cms-22190" target="_self">Ellipse Tool (F7)</a>: </strong>This tool creates ellipses and circles within a document. It also gives you the ability to create closed shapes, pie shapes, and arc shapes as well in the <strong>Property Bar</strong>.</p>
+								<p><strong><a href="http://www.coreldraw.com/us/pages/items/1600187.html" target="_self">Envelope (Control F7)</a>:&nbsp;</strong>This docker gives you additional control when applying the&nbsp;<strong>Envelope</strong> effect to an object within a working document.</p>
+								<p><strong>Envelope Tool:&nbsp;</strong>This tool allows you to change the shape of an object by manipulating nodes surrounding the object in an envelope or bounding box instead of the object's nodes themselves.<strong><br></strong>
+								</p>
+								<p><strong>Eraser Tool (X): </strong>This tool allows you to delete (erase) components of selected objects within a document.&nbsp;</p>
+								<p><strong><a href="http://design.tutsplus.com/tutorials/how-to-use-the-extrude-tool-in-coreldraw--cms-22863" target="_self">Extrude</a>: </strong>This docker gives you additional control when using the Extrude tool or applying an Extrude effect.</p>
+								<p><strong><a href="http://design.tutsplus.com/tutorials/how-to-use-the-extrude-tool-in-coreldraw--cms-22863" target="_self">Extrude Tool</a>: </strong>This tool allows you to convert a flat object into a 3D object with a number of options found within either the <strong>Property Bar</strong> or the <strong>Extrude</strong> docker.</p>
+								<h2><strong>F</strong></h2>
+								<p><strong><a href="http://www.coreldraw.com/us/pages/items/1600150.html" target="_self">Fillet/Scallop/Chamfer: </a></strong>This docker controls the corner options to create rounded, scalloped, or straight-edged corners in both objects and curves.</p>
+								<p><strong><a href="http://design.tutsplus.com/tutorials/how-to-create-and-use-perfect-shapes-in-coreldraw--cms-22657" target="_self">Flowchart Shapes</a>: </strong>These perfect shapes are fantastic for use within flowcharts and, as objects, have special nodes that you can manipulate with the <strong>Shape</strong> tool in order to edit the shape in a unique way.</p>
+								<p><strong><a href="http://www.coreldraw.com/us/pages/items/17700681.html" target="_self">Font Playground</a>: </strong>This docker allows users to preview sample text by comparing font and size choices before settling on a font to be used within a document.</p>
+								<p><strong>Free Transform: </strong>This tool allows you to rotate, skew, scale, and reflect objects by choosing the method of manipulation in the&nbsp;<strong>Property Bar</strong>.</p>
+								<p><strong>Freehand Pick: </strong>This tool lets you select an area around or near objects in order to select multiple things within your document at once, so long as they fall within the selection shape you draw.</p>
+								<p><strong><a href="http://design.tutsplus.com/tutorials/coreldraw-basic-drawing-tools--cms-22178" target="_self">Freehand Tool (F5)</a>: </strong>This curve tool allows you to draw lines, curves, and shapes freely without thinking about where to place nodes or the angles of curves. You can draw segments of lines and objects, connect to open nodes, and close objects quickly and easily with this tool as well.</p>
+								<h2>G</h2>
+								<p><strong>Graph Paper Tool (D): </strong>This tool creates grids of complete and closed shapes according to the settings implemented in the <strong>Property Bar.</strong>
+								</p>
+								<p><strong><a href="http://design.tutsplus.com/tutorials/how-to-create-a-colorful-brochure-for-print-using-coreldraw--cms-23604" target="_self">Guidelines</a>:</strong> This docker controls the application and look of guidelines placed within a document. Users can create, edit, or delete any guidelines found within their document by way of this docker.</p>
+								<h2>H</h2>
+								<p><strong><a href="http://www.coreldraw.com/us/pages/items/1200077.html" target="_self">Horizontal or Vertical Dimension Tool</a>:&nbsp;</strong>This tool draws either vertical or horizontal lines, allowing users to measure spaces within their document.&nbsp;</p>
+								<h2>I</h2>
+								<p><strong><a href="http://design.tutsplus.com/tutorials/how-to-create-and-use-gradients-in-coreldraw--cms-22463" target="_self">Interactive Fill Tool (G)</a>: </strong>This tool allows full control over fill attributes, especially fountain fills, giving users the ability to define a fill's angle and placement dynamically versus defining it based on numerical inputs. Additional options are controllable through the <strong>Property Bar</strong> and <strong>Object Properties</strong> docker.</p>
+								<p><strong>Insert Character: </strong>This docker allows you to look through and add glyphs within a text object. You can run through all of the glyphs within an installed font as well as replace characters within text with something new or more fitting from your font.</p>
+								<h2>J</h2>
+								<p><strong>Join Curves: </strong>This docker allows you to select and join the open nodes of curves, effectively creating closed objects within your document through its automated process so long as open curves are within the defined&nbsp;<strong>Gap tolerance</strong>.</p>
+								<h2>K</h2>
+								<p><strong>Knife Tool: </strong>This tool allows you to split an object into two separate objects. Additional options for the tool are found in the<strong> Property Bar</strong> while the tool is in use.</p>
+								<p><strong>Knife Tool (Premium): </strong>This tool is found within the toolbox if you are a Premium subscriber. It furthers the options of the Knife tool by allowing you to split objects directly, with a gap, or an overlap.</p>
+								<h2>L</h2>
+								<p><strong>Lens (Alt-F3):</strong> This docker applies a variety of effects to objects overlapping each other within a document, including <strong>Brighten</strong>, <strong>Fish Eye</strong>, <strong>Heat Map</strong>, <strong>Magnify</strong>, and more.&nbsp;The view within the overlapping object can also be frozen so that the object can be moved whilst retaining the effect within.</p>
+								<h2>M</h2>
+								<p><strong><a href="http://design.tutsplus.com/tutorials/how-to-use-the-mesh-fill-tool-in-coreldraw--cms-23814" target="_self">Mesh Fill Tool (M)</a>:</strong> This tool allows users to convert an object into a rendered mesh object by placing nodes and cross sections of nodes whereupon blended colors will be applied to a mesh grid.</p>
+								<h2>N</h2>
+								<p><strong><a href="http://www.coreldraw.com/us/pages/items/1200075.html" target="_self">Nodes</a>:&nbsp;</strong>These are the points that make up lines and objects within a document. Every object has them, especially those which have been converted to curves, and many tools and dockers aid in manipulating them in some way. The more nodes a document has, the larger the file size. The fewer node objects within a document, the smaller a file will ultimately be.&nbsp;The Shape tool is used to manipulate the nodes.</p>
+								<h2>O</h2>
+								<p><strong>Object Coordinates: </strong>This docker allows users to create and place a variety of objects&nbsp;according&nbsp;to the dimensions defined within the docker itself. When users set the options to 0 copies, the docker manipulates the selected object. When 1 or more copies are defined, the docker creates a succession of objects according to their defined settings.</p>
+								<p><strong><a href="http://www.coreldraw.com/us/pages/items/1200035.html" target="_self">Object Manager</a>: </strong>This docker organizes all objects and curves within a document into <strong>Layers</strong> and <strong>Pages</strong>, giving you full control over everything within your working document.</p>
+								<p><strong><a href="http://design.tutsplus.com/tutorials/create-an-art-nouveau-inspired-robot-design-in-coreldraw--cms-23602" target="_self">Object Properties</a>: </strong>This docker allows you to control object attributes such as <strong>Outline</strong>, <strong>Fill</strong>, and&nbsp;<strong>Transparency</strong>, and their unique options.</p>
+								<p><strong>Object Styles:</strong>&nbsp;This docker controls all of the styles and style sets you can apply to an object. Set up assorted styles and attributes, including paragraph options, fill options, outline options and more. Save and load style sets from document to document, or edit and delete styles to alter a working document, all within the comfort of the docker.</p>
+								<p><strong>Outline Color Tool:&nbsp;</strong>This tool allows you to add or edit an outline color of an object through models, mixers, or palettes.</p>
+								<p><strong><a href="http://design.tutsplus.com/tutorials/how-to-create-a-cartoon-holiday-illustration-using-coreldraw--vector-6136" target="_self">Outline Pen Tool</a>:</strong> This tool allows you to add or edit an outline's weight, style, corner options, and more, all from the comfort of the <strong>Toolbox</strong>.</p>
+								<h2>P</h2>
+								<p><strong>Pan Tool (H):&nbsp;</strong>This hand-shaped tool allows you to grab and pan across and around a working document. It's especially helpful when working on elements off the page or when moving around a document without zooming out to see more of it.</p>
+								<p><strong><a href="http://www.coreldraw.com/us/pages/items/15200103.html" target="_self">Parallel Dimension Tool</a>: </strong>This dimension tool draws slanted dimension lines, allowing you to measure various areas within your document.</p>
+								<p><strong><a href="http://design.tutsplus.com/tutorials/how-to-create-an-easy-halloween-pattern-in-coreldraw--cms-22252" target="_self">Pattern Fill</a>:</strong> This feature allows you to create and edit custom patterns, or patterns downloaded through Corel Connect, that can be used as fills in closed objects within a working document.
+									<br>
+								</p>
+								<p><strong><a href="http://design.tutsplus.com/tutorials/coreldraw-basic-drawing-tools--cms-22178" target="_self">Pen Tool</a>: </strong>This curve tool allows you to place nodes to draw straight lines and curves. Unlike the Bezier tool, it lets you preview curves and lines as they're being placed and drawn, giving you greater control when creating lines and objects.</p>
+								<p><strong>Pick Tool:&nbsp;</strong>This tool lets you select, move, and transform objects within your document so long as they're on the working page and unlocked.</p>
+								<p><strong><a href="http://www.coreldraw.com/us/pages/items/17700678.html" target="_self">Polygon Tool (Y)</a>: </strong>This tool creates an assortment of polygonal shapes thanks to the ability to define the number of sides in the&nbsp;<strong>Property Bar</strong>.</p>
+								<p><strong><a href="http://www.coreldraw.com/us/pages/items/1200075.html" target="_self">Polyline Tool</a>: </strong>This drawing tool allows you to draw curves, arcs, and straight lines in one connected go, only ending once an object has been closed.&nbsp;</p>
+								<p><strong><a href="http://design.tutsplus.com/tutorials/create-an-art-nouveau-inspired-robot-design-in-coreldraw--cms-23602" target="_self">PowerClip</a>:&nbsp;</strong>This powerful action clips a group to the boundaries of an overlapping object, masking off components of the group outside the overlapping object's boundaries. Users can create PowerClips, edit them, add components, and delete components within the&nbsp;<strong>Object Manager</strong> docker, as well as within the document itself.</p>
+								<p><strong>Property Bar: </strong>This all-important docker gives users additional options and points of control for every tool. It's not only a useful docker but often quite important in contributing to the productivity of working within the program.</p>
+								<h2>R</h2>
+								<p><strong><a href="http://design.tutsplus.com/tutorials/coreldraw-shape-building-basics--cms-22190" target="_self">Rectangle Tool (F6)</a>:&nbsp;</strong>This tool creates rectangles and squares within a document. It also gives users the ability to alter the corners in the&nbsp;<strong>Property Bar</strong>.</p>
+								<p><strong>Repel Tool:&nbsp;</strong>One of the&nbsp;<strong>Shape Edit</strong>&nbsp;tools,<strong>&nbsp;</strong>this tool is the opposite of the <strong>Attract</strong> tool.<strong>&nbsp;</strong>The<strong>&nbsp;Repel</strong>&nbsp;tool manipulates the edges of the object by pushing nodes away from the center of the cursor so long as they're within the tool's nib diameter.</p>
+								<p><strong><a href="http://design.tutsplus.com/tutorials/how-to-create-infographics-with-connector-tools-in-coreldraw--cms-22944" target="_self">Right-Angle Connector Tool</a>: </strong>This connector tool connects two objects with a right angle created by the user drawing the line itself. Users can also define the path's ends, width, color, radius, and style within the <strong>Property Bar</strong> or <strong>Object Properties</strong> docker.</p>
+								<p><strong>Roughen Tool: </strong>This distortion tool creates a series of angles and points along an object's edge according to the settings the user defines in the&nbsp;<strong>Property Bar</strong>.</p>
+								<p><strong><a href="http://design.tutsplus.com/tutorials/how-to-create-infographics-with-connector-tools-in-coreldraw--cms-22944" target="_self">Rounded Right-Angle Connector Tool</a>:&nbsp;</strong>This connector tool connects two objects with a rounded right angle created by the user drawing the line itself. Users can also define the path's ends, width, color, radius, and style within the <strong>Property Bar</strong> or <strong>Object Properties</strong> docker.</p>
+								<h2>S</h2>
+								<p><strong><a href="http://www.coreldraw.com/us/pages/items/1200077.html" target="_self">Segment Dimension Tool</a>: </strong>This tool displays the distance between nodes of a single object or multiple objects.</p>
+								<p><strong>Shape Tool (F10): </strong>This tool allows users to edit objects, curves, and text by manipulating their nodes.</p>
+								<p><strong><a href="http://design.tutsplus.com/tutorials/design-a-hipster-barbershop-facebook-cover-in-coreldraw--cms-23534" target="_self">Shaping</a>: </strong>This docker allows users to manipulate overlapping objects through functions such as Weld, Simplify, Intersect, and more.</p>
+								<p><strong>Smart Drawing Tool (Shift-S):</strong> This curve tool converts paths drawn into either smoothed out paths or basic shapes. Ellipses, polygons, and rectangles can all be created with this predictive, smart drawing tool. This tool works especially well with pressure-enabled graphic tablets.</p>
+								<p><strong><a href="http://design.tutsplus.com/tutorials/design-and-recolor-a-flat-precious-gems-seamless-pattern-in-coreldraw--cms-23449" target="_self">Smart Fill Tool</a>:&nbsp;</strong>This tool creates objects from intersecting areas within other objects, effectively "filling" them in with the chosen fill color.</p>
+								<p><strong><a href="http://design.tutsplus.com/tutorials/coreldraw-shape-building-basics--cms-22190" target="_self">Smear Tool</a>: </strong>This distortion tool allows the user to drag the edge of an object out into a tapered shape. Users can adjust the tool's options and how the smear affects the object in the <strong>Property Bar</strong>.</p>
+								<p><strong>Smooth Tool:&nbsp;</strong>This tool smoothes an object's path when you drag it across an object's outline. When possible, the tool reduces and simplifies the shape and number of nodes found in the path in order to smooth it out.</p>
+								<p><strong>Smudge Tool: </strong>This tool changes the shape of an object, not just its edges, when you drag the tool across it. You can adjust the tool's settings in the <strong>Property Bar</strong>.</p>
+								<p><strong><a href="http://design.tutsplus.com/tutorials/coreldraw-shape-building-basics--cms-22190" target="_self">Spiral Tool</a> (A): </strong>This shape tool allows you to draw symmetrical and logarithmic spiral objects within your document.</p>
+								<p><strong><a href="http://design.tutsplus.com/tutorials/create-an-art-nouveau-inspired-robot-design-in-coreldraw--cms-23602" target="_self">Star Tool</a>: </strong>This shape tool allows you to draw star objects within your documents. Settings in the <strong>Property Bar</strong> give you the option of adjusting the number of points and sharpness of the shape similar to the settings found in the&nbsp;<strong>Complex Star Tool</strong><strong>'s</strong> objects.</p>
+								<p><strong>Step and Repeat: </strong>This docker allows you to&nbsp;create and position multiple copies of an object at a time. You can also control how the copies are positioned from the original object within the docker itself.</p>
+								<p><strong><a href="http://design.tutsplus.com/tutorials/how-to-create-infographics-with-connector-tools-in-coreldraw--cms-22944" target="_self">Straight-Line Connector Tool</a>:&nbsp;</strong>This connector tool connects two objects with a straight line created by the user drawing the line itself. Users can also define the path's ends, width, color, and style within the&nbsp;<strong>Property Bar</strong>&nbsp;or&nbsp;<strong>Object Properties</strong>&nbsp;docker.</p>
+								<p><strong>Symbol Manager: </strong>This docker gives you access to symbols and associated functionality so long as symbols have been saved onto your machine. Drag objects, curves, or object groups into the docker to add new symbols to work with, and edit, save, or delete symbols for use in other documents.</p>
+								<h2>T</h2>
+								<p><strong><a href="http://www.coreldraw.com/us/pages/items/1600132.html?pgid=800382&amp;item=resource&amp;listid=1600132" target="_self">Table Tool</a>:&nbsp;</strong>This tool creates grids of open lines according to the settings implemented in the&nbsp;<strong>Property Bar.&nbsp;</strong>
+								</p>
+								<p><strong><a href="http://www.coreldraw.com/us/pages/items/1500756.html" target="_self">Text Properties</a>: </strong>This docker controls all things related to text. Users can modify character, paragraph, and frame settings in a number of ways in one convenient location.</p>
+								<p><strong><a href="http://design.tutsplus.com/tutorials/how-to-use-the-text-tool-in-coreldraw--cms-22474" target="_self">Text Tool (F8</a>): </strong>This tool allows users to create and modify artistic and paragraph text. Best paired with the <strong>Text Properties </strong>docker.</p>
+								<p><strong>Toolbox: </strong>This Toolbar contains all of the tools within the program. It's customizable too, allowing users to toggle tools or tool groups on or off at their discretion.</p>
+								<p><strong><a href="http://www.coreldraw.com/us/pages/items/17600591.html?pgid=800382&amp;item=resource&amp;listid=17600591" target="_self">Transformations</a>: </strong>This docker allows users to manipulate and move objects or object copies in their document. Position, rotate, mirror, scale, and skew objects or create a succession of copies based on the data input into the docker's options.</p>
+								<p><strong>Transparency Tool: </strong>This tool allows users to interactively create or modify an object or curve's transparency properties either on the object itself or in the <strong>Property Bar</strong>.</p>
+								<p><strong>Tray: </strong>This docker integrates&nbsp;with Corel CONNECT, CorelDRAW and Corel PHOTO-PAINT,&nbsp;allowing users to collect content from multiple folders into one&nbsp;easily referenced place within the program for the working document.</p>
+								<p><strong>Twirl Tool: </strong>This tool swirls an object's edges toward the center of the cursor as you drag it around the object. You can alter the twirl direction and rate in the&nbsp;<strong>Property Bar</strong>.</p>
+								<h2>V</h2>
+								<p><strong>View Manager: </strong>Allows users to zoom in or out of a document in different ways and save those views in the docker for quick reference.</p>
+								<h2>Z</h2>
+								<p><strong>Zoom Tool (Z): </strong>This tool changes the level of magnification within a document as well as allowing users to change how the document is magnified (through selection, a simple plus or minus, into all objects, etc.).</p>
+								<h2>#</h2>
+								<p><strong><a href="http://design.tutsplus.com/tutorials/coreldraw-basic-drawing-tools--cms-22178" target="_self">2-Point Line Tool</a>:&nbsp;</strong>This tool allows you to draw straight lines between two points by dragging from one point to another.&nbsp;Lines can be drawn either straight, perpendicular, or at a tangent to other objects depending on which option is chosen in the Property bar.</p>
+								<p><strong><a href="http://www.coreldraw.com/us/pages/items/1500742.html" target="_self">3-Point Ellipse Tool</a>:</strong>&nbsp;A shape tool that creates ellipses and circles by defining the diameter of the shape and building the ellipse outward from that line. It starts in a way that's similar to the&nbsp;<strong>2-Point Line</strong>, but once the line is drawn you create an ellipse or circle.</p>
+								<p><strong><a href="http://www.coreldraw.com/us/pages/items/1200075.html" target="_self">3-Point Curve Tool</a>:&nbsp;</strong>A drawing tool that allows you to create a curved line by first defining the length of the line and then defining the curve of that line. The third point is the center point of the curve, which you can manipulate and preview while drawing the line.</p>
+								<p><strong><a href="http://www.coreldraw.com/us/pages/items/1500742.html" target="_self">3-Point Rectangle Tool</a>:&nbsp;</strong>A shape tool that creates rectangles and squares by defining the width of the shape and building the ellipse outward from that line. It starts in a way that's similar to the&nbsp;<strong>2-Point Line</strong>, but once the line is drawn you create a rectangle or square.</p>
+								<p><strong><a href="http://www.coreldraw.com/us/pages/items/1200077.html" target="_self">3-Point Callout Tool</a>:&nbsp;</strong>This tool lets you draw an angled two-segment line that serves as a callout shape.</p>
+
+                                <script src='../js/colpick.js'></script>
+                                <script src="../js/colorpicker.js"></script>
+
+                                </div>
+                            </div>
+
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane animated fadeIn in" id="tab-2">
+                    <div id="contenttab2"></div>
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane animated fadeIn" id="tab-3" style="margin-top:-20px;margin-left:-20px;margin-right:-20px;background:#ffffff">
+
+                    </div>
+
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- Page Loader -->
+        <div class="page-loader">
+            <div class="preloader" style="text-align:center;">
+                <svg class="pl-circular" viewBox="25 25 50 50">
+                    <circle class="plc-path" cx="50" cy="50" r="20" />
+                </svg><br/><br/>
+                <div style="font-size:8px;margin-left:-80px;width:200px" class="demo"></div>
+            </div>
+        </div>
+
+
+        <!-- Javascript Libraries -->
+        <script src="../vendors/bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="../vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+        <script src="../vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="../vendors/bower_components/Waves/dist/waves.min.js"></script>
+        <script src="../vendors/bootstrap-growl/bootstrap-growl.min.js"></script>
+        <script src="../vendors/bower_components/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="../vendors/bower_components/lightgallery/dist/js/lightgallery-all.min.js"></script>
+        <script src="../vendors/bootgrid/jquery.bootgrid.updated.min.js"></script>
+
+        <!-- Placeholder for IE9 -->
+        <!--[if IE 9 ]>
+            <script src="vendors/bower_components/jquery-placeholder/jquery.placeholder.min.js"></script>
+        <![endif]-->
+
+        <script src="../js/app.min.js"></script>
+
+        <!-- Data Table -->
+        <script>
+            $(function()
+            {
+              $("#grid-basic").bootgrid({
+                  caseSensitive: false,
+                    css: {
+                        icon: 'zmdi icon',
+                        iconColumns: 'zmdi-view-module',
+                        iconDown: 'zmdi-sort-amount-desc',
+                        iconRefresh: 'zmdi-refresh',
+                        iconUp: 'zmdi-sort-amount-asc'
+                    },
+              }
+              )
+            });
+        </script>
+
+        <script type="text/javascript">
+            //Basic
+            $('#sa-basic').click(function(e){
+                e.preventDefault();
+                var link = $(this).attr('href');
+
+                swal({
+                    title: "Get Inspire Profesional Logos",
+                    text: "More logos sparately on our Learn Apps: Javascript, NoSQL Database, Virtual Reality, and more...",
+                    showCancelButton: true,
+                    allowOutsideClick: true,
+                },
+                function(){
+                    window.location.href = 'market://details?id=id.web.designer.learn.javascript';
+                });
+            });
+        </script>
+
+    <script type="text/javascript">
+        function rateApp() {
+            android.rateApp();
+       }
+    </script>
+
+    </body>
+
+</html>
