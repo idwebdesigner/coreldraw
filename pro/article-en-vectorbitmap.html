@@ -34,8 +34,6 @@
         $("#contenttab2").load("http://app.coreldraw.designer.web.id/pro/contenttab2.html");
         });</script>
 
-        <link rel='stylesheet prefetch' href='../css/colpick.css'>
-
         <style>.videoWrapper {
         position: relative;
         padding-bottom: 56.25%; /* 16:9 */
@@ -254,20 +252,37 @@
                             <div class="card blog-post" style="margin-bottom:-0px;">
                                 
                                 <div class="videoWrapper">
-                                <img width="100%" src="../images/edit_fill.jpg" frameborder="0" allowfullscreen></img>
+                                <img width="100%" src="../images/green.png" frameborder="0" allowfullscreen></img>
                                 </div>
 
                                 <a class="card-header ch-alt">
-                                    <h2><small>Uniform, or solid fills are the most basic CorelDraw fill. Select an object with the Pick Tool (create one if necessary). Click in the color palette with an object selected to fill. You can also use the Uniform Fill dialog or click and drag a color from the color palette.</small></h2>
+                                    <h2><small>There are two basic types of graphic files: Bitmap and Vector. Although you cannot always tell by looking at an image whether it is a bitmap or vector type, they are very different and created in a totally different way. This can be confusing, but understanding the difference is essential to understanding computer graphics.</small></h2>
                                 </a>
 
                                 <div class="card-body card-padding">
 
-                                <h4>Try Interactive color picker bellow</h4>
+                                <h4>Bitmap Images</h4>
                                 <br/>
-                                <colorpicker>
-                                <div id="picker"></div>
-                                </colorpicker>
+                                <img width="100%" src="../images/bitmap.jpg" frameborder="0" allowfullscreen></img>
+                                <br/><br/>
+                                Bitmap images are constructed from a series of pixels, or tiny squares. Sometimes the squares are all filled with one color, forming a solid image, but more often, each pixel contains a unique color Look at the example at the left. On the left is the way we see an image. On the right the outlines are drawn to represent the pixels.<br/><br/>
+                                <h4>Vector Images</h4>
+                                <br/>
+                                <img width="100%" src="../images/vector.jpg" frameborder="0" allowfullscreen></img>
+                                <br/><br/>
+                                Vector images have no pixels. They are displayed or printed with mathematical positioning. A vector image contains messages like, draw a rectangle, this size and at this place on the page. The example here approximates how the design is created. Compare it to the bitmap example of the same image.<br/><br/>
+                                <h4>Scaled to Larger size</h4>
+                                <br/>
+                                <img width="100%" src="../images/resize.jpg" frameborder="0" allowfullscreen></img>
+                                <br/><br/>
+                                Bitmap images lose quality if they are scaled to a larger size. See the example here which simulates bitmap scaling on the left and vector on the right.
+                                <br/><br/>
+                                CorelDraw is essentially a vector construction program. Bitmaps can be imported, cropped and positioned in CorelDraw. To edit, or change the appearance of the bitmap, use Corel PhotoPaint and import the results into your CorelDraw document.
+                                <br/><br/>
+                                Corel PhotoPaint integrated into the program can creates and edits bitmap file types. The two work together to provide all you need in computer graphics.
+
+
+
 
                                 <script src='../js/colpick.js'></script>
                                 <script src="../js/colorpicker.js"></script>
