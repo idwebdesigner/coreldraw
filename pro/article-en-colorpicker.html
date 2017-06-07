@@ -28,14 +28,13 @@
         <script src="../js/h5utils.js"></script>
         <script src="../js/jquery-2.1.0.min.js"></script>
         <script src="../js/jquery.jscroll.min.js"></script>
-
-        <link rel='stylesheet prefetch' href='../css/colpick.css'>
-
         <script>$(function(){
         $("#contentloader1").load("http://app.coreldraw.designer.web.id/content-message.html"); $("#contentloader2").load("http://app.coreldraw.designer.web.id/pro/content-right-pro.html");
         $("#contenttab1").load("http://app.coreldraw.designer.web.id/pro/contenttab2.html");
         $("#contenttab2").load("http://app.coreldraw.designer.web.id/pro/contenttab2.html");
         });</script>
+
+        <link rel='stylesheet prefetch' href='../css/colpick.css'>
 
         <style>.videoWrapper {
         position: relative;
@@ -198,7 +197,7 @@
                     <li><a href="index.html"><i class="zmdi zmdi-flag"></i> Tutorial Bahasa Indonesia</a></li>
                     <li class="sub-menu toggled active">
                         <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-android"></i> Featured Apps</a>
-                        <div style="margin-left:65px;margin-top:10px;font-size:10px;color:#888888;padding-right:20px;">Beberapa tutorial disertakan video Youtube untuk memudahkan memahami. Beberapa lainnya masih dalam pengerjaan.</div>
+                        <div style="margin-left:65px;margin-top:10px;font-size:10px;color:#888888;padding-right:20px;">Color Docker: This docker allows you to choose fill and outline colors from a color picker, color sliders, and color palettes. Found with dockers and in the Toolbox.</div>
 
                         <ul>
 
@@ -255,20 +254,19 @@
                             <div class="card blog-post" style="margin-bottom:-0px;">
                                 
                                 <div class="videoWrapper">
-                                <img width="100%" src="../images/green.png" frameborder="0" allowfullscreen></img>
+                                <img width="100%" src="../images/edit_fill.jpg" frameborder="0" allowfullscreen></img>
                                 </div>
 
                                 <a class="card-header ch-alt">
-                                    <h2><small>A hexadecimal color is specified with: #RRGGBB. RR (red), GG (green) and BB (blue) are hexadecimal integers between 00 and FF specifying the intensity of the color. For example, #0000FF is displayed as blue, because the blue component is set to its highest value (FF) and the others are set to 00.</small></h2>
+                                    <h2><small>Color Docker: This docker allows you to choose fill and outline colors from a color picker, color sliders, and color palettes. Found with dockers and in the Toolbox.</small></h2>
                                 </a>
 
                                 <div class="card-body card-padding">
-disini
-  <body>
+
+  <colorpicker>
   <div id="picker"></div>
-</body>
-<script src='../js/jquery.min.js'></script>
-<script src='../js/jquery-ui.min.js'></script>
+</colorpicker>
+
 <script src='../js/colpick.js'></script>
 <script src="../js/colorpicker.js"></script>
 
@@ -354,6 +352,69 @@ disini
                 });
             });
         </script>
+
+    <script type="text/javascript">
+        function getFirebaseToken() {
+             alert(android.getFirebaseToken());
+        }
+
+        function isProductPurchased() {
+            alert(android.isProductPurchased());
+        }
+
+        function createNotification(display, message) {
+            android.createNotification(display, message);
+        }
+
+        function showLoader() {
+            android.showLoader();
+        }
+
+        function hideLoader() {
+            android.hideLoader();
+        }
+
+        function fontSizeNormal() {
+            android.fontSizeNormal();
+        }
+
+        function fontSizeLarger() {
+            android.fontSizeLarger();
+        }
+
+
+        function fontSizeLargest() {
+            android.fontSizeLargest();
+        }
+
+        function fontSizeSmaller() {
+            android.fontSizeSmaller();
+        }
+
+       function fontSizeSmallest() {
+            android.fontSizeSmallest();
+       }
+        function rateApp() {
+            android.rateApp();
+       }
+
+        var currentFont = 2;
+        var fontSizeFunc = [fontSizeSmallest, fontSizeSmaller, fontSizeNormal, fontSizeLarger, fontSizeLargest]
+
+       function fontDec() {
+            if (currentFont > 0) {
+                currentFont--;
+            }
+            fontSizeFunc[currentFont]();
+       }
+
+       function fontInc() {
+            if (currentFont < 4) {
+                currentFont++;
+            }
+            fontSizeFunc[currentFont]();
+       }
+    </script>
 
     </body>
 
