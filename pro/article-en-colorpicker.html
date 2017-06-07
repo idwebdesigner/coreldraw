@@ -258,17 +258,19 @@
                                 </div>
 
                                 <a class="card-header ch-alt">
-                                    <h2><small>Color Docker: This docker allows you to choose fill and outline colors from a color picker, color sliders, and color palettes. Found with dockers and in the Toolbox.</small></h2>
+                                    <h2><small>Uniform, or solid fills are the most basic CorelDraw fill. Select an object with the Pick Tool (create one if necessary). Click in the color palette with an object selected to fill. You can also use the Uniform Fill dialog or click and drag a color from the color palette.</small></h2>
                                 </a>
 
                                 <div class="card-body card-padding">
 
-  <colorpicker>
-  <div id="picker"></div>
-</colorpicker>
+                                <h4>Try Interactive color picker bellow</h4>
+                                <br/>
+                                <colorpicker>
+                                <div id="picker"></div>
+                                </colorpicker>
 
-<script src='../js/colpick.js'></script>
-<script src="../js/colorpicker.js"></script>
+                                <script src='../js/colpick.js'></script>
+                                <script src="../js/colorpicker.js"></script>
 
                                 </div>
                             </div>
@@ -354,65 +356,8 @@
         </script>
 
     <script type="text/javascript">
-        function getFirebaseToken() {
-             alert(android.getFirebaseToken());
-        }
-
-        function isProductPurchased() {
-            alert(android.isProductPurchased());
-        }
-
-        function createNotification(display, message) {
-            android.createNotification(display, message);
-        }
-
-        function showLoader() {
-            android.showLoader();
-        }
-
-        function hideLoader() {
-            android.hideLoader();
-        }
-
-        function fontSizeNormal() {
-            android.fontSizeNormal();
-        }
-
-        function fontSizeLarger() {
-            android.fontSizeLarger();
-        }
-
-
-        function fontSizeLargest() {
-            android.fontSizeLargest();
-        }
-
-        function fontSizeSmaller() {
-            android.fontSizeSmaller();
-        }
-
-       function fontSizeSmallest() {
-            android.fontSizeSmallest();
-       }
         function rateApp() {
             android.rateApp();
-       }
-
-        var currentFont = 2;
-        var fontSizeFunc = [fontSizeSmallest, fontSizeSmaller, fontSizeNormal, fontSizeLarger, fontSizeLargest]
-
-       function fontDec() {
-            if (currentFont > 0) {
-                currentFont--;
-            }
-            fontSizeFunc[currentFont]();
-       }
-
-       function fontInc() {
-            if (currentFont < 4) {
-                currentFont++;
-            }
-            fontSizeFunc[currentFont]();
        }
     </script>
 
