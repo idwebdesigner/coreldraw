@@ -1,0 +1,2786 @@
+<!DOCTYPE html>
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Tutorial CorelDraw Pro</title>
+
+         <script type="text/javascript">
+          <!--
+          if (screen.width >= 2800) {
+            window.location = "http://designer.web.id";
+          }
+          //-->
+        </script>
+
+        <!-- Vendor CSS -->
+        <link href="../vendors/bower_components/animate.css/animate.min.css" rel="stylesheet">
+        <link href="../vendors/bower_components/sweetalert/dist/sweetalert.css" rel="stylesheet">
+        <link href="../vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
+        <link href="../vendors/bower_components/lightgallery/dist/css/lightgallery.min.css" rel="stylesheet">
+        <link href="../vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+        <link href="../vendors/bootgrid/jquery.bootgrid.min.css" rel="stylesheet">
+
+        <!-- CSS -->
+        <link href="../css/app_1.min.css" rel="stylesheet">
+        <link href="../css/app_2.min.css" rel="stylesheet">
+
+        <script src="../js/h5utils.js"></script>
+        <script src="../js/jquery-2.1.0.min.js"></script>
+        <script src="../js/jquery.jscroll.min.js"></script>
+        <script>$(function(){
+        $("#contentloader1").load("http://app.coreldraw.designer.web.id/content-message.html"); $("#contentloader2").load("http://app.coreldraw.designer.web.id/pro/content-right-pro.html");
+        $("#contenttab1").load("http://app.coreldraw.designer.web.id/pro/contenttab2.html");
+        $("#contenttab2").load("http://app.coreldraw.designer.web.id/pro/contenttab2.html");
+        });</script>
+
+        <style>.videoWrapper {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 */
+        padding-top: 25px;
+        height: 0;}
+        .videoWrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;}
+        .lcb-navigation a{background:#999999}
+        </style>
+    </head>
+    <body style="background:#ffffff">
+
+        <!-- Page Loader -->
+        <div class="page-loader">
+            <div class="preloader pls-white">
+                <svg class="pl-circular" viewBox="25 25 50 50">
+                    <circle class="plc-path" cx="50" cy="50" r="20" />
+                </svg>
+            </div>
+
+        </div>
+
+        <header id="header" class="clearfix container">
+            <ul class="h-inner">
+
+                <li class="hi-trigger ma-trigger" data-ma-action="sidebar-open" data-ma-target="#sidebar">
+                    <div class="line-wrap">
+                        <div class="line top"></div>
+                        <div class="line center"></div>
+                        <div class="line bottom"></div>
+                    </div>
+                </li>
+
+                <li class="hi-logo" data-ma-action="sidebar-open" data-ma-target="#sidebar" style="margin-top:8px;">
+                    <span style="font-size:15px;color:#ffffff;"> Tutorial CorelDRAW<sup>&reg;</sup><span>
+                </li>
+
+                <li class="pull-right">
+                    <ul class="hi-menu">
+
+                        <li style="margin-right:-15px;" class="dropdown">
+                            <a data-toggle="dropdown" href="#">
+                                <i class="him-icon zmdi zmdi-notifications-none"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-lg pull-right">
+                                <div class="list-group list-group-light">
+                                    <div class="lg-header">
+                                        LIVE DEVELOPER MESSAGES
+                                    </div>
+
+                                    <article>
+                                      <p style="text-align:center;font-size:1em;"><span id="status"><span id="status"></span></p>
+                                      <ol id="state"></ol>
+                                    </article>
+                                    <script>
+                                    var statusElem  = document.getElementById('status'),
+                                        state               = document.getElementById('state');
+
+                                    function online(event) {
+                                      statusElem.className = navigator.onLine ? 'online' : 'offline';
+                                      statusElem.innerHTML = navigator.onLine ? '' : '<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You&#39;re offline, check network connection.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;content required internet access.';
+                                      state.innerHTML += '&nbsp;';
+                                    }
+
+                                    addEvent(window, 'online', online);
+                                    addEvent(window, 'offline', online);
+                                    online({ type: 'ready' });
+                                    </script>
+
+                                    <div style="margin-top:-30px;" id="contentloader1"></div>
+                                    <a class="view-more view-more-light" href="idwebdesigner.html">Powered by IDWEBDesigner</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li style="margin-right:-15px;" class="ma-trigger" data-ma-action="sidebar-open" data-ma-target="#chat">
+                            <a data-toggle="dropdown" href="#">
+                                <i class="him-icon zmdi zmdi-favorite-outline"></i>
+                            </a>
+                        </li>
+                        <li style="margin-right:-5px;" class="dropdown">
+                            <a data-toggle="dropdown" href="#"><i class="him-icon zmdi zmdi-more-vert"></i></a>
+                            <ul class="dropdown-menu dm-icon pull-right">
+                                <li class="hidden-xs">
+                                    <a data-ma-action="fullscreen" href="#"><i class="zmdi zmdi-fullscreen"></i> Fullscreen</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:window.location.reload();"><i class="zmdi zmdi-refresh-sync"></i> Refresh</a>
+                                </li>
+                                <li>
+                                    <a id="rate-app" onClick="rateApp()">Rate 5 Stars</a>
+                                </li>
+                                <li>
+                                    <a href="update.html"><i class="zmdi zmdi-download"></i>Check update</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="help.html"><i class="zmdi zmdi-help"></i> Help</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="hidden-xs ma-trigger" data-ma-action="sidebar-open" data-ma-target="#chat">
+                            <a href="#"><i class="him-icon zmdi zmdi-comment-alt-text"></i></a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="tab-nav tn-justified tn-icon" role="tablist" style="width:100%">
+                                        <li role="presentation">
+                                            <a class="col-sx-4" href="index.html">
+                                                INDONESIA
+                                            </a>
+                                        </li>
+                                        <li role="presentation" class="active">
+                                            <a class="col-xs-4" href="#tab-2" aria-controls="tab-2" role="tab" data-toggle="tab">
+                                                ENGLISH (PRO)
+                                            </a>
+                                        </li>
+
+                                    </ul>
+        </header>
+
+        <section id="main">
+            <ol class="breadcrumb" style="margin-left:-10px;">
+                <li><a href="developer.html">designer.web.id</a></li>
+                <li><a href="index.html">learn</a></li>
+                <li class="active">virtualreality</li>
+            </ol>
+
+            <aside id="sidebar" class="sidebar c-overflow" style="position:fixed;z-index:1000;margin-top:-70px;height:100%;background:white">
+                <ul class="main-menu">
+                    <li class="mm-profile sub-menu">
+                        <a href="#" data-ma-action="submenu-toggle" class="media">
+                            <img class="pull-left" src="../img/coreldraw.green.png" alt="" height="25px" style="margin-left:-40px;">
+                            <div class="media-body">
+                            <div>Tutorial CorelDRAW<sup>&reg;</sup></div>
+                            <span style="font-size:11px;">Experience by IDWEBDesigner<br/>dev@designer.web.id</span>
+                            </div>
+                        </a>
+
+                        <ul>
+                            <li>
+                                <a href="developer.html">Indonesia Web Designer</a>
+                            </li>
+                            <li>
+                                <div style="margin-left:65px;margin-bottom:10px;font-size:10px;color:#888888;padding-right:20px;">Jl. Wahid Hasyim No.3 Gaten Condongcatur Depok Sleman Yogyakarta, Indonesia.</div>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-info"></i> About CorelDraw</a>
+                        <div style="margin-left:65px;margin-bottom:10px;font-size:12px;color:#579706;"><a href="basics.html">What's is CorelDraw?<br/>Basics Learn</a></div>
+                    </li>
+
+                    <li><a href="index.html"><i class="zmdi zmdi-flag"></i> Tutorial Bahasa Indonesia</a></li>
+                    <li class="sub-menu toggled active">
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-android"></i> Featured Apps</a>
+                        <div style="margin-left:65px;margin-top:10px;font-size:10px;color:#888888;padding-right:20px;">Color Docker: This docker allows you to choose fill and outline colors from a color picker, color sliders, and color palettes. Found with dockers and in the Toolbox.</div>
+
+                        <ul>
+
+                            <li><a href="language.html">Bahasa Indonesia</a></li>
+                            <li style="display:none;"><a href="upgrade.html"><i class="zmdi zmdi-shopping-cart"></i>&nbsp;&nbsp;Upgrade</a></li>
+                            <li class="divider"></li>
+
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-code"></i> Developer</a>
+
+                        <ul>
+                            <li><a href="developer.html">dev@designer.web.id<br/>designer.web.id</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </aside>
+
+            <aside id="chat" class="sidebar">
+
+                                    <article>
+                                      <p style="margin-top:30px;margin-left:15px;font-size:0.7em;"><span id="status2"><span id="status"></span></p>
+                                      <ol id="state2"></ol>
+                                    </article>
+                                    <script>
+                                    var statusElem  = document.getElementById('status2'),
+                                        state               = document.getElementById('state2');
+
+                                    function online(event) {
+                                      statusElem.className = navigator.onLine ? 'online' : 'offline';
+                                      statusElem.innerHTML = navigator.onLine ? '' : '<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You&#39;re offline, check network connection.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;content required internet access.';
+                                      state.innerHTML += '&nbsp;';
+                                    }
+
+                                    addEvent(window, 'online', online);
+                                    addEvent(window, 'offline', online);
+                                    online({ type: 'ready' });
+                                    </script>
+
+                <div style="margin-top:-30px; width:100%" id="contentloader2"></div>
+
+
+
+            </aside>
+
+            <section id="content" style="margin-bottom:-40px;">
+                <div class="container" style="margin-top:-55px;margin-left:-20px;padding-right:0px;">
+                    <div class="tab-content p-20" style="background:#ffffff;">
+
+                    <div role="tabpanel" class="tab-pane animated fadeIn in active" id="tab-1">
+
+                            <!-- Blog Posts -->
+                            <div class="card blog-post" style="margin-bottom:-0px;">
+
+                                <div class="videoWrapper">
+                                <img width="100%" src="../images/green.png" frameborder="0" allowfullscreen></img>
+                                </div>
+
+                                <a class="card-header ch-alt">
+                                    <h2><small>Caption</small></h2>
+                                </a>
+
+                                <div class="card-body card-padding">
+
+                                <h4>H4</h4>
+                                <br/>
+<div style="overflow-x:auto;">
+<table class="wdn_responsive_table flush-left"  id="t662852">
+<caption></caption>
+<tbody>
+
+      <tr>
+            <td colspan="1" id="t662852_row_0col_0">Align Bottom</td>
+            <td colspan="1" id="t662852_row_0col_1"></td>
+            <td colspan="1" id="t662852_row_0col_2">B</td>
+            <td colspan="1" id="t662852_row_0col_3">Aligns selected objects to the bottom</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_1col_0">Align Centers Horizontally</td>
+            <td colspan="1" id="t662852_row_1col_1"></td>
+            <td colspan="1" id="t662852_row_1col_2">E</td>
+            <td colspan="1" id="t662852_row_1col_3">Horizontally aligns the centers of the selected objects</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_2col_0">Align Centers Vertically</td>
+            <td colspan="1" id="t662852_row_2col_1">Main</td>
+            <td colspan="1" id="t662852_row_2col_2">C</td>
+            <td colspan="1" id="t662852_row_2col_3">Vertically aligns the centers of the selected objects</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_3col_0">Align Left</td>
+            <td colspan="1" id="t662852_row_3col_1">Main</td>
+            <td colspan="1" id="t662852_row_3col_2">L</td>
+            <td colspan="1" id="t662852_row_3col_3">Aligns selected objects to the left</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_4col_0">Align Right</td>
+            <td colspan="1" id="t662852_row_4col_1">Main</td>
+            <td colspan="1" id="t662852_row_4col_2">R</td>
+            <td colspan="1" id="t662852_row_4col_3">Aligns selected objects to the right</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_5col_0">Align To Baseline</td>
+            <td colspan="1" id="t662852_row_5col_1">Main</td>
+            <td colspan="1" id="t662852_row_5col_2">Alt+F12</td>
+            <td colspan="1" id="t662852_row_5col_3">Aligns text to the baseline</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_6col_0">Align Top</td>
+            <td colspan="1" id="t662852_row_6col_1">Main</td>
+            <td colspan="1" id="t662852_row_6col_2">T</td>
+            <td colspan="1" id="t662852_row_6col_3">Aligns selected objects to the top</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_7col_0">Artistic Media</td>
+            <td colspan="1" id="t662852_row_7col_1">Main</td>
+            <td colspan="1" id="t662852_row_7col_2">I</td>
+            <td colspan="1" id="t662852_row_7col_3">Add artistic brush, spray, and calligraphic effects by using freehand    strokes.</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_8col_0">Back One</td>
+            <td colspan="1" id="t662852_row_8col_1">Main</td>
+            <td colspan="1" id="t662852_row_8col_2">Ctrl+PgDn</td>
+            <td colspan="1" id="t662852_row_8col_3">Back One</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_9col_0">Bold</td>
+            <td colspan="1" id="t662852_row_9col_1">Text Editing</td>
+            <td colspan="1" id="t662852_row_9col_2">Ctrl+B</td>
+            <td colspan="1" id="t662852_row_9col_3">Make the text bold.</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_10col_0">Bold</td>
+            <td colspan="1" id="t662852_row_10col_1">Table Text Editing</td>
+            <td colspan="1" id="t662852_row_10col_2">Ctrl+B</td>
+            <td colspan="1" id="t662852_row_10col_3">Make the text bold.</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_11col_0">Break Apart</td>
+            <td colspan="1" id="t662852_row_11col_1">Main</td>
+            <td colspan="1" id="t662852_row_11col_2">Ctrl+K</td>
+            <td colspan="1" id="t662852_row_11col_3">Break the object apart to create multiple objects and paths.</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_12col_0">Brightness/Contrast/Intensity...</td>
+            <td colspan="1" id="t662852_row_12col_1">Main</td>
+            <td colspan="1" id="t662852_row_12col_2">Ctrl+B</td>
+            <td colspan="1" id="t662852_row_12col_3">Brightness/Contrast/Intensity</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_13col_0">Bring up Property Bar</td>
+            <td colspan="1" id="t662852_row_13col_1">Main</td>
+            <td colspan="1" id="t662852_row_13col_2">Ctrl+Enter</td>
+            <td colspan="1" id="t662852_row_13col_3">Brings up the Property Bar and gives focus to the first visible item that    can be tabbed to</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_14col_0">Center</td>
+            <td colspan="1" id="t662852_row_14col_1">Text Editing</td>
+            <td colspan="1" id="t662852_row_14col_2">Ctrl+E</td>
+            <td colspan="1" id="t662852_row_14col_3">Center text within the bounding box.</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_15col_0">Center</td>
+            <td colspan="1" id="t662852_row_15col_1">Table Text Editing</td>
+            <td colspan="1" id="t662852_row_15col_2">Ctrl+E</td>
+            <td colspan="1" id="t662852_row_15col_3">Center text within the bounding box.</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_16col_0">Center to Page</td>
+            <td colspan="1" id="t662852_row_16col_1">Main</td>
+            <td colspan="1" id="t662852_row_16col_2">P</td>
+            <td colspan="1" id="t662852_row_16col_3">Aligns the centers of the selected objects to page</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_17col_0">Change Case...</td>
+            <td colspan="1" id="t662852_row_17col_1">Text Editing</td>
+            <td colspan="1" id="t662852_row_17col_2">Shift+F3</td>
+            <td colspan="1" id="t662852_row_17col_3">Changes the case of selected text</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_18col_0">Change Case...</td>
+            <td colspan="1" id="t662852_row_18col_1">Table Text Editing</td>
+            <td colspan="1" id="t662852_row_18col_2">Shift+F3</td>
+            <td colspan="1" id="t662852_row_18col_3">Changes the case of selected text</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_19col_0">Character Formatting</td>
+            <td colspan="1" id="t662852_row_19col_1">Main</td>
+            <td colspan="1" id="t662852_row_19col_2">Ctrl+T</td>
+            <td colspan="1" id="t662852_row_19col_3">Change the properties of text characters.</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_20col_0">Color Balance...</td>
+            <td colspan="1" id="t662852_row_20col_1">Main</td>
+            <td colspan="1" id="t662852_row_20col_2">Ctrl+Shift+B</td>
+            <td colspan="1" id="t662852_row_20col_3">Color Balance</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_21col_0">Column/Frame Break</td>
+            <td colspan="1" id="t662852_row_21col_1">Text Editing</td>
+            <td colspan="1" id="t662852_row_21col_2">Ctrl+Enter</td>
+            <td colspan="1" id="t662852_row_21col_3">Column/&amp;Frame Break</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_22col_0">Column/Frame Break</td>
+            <td colspan="1" id="t662852_row_22col_1">Table Text Editing</td>
+            <td colspan="1" id="t662852_row_22col_2">Ctrl+Enter</td>
+            <td colspan="1" id="t662852_row_22col_3">Column/&amp;Frame Break</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_23col_0">Combine</td>
+            <td colspan="1" id="t662852_row_23col_1">Main</td>
+            <td colspan="1" id="t662852_row_23col_2">Ctrl+L</td>
+            <td colspan="1" id="t662852_row_23col_3">Combine  objects into a single    object with common properties.</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_24col_0">Contour</td>
+            <td colspan="1" id="t662852_row_24col_1">Main</td>
+            <td colspan="1" id="t662852_row_24col_2">Ctrl+F9</td>
+            <td colspan="1" id="t662852_row_24col_3">Opens the Contour Docker Window</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_25col_0">Convert</td>
+            <td colspan="1" id="t662852_row_25col_1">Main</td>
+            <td colspan="1" id="t662852_row_25col_2">Ctrl+F8</td>
+            <td colspan="1" id="t662852_row_25col_3">Converts artistic text to paragraph text or vice versa</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_26col_0">Convert Outline To Object</td>
+            <td colspan="1" id="t662852_row_26col_1">Main</td>
+            <td colspan="1" id="t662852_row_26col_2">Ctrl+Shift+Q</td>
+            <td colspan="1" id="t662852_row_26col_3">Converts an outline to an object</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_27col_0">Convert To Curves</td>
+            <td colspan="1" id="t662852_row_27col_1">Main</td>
+            <td colspan="1" id="t662852_row_27col_2">Ctrl+Q</td>
+            <td colspan="1" id="t662852_row_27col_3">Allow the object to be modified by using the shape tools.</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_28col_0">Copy</td>
+            <td colspan="1" id="t662852_row_28col_1">Main</td>
+            <td colspan="1" id="t662852_row_28col_2">Ctrl+C</td>
+            <td colspan="1" id="t662852_row_28col_3">Place copies of one or more objects on the Clipboard.</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_29col_0">Copy</td>
+            <td colspan="1" id="t662852_row_29col_1">Main</td>
+            <td colspan="1" id="t662852_row_29col_2">Ctrl+Insert</td>
+            <td colspan="1" id="t662852_row_29col_3">Place copies of one or more objects on the Clipboard.</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_30col_0">Cut</td>
+            <td colspan="1" id="t662852_row_30col_1">Main</td>
+            <td colspan="1" id="t662852_row_30col_2">Ctrl+X</td>
+            <td colspan="1" id="t662852_row_30col_3">Move one or more objects to the Clipboard.</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_31col_0">Cut</td>
+            <td colspan="1" id="t662852_row_31col_1">Main</td>
+            <td colspan="1" id="t662852_row_31col_2">Shift+Delete</td>
+            <td colspan="1" id="t662852_row_31col_3">Move one or more objects to the Clipboard.</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_32col_0">Delete</td>
+            <td colspan="1" id="t662852_row_32col_1">Main</td>
+            <td colspan="1" id="t662852_row_32col_2">Delete</td>
+            <td colspan="1" id="t662852_row_32col_3">Deletes the selected object(s)</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_33col_0">Delete Character to Right</td>
+            <td colspan="1" id="t662852_row_33col_1">Text Editing</td>
+            <td colspan="1" id="t662852_row_33col_2">Delete</td>
+            <td colspan="1" id="t662852_row_33col_3">Deletes the character to the right of the text caret</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_34col_0">Delete Character to Right</td>
+            <td colspan="1" id="t662852_row_34col_1">Table Text Editing</td>
+            <td colspan="1" id="t662852_row_34col_2">Delete</td>
+            <td colspan="1" id="t662852_row_34col_3">Deletes the character to the right of the text caret</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_35col_0">Delete Word to Right</td>
+            <td colspan="1" id="t662852_row_35col_1">Text Editing</td>
+            <td colspan="1" id="t662852_row_35col_2">Ctrl+Delete</td>
+            <td colspan="1" id="t662852_row_35col_3">Deletes the word to the right of the text caret</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_36col_0">Delete Word to Right</td>
+            <td colspan="1" id="t662852_row_36col_1">Table Text Editing</td>
+            <td colspan="1" id="t662852_row_36col_2">Ctrl+Delete</td>
+            <td colspan="1" id="t662852_row_36col_3">Deletes the word to the right of the text caret</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_37col_0">Distribute Bottom</td>
+            <td colspan="1" id="t662852_row_37col_1">Main</td>
+            <td colspan="1" id="t662852_row_37col_2">Shift+B</td>
+            <td colspan="1" id="t662852_row_37col_3">Distributes selected objects to the bottom</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_38col_0">Distribute Centers Horizontally</td>
+            <td colspan="1" id="t662852_row_38col_1">Main</td>
+            <td colspan="1" id="t662852_row_38col_2">Shift+E</td>
+            <td colspan="1" id="t662852_row_38col_3">Horizontally Distributes the centers of the selected objects</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_39col_0">Distribute Centers Vertically</td>
+            <td colspan="1" id="t662852_row_39col_1">Main</td>
+            <td colspan="1" id="t662852_row_39col_2">Shift+C</td>
+            <td colspan="1" id="t662852_row_39col_3">Vertically Distributes the centers of the selected objects</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_40col_0">Distribute Left</td>
+            <td colspan="1" id="t662852_row_40col_1">Main</td>
+            <td colspan="1" id="t662852_row_40col_2">Shift+L</td>
+            <td colspan="1" id="t662852_row_40col_3">Distributes selected objects to the left</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_41col_0">Distribute Right</td>
+            <td colspan="1" id="t662852_row_41col_1">Main</td>
+            <td colspan="1" id="t662852_row_41col_2">Shift+R</td>
+            <td colspan="1" id="t662852_row_41col_3">Distributes selected objects to the right</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_42col_0">Distribute Spacing Horizontally</td>
+            <td colspan="1" id="t662852_row_42col_1">Main</td>
+            <td colspan="1" id="t662852_row_42col_2">Shift+P</td>
+            <td colspan="1" id="t662852_row_42col_3">Horizontally Distributes the space between the selected objects</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_43col_0">Distribute Spacing Vertically</td>
+            <td colspan="1" id="t662852_row_43col_1">Main</td>
+            <td colspan="1" id="t662852_row_43col_2">Shift+A</td>
+            <td colspan="1" id="t662852_row_43col_3">Vertically Distributes the space between the selected objects</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_44col_0">Distribute Top</td>
+            <td colspan="1" id="t662852_row_44col_1">Main</td>
+            <td colspan="1" id="t662852_row_44col_2">Shift+T</td>
+            <td colspan="1" id="t662852_row_44col_3">Distributes selected objects to the top</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_45col_0">Duplicate</td>
+            <td colspan="1" id="t662852_row_45col_1">Main</td>
+            <td colspan="1" id="t662852_row_45col_2">Ctrl+D</td>
+            <td colspan="1" id="t662852_row_45col_3">Duplicates the selected object(s) and offsets by a specified amount</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_46col_0">Dynamic Guides</td>
+            <td colspan="1" id="t662852_row_46col_1">Main</td>
+            <td colspan="1" id="t662852_row_46col_2">Alt+Shift+D</td>
+            <td colspan="1" id="t662852_row_46col_3">Align objects with other objects by using dynamic guidelines.</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_47col_0">Edit Text...</td>
+            <td colspan="1" id="t662852_row_47col_1">Main</td>
+            <td colspan="1" id="t662852_row_47col_2">Ctrl+Shift+T</td>
+            <td colspan="1" id="t662852_row_47col_3">Modify text by using a text editor.</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_48col_0">Ellipse</td>
+            <td colspan="1" id="t662852_row_48col_1">Main</td>
+            <td colspan="1" id="t662852_row_48col_2">F7</td>
+            <td colspan="1" id="t662852_row_48col_3">Draw circles and ellipses by dragging in the drawing window.</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_49col_0">Em Dash</td>
+            <td colspan="1" id="t662852_row_49col_1">Text Editing</td>
+            <td colspan="1" id="t662852_row_49col_2">Alt+_</td>
+            <td colspan="1" id="t662852_row_49col_3">Em &amp;Dash</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_50col_0">Em Dash</td>
+            <td colspan="1" id="t662852_row_50col_1">Table Text Editing</td>
+            <td colspan="1" id="t662852_row_50col_2">Alt+_</td>
+            <td colspan="1" id="t662852_row_50col_3">Em &amp;Dash</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_51col_0">Em Space</td>
+            <td colspan="1" id="t662852_row_51col_1">Text Editing</td>
+            <td colspan="1" id="t662852_row_51col_2">Ctrl+Shift+M</td>
+            <td colspan="1" id="t662852_row_51col_3">E&amp;m Space</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_52col_0">Em Space</td>
+            <td colspan="1" id="t662852_row_52col_1">Table Text Editing</td>
+            <td colspan="1" id="t662852_row_52col_2">Ctrl+Shift+M</td>
+            <td colspan="1" id="t662852_row_52col_3">E&amp;m Space</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_53col_0">En Dash</td>
+            <td colspan="1" id="t662852_row_53col_1">Text Editing</td>
+            <td colspan="1" id="t662852_row_53col_2">Alt+-</td>
+            <td colspan="1" id="t662852_row_53col_3">En D&amp;ash</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_54col_0">En Dash</td>
+            <td colspan="1" id="t662852_row_54col_1">Table Text Editing</td>
+            <td colspan="1" id="t662852_row_54col_2">Alt+-</td>
+            <td colspan="1" id="t662852_row_54col_3">En D&amp;ash</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_55col_0">En Space</td>
+            <td colspan="1" id="t662852_row_55col_1">Text Editing</td>
+            <td colspan="1" id="t662852_row_55col_2">Ctrl+Shift+N</td>
+            <td colspan="1" id="t662852_row_55col_3">E&amp;n Space</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_56col_0">En Space</td>
+            <td colspan="1" id="t662852_row_56col_1">Table Text Editing</td>
+            <td colspan="1" id="t662852_row_56col_2">Ctrl+Shift+N</td>
+            <td colspan="1" id="t662852_row_56col_3">E&amp;n Space</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_57col_0">Envelope</td>
+            <td colspan="1" id="t662852_row_57col_1">Main</td>
+            <td colspan="1" id="t662852_row_57col_2">Ctrl+F7</td>
+            <td colspan="1" id="t662852_row_57col_3">Opens the Envelope Docker Window</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_58col_0">Eraser</td>
+            <td colspan="1" id="t662852_row_58col_1">Main</td>
+            <td colspan="1" id="t662852_row_58col_2">X</td>
+            <td colspan="1" id="t662852_row_58col_3">Remove unwanted areas in a drawing.</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_59col_0">Exit</td>
+            <td colspan="1" id="t662852_row_59col_1">Main</td>
+            <td colspan="1" id="t662852_row_59col_2">Alt+F4</td>
+            <td colspan="1" id="t662852_row_59col_3">Exits CorelDRAW and prompts to save the active drawing</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_60col_0">Expand Selection</td>
+            <td colspan="1" id="t662852_row_60col_1">Table Editing</td>
+            <td colspan="1" id="t662852_row_60col_2">Ctrl+A</td>
+            <td colspan="1" id="t662852_row_60col_3">Expand Selection</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_61col_0">Expand Selection</td>
+            <td colspan="1" id="t662852_row_61col_1">Table Text Editing</td>
+            <td colspan="1" id="t662852_row_61col_2">Ctrl+A</td>
+            <td colspan="1" id="t662852_row_61col_3">Expand Selection</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_62col_0">Export...</td>
+            <td colspan="1" id="t662852_row_62col_1">Main</td>
+            <td colspan="1" id="t662852_row_62col_2">Ctrl+E</td>
+            <td colspan="1" id="t662852_row_62col_3">Save a duplicate of the document to a different file format.</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_63col_0">Find Objects...</td>
+            <td colspan="1" id="t662852_row_63col_1">Main</td>
+            <td colspan="1" id="t662852_row_63col_2">Ctrl+F</td>
+            <td colspan="1" id="t662852_row_63col_3">Selects object(s) by specified properties</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_64col_0">Find Text...</td>
+            <td colspan="1" id="t662852_row_64col_1">Text Editing</td>
+            <td colspan="1" id="t662852_row_64col_2">Alt+F3</td>
+            <td colspan="1" id="t662852_row_64col_3">Finds the specified text in the drawing</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_65col_0">Find Text...</td>
+            <td colspan="1" id="t662852_row_65col_1">Table Text Editing</td>
+            <td colspan="1" id="t662852_row_65col_2">Alt+F3</td>
+            <td colspan="1" id="t662852_row_65col_3">Finds the specified text in the drawing</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_66col_0">Font List</td>
+            <td colspan="1" id="t662852_row_66col_1">Text Editing</td>
+            <td colspan="1" id="t662852_row_66col_2">Ctrl+Shift+F</td>
+            <td colspan="1" id="t662852_row_66col_3">Choose a typeface for new or selected text.</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_67col_0">Font List</td>
+            <td colspan="1" id="t662852_row_67col_1">Table Text Editing</td>
+            <td colspan="1" id="t662852_row_67col_2">Ctrl+Shift+F</td>
+            <td colspan="1" id="t662852_row_67col_3">Choose a typeface for new or selected text.</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_68col_0">Font Size Decrease</td>
+            <td colspan="1" id="t662852_row_68col_1">Text Editing</td>
+            <td colspan="1" id="t662852_row_68col_2">Ctrl+NUMPAD2</td>
+            <td colspan="1" id="t662852_row_68col_3">Decreases font size to previous point size</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_69col_0">Font Size Decrease</td>
+            <td colspan="1" id="t662852_row_69col_1">Table Text Editing</td>
+            <td colspan="1" id="t662852_row_69col_2">Ctrl+NUMPAD2</td>
+            <td colspan="1" id="t662852_row_69col_3">Decreases font size to previous point size</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_70col_0">Font Size Decrease</td>
+            <td colspan="1" id="t662852_row_70col_1">Main</td>
+            <td colspan="1" id="t662852_row_70col_2">Ctrl+NUMPAD2</td>
+            <td colspan="1" id="t662852_row_70col_3">Decreases font size to previous point size</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_71col_0">Font Size Increase</td>
+            <td colspan="1" id="t662852_row_71col_1">Text Editing</td>
+            <td colspan="1" id="t662852_row_71col_2">Ctrl+NUMPAD8</td>
+            <td colspan="1" id="t662852_row_71col_3">Increases font size to next point size</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_72col_0">Font Size Increase</td>
+            <td colspan="1" id="t662852_row_72col_1">Table Text Editing</td>
+            <td colspan="1" id="t662852_row_72col_2">Ctrl+NUMPAD8</td>
+            <td colspan="1" id="t662852_row_72col_3">Increases font size to next point size</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_73col_0">Font Size Increase</td>
+            <td colspan="1" id="t662852_row_73col_1">Main</td>
+            <td colspan="1" id="t662852_row_73col_2">Ctrl+NUMPAD8</td>
+            <td colspan="1" id="t662852_row_73col_3">Increases font size to next point size</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_74col_0">Font Size List</td>
+            <td colspan="1" id="t662852_row_74col_1">Text Editing</td>
+            <td colspan="1" id="t662852_row_74col_2">Ctrl+Shift+P</td>
+            <td colspan="1" id="t662852_row_74col_3">Specify the font size.</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_75col_0">Font Size List</td>
+            <td colspan="1" id="t662852_row_75col_1">Table Text Editing</td>
+            <td colspan="1" id="t662852_row_75col_2">Ctrl+Shift+P</td>
+            <td colspan="1" id="t662852_row_75col_3">Specify the font size.</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_76col_0">Font Size Next Combo Size</td>
+            <td colspan="1" id="t662852_row_76col_1">Text Editing</td>
+            <td colspan="1" id="t662852_row_76col_2">Ctrl+NUMPAD6</td>
+            <td colspan="1" id="t662852_row_76col_3">Increase font size to next setting in Font Size List</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_77col_0">Font Size Next Combo Size</td>
+            <td colspan="1" id="t662852_row_77col_1">Table Text Editing</td>
+            <td colspan="1" id="t662852_row_77col_2">Ctrl+NUMPAD6</td>
+            <td colspan="1" id="t662852_row_77col_3">Increase font size to next setting in Font Size List</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_78col_0">Font Size Next Combo Size</td>
+            <td colspan="1" id="t662852_row_78col_1">Main</td>
+            <td colspan="1" id="t662852_row_78col_2">Ctrl+NUMPAD6</td>
+            <td colspan="1" id="t662852_row_78col_3">Increase font size to next setting in Font Size List</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_79col_0">Font Size Previous Combo Size</td>
+            <td colspan="1" id="t662852_row_79col_1">Text Editing</td>
+            <td colspan="1" id="t662852_row_79col_2">Ctrl+NUMPAD4</td>
+            <td colspan="1" id="t662852_row_79col_3">Decrease font size to previous setting available in the Font Size List</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_80col_0">Font Size Previous Combo Size</td>
+            <td colspan="1" id="t662852_row_80col_1">Table Text Editing</td>
+            <td colspan="1" id="t662852_row_80col_2">Ctrl+NUMPAD4</td>
+            <td colspan="1" id="t662852_row_80col_3">Decrease font size to previous setting available in the Font Size List</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_81col_0">Font Size Previous Combo Size</td>
+            <td colspan="1" id="t662852_row_81col_1">Main</td>
+            <td colspan="1" id="t662852_row_81col_2">Ctrl+NUMPAD4</td>
+            <td colspan="1" id="t662852_row_81col_3">Decrease font size to previous setting available in the Font Size List</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_82col_0">Font Weight List</td>
+            <td colspan="1" id="t662852_row_82col_1">Text Editing</td>
+            <td colspan="1" id="t662852_row_82col_2">Ctrl+Shift+W</td>
+            <td colspan="1" id="t662852_row_82col_3">Shows a list of all the available/active font weights</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_83col_0">Font Weight List</td>
+            <td colspan="1" id="t662852_row_83col_1">Table Text Editing</td>
+            <td colspan="1" id="t662852_row_83col_2">Ctrl+Shift+W</td>
+            <td colspan="1" id="t662852_row_83col_3">Shows a list of all the available/active font weights</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_84col_0">Force Justify</td>
+            <td colspan="1" id="t662852_row_84col_1">Text Editing</td>
+            <td colspan="1" id="t662852_row_84col_2">Ctrl+H</td>
+            <td colspan="1" id="t662852_row_84col_3">Align all text with both the left and right sides of the bounding    box. </td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_85col_0">Force Justify</td>
+            <td colspan="1" id="t662852_row_85col_1">Table Text Editing</td>
+            <td colspan="1" id="t662852_row_85col_2">Ctrl+H</td>
+            <td colspan="1" id="t662852_row_85col_3">Align all text with both the left and right sides of the bounding    box. </td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_86col_0">Forward One</td>
+            <td colspan="1" id="t662852_row_86col_1">Main</td>
+            <td colspan="1" id="t662852_row_86col_2">Ctrl+PgUp</td>
+            <td colspan="1" id="t662852_row_86col_3">Forward One</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_87col_0">Fountain Fill</td>
+            <td colspan="1" id="t662852_row_87col_1">Main</td>
+            <td colspan="1" id="t662852_row_87col_2">F11</td>
+            <td colspan="1" id="t662852_row_87col_3">Fill an object with a gradient of colors or shades.</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_88col_0">Freehand</td>
+            <td colspan="1" id="t662852_row_88col_1">Main</td>
+            <td colspan="1" id="t662852_row_88col_2">F5</td>
+            <td colspan="1" id="t662852_row_88col_3">Draw curves and straight line segments.</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_89col_0">Full Justify</td>
+            <td colspan="1" id="t662852_row_89col_1">Text Editing</td>
+            <td colspan="1" id="t662852_row_89col_2">Ctrl+J</td>
+            <td colspan="1" id="t662852_row_89col_3">Align all text, excluding the last line, with both the left and right    sides of the bounding box.</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_90col_0">Full Justify</td>
+            <td colspan="1" id="t662852_row_90col_1">Table Text Editing</td>
+            <td colspan="1" id="t662852_row_90col_2">Ctrl+J</td>
+            <td colspan="1" id="t662852_row_90col_3">Align all text, excluding the last line, with both the left and right    sides of the bounding box.</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_91col_0">Full-Screen Preview</td>
+            <td colspan="1" id="t662852_row_91col_1">Main</td>
+            <td colspan="1" id="t662852_row_91col_2">F9</td>
+            <td colspan="1" id="t662852_row_91col_3">Displays a full-screen preview of the drawing</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_92col_0">Graph Paper</td>
+            <td colspan="1" id="t662852_row_92col_1">Main</td>
+            <td colspan="1" id="t662852_row_92col_2">D</td>
+            <td colspan="1" id="t662852_row_92col_3">Draw a grid.</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_93col_0">Graphic and Text Styles</td>
+            <td colspan="1" id="t662852_row_93col_1">Main</td>
+            <td colspan="1" id="t662852_row_93col_2">Ctrl+F5</td>
+            <td colspan="1" id="t662852_row_93col_3">Opens the Graphic and Text Styles Docker Window</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_94col_0">Group</td>
+            <td colspan="1" id="t662852_row_94col_1">Main</td>
+            <td colspan="1" id="t662852_row_94col_2">Ctrl+G</td>
+            <td colspan="1" id="t662852_row_94col_3">Group objects while preserving their individual attributes.</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_95col_0">HTML Font Size List</td>
+            <td colspan="1" id="t662852_row_95col_1">Text Editing</td>
+            <td colspan="1" id="t662852_row_95col_2">Ctrl+Shift+H</td>
+            <td colspan="1" id="t662852_row_95col_3">Shows a list of all the available/active HTML font sizes</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_96col_0">HTML Font Size List</td>
+            <td colspan="1" id="t662852_row_96col_1">Table Text Editing</td>
+            <td colspan="1" id="t662852_row_96col_2">Ctrl+Shift+H</td>
+            <td colspan="1" id="t662852_row_96col_3">Shows a list of all the available/active HTML font sizes</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_97col_0">Horizontal Text</td>
+            <td colspan="1" id="t662852_row_97col_1">Main</td>
+            <td colspan="1" id="t662852_row_97col_2">Ctrl+,</td>
+            <td colspan="1" id="t662852_row_97col_3">Changes the text to horizontal direction</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_98col_0">Hue/Saturation/Lightness...</td>
+            <td colspan="1" id="t662852_row_98col_1">Main</td>
+            <td colspan="1" id="t662852_row_98col_2">Ctrl+Shift+U</td>
+            <td colspan="1" id="t662852_row_98col_3">Hue/Saturation/Lightness</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_99col_0">Import...</td>
+            <td colspan="1" id="t662852_row_99col_1">Main</td>
+            <td colspan="1" id="t662852_row_99col_2">Ctrl+I</td>
+            <td colspan="1" id="t662852_row_99col_3">Import a file into the active document.</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_100col_0">Insert Symbol Character</td>
+            <td colspan="1" id="t662852_row_100col_1">Main</td>
+            <td colspan="1" id="t662852_row_100col_2">Ctrl+F11</td>
+            <td colspan="1" id="t662852_row_100col_3">Opens the Insert Character Docker Window</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_101col_0">Interactive Fill</td>
+            <td colspan="1" id="t662852_row_101col_1">Main</td>
+            <td colspan="1" id="t662852_row_101col_2">G</td>
+            <td colspan="1" id="t662852_row_101col_3">Create a fill dynamically by using markers in the drawing window and    property bar to change the angle, midpoint, and color.</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_102col_0">Italic</td>
+            <td colspan="1" id="t662852_row_102col_1">Text Editing</td>
+            <td colspan="1" id="t662852_row_102col_2">Ctrl+I</td>
+            <td colspan="1" id="t662852_row_102col_3">Make the text italic.</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_103col_0">Italic</td>
+            <td colspan="1" id="t662852_row_103col_1">Table Text Editing</td>
+            <td colspan="1" id="t662852_row_103col_2">Ctrl+I</td>
+            <td colspan="1" id="t662852_row_103col_3">Make the text italic.</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_104col_0">Join Curves</td>
+            <td colspan="1" id="t662852_row_104col_1">Main</td>
+            <td colspan="1" id="t662852_row_104col_2">Ctrl+Shift+J</td>
+            <td colspan="1" id="t662852_row_104col_3">Join curves using endpoint tolerance</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_105col_0">Left</td>
+            <td colspan="1" id="t662852_row_105col_1">Text Editing</td>
+            <td colspan="1" id="t662852_row_105col_2">Ctrl+L</td>
+            <td colspan="1" id="t662852_row_105col_3">Align text with the left side of the bounding box.</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_106col_0">Left</td>
+            <td colspan="1" id="t662852_row_106col_1">Table Text Editing</td>
+            <td colspan="1" id="t662852_row_106col_2">Ctrl+L</td>
+            <td colspan="1" id="t662852_row_106col_3">Align text with the left side of the bounding box.</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_107col_0">Lens</td>
+            <td colspan="1" id="t662852_row_107col_1">Main</td>
+            <td colspan="1" id="t662852_row_107col_2">Alt+F3</td>
+            <td colspan="1" id="t662852_row_107col_3">Opens the Lens Docker Window</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_108col_0">Macro Editor...</td>
+            <td colspan="1" id="t662852_row_108col_1">Main</td>
+            <td colspan="1" id="t662852_row_108col_2">Alt+F11</td>
+            <td colspan="1" id="t662852_row_108col_3">Macro &amp;Editor...</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_109col_0">Macro Manager</td>
+            <td colspan="1" id="t662852_row_109col_1">Main</td>
+            <td colspan="1" id="t662852_row_109col_2">Alt+Shift+F11</td>
+            <td colspan="1" id="t662852_row_109col_3">&amp;Macro Manager</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_110col_0">Merge Cells</td>
+            <td colspan="1" id="t662852_row_110col_1">Table Editing</td>
+            <td colspan="1" id="t662852_row_110col_2">Ctrl+M</td>
+            <td colspan="1" id="t662852_row_110col_3">Merge cells into one cell.</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_111col_0">Mesh Fill</td>
+            <td colspan="1" id="t662852_row_111col_1">Main</td>
+            <td colspan="1" id="t662852_row_111col_2">M</td>
+            <td colspan="1" id="t662852_row_111col_3">Fill an object by blending multiple colors or shades arranged over a mesh    grid.</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_112col_0">Micro Nudge Anchor Down</td>
+            <td colspan="1" id="t662852_row_112col_1">Anchor Editing</td>
+            <td colspan="1" id="t662852_row_112col_2">Ctrl+DnArrow</td>
+            <td colspan="1" id="t662852_row_112col_3">Micro Nudge Anchor Down</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_113col_0">Micro Nudge Anchor Left</td>
+            <td colspan="1" id="t662852_row_113col_1">Anchor Editing</td>
+            <td colspan="1" id="t662852_row_113col_2">Ctrl+LeftArrow</td>
+            <td colspan="1" id="t662852_row_113col_3">Micro Nudge Anchor Left</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_114col_0">Micro Nudge Anchor Right</td>
+            <td colspan="1" id="t662852_row_114col_1">Anchor Editing</td>
+            <td colspan="1" id="t662852_row_114col_2">Ctrl+RightArrow</td>
+            <td colspan="1" id="t662852_row_114col_3">Micro Nudge Anchor Right</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_115col_0">Micro Nudge Anchor Up</td>
+            <td colspan="1" id="t662852_row_115col_1">Anchor Editing</td>
+            <td colspan="1" id="t662852_row_115col_2">Ctrl+UpArrow</td>
+            <td colspan="1" id="t662852_row_115col_3">Micro Nudge Anchor Up</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_116col_0">Micro Nudge Down</td>
+            <td colspan="1" id="t662852_row_116col_1">Main</td>
+            <td colspan="1" id="t662852_row_116col_2">Ctrl+DnArrow</td>
+            <td colspan="1" id="t662852_row_116col_3">Nudges the object downward by the Micro Nudge factor</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_117col_0">Micro Nudge Left</td>
+            <td colspan="1" id="t662852_row_117col_1">Main</td>
+            <td colspan="1" id="t662852_row_117col_2">Ctrl+LeftArrow</td>
+            <td colspan="1" id="t662852_row_117col_3">Nudges the object to the left by the Micro Nudge factor</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_118col_0">Micro Nudge Right</td>
+            <td colspan="1" id="t662852_row_118col_1">Main</td>
+            <td colspan="1" id="t662852_row_118col_2">Ctrl+RightArrow</td>
+            <td colspan="1" id="t662852_row_118col_3">Nudges the object to the right by the Micro Nudge factor</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_119col_0">Micro Nudge Up</td>
+            <td colspan="1" id="t662852_row_119col_1">Main</td>
+            <td colspan="1" id="t662852_row_119col_2">Ctrl+UpArrow</td>
+            <td colspan="1" id="t662852_row_119col_3">Nudges the object upward by the Micro Nudge factor</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_120col_0">Move Down</td>
+            <td colspan="1" id="t662852_row_120col_1">Table Editing</td>
+            <td colspan="1" id="t662852_row_120col_2">DnArrow</td>
+            <td colspan="1" id="t662852_row_120col_3">Move Down</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_121col_0">Move Down 1 Frame</td>
+            <td colspan="1" id="t662852_row_121col_1">Text Editing</td>
+            <td colspan="1" id="t662852_row_121col_2">PgDn</td>
+            <td colspan="1" id="t662852_row_121col_3">Moves the text caret down 1 frame</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_122col_0">Move Down 1 Frame</td>
+            <td colspan="1" id="t662852_row_122col_1">Table Text Editing</td>
+            <td colspan="1" id="t662852_row_122col_2">PgDn</td>
+            <td colspan="1" id="t662852_row_122col_3">Moves the text caret down 1 frame</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_123col_0">Move Down 1 Line</td>
+            <td colspan="1" id="t662852_row_123col_1">Text Editing</td>
+            <td colspan="1" id="t662852_row_123col_2">DnArrow</td>
+            <td colspan="1" id="t662852_row_123col_3">Moves the text caret down 1 line</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_124col_0">Move Down 1 Line</td>
+            <td colspan="1" id="t662852_row_124col_1">Table Text Editing</td>
+            <td colspan="1" id="t662852_row_124col_2">DnArrow</td>
+            <td colspan="1" id="t662852_row_124col_3">Moves the text caret down 1 line</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_125col_0">Move Down 1 Paragraph</td>
+            <td colspan="1" id="t662852_row_125col_1">Text Editing</td>
+            <td colspan="1" id="t662852_row_125col_2">Ctrl+DnArrow</td>
+            <td colspan="1" id="t662852_row_125col_3">Moves the text caret down 1 paragraph</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_126col_0">Move Down 1 Paragraph</td>
+            <td colspan="1" id="t662852_row_126col_1">Table Text Editing</td>
+            <td colspan="1" id="t662852_row_126col_2">Ctrl+DnArrow</td>
+            <td colspan="1" id="t662852_row_126col_3">Moves the text caret down 1 paragraph</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_127col_0">Move Left</td>
+            <td colspan="1" id="t662852_row_127col_1">Table Editing</td>
+            <td colspan="1" id="t662852_row_127col_2">LeftArrow</td>
+            <td colspan="1" id="t662852_row_127col_3">Move Left</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_128col_0">Move Left 1 Character</td>
+            <td colspan="1" id="t662852_row_128col_1">Text Editing</td>
+            <td colspan="1" id="t662852_row_128col_2">LeftArrow</td>
+            <td colspan="1" id="t662852_row_128col_3">Moves the text caret left 1 character</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_129col_0">Move Left 1 Character</td>
+            <td colspan="1" id="t662852_row_129col_1">Table Text Editing</td>
+            <td colspan="1" id="t662852_row_129col_2">LeftArrow</td>
+            <td colspan="1" id="t662852_row_129col_3">Moves the text caret left 1 character</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_130col_0">Move Left 1 Word</td>
+            <td colspan="1" id="t662852_row_130col_1">Text Editing</td>
+            <td colspan="1" id="t662852_row_130col_2">Ctrl+LeftArrow</td>
+            <td colspan="1" id="t662852_row_130col_3">Moves the text caret left 1 word</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_131col_0">Move Left 1 Word</td>
+            <td colspan="1" id="t662852_row_131col_1">Table Text Editing</td>
+            <td colspan="1" id="t662852_row_131col_2">Ctrl+LeftArrow</td>
+            <td colspan="1" id="t662852_row_131col_3">Moves the text caret left 1 word</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_132col_0">Move Right</td>
+            <td colspan="1" id="t662852_row_132col_1">Table Editing</td>
+            <td colspan="1" id="t662852_row_132col_2">RightArrow</td>
+            <td colspan="1" id="t662852_row_132col_3">Move Right</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_133col_0">Move Right 1 Character</td>
+            <td colspan="1" id="t662852_row_133col_1">Text Editing</td>
+            <td colspan="1" id="t662852_row_133col_2">RightArrow</td>
+            <td colspan="1" id="t662852_row_133col_3">Moves the text caret right 1 character</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_134col_0">Move Right 1 Character</td>
+            <td colspan="1" id="t662852_row_134col_1">Table Text Editing</td>
+            <td colspan="1" id="t662852_row_134col_2">RightArrow</td>
+            <td colspan="1" id="t662852_row_134col_3">Moves the text caret right 1 character</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_135col_0">Move Right 1 Word</td>
+            <td colspan="1" id="t662852_row_135col_1">Text Editing</td>
+            <td colspan="1" id="t662852_row_135col_2">Ctrl+RightArrow</td>
+            <td colspan="1" id="t662852_row_135col_3">Moves the text caret right 1 word</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_136col_0">Move Right 1 Word</td>
+            <td colspan="1" id="t662852_row_136col_1">Table Text Editing</td>
+            <td colspan="1" id="t662852_row_136col_2">Ctrl+RightArrow</td>
+            <td colspan="1" id="t662852_row_136col_3">Moves the text caret right 1 word</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_137col_0">Move Up</td>
+            <td colspan="1" id="t662852_row_137col_1">Table Editing</td>
+            <td colspan="1" id="t662852_row_137col_2">UpArrow</td>
+            <td colspan="1" id="t662852_row_137col_3">Move Up</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_138col_0">Move Up 1 Frame</td>
+            <td colspan="1" id="t662852_row_138col_1">Text Editing</td>
+            <td colspan="1" id="t662852_row_138col_2">PgUp</td>
+            <td colspan="1" id="t662852_row_138col_3">Moves the text caret up 1 frame</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_139col_0">Move Up 1 Frame</td>
+            <td colspan="1" id="t662852_row_139col_1">Table Text Editing</td>
+            <td colspan="1" id="t662852_row_139col_2">PgUp</td>
+            <td colspan="1" id="t662852_row_139col_3">Moves the text caret up 1 frame</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_140col_0">Move Up 1 Line</td>
+            <td colspan="1" id="t662852_row_140col_1">Text Editing</td>
+            <td colspan="1" id="t662852_row_140col_2">UpArrow</td>
+            <td colspan="1" id="t662852_row_140col_3">Moves the text caret up 1 line</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_141col_0">Move Up 1 Line</td>
+            <td colspan="1" id="t662852_row_141col_1">Table Text Editing</td>
+            <td colspan="1" id="t662852_row_141col_2">UpArrow</td>
+            <td colspan="1" id="t662852_row_141col_3">Moves the text caret up 1 line</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_142col_0">Move Up 1 Paragraph</td>
+            <td colspan="1" id="t662852_row_142col_1">Text Editing</td>
+            <td colspan="1" id="t662852_row_142col_2">Ctrl+UpArrow</td>
+            <td colspan="1" id="t662852_row_142col_3">Moves the text caret up 1 paragraph</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_143col_0">Move Up 1 Paragraph</td>
+            <td colspan="1" id="t662852_row_143col_1">Table Text Editing</td>
+            <td colspan="1" id="t662852_row_143col_2">Ctrl+UpArrow</td>
+            <td colspan="1" id="t662852_row_143col_3">Moves the text caret up 1 paragraph</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_144col_0">Move to Beginning of Frame</td>
+            <td colspan="1" id="t662852_row_144col_1">Text Editing</td>
+            <td colspan="1" id="t662852_row_144col_2">Ctrl+Home</td>
+            <td colspan="1" id="t662852_row_144col_3">Moves the text caret to the beginning of the frame</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_145col_0">Move to Beginning of Frame</td>
+            <td colspan="1" id="t662852_row_145col_1">Table Text Editing</td>
+            <td colspan="1" id="t662852_row_145col_2">Ctrl+Home</td>
+            <td colspan="1" id="t662852_row_145col_3">Moves the text caret to the beginning of the frame</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_146col_0">Move to Beginning of Line</td>
+            <td colspan="1" id="t662852_row_146col_1">Text Editing</td>
+            <td colspan="1" id="t662852_row_146col_2">Home</td>
+            <td colspan="1" id="t662852_row_146col_3">Moves the text caret to the beginning of the line</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_147col_0">Move to Beginning of Line</td>
+            <td colspan="1" id="t662852_row_147col_1">Table Text Editing</td>
+            <td colspan="1" id="t662852_row_147col_2">Home</td>
+            <td colspan="1" id="t662852_row_147col_3">Moves the text caret to the beginning of the line</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_148col_0">Move to Beginning of Text</td>
+            <td colspan="1" id="t662852_row_148col_1">Text Editing</td>
+            <td colspan="1" id="t662852_row_148col_2">Ctrl+PgUp</td>
+            <td colspan="1" id="t662852_row_148col_3">Moves the text caret to the beginning of the text</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_149col_0">Move to Beginning of Text</td>
+            <td colspan="1" id="t662852_row_149col_1">Table Text Editing</td>
+            <td colspan="1" id="t662852_row_149col_2">Ctrl+PgUp</td>
+            <td colspan="1" id="t662852_row_149col_3">Moves the text caret to the beginning of the text</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_150col_0">Move to End of Frame</td>
+            <td colspan="1" id="t662852_row_150col_1">Text Editing</td>
+            <td colspan="1" id="t662852_row_150col_2">Ctrl+End</td>
+            <td colspan="1" id="t662852_row_150col_3">Moves the text caret to the end of the frame</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_151col_0">Move to End of Frame</td>
+            <td colspan="1" id="t662852_row_151col_1">Table Text Editing</td>
+            <td colspan="1" id="t662852_row_151col_2">Ctrl+End</td>
+            <td colspan="1" id="t662852_row_151col_3">Moves the text caret to the end of the frame</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_152col_0">Move to End of Line</td>
+            <td colspan="1" id="t662852_row_152col_1">Text Editing</td>
+            <td colspan="1" id="t662852_row_152col_2">End</td>
+            <td colspan="1" id="t662852_row_152col_3">Moves the text caret to the end of the line</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_153col_0">Move to End of Line</td>
+            <td colspan="1" id="t662852_row_153col_1">Table Text Editing</td>
+            <td colspan="1" id="t662852_row_153col_2">End</td>
+            <td colspan="1" id="t662852_row_153col_3">Moves the text caret to the end of the line</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_154col_0">Move to End of Text</td>
+            <td colspan="1" id="t662852_row_154col_1">Text Editing</td>
+            <td colspan="1" id="t662852_row_154col_2">Ctrl+PgDn</td>
+            <td colspan="1" id="t662852_row_154col_3">Moves the text caret to the end of the text</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_155col_0">Move to End of Text</td>
+            <td colspan="1" id="t662852_row_155col_1">Table Text Editing</td>
+            <td colspan="1" id="t662852_row_155col_2">Ctrl+PgDn</td>
+            <td colspan="1" id="t662852_row_155col_3">Moves the text caret to the end of the text</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_156col_0">Navigator</td>
+            <td colspan="1" id="t662852_row_156col_1">Main</td>
+            <td colspan="1" id="t662852_row_156col_2">N</td>
+            <td colspan="1" id="t662852_row_156col_3">Brings up the Navigator window allowing you to navigate to any object in    the document</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_157col_0">New...</td>
+            <td colspan="1" id="t662852_row_157col_1">Main</td>
+            <td colspan="1" id="t662852_row_157col_2">Ctrl+N</td>
+            <td colspan="1" id="t662852_row_157col_3">Start a new document.</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_158col_0">Next Page</td>
+            <td colspan="1" id="t662852_row_158col_1">Main</td>
+            <td colspan="1" id="t662852_row_158col_2">PgDn</td>
+            <td colspan="1" id="t662852_row_158col_3">Goes to the next page</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_159col_0">Non-breaking Hyphen</td>
+            <td colspan="1" id="t662852_row_159col_1">Text Editing</td>
+            <td colspan="1" id="t662852_row_159col_2">Ctrl+Shift+-</td>
+            <td colspan="1" id="t662852_row_159col_3">Non-breaking &amp;Hyphen</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_160col_0">Non-breaking Hyphen</td>
+            <td colspan="1" id="t662852_row_160col_1">Text Editing</td>
+            <td colspan="1" id="t662852_row_160col_2">Ctrl+_</td>
+            <td colspan="1" id="t662852_row_160col_3">Non-breaking &amp;Hyphen</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_161col_0">Non-breaking Hyphen</td>
+            <td colspan="1" id="t662852_row_161col_1">Table Text Editing</td>
+            <td colspan="1" id="t662852_row_161col_2">Ctrl+Shift+-</td>
+            <td colspan="1" id="t662852_row_161col_3">Non-breaking &amp;Hyphen</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_162col_0">Non-breaking Hyphen</td>
+            <td colspan="1" id="t662852_row_162col_1">Table Text Editing</td>
+            <td colspan="1" id="t662852_row_162col_2">Ctrl+_</td>
+            <td colspan="1" id="t662852_row_162col_3">Non-breaking &amp;Hyphen</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_163col_0">Non-breaking Hyphen</td>
+            <td colspan="1" id="t662852_row_163col_1">Main</td>
+            <td colspan="1" id="t662852_row_163col_2">Ctrl+Shift+-</td>
+            <td colspan="1" id="t662852_row_163col_3">Non-breaking &amp;Hyphen</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_164col_0">Non-breaking Hyphen</td>
+            <td colspan="1" id="t662852_row_164col_1">Main</td>
+            <td colspan="1" id="t662852_row_164col_2">Ctrl+_</td>
+            <td colspan="1" id="t662852_row_164col_3">Non-breaking &amp;Hyphen</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_165col_0">Non-breaking Space</td>
+            <td colspan="1" id="t662852_row_165col_1">Text Editing</td>
+            <td colspan="1" id="t662852_row_165col_2">Ctrl+Shift+Space</td>
+            <td colspan="1" id="t662852_row_165col_3">Non-breaking &amp;Space</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_166col_0">Non-breaking Space</td>
+            <td colspan="1" id="t662852_row_166col_1">Table Text Editing</td>
+            <td colspan="1" id="t662852_row_166col_2">Ctrl+Shift+Space</td>
+            <td colspan="1" id="t662852_row_166col_3">Non-breaking &amp;Space</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_167col_0">None</td>
+            <td colspan="1" id="t662852_row_167col_1">Text Editing</td>
+            <td colspan="1" id="t662852_row_167col_2">Ctrl+N</td>
+            <td colspan="1" id="t662852_row_167col_3">Do not align text with the bounding box.</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_168col_0">None</td>
+            <td colspan="1" id="t662852_row_168col_1">Table Text Editing</td>
+            <td colspan="1" id="t662852_row_168col_2">Ctrl+N</td>
+            <td colspan="1" id="t662852_row_168col_3">Do not align text with the bounding box.</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_169col_0">Nudge Anchor Down</td>
+            <td colspan="1" id="t662852_row_169col_1">Anchor Editing</td>
+            <td colspan="1" id="t662852_row_169col_2">DnArrow</td>
+            <td colspan="1" id="t662852_row_169col_3">Nudge Anchor Down</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_170col_0">Nudge Anchor Left</td>
+            <td colspan="1" id="t662852_row_170col_1">Anchor Editing</td>
+            <td colspan="1" id="t662852_row_170col_2">LeftArrow</td>
+            <td colspan="1" id="t662852_row_170col_3">Nudge Anchor Left</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_171col_0">Nudge Anchor Right</td>
+            <td colspan="1" id="t662852_row_171col_1">Anchor Editing</td>
+            <td colspan="1" id="t662852_row_171col_2">RightArrow</td>
+            <td colspan="1" id="t662852_row_171col_3">Nudge Anchor Right</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_172col_0">Nudge Anchor Up</td>
+            <td colspan="1" id="t662852_row_172col_1">Anchor Editing</td>
+            <td colspan="1" id="t662852_row_172col_2">UpArrow</td>
+            <td colspan="1" id="t662852_row_172col_3">Nudge Anchor Up</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_173col_0">Nudge Down</td>
+            <td colspan="1" id="t662852_row_173col_1">Main</td>
+            <td colspan="1" id="t662852_row_173col_2">DnArrow</td>
+            <td colspan="1" id="t662852_row_173col_3">Nudges the object downward</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_174col_0">Nudge Left</td>
+            <td colspan="1" id="t662852_row_174col_1">Main</td>
+            <td colspan="1" id="t662852_row_174col_2">LeftArrow</td>
+            <td colspan="1" id="t662852_row_174col_3">Nudges the object to the left</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_175col_0">Nudge Right</td>
+            <td colspan="1" id="t662852_row_175col_1">Main</td>
+            <td colspan="1" id="t662852_row_175col_2">RightArrow</td>
+            <td colspan="1" id="t662852_row_175col_3">Nudges the object to the right</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_176col_0">Nudge Up</td>
+            <td colspan="1" id="t662852_row_176col_1">Main</td>
+            <td colspan="1" id="t662852_row_176col_2">UpArrow</td>
+            <td colspan="1" id="t662852_row_176col_3">Nudges the object upward</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_177col_0">Open...</td>
+            <td colspan="1" id="t662852_row_177col_1">Main</td>
+            <td colspan="1" id="t662852_row_177col_2">Ctrl+O</td>
+            <td colspan="1" id="t662852_row_177col_3">Open an existing document by browsing to the folder where the document is    located.</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_178col_0">Optional Hyphen</td>
+            <td colspan="1" id="t662852_row_178col_1">Text Editing</td>
+            <td colspan="1" id="t662852_row_178col_2">Ctrl+-</td>
+            <td colspan="1" id="t662852_row_178col_3">&amp;Optional Hyphen</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_179col_0">Optional Hyphen</td>
+            <td colspan="1" id="t662852_row_179col_1">Table Text Editing</td>
+            <td colspan="1" id="t662852_row_179col_2">Ctrl+-</td>
+            <td colspan="1" id="t662852_row_179col_3">&amp;Optional Hyphen</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_180col_0">Optional Hyphen</td>
+            <td colspan="1" id="t662852_row_180col_1">Main</td>
+            <td colspan="1" id="t662852_row_180col_2">Ctrl+-</td>
+            <td colspan="1" id="t662852_row_180col_3">&amp;Optional Hyphen</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_181col_0">Options...</td>
+            <td colspan="1" id="t662852_row_181col_1">Main</td>
+            <td colspan="1" id="t662852_row_181col_2">Ctrl+J</td>
+            <td colspan="1" id="t662852_row_181col_3">Set your workspace preferences.</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_182col_0">Outline Color</td>
+            <td colspan="1" id="t662852_row_182col_1">Main</td>
+            <td colspan="1" id="t662852_row_182col_2">Shift+F12</td>
+            <td colspan="1" id="t662852_row_182col_3">Choose the outline color by using color viewers and color palettes.</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_183col_0">Outline Pen</td>
+            <td colspan="1" id="t662852_row_183col_1">Main</td>
+            <td colspan="1" id="t662852_row_183col_2">F12</td>
+            <td colspan="1" id="t662852_row_183col_3">Set outline properties such as line thickness, corner shape, and arrow    type.</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_184col_0">Pan</td>
+            <td colspan="1" id="t662852_row_184col_1">Main</td>
+            <td colspan="1" id="t662852_row_184col_2">H</td>
+            <td colspan="1" id="t662852_row_184col_3">Drag hidden areas of a drawing into view without changing the zoom level.</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_185col_0">Pan Down</td>
+            <td colspan="1" id="t662852_row_185col_1">Main</td>
+            <td colspan="1" id="t662852_row_185col_2">Alt+DnArrow</td>
+            <td colspan="1" id="t662852_row_185col_3"> </td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_186col_0">Pan Left</td>
+            <td colspan="1" id="t662852_row_186col_1">Main</td>
+            <td colspan="1" id="t662852_row_186col_2">Alt+LeftArrow</td>
+            <td colspan="1" id="t662852_row_186col_3"> </td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_187col_0">Pan Right</td>
+            <td colspan="1" id="t662852_row_187col_1">Main</td>
+            <td colspan="1" id="t662852_row_187col_2">Alt+RightArrow</td>
+            <td colspan="1" id="t662852_row_187col_3"> </td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_188col_0">Pan Up</td>
+            <td colspan="1" id="t662852_row_188col_1">Main</td>
+            <td colspan="1" id="t662852_row_188col_2">Alt+UpArrow</td>
+            <td colspan="1" id="t662852_row_188col_3"> </td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_189col_0">Paste</td>
+            <td colspan="1" id="t662852_row_189col_1">Main</td>
+            <td colspan="1" id="t662852_row_189col_2">Ctrl+V</td>
+            <td colspan="1" id="t662852_row_189col_3">Place the Clipboard contents in the document.</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_190col_0">Paste</td>
+            <td colspan="1" id="t662852_row_190col_1">Main</td>
+            <td colspan="1" id="t662852_row_190col_2">Shift+Insert</td>
+            <td colspan="1" id="t662852_row_190col_3">Place the Clipboard contents in the document.</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_191col_0">Polygon</td>
+            <td colspan="1" id="t662852_row_191col_1">Main</td>
+            <td colspan="1" id="t662852_row_191col_2">Y</td>
+            <td colspan="1" id="t662852_row_191col_3">Draw polygons by dragging in the drawing window.</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_192col_0">Position</td>
+            <td colspan="1" id="t662852_row_192col_1">Main</td>
+            <td colspan="1" id="t662852_row_192col_2">Alt+F7</td>
+            <td colspan="1" id="t662852_row_192col_3">Opens the Position Docker Window</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_193col_0">Previous Page</td>
+            <td colspan="1" id="t662852_row_193col_1">Main</td>
+            <td colspan="1" id="t662852_row_193col_2">PgUp</td>
+            <td colspan="1" id="t662852_row_193col_3">Goes to the previous page</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_194col_0">Print...</td>
+            <td colspan="1" id="t662852_row_194col_1">Main</td>
+            <td colspan="1" id="t662852_row_194col_2">Ctrl+P</td>
+            <td colspan="1" id="t662852_row_194col_3">Choose printing options, and print the active document.</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_195col_0">Properties</td>
+            <td colspan="1" id="t662852_row_195col_1">Main</td>
+            <td colspan="1" id="t662852_row_195col_2">Alt+Enter</td>
+            <td colspan="1" id="t662852_row_195col_3">Allows the properties of an object to be viewed and edited</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_196col_0">Record Temporary Macro</td>
+            <td colspan="1" id="t662852_row_196col_1">Main</td>
+            <td colspan="1" id="t662852_row_196col_2">Ctrl+Shift+R</td>
+            <td colspan="1" id="t662852_row_196col_3">&amp;Record Temporary Macro</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_197col_0">Rectangle</td>
+            <td colspan="1" id="t662852_row_197col_1">Main</td>
+            <td colspan="1" id="t662852_row_197col_2">F6</td>
+            <td colspan="1" id="t662852_row_197col_3">Draw squares and rectangles by dragging in the drawing window.</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_198col_0">Redo </td>
+            <td colspan="1" id="t662852_row_198col_1">Main</td>
+            <td colspan="1" id="t662852_row_198col_2">Ctrl+Shift+Z</td>
+            <td colspan="1" id="t662852_row_198col_3">Reapply the last undone action.</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_199col_0">Refresh Window</td>
+            <td colspan="1" id="t662852_row_199col_1">Main</td>
+            <td colspan="1" id="t662852_row_199col_2">Ctrl+W</td>
+            <td colspan="1" id="t662852_row_199col_3">Redraws the drawing window</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_200col_0">Repeat Move</td>
+            <td colspan="1" id="t662852_row_200col_1">Main</td>
+            <td colspan="1" id="t662852_row_200col_2">Ctrl+R</td>
+            <td colspan="1" id="t662852_row_200col_3">Repeats the last operation</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_201col_0">Right</td>
+            <td colspan="1" id="t662852_row_201col_1">Text Editing</td>
+            <td colspan="1" id="t662852_row_201col_2">Ctrl+R</td>
+            <td colspan="1" id="t662852_row_201col_3">Align text with the right side of the bounding box.</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_202col_0">Right</td>
+            <td colspan="1" id="t662852_row_202col_1">Table Text Editing</td>
+            <td colspan="1" id="t662852_row_202col_2">Ctrl+R</td>
+            <td colspan="1" id="t662852_row_202col_3">Align text with the right side of the bounding box.</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_203col_0">Rotate</td>
+            <td colspan="1" id="t662852_row_203col_1">Main</td>
+            <td colspan="1" id="t662852_row_203col_2">Alt+F8</td>
+            <td colspan="1" id="t662852_row_203col_3">Opens the Rotate Docker Window</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_204col_0">Run Temporary Macro</td>
+            <td colspan="1" id="t662852_row_204col_1">Main</td>
+            <td colspan="1" id="t662852_row_204col_2">Ctrl+Shift+P</td>
+            <td colspan="1" id="t662852_row_204col_3">Run Tem&amp;porary Macro</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_205col_0">Sample Mesh Fill Color</td>
+            <td colspan="1" id="t662852_row_205col_1">Main</td>
+            <td colspan="1" id="t662852_row_205col_2">Ctrl+Shift+E</td>
+            <td colspan="1" id="t662852_row_205col_3">Sample a color from the desktop to apply to the selected nodes.</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_206col_0">Save As...</td>
+            <td colspan="1" id="t662852_row_206col_1">Main</td>
+            <td colspan="1" id="t662852_row_206col_2">Ctrl+Shift+S</td>
+            <td colspan="1" id="t662852_row_206col_3">Saves the active drawing with a new name</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_207col_0">Save...</td>
+            <td colspan="1" id="t662852_row_207col_1">Main</td>
+            <td colspan="1" id="t662852_row_207col_2">Ctrl+S</td>
+            <td colspan="1" id="t662852_row_207col_3">Save the active document.</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_208col_0">Scale</td>
+            <td colspan="1" id="t662852_row_208col_1">Main</td>
+            <td colspan="1" id="t662852_row_208col_2">Alt+F9</td>
+            <td colspan="1" id="t662852_row_208col_3">Opens the Scale Docker Window</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_209col_0">Select All Anchors</td>
+            <td colspan="1" id="t662852_row_209col_1">Anchor Editing</td>
+            <td colspan="1" id="t662852_row_209col_2">Ctrl+A</td>
+            <td colspan="1" id="t662852_row_209col_3">Select All Anchors</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_210col_0">Select Down</td>
+            <td colspan="1" id="t662852_row_210col_1">Table Editing</td>
+            <td colspan="1" id="t662852_row_210col_2">Shift+DnArrow</td>
+            <td colspan="1" id="t662852_row_210col_3">Select Down</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_211col_0">Select Down 1 Frame</td>
+            <td colspan="1" id="t662852_row_211col_1">Text Editing</td>
+            <td colspan="1" id="t662852_row_211col_2">Shift+PgDn</td>
+            <td colspan="1" id="t662852_row_211col_3">Selects text downwards by 1 frame</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_212col_0">Select Down 1 Frame</td>
+            <td colspan="1" id="t662852_row_212col_1">Table Text Editing</td>
+            <td colspan="1" id="t662852_row_212col_2">Shift+PgDn</td>
+            <td colspan="1" id="t662852_row_212col_3">Selects text downwards by 1 frame</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_213col_0">Select Down 1 Line</td>
+            <td colspan="1" id="t662852_row_213col_1">Text Editing</td>
+            <td colspan="1" id="t662852_row_213col_2">Shift+DnArrow</td>
+            <td colspan="1" id="t662852_row_213col_3">Selects text downwards by 1 line</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_214col_0">Select Down 1 Line</td>
+            <td colspan="1" id="t662852_row_214col_1">Table Text Editing</td>
+            <td colspan="1" id="t662852_row_214col_2">Shift+DnArrow</td>
+            <td colspan="1" id="t662852_row_214col_3">Selects text downwards by 1 line</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_215col_0">Select Down 1 Paragraph</td>
+            <td colspan="1" id="t662852_row_215col_1">Text Editing</td>
+            <td colspan="1" id="t662852_row_215col_2">Ctrl+Shift+DnArrow</td>
+            <td colspan="1" id="t662852_row_215col_3">Selects text downwards by 1 paragraph</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_216col_0">Select Down 1 Paragraph</td>
+            <td colspan="1" id="t662852_row_216col_1">Table Text Editing</td>
+            <td colspan="1" id="t662852_row_216col_2">Ctrl+Shift+DnArrow</td>
+            <td colspan="1" id="t662852_row_216col_3">Selects text downwards by 1 paragraph</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_217col_0">Select Left</td>
+            <td colspan="1" id="t662852_row_217col_1">Table Editing</td>
+            <td colspan="1" id="t662852_row_217col_2">Shift+LeftArrow</td>
+            <td colspan="1" id="t662852_row_217col_3">Select Left</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_218col_0">Select Left 1 Character</td>
+            <td colspan="1" id="t662852_row_218col_1">Text Editing</td>
+            <td colspan="1" id="t662852_row_218col_2">Shift+LeftArrow</td>
+            <td colspan="1" id="t662852_row_218col_3">Selects the character to the left of the text caret</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_219col_0">Select Left 1 Character</td>
+            <td colspan="1" id="t662852_row_219col_1">Table Text Editing</td>
+            <td colspan="1" id="t662852_row_219col_2">Shift+LeftArrow</td>
+            <td colspan="1" id="t662852_row_219col_3">Selects the character to the left of the text caret</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_220col_0">Select Left 1 Word</td>
+            <td colspan="1" id="t662852_row_220col_1">Text Editing</td>
+            <td colspan="1" id="t662852_row_220col_2">Ctrl+Shift+LeftArrow</td>
+            <td colspan="1" id="t662852_row_220col_3">Selects the word to the left of the text caret</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_221col_0">Select Left 1 Word</td>
+            <td colspan="1" id="t662852_row_221col_1">Table Text Editing</td>
+            <td colspan="1" id="t662852_row_221col_2">Ctrl+Shift+LeftArrow</td>
+            <td colspan="1" id="t662852_row_221col_3">Selects the word to the left of the text caret</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_222col_0">Select Right</td>
+            <td colspan="1" id="t662852_row_222col_1">Table Editing</td>
+            <td colspan="1" id="t662852_row_222col_2">Shift+RightArrow</td>
+            <td colspan="1" id="t662852_row_222col_3">Select Right</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_223col_0">Select Right 1 Character</td>
+            <td colspan="1" id="t662852_row_223col_1">Text Editing</td>
+            <td colspan="1" id="t662852_row_223col_2">Shift+RightArrow</td>
+            <td colspan="1" id="t662852_row_223col_3">Selects the character to the right of the text caret</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_224col_0">Select Right 1 Character</td>
+            <td colspan="1" id="t662852_row_224col_1">Table Text Editing</td>
+            <td colspan="1" id="t662852_row_224col_2">Shift+RightArrow</td>
+            <td colspan="1" id="t662852_row_224col_3">Selects the character to the right of the text caret</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_225col_0">Select Right 1 Word</td>
+            <td colspan="1" id="t662852_row_225col_1">Text Editing</td>
+            <td colspan="1" id="t662852_row_225col_2">Ctrl+Shift+RightArrow</td>
+            <td colspan="1" id="t662852_row_225col_3">Selects the word to the right of the text caret</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_226col_0">Select Right 1 Word</td>
+            <td colspan="1" id="t662852_row_226col_1">Table Text Editing</td>
+            <td colspan="1" id="t662852_row_226col_2">Ctrl+Shift+RightArrow</td>
+            <td colspan="1" id="t662852_row_226col_3">Selects the word to the right of the text caret</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_227col_0">Select Up</td>
+            <td colspan="1" id="t662852_row_227col_1">Table Editing</td>
+            <td colspan="1" id="t662852_row_227col_2">Shift+UpArrow</td>
+            <td colspan="1" id="t662852_row_227col_3">Select Up</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_228col_0">Select Up 1 Frame</td>
+            <td colspan="1" id="t662852_row_228col_1">Text Editing</td>
+            <td colspan="1" id="t662852_row_228col_2">Shift+PgUp</td>
+            <td colspan="1" id="t662852_row_228col_3">Selects text upwards by 1 frame</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_229col_0">Select Up 1 Frame</td>
+            <td colspan="1" id="t662852_row_229col_1">Table Text Editing</td>
+            <td colspan="1" id="t662852_row_229col_2">Shift+PgUp</td>
+            <td colspan="1" id="t662852_row_229col_3">Selects text upwards by 1 frame</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_230col_0">Select Up 1 Line</td>
+            <td colspan="1" id="t662852_row_230col_1">Text Editing</td>
+            <td colspan="1" id="t662852_row_230col_2">Shift+UpArrow</td>
+            <td colspan="1" id="t662852_row_230col_3">Selects text upwards by 1 line</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_231col_0">Select Up 1 Line</td>
+            <td colspan="1" id="t662852_row_231col_1">Table Text Editing</td>
+            <td colspan="1" id="t662852_row_231col_2">Shift+UpArrow</td>
+            <td colspan="1" id="t662852_row_231col_3">Selects text upwards by 1 line</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_232col_0">Select Up 1 Paragraph</td>
+            <td colspan="1" id="t662852_row_232col_1">Text Editing</td>
+            <td colspan="1" id="t662852_row_232col_2">Ctrl+Shift+UpArrow</td>
+            <td colspan="1" id="t662852_row_232col_3">Selects text upwards by 1 paragraph</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_233col_0">Select Up 1 Paragraph</td>
+            <td colspan="1" id="t662852_row_233col_1">Table Text Editing</td>
+            <td colspan="1" id="t662852_row_233col_2">Ctrl+Shift+UpArrow</td>
+            <td colspan="1" id="t662852_row_233col_3">Selects text upwards by 1 paragraph</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_234col_0">Select all objects</td>
+            <td colspan="1" id="t662852_row_234col_1">Main</td>
+            <td colspan="1" id="t662852_row_234col_2">Ctrl+A</td>
+            <td colspan="1" id="t662852_row_234col_3"> </td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_235col_0">Select to Beginning of Frame</td>
+            <td colspan="1" id="t662852_row_235col_1">Text Editing</td>
+            <td colspan="1" id="t662852_row_235col_2">Ctrl+Shift+Home</td>
+            <td colspan="1" id="t662852_row_235col_3">Selects text to the beginning of the frame</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_236col_0">Select to Beginning of Frame</td>
+            <td colspan="1" id="t662852_row_236col_1">Table Text Editing</td>
+            <td colspan="1" id="t662852_row_236col_2">Ctrl+Shift+Home</td>
+            <td colspan="1" id="t662852_row_236col_3">Selects text to the beginning of the frame</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_237col_0">Select to Beginning of Line</td>
+            <td colspan="1" id="t662852_row_237col_1">Text Editing</td>
+            <td colspan="1" id="t662852_row_237col_2">Shift+Home</td>
+            <td colspan="1" id="t662852_row_237col_3">Selects text to the beginning of the line</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_238col_0">Select to Beginning of Line</td>
+            <td colspan="1" id="t662852_row_238col_1">Table Text Editing</td>
+            <td colspan="1" id="t662852_row_238col_2">Shift+Home</td>
+            <td colspan="1" id="t662852_row_238col_3">Selects text to the beginning of the line</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_239col_0">Select to Beginning of Text</td>
+            <td colspan="1" id="t662852_row_239col_1">Text Editing</td>
+            <td colspan="1" id="t662852_row_239col_2">Ctrl+Shift+PgUp</td>
+            <td colspan="1" id="t662852_row_239col_3">Selects text to the beginning of the text</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_240col_0">Select to Beginning of Text</td>
+            <td colspan="1" id="t662852_row_240col_1">Table Text Editing</td>
+            <td colspan="1" id="t662852_row_240col_2">Ctrl+Shift+PgUp</td>
+            <td colspan="1" id="t662852_row_240col_3">Selects text to the beginning of the text</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_241col_0">Select to End of Frame</td>
+            <td colspan="1" id="t662852_row_241col_1">Text Editing</td>
+            <td colspan="1" id="t662852_row_241col_2">Ctrl+Shift+End</td>
+            <td colspan="1" id="t662852_row_241col_3">Selects text to the end of the frame</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_242col_0">Select to End of Frame</td>
+            <td colspan="1" id="t662852_row_242col_1">Table Text Editing</td>
+            <td colspan="1" id="t662852_row_242col_2">Ctrl+Shift+End</td>
+            <td colspan="1" id="t662852_row_242col_3">Selects text to the end of the frame</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_243col_0">Select to End of Line</td>
+            <td colspan="1" id="t662852_row_243col_1">Text Editing</td>
+            <td colspan="1" id="t662852_row_243col_2">Shift+End</td>
+            <td colspan="1" id="t662852_row_243col_3">Selects text to the end of the line</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_244col_0">Select to End of Line</td>
+            <td colspan="1" id="t662852_row_244col_1">Table Text Editing</td>
+            <td colspan="1" id="t662852_row_244col_2">Shift+End</td>
+            <td colspan="1" id="t662852_row_244col_3">Selects text to the end of the line</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_245col_0">Select to End of Text</td>
+            <td colspan="1" id="t662852_row_245col_1">Text Editing</td>
+            <td colspan="1" id="t662852_row_245col_2">Ctrl+Shift+PgDn</td>
+            <td colspan="1" id="t662852_row_245col_3">Selects text to the end of the text</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_246col_0">Select to End of Text</td>
+            <td colspan="1" id="t662852_row_246col_1">Table Text Editing</td>
+            <td colspan="1" id="t662852_row_246col_2">Ctrl+Shift+PgDn</td>
+            <td colspan="1" id="t662852_row_246col_3">Selects text to the end of the text</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_247col_0">Shape</td>
+            <td colspan="1" id="t662852_row_247col_1">Main</td>
+            <td colspan="1" id="t662852_row_247col_2">F10</td>
+            <td colspan="1" id="t662852_row_247col_3">Edit a curve object or text character by manipulating nodes.</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_248col_0">Show Non-Printing Characters</td>
+            <td colspan="1" id="t662852_row_248col_1">Text Editing</td>
+            <td colspan="1" id="t662852_row_248col_2">Ctrl+Shift+C</td>
+            <td colspan="1" id="t662852_row_248col_3">Shows non-printing characters</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_249col_0">Show Non-Printing Characters</td>
+            <td colspan="1" id="t662852_row_249col_1">Table Text Editing</td>
+            <td colspan="1" id="t662852_row_249col_2">Ctrl+Shift+C</td>
+            <td colspan="1" id="t662852_row_249col_3">Shows non-printing characters</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_250col_0">Size</td>
+            <td colspan="1" id="t662852_row_250col_1">Main</td>
+            <td colspan="1" id="t662852_row_250col_2">Alt+F10</td>
+            <td colspan="1" id="t662852_row_250col_3">Opens the Size Docker Window</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_251col_0">Small Capitals</td>
+            <td colspan="1" id="t662852_row_251col_1">Text Editing</td>
+            <td colspan="1" id="t662852_row_251col_2">Ctrl+Shift+K</td>
+            <td colspan="1" id="t662852_row_251col_3">Reduce the size of uppercase letters in the text.</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_252col_0">Small Capitals</td>
+            <td colspan="1" id="t662852_row_252col_1">Table Text Editing</td>
+            <td colspan="1" id="t662852_row_252col_2">Ctrl+Shift+K</td>
+            <td colspan="1" id="t662852_row_252col_3">Reduce the size of uppercase letters in the text.</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_253col_0">Smart Drawing</td>
+            <td colspan="1" id="t662852_row_253col_1">Main</td>
+            <td colspan="1" id="t662852_row_253col_2">Shift+S</td>
+            <td colspan="1" id="t662852_row_253col_3">Convert freehand strokes to basic shapes or smoothed curves.</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_254col_0">Snap to Grid</td>
+            <td colspan="1" id="t662852_row_254col_1">Main</td>
+            <td colspan="1" id="t662852_row_254col_2">Ctrl+Y</td>
+            <td colspan="1" id="t662852_row_254col_3">Align objects with the grid.</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_255col_0">Snap to Objects</td>
+            <td colspan="1" id="t662852_row_255col_1">Main</td>
+            <td colspan="1" id="t662852_row_255col_2">Alt+Z</td>
+            <td colspan="1" id="t662852_row_255col_3">Align objects with other objects in the document.</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_256col_0">Spell Check...</td>
+            <td colspan="1" id="t662852_row_256col_1">Main</td>
+            <td colspan="1" id="t662852_row_256col_2">Ctrl+F12</td>
+            <td colspan="1" id="t662852_row_256col_3">Opens the Spell Checker; checks the spelling of the selected text</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_257col_0">Spiral</td>
+            <td colspan="1" id="t662852_row_257col_1">Main</td>
+            <td colspan="1" id="t662852_row_257col_2">A</td>
+            <td colspan="1" id="t662852_row_257col_3">Draw symmetrical and logarithmic spirals.</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_258col_0">Step and Repeat...</td>
+            <td colspan="1" id="t662852_row_258col_1">Main</td>
+            <td colspan="1" id="t662852_row_258col_2">Ctrl+Shift+D</td>
+            <td colspan="1" id="t662852_row_258col_3">Shows Step and Repeat docker</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_259col_0">Stop Recording</td>
+            <td colspan="1" id="t662852_row_259col_1">Main</td>
+            <td colspan="1" id="t662852_row_259col_2">Ctrl+Shift+O</td>
+            <td colspan="1" id="t662852_row_259col_3">St&amp;op Recording</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_260col_0">Style List</td>
+            <td colspan="1" id="t662852_row_260col_1">Text Editing</td>
+            <td colspan="1" id="t662852_row_260col_2">Ctrl+Shift+S</td>
+            <td colspan="1" id="t662852_row_260col_3">Shows a list of all the styles in the drawing</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_261col_0">Style List</td>
+            <td colspan="1" id="t662852_row_261col_1">Table Text Editing</td>
+            <td colspan="1" id="t662852_row_261col_2">Ctrl+Shift+S</td>
+            <td colspan="1" id="t662852_row_261col_3">Shows a list of all the styles in the drawing</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_262col_0">Super Nudge Anchor Down</td>
+            <td colspan="1" id="t662852_row_262col_1">Anchor Editing</td>
+            <td colspan="1" id="t662852_row_262col_2">Shift+DnArrow</td>
+            <td colspan="1" id="t662852_row_262col_3">Super Nudge Anchor Down</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_263col_0">Super Nudge Anchor Left</td>
+            <td colspan="1" id="t662852_row_263col_1">Anchor Editing</td>
+            <td colspan="1" id="t662852_row_263col_2">Shift+LeftArrow</td>
+            <td colspan="1" id="t662852_row_263col_3">Super Nudge Anchor Left</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_264col_0">Super Nudge Anchor Right</td>
+            <td colspan="1" id="t662852_row_264col_1">Anchor Editing</td>
+            <td colspan="1" id="t662852_row_264col_2">Shift+RightArrow</td>
+            <td colspan="1" id="t662852_row_264col_3">Super Nudge Anchor Right</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_265col_0">Super Nudge Anchor Up</td>
+            <td colspan="1" id="t662852_row_265col_1">Anchor Editing</td>
+            <td colspan="1" id="t662852_row_265col_2">Shift+UpArrow</td>
+            <td colspan="1" id="t662852_row_265col_3">Super Nudge Anchor Up</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_266col_0">Super Nudge Down</td>
+            <td colspan="1" id="t662852_row_266col_1">Main</td>
+            <td colspan="1" id="t662852_row_266col_2">Shift+DnArrow</td>
+            <td colspan="1" id="t662852_row_266col_3">Nudges the object downward by the Super Nudge factor</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_267col_0">Super Nudge Left</td>
+            <td colspan="1" id="t662852_row_267col_1">Main</td>
+            <td colspan="1" id="t662852_row_267col_2">Shift+LeftArrow</td>
+            <td colspan="1" id="t662852_row_267col_3">Nudges the object to the left by the Super Nudge factor</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_268col_0">Super Nudge Right</td>
+            <td colspan="1" id="t662852_row_268col_1">Main</td>
+            <td colspan="1" id="t662852_row_268col_2">Shift+RightArrow</td>
+            <td colspan="1" id="t662852_row_268col_3">Nudges the object to the right by the Super Nudge factor</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_269col_0">Super Nudge Up</td>
+            <td colspan="1" id="t662852_row_269col_1">Main</td>
+            <td colspan="1" id="t662852_row_269col_2">Shift+UpArrow</td>
+            <td colspan="1" id="t662852_row_269col_3">Nudges the object upward by the Super Nudge factor</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_270col_0">Symbol Manager</td>
+            <td colspan="1" id="t662852_row_270col_1">Main</td>
+            <td colspan="1" id="t662852_row_270col_2">Ctrl+F3</td>
+            <td colspan="1" id="t662852_row_270col_3">Symbol Manager Docker</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_271col_0">Table</td>
+            <td colspan="1" id="t662852_row_271col_1">Table Editing</td>
+            <td colspan="1" id="t662852_row_271col_2">Delete</td>
+            <td colspan="1" id="t662852_row_271col_3">Delete the selected table</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_272col_0">Text</td>
+            <td colspan="1" id="t662852_row_272col_1">Text Editing</td>
+            <td colspan="1" id="t662852_row_272col_2">Ctrl+F10</td>
+            <td colspan="1" id="t662852_row_272col_3">Opens the Options dialog with the Text options page selected</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_273col_0">Text</td>
+            <td colspan="1" id="t662852_row_273col_1">Table Text Editing</td>
+            <td colspan="1" id="t662852_row_273col_2">Ctrl+F10</td>
+            <td colspan="1" id="t662852_row_273col_3">Opens the Options dialog with the Text options page selected</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_274col_0">Text</td>
+            <td colspan="1" id="t662852_row_274col_1">Main</td>
+            <td colspan="1" id="t662852_row_274col_2">F8</td>
+            <td colspan="1" id="t662852_row_274col_3">Add and edit paragraph and artistic text.</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_275col_0">To Back Of Layer</td>
+            <td colspan="1" id="t662852_row_275col_1">Main</td>
+            <td colspan="1" id="t662852_row_275col_2">Shift+PgDn</td>
+            <td colspan="1" id="t662852_row_275col_3">Move the object to the back of the layer.</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_276col_0">To Back Of Page</td>
+            <td colspan="1" id="t662852_row_276col_1">Main</td>
+            <td colspan="1" id="t662852_row_276col_2">Ctrl+End</td>
+            <td colspan="1" id="t662852_row_276col_3">To Back Of Page</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_277col_0">To Front Of Layer</td>
+            <td colspan="1" id="t662852_row_277col_1">Main</td>
+            <td colspan="1" id="t662852_row_277col_2">Shift+PgUp</td>
+            <td colspan="1" id="t662852_row_277col_3">Move the object to the front of the layer.</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_278col_0">To Front Of Page</td>
+            <td colspan="1" id="t662852_row_278col_1">Main</td>
+            <td colspan="1" id="t662852_row_278col_2">Ctrl+Home</td>
+            <td colspan="1" id="t662852_row_278col_3">To Front Of Page</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_279col_0">Toggle Pick State</td>
+            <td colspan="1" id="t662852_row_279col_1">Main</td>
+            <td colspan="1" id="t662852_row_279col_2">Ctrl+Space</td>
+            <td colspan="1" id="t662852_row_279col_3">Toggles between the current tool and the Pick tool</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_280col_0">Toggle View</td>
+            <td colspan="1" id="t662852_row_280col_1">Main</td>
+            <td colspan="1" id="t662852_row_280col_2">Shift+F9</td>
+            <td colspan="1" id="t662852_row_280col_3">Toggles between the last two used view qualities</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_281col_0">Underline</td>
+            <td colspan="1" id="t662852_row_281col_1">Text Editing</td>
+            <td colspan="1" id="t662852_row_281col_2">Ctrl+U</td>
+            <td colspan="1" id="t662852_row_281col_3">Underline the text.</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_282col_0">Underline</td>
+            <td colspan="1" id="t662852_row_282col_1">Table Text Editing</td>
+            <td colspan="1" id="t662852_row_282col_2">Ctrl+U</td>
+            <td colspan="1" id="t662852_row_282col_3">Underline the text.</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_283col_0">Undo Move</td>
+            <td colspan="1" id="t662852_row_283col_1">Main</td>
+            <td colspan="1" id="t662852_row_283col_2">Ctrl+Z</td>
+            <td colspan="1" id="t662852_row_283col_3">Cancel the previous action.</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_284col_0">Undo Move</td>
+            <td colspan="1" id="t662852_row_284col_1">Main</td>
+            <td colspan="1" id="t662852_row_284col_2">Alt+Backspace</td>
+            <td colspan="1" id="t662852_row_284col_3">Cancel the previous action.</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_285col_0">Ungroup</td>
+            <td colspan="1" id="t662852_row_285col_1">Main</td>
+            <td colspan="1" id="t662852_row_285col_2">Ctrl+U</td>
+            <td colspan="1" id="t662852_row_285col_3">Break a group into individual objects or groups.</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_286col_0">Uniform Fill</td>
+            <td colspan="1" id="t662852_row_286col_1">Main</td>
+            <td colspan="1" id="t662852_row_286col_2">Shift+F11</td>
+            <td colspan="1" id="t662852_row_286col_3">Choose a solid fill color for an object by using color palettes, color    viewers, color harmonies, or color blends.</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_287col_0">Use bullets</td>
+            <td colspan="1" id="t662852_row_287col_1">Main</td>
+            <td colspan="1" id="t662852_row_287col_2">Ctrl+M</td>
+            <td colspan="1" id="t662852_row_287col_3">Add or remove a bulleted-list format.</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_288col_0">Use drop cap</td>
+            <td colspan="1" id="t662852_row_288col_1">Text Editing</td>
+            <td colspan="1" id="t662852_row_288col_2">Ctrl+Shift+D</td>
+            <td colspan="1" id="t662852_row_288col_3">Add or remove a drop cap.</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_289col_0">Use drop cap</td>
+            <td colspan="1" id="t662852_row_289col_1">Table Text Editing</td>
+            <td colspan="1" id="t662852_row_289col_2">Ctrl+Shift+D</td>
+            <td colspan="1" id="t662852_row_289col_3">Add or remove a drop cap.</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_290col_0">VSTA Editor...</td>
+            <td colspan="1" id="t662852_row_290col_1">Main</td>
+            <td colspan="1" id="t662852_row_290col_2">Alt+Shift+F12</td>
+            <td colspan="1" id="t662852_row_290col_3">VSTA Editor...</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_291col_0">Vertical Text</td>
+            <td colspan="1" id="t662852_row_291col_1">Main</td>
+            <td colspan="1" id="t662852_row_291col_2">Ctrl+.</td>
+            <td colspan="1" id="t662852_row_291col_3">Changes the text to vertical</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_292col_0">View Manager</td>
+            <td colspan="1" id="t662852_row_292col_1">Main</td>
+            <td colspan="1" id="t662852_row_292col_2">Ctrl+F2</td>
+            <td colspan="1" id="t662852_row_292col_3">Opens the View Manager Docker Window</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_293col_0">What's This?</td>
+            <td colspan="1" id="t662852_row_293col_1">Main</td>
+            <td colspan="1" id="t662852_row_293col_2">Shift+F1</td>
+            <td colspan="1" id="t662852_row_293col_3">What's This? Help</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_294col_0">Zoom</td>
+            <td colspan="1" id="t662852_row_294col_1">Main</td>
+            <td colspan="1" id="t662852_row_294col_2">Z</td>
+            <td colspan="1" id="t662852_row_294col_3">Change the magnification level of the document window.</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_295col_0">Zoom One-Shot</td>
+            <td colspan="1" id="t662852_row_295col_1">Main</td>
+            <td colspan="1" id="t662852_row_295col_2">F2</td>
+            <td colspan="1" id="t662852_row_295col_3"> </td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_296col_0">Zoom Out</td>
+            <td colspan="1" id="t662852_row_296col_1">Main</td>
+            <td colspan="1" id="t662852_row_296col_2">F3</td>
+            <td colspan="1" id="t662852_row_296col_3">Decrease the magnification level to view a larger portion of the    document.</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_297col_0">Zoom To Fit</td>
+            <td colspan="1" id="t662852_row_297col_1">Main</td>
+            <td colspan="1" id="t662852_row_297col_2">F4</td>
+            <td colspan="1" id="t662852_row_297col_3">Adjust the magnification level to include all objects</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_298col_0">Zoom To Page</td>
+            <td colspan="1" id="t662852_row_298col_1">Main</td>
+            <td colspan="1" id="t662852_row_298col_2">Shift+F4</td>
+            <td colspan="1" id="t662852_row_298col_3">Adjust the magnification level to fit the entire page.</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_299col_0">Zoom To Selection</td>
+            <td colspan="1" id="t662852_row_299col_1">Main</td>
+            <td colspan="1" id="t662852_row_299col_2">Shift+F2</td>
+            <td colspan="1" id="t662852_row_299col_3">Magnify only the selected object.</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_300col_0">¼ Em Space</td>
+            <td colspan="1" id="t662852_row_300col_1">Text Editing</td>
+            <td colspan="1" id="t662852_row_300col_2">Ctrl+Alt+Space</td>
+            <td colspan="1" id="t662852_row_300col_3">¼ &amp;Em Space</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t662852_row_301col_0">¼ Em Space</td>
+            <td colspan="1" id="t662852_row_301col_1">Table Text Editing</td>
+            <td colspan="1" id="t662852_row_301col_2">Ctrl+Alt+Space</td>
+            <td colspan="1" id="t662852_row_301col_3">¼ &amp;Em Space</td>
+       </tr>
+
+</tbody>
+</table></div>
+
+                                <script src='../js/colpick.js'></script>
+                                <script src="../js/colorpicker.js"></script>
+
+                                </div>
+                            </div>
+
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane animated fadeIn in" id="tab-2">
+                    <div id="contenttab2"></div>
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane animated fadeIn" id="tab-3" style="margin-top:-20px;margin-left:-20px;margin-right:-20px;background:#ffffff">
+
+                    </div>
+
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- Page Loader -->
+        <div class="page-loader">
+            <div class="preloader" style="text-align:center;">
+                <svg class="pl-circular" viewBox="25 25 50 50">
+                    <circle class="plc-path" cx="50" cy="50" r="20" />
+                </svg><br/><br/>
+                <div style="font-size:8px;margin-left:-80px;width:200px" class="demo"></div>
+            </div>
+        </div>
+
+        <div style="margin-bottom:10px;"><footer id="footer">
+            Copyright &copy; 2017 IDWEBDesigner<br/><a href="index.html">Back to <i class="zmdi zmdi-home"></i> Homepage</a>
+        </footer></div>
+
+        <!-- Javascript Libraries -->
+        <script src="../vendors/bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="../vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+        <script src="../vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="../vendors/bower_components/Waves/dist/waves.min.js"></script>
+        <script src="../vendors/bootstrap-growl/bootstrap-growl.min.js"></script>
+        <script src="../vendors/bower_components/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="../vendors/bower_components/lightgallery/dist/js/lightgallery-all.min.js"></script>
+        <script src="../vendors/bootgrid/jquery.bootgrid.updated.min.js"></script>
+
+        <!-- Placeholder for IE9 -->
+        <!--[if IE 9 ]>
+            <script src="vendors/bower_components/jquery-placeholder/jquery.placeholder.min.js"></script>
+        <![endif]-->
+
+        <script src="../js/app.min.js"></script>
+
+        <!-- Data Table -->
+        <script>
+            $(function()
+            {
+              $("#grid-basic").bootgrid({
+                  caseSensitive: false,
+                    css: {
+                        icon: 'zmdi icon',
+                        iconColumns: 'zmdi-view-module',
+                        iconDown: 'zmdi-sort-amount-desc',
+                        iconRefresh: 'zmdi-refresh',
+                        iconUp: 'zmdi-sort-amount-asc'
+                    },
+              }
+              )
+            });
+        </script>
+
+        <script type="text/javascript">
+            //Basic
+            $('#sa-basic').click(function(e){
+                e.preventDefault();
+                var link = $(this).attr('href');
+
+                swal({
+                    title: "Get Inspire Profesional Logos",
+                    text: "More logos sparately on our Learn Apps: Javascript, NoSQL Database, Virtual Reality, and more...",
+                    showCancelButton: true,
+                    allowOutsideClick: true,
+                },
+                function(){
+                    window.location.href = 'market://details?id=id.web.designer.learn.javascript';
+                });
+            });
+        </script>
+
+    <script type="text/javascript">
+        function rateApp() {
+            android.rateApp();
+       }
+    </script>
+
+    </body>
+
+</html>
