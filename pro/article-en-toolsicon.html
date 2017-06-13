@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Tutorial CorelDraw Pro</title>
+
+         <script type="text/javascript">
+          <!--
+          if (screen.width >= 2800) {
+            window.location = "http://designer.web.id";
+          }
+          //-->
+        </script>
+
+        <!-- Vendor CSS -->
+        <link href="../vendors/bower_components/animate.css/animate.min.css" rel="stylesheet">
+        <link href="../vendors/bower_components/sweetalert/dist/sweetalert.css" rel="stylesheet">
+        <link href="../vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
+        <link href="../vendors/bower_components/lightgallery/dist/css/lightgallery.min.css" rel="stylesheet">
+        <link href="../vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+        <link href="../vendors/bootgrid/jquery.bootgrid.min.css" rel="stylesheet">
+
+        <!-- CSS -->
+        <link href="../css/app_1.min.css" rel="stylesheet">
+        <link href="../css/app_2.min.css" rel="stylesheet">
+
+        <script src="../js/h5utils.js"></script>
+        <script src="../js/jquery-2.1.0.min.js"></script>
+        <script src="../js/jquery.jscroll.min.js"></script>
+        <script>$(function(){
+        $("#contentloader1").load("http://app.coreldraw.designer.web.id/content-message.html"); $("#contentloader2").load("http://app.coreldraw.designer.web.id/pro/content-right-pro.html");
+        $("#contenttab1").load("http://app.coreldraw.designer.web.id/pro/contenttab2.html");
+        $("#contenttab2").load("http://app.coreldraw.designer.web.id/pro/contenttab2.html");
+        });</script>
+
+        <style>.videoWrapper {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 */
+        padding-top: 25px;
+        height: 0;}
+        .videoWrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;}
+        .lcb-navigation a{background:#999999}
+        </style>
+    </head>
+    <body style="background:#ffffff">
+
+        <!-- Page Loader -->
+        <div class="page-loader">
+            <div class="preloader pls-white">
+                <svg class="pl-circular" viewBox="25 25 50 50">
+                    <circle class="plc-path" cx="50" cy="50" r="20" />
+                </svg>
+            </div>
+
+        </div>
+
+        <header id="header" class="clearfix container">
+            <ul class="h-inner">
+
+                <li class="hi-trigger ma-trigger" data-ma-action="sidebar-open" data-ma-target="#sidebar">
+                    <div class="line-wrap">
+                        <div class="line top"></div>
+                        <div class="line center"></div>
+                        <div class="line bottom"></div>
+                    </div>
+                </li>
+
+                <li class="hi-logo" data-ma-action="sidebar-open" data-ma-target="#sidebar" style="margin-top:8px;">
+                    <span style="font-size:15px;color:#ffffff;"> Tutorial CorelDRAW<sup>&reg;</sup><span>
+                </li>
+
+                <li class="pull-right">
+                    <ul class="hi-menu">
+
+                        <li style="margin-right:-15px;" class="dropdown">
+                            <a data-toggle="dropdown" href="#">
+                                <i class="him-icon zmdi zmdi-notifications-none"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-lg pull-right">
+                                <div class="list-group list-group-light">
+                                    <div class="lg-header">
+                                        LIVE DEVELOPER MESSAGES
+                                    </div>
+
+                                    <article>
+                                      <p style="text-align:center;font-size:1em;"><span id="status"><span id="status"></span></p>
+                                      <ol id="state"></ol>
+                                    </article>
+                                    <script>
+                                    var statusElem  = document.getElementById('status'),
+                                        state               = document.getElementById('state');
+
+                                    function online(event) {
+                                      statusElem.className = navigator.onLine ? 'online' : 'offline';
+                                      statusElem.innerHTML = navigator.onLine ? '' : '<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You&#39;re offline, check network connection.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;content required internet access.';
+                                      state.innerHTML += '&nbsp;';
+                                    }
+
+                                    addEvent(window, 'online', online);
+                                    addEvent(window, 'offline', online);
+                                    online({ type: 'ready' });
+                                    </script>
+
+                                    <div style="margin-top:-30px;" id="contentloader1"></div>
+                                    <a class="view-more view-more-light" href="idwebdesigner.html">Powered by IDWEBDesigner</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li style="margin-right:-15px;" class="ma-trigger" data-ma-action="sidebar-open" data-ma-target="#chat">
+                            <a data-toggle="dropdown" href="#">
+                                <i class="him-icon zmdi zmdi-favorite-outline"></i>
+                            </a>
+                        </li>
+                        <li style="margin-right:-5px;" class="dropdown">
+                            <a data-toggle="dropdown" href="#"><i class="him-icon zmdi zmdi-more-vert"></i></a>
+                            <ul class="dropdown-menu dm-icon pull-right">
+                                <li class="hidden-xs">
+                                    <a data-ma-action="fullscreen" href="#"><i class="zmdi zmdi-fullscreen"></i> Fullscreen</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:window.location.reload();"><i class="zmdi zmdi-refresh-sync"></i> Refresh</a>
+                                </li>
+                                <li>
+                                    <a id="rate-app" onClick="rateApp()">Rate 5 Stars</a>
+                                </li>
+                                <li>
+                                    <a href="update.html"><i class="zmdi zmdi-download"></i>Check update</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="help.html"><i class="zmdi zmdi-help"></i> Help</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="hidden-xs ma-trigger" data-ma-action="sidebar-open" data-ma-target="#chat">
+                            <a href="#"><i class="him-icon zmdi zmdi-comment-alt-text"></i></a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="tab-nav tn-justified tn-icon" role="tablist" style="width:100%">
+                                        <li role="presentation">
+                                            <a class="col-sx-4" href="index.html">
+                                                INDONESIA
+                                            </a>
+                                        </li>
+                                        <li role="presentation" class="active">
+                                            <a class="col-xs-4" href="#tab-2" aria-controls="tab-2" role="tab" data-toggle="tab">
+                                                ENGLISH (PRO)
+                                            </a>
+                                        </li>
+
+                                    </ul>
+        </header>
+
+        <section id="main">
+            <ol class="breadcrumb" style="margin-left:-10px;">
+                <li><a href="developer.html">designer.web.id</a></li>
+                <li><a href="index.html">learn</a></li>
+                <li class="active">virtualreality</li>
+            </ol>
+
+            <aside id="sidebar" class="sidebar c-overflow" style="position:fixed;z-index:1000;margin-top:-70px;height:100%;background:white">
+                <ul class="main-menu">
+                    <li class="mm-profile sub-menu">
+                        <a href="#" data-ma-action="submenu-toggle" class="media">
+                            <img class="pull-left" src="../img/coreldraw.green.png" alt="" height="25px" style="margin-left:-40px;">
+                            <div class="media-body">
+                            <div>Tutorial CorelDRAW<sup>&reg;</sup></div>
+                            <span style="font-size:11px;">Experience by IDWEBDesigner<br/>dev@designer.web.id</span>
+                            </div>
+                        </a>
+
+                        <ul>
+                            <li>
+                                <a href="developer.html">Indonesia Web Designer</a>
+                            </li>
+                            <li>
+                                <div style="margin-left:65px;margin-bottom:10px;font-size:10px;color:#888888;padding-right:20px;">Jl. Wahid Hasyim No.3 Gaten Condongcatur Depok Sleman Yogyakarta, Indonesia.</div>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-info"></i> About CorelDraw</a>
+                        <div style="margin-left:65px;margin-bottom:10px;font-size:12px;color:#579706;"><a href="basics.html">What's is CorelDraw?<br/>Basics Learn</a></div>
+                    </li>
+
+                    <li><a href="index.html"><i class="zmdi zmdi-flag"></i> Tutorial Bahasa Indonesia</a></li>
+                    <li class="sub-menu toggled active">
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-android"></i> Featured Apps</a>
+                        <div style="margin-left:65px;margin-top:10px;font-size:10px;color:#888888;padding-right:20px;">Color Docker: This docker allows you to choose fill and outline colors from a color picker, color sliders, and color palettes. Found with dockers and in the Toolbox.</div>
+
+                        <ul>
+
+                            <li><a href="language.html">Bahasa Indonesia</a></li>
+                            <li style="display:none;"><a href="upgrade.html"><i class="zmdi zmdi-shopping-cart"></i>&nbsp;&nbsp;Upgrade</a></li>
+                            <li class="divider"></li>
+
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-code"></i> Developer</a>
+
+                        <ul>
+                            <li><a href="developer.html">dev@designer.web.id<br/>designer.web.id</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </aside>
+
+            <aside id="chat" class="sidebar">
+
+                                    <article>
+                                      <p style="margin-top:30px;margin-left:15px;font-size:0.7em;"><span id="status2"><span id="status"></span></p>
+                                      <ol id="state2"></ol>
+                                    </article>
+                                    <script>
+                                    var statusElem  = document.getElementById('status2'),
+                                        state               = document.getElementById('state2');
+
+                                    function online(event) {
+                                      statusElem.className = navigator.onLine ? 'online' : 'offline';
+                                      statusElem.innerHTML = navigator.onLine ? '' : '<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You&#39;re offline, check network connection.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;content required internet access.';
+                                      state.innerHTML += '&nbsp;';
+                                    }
+
+                                    addEvent(window, 'online', online);
+                                    addEvent(window, 'offline', online);
+                                    online({ type: 'ready' });
+                                    </script>
+
+                <div style="margin-top:-30px; width:100%" id="contentloader2"></div>
+
+
+
+            </aside>
+
+            <section id="content" style="margin-bottom:-40px;">
+                <div class="container" style="margin-top:-55px;margin-left:-20px;padding-right:0px;">
+                    <div class="tab-content p-20" style="background:#ffffff;">
+
+                    <div role="tabpanel" class="tab-pane animated fadeIn in active" id="tab-1">
+
+                            <!-- Blog Posts -->
+                            <div class="card blog-post" style="margin-bottom:-0px;">
+
+                                <div class="videoWrapper">
+                                <img width="100%" src="../images/green.png" frameborder="0" allowfullscreen></img>
+                                </div>
+
+                                <a class="card-header ch-alt">
+                                    <h2><small>Caption</small></h2>
+                                </a>
+
+                                <div class="card-body card-padding">
+
+                                <h4>CorelDRAW Tools Icons</h4>
+                                <br/>
+
+<table class="wdn_responsive_table flush-left"  id="t596282">
+<caption></caption>
+<tbody>
+
+      <tr>
+            <td colspan="1" id="t596282_row_0col_0"><img alt="Pick Tool" height="27" src="../images/icon/pick_tool_icon.png" width="24" /></td>
+            <td colspan="1" id="t596282_row_0col_1">Pick tool - Select, position, or transform objects.  </td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t596282_row_1col_0"><img alt="Freehand Pick tool" width="100%" src="../images/icon/freehand_pick_tool.png" width="20" /></td>
+            <td colspan="1" id="t596282_row_1col_1">Freehand Pick tool - Select objects by using a freehand selection marquee. Position and transform objects.  </td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t596282_row_2col_0"><img alt="Shape tool" height="26" src="../images/icon/shape_tool_icon.png" width="26" /></td>
+            <td colspan="1" id="t596282_row_2col_1">Shape tool (F10) - Edit a curve object or text character by manipulating nodes.  </td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t596282_row_3col_0"><img alt="Smudge Brush tool" height="26" src="../images/icon/smudge_brush_tool_icon.png" width="25" /></td>
+            <td colspan="1" id="t596282_row_3col_1">Smudge Brush tool - Change the shape of an object by dragging along its outline.  </td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t596282_row_4col_0"><img alt="Roughen Brush tool" height="27" src="../images/icon/roughen_brush_tool_icon.png" width="27" /></td>
+            <td colspan="1" id="t596282_row_4col_1">Roughen Brush tool - Distort the edge of an object by dragging along its outline.  </td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t596282_row_5col_0"><img alt="Free Transform tool" height="27" src="../images/icon/free_transform_tool_icon.png" width="24" /></td>
+            <td colspan="1" id="t596282_row_5col_1">Free Transform tool - Rotate, skew, mirror, and scale objects.  </td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t596282_row_6col_0"><img alt="Smear tool" height="23" src="../images/icon/smear_tool.png" width="24" /></td>
+            <td colspan="1" id="t596282_row_6col_1">Smear tool - Change the edge of an object by dragging along its outline.  </td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t596282_row_7col_0"><img alt="Twirl tool" height="22" src="../images/icon/twirl_tool.png" width="22" /></td>
+            <td colspan="1" id="t596282_row_7col_1">Twirl tool - Add swirl effects by dragging along the outline of an object.  </td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t596282_row_8col_0"><img alt="Attract tool" height="23" src="../images/icon/attract_tool.png" width="25" /></td>
+            <td colspan="1" id="t596282_row_8col_1">Attract tool - Reshape objects by attracting nodes to the cursor.  </td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t596282_row_9col_0"><img alt="Repel tool" height="21" src="../images/icon/repel_tool.png" width="21" /></td>
+            <td colspan="1" id="t596282_row_9col_1">Repel tool - Reshape objects by pushing nodes away from the cursor.  </td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t596282_row_10col_0"><img alt="Smooth tool" height="20" src="../images/icon/smooth_tool.png" width="21" /></td>
+            <td colspan="1" id="t596282_row_10col_1">Smooth tool - Smooth object by dragging along its outline.  </td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t596282_row_11col_0"><img alt="Crop tool" height="27" src="../images/icon/crop_tool_icon.png" width="27" /></td>
+            <td colspan="1" id="t596282_row_11col_1">Crop tool - Remove the areas outside a selection.  </td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t596282_row_12col_0"><img alt="Knife tool" height="24" src="../images/icon/knife_tool_icon.png" width="27" /></td>
+            <td colspan="1" id="t596282_row_12col_1">Knife tool - Slice an object to split it into two separate objects.  </td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t596282_row_13col_0"><img alt="Eraser tool" height="28" src="../images/icon/eraser_tool_icon.png" width="27" /></td>
+            <td colspan="1" id="t596282_row_13col_1">Eraser tool (X) - Remove unwanted areas in a drawing.  </td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t596282_row_14col_0"><img alt="Virtual Segment Delete tool" height="25" src="../images/icon/virtual_segment_delete_tool_icon.png" width="27" /></td>
+            <td colspan="1" id="t596282_row_14col_1">Virtual Segment Delete tool - Remove overlapping segments in objects.  </td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t596282_row_15col_0"><img alt="Zoom tool" height="24" src="../images/icon/zoom_tool_icon.png" width="26" /></td>
+            <td colspan="1" id="t596282_row_15col_1">Zoom tool (Z) - Change the magnification level of the document window.  </td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t596282_row_16col_0"><img alt="Pan tool" height="25" src="../images/icon/panning_tool_icon.png" width="25" /></td>
+            <td colspan="1" id="t596282_row_16col_1">Pan tool (H) - Drag hidden areas of a drawing into view without changing the zoom level.  </td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t596282_row_17col_0"><img alt="Freehand tool" height="25" src="../images/icon/freehand_tool_icon.png" width="29" /></td>
+            <td colspan="1" id="t596282_row_17col_1">Freehand tool (F5) - Draw curves and straight line segments.  </td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t596282_row_18col_0"><img alt="2-Point Line tool " height="27" src="../images/icon/2_pt_line_tool_ icon.png" width="27" /></td>
+            <td colspan="1" id="t596282_row_18col_1">2-Point Line tool  - Draw a straight line by drawing from the starting point to the endpoint.  </td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t596282_row_19col_0"><img alt="Bezier tool" height="28" src="../images/icon/bezier_tool_icon .png" width="26" /></td>
+            <td colspan="1" id="t596282_row_19col_1">Bezier tool - Draw curves one segment at a time.  </td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t596282_row_20col_0"><img alt="Artistic Media tool" height="28" src="../images/icon/artistic_media_tool_icon.png" width="28" /></td>
+            <td colspan="1" id="t596282_row_20col_1">Artistic Media tool (I) - Add artistic brush, spray, and calligraphic effects by using freehand strokes.  </td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t596282_row_21col_0"><img alt="Pen tool" height="27" src="../images/icon/pen_tool_icon.png" width="26" /></td>
+            <td colspan="1" id="t596282_row_21col_1">Pen tool - Draw curves in segments, and preview each segment as you draw.  </td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t596282_row_22col_0"><img alt="B-Spline tool" height="25" src="../images/icon/b_spline_tool_icon.png" width="26" /></td>
+            <td colspan="1" id="t596282_row_22col_1">B-Spline tool - Draw curved lines by setting control points that shape the curve without breaking it into segments.  </td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t596282_row_23col_0"><img alt="Polyline tool" height="26" src="../images/icon/polyline_tool_icon.png" width="26" /></td>
+            <td colspan="1" id="t596282_row_23col_1">Polyline tool - Draw connected curves and straight lines in one continuous action.  </td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t596282_row_24col_0"><img alt="3-Point Curve tool" height="24" src="../images/icon/3_pt_curve_tool_icon.png" width="25" /></td>
+            <td colspan="1" id="t596282_row_24col_1">3-Point Curve tool - Draw a curve by dragging from the starting point to the endpoint and then positioning the center point.  </td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t596282_row_25col_0"><img alt="Smart Fill tool" height="27" src="../images/icon/smart_fill_tool_icon.png" width="26" /></td>
+            <td colspan="1" id="t596282_row_25col_1">Smart Fill tool - Create objects from overlapping areas, and apply a fill to those objects.  </td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t596282_row_26col_0"><img alt="Smart Drawing tool" height="24" src="../images/icon/smart_drawing_tool_icon.png" width="26" /></td>
+            <td colspan="1" id="t596282_row_26col_1">Smart Drawing tool (Shift+S) - Convert freehand strokes to basic shapes or smoothed curves.  </td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t596282_row_27col_0"><img alt="Rectangle tool" height="24" src="../images/icon/rectangle_tool_icon.png" width="26" /></td>
+            <td colspan="1" id="t596282_row_27col_1">Rectangle tool (F6) - Draw squares and rectangles by dragging in the drawing window.  </td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t596282_row_28col_0"><img alt="3-Point Rectangle tool" height="26" src="../images/icon/3_pt_rectangle_tool_icon.png" width="27" /></td>
+            <td colspan="1" id="t596282_row_28col_1">3-Point Rectangle tool - Draw rectangles at an angle.  </td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t596282_row_29col_0"><img alt="Elipse tool" height="25" src="../images/icon/elipse_too_icon.png" width="23" /></td>
+            <td colspan="1" id="t596282_row_29col_1">Elipse tool (F7) - Draw circles and elipses by dragging in the drawing window.  </td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t596282_row_30col_0"><img alt="3-Point Elipse tool" height="24" src="../images/icon/3_pt_elipse.png" width="22" /></td>
+            <td colspan="1" id="t596282_row_30col_1">3-Point Elipse tool - Draws elipses at an angle.  </td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t596282_row_31col_0"><img alt="Polygon tool" height="26" src="../images/icon/polygon_tool_icon.png" width="26" /></td>
+            <td colspan="1" id="t596282_row_31col_1">Polygon tool (Y) - Draw polygons by draggig in the drawing window.  </td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t596282_row_32col_0"><img alt="Star tool" height="26" src="../images/icon/star_tool_icon.png" width="27" /></td>
+            <td colspan="1" id="t596282_row_32col_1">Star tool - Draw uniform, outlined stars.  </td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t596282_row_33col_0"><img alt="Complex Star tool" height="19" src="../images/icon/complex_star_tool.png" width="22" /></td>
+            <td colspan="1" id="t596282_row_33col_1">Complex Star tool - Draw stars that have intersecting sides.  </td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t596282_row_34col_0"><img alt="Graph Paper tool" height="23" src="../images/icon/graph_paper_tool.png" width="20" /></td>
+            <td colspan="1" id="t596282_row_34col_1">Graph Paper tool (D) - Draw a grid.  </td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t596282_row_35col_0"><img alt="Spiral tool" height="22" src="../images/icon/spiral_tool.png" width="22" /></td>
+            <td colspan="1" id="t596282_row_35col_1">Spiral tool (A) - Draw symmetrical and logarithmic spirals.  </td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t596282_row_36col_0"><img alt="Basic Shapes tool" height="21" src="../images/icon/basic_shapes_tool.png" width="23" /></td>
+            <td colspan="1" id="t596282_row_36col_1">Basic Shapes tool - Draw triangles, circles, cylinders, hearts and other shapes.  </td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t596282_row_37col_0"><img alt="Arrow Shapes tool" height="20" src="../images/icon/arrow_shapes_tool.png" width="25" /></td>
+            <td colspan="1" id="t596282_row_37col_1">Arrow Shapes tool - Draw arrows of various shapes and directions.  </td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t596282_row_38col_0"><img alt="Flowchart Shapes tool" height="21" src="../images/icon/flowchart_shapes_tool.png" width="23" /></td>
+            <td colspan="1" id="t596282_row_38col_1">
+Flowchart Shapes tool - Draw flowchart symbols.
+</td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t596282_row_39col_0"><img alt="Banner Shapes tool" height="23" src="../images/icon/banner_shapes_tool.png" width="26" /></td>
+            <td colspan="1" id="t596282_row_39col_1">Banner Shapes tool - Draw ribbon objects and explosion shapes.  </td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t596282_row_40col_0"><img alt="Callout Shapes tool" height="24" src="../images/icon/callout_shapes_tool.png" width="22" /></td>
+            <td colspan="1" id="t596282_row_40col_1">Callout Shapes tool - Draw labels and speech bubbles.  </td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t596282_row_41col_0"><img alt="Text tool" height="22" src="../images/icon/text_tool.png" width="23" /></td>
+            <td colspan="1" id="t596282_row_41col_1">Text tool (F8) - Add and edit paragraph and artistic text.  </td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t596282_row_42col_0"><img alt="Table tool" height="24" src="../images/icon/chart_tool.png" width="24" /></td>
+            <td colspan="1" id="t596282_row_42col_1">Table tool - Draw, select, and edit tables.  </td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t596282_row_43col_0"><img alt="Parallel Dimension tool" height="21" src="../images/icon/parallel_dimension.png" width="20" /></td>
+            <td colspan="1" id="t596282_row_43col_1">Parallel Dimension tool - Draw slanted dimension lines.  </td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t596282_row_44col_0"><img alt="Horizontal or Vertical Dimension tool" height="23" src="../images/icon/horizontal_or_vertical_dimension.png" width="21" /></td>
+            <td colspan="1" id="t596282_row_44col_1">Horizontal or Vertical Dimension tool - Draw horizontal or vertical dimension lines.  </td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t596282_row_45col_0"><img alt="Angular Dimension tool" height="23" src="../images/icon/angular_dimension.png" width="24" /></td>
+            <td colspan="1" id="t596282_row_45col_1">Angular Dimension tool - Draw angular dimension lines.  </td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t596282_row_46col_0"><img alt="Segment Dimension tool" height="21" src="../images/icon/segment_dimension.png" width="23" /></td>
+            <td colspan="1" id="t596282_row_46col_1">Segment Dimension tool - Display the distance between end nodes on single or multiple segments.  </td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t596282_row_47col_0"><img alt="3-Point Callout tool" height="21" src="../images/icon/3_pt_callout.png" width="21" /></td>
+            <td colspan="1" id="t596282_row_47col_1">3-Point Callout tool - Draw a callout with a two-segment leadingline.  </td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t596282_row_48col_0"><img alt="Straight-Line Connector tool" height="22" src="../images/icon/straight_line_connector.png" width="22" /></td>
+            <td colspan="1" id="t596282_row_48col_1">Straight-Line Connector tool - Draw a straight line to connect two objects.  </td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t596282_row_49col_0"><img alt="Right-Angle Connector tool" height="24" src="../images/icon/right_angle_connector.png" width="24" /></td>
+            <td colspan="1" id="t596282_row_49col_1">Right-Angle Connector tool - Draw a right angle to connect two objects.  </td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t596282_row_50col_0"><img alt="Right-Angle Round Connector tool" height="22" src="../images/icon/right_angle_round_connector.png" width="25" /></td>
+            <td colspan="1" id="t596282_row_50col_1">Right-Angle Round Connector tool - Draw a right angle with a rounded corner to connect two objects.  </td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t596282_row_51col_0"><img alt="Edit Anchor tool" height="22" src="../images/icon/edit_anchor.png" width="22" /></td>
+            <td colspan="1" id="t596282_row_51col_1">Edit Anchor tool - Modify the connector line anchor points of objects.  </td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t596282_row_52col_0"><img alt="Blend tool" height="23" src="../images/icon/blend_tool.png" width="21" /></td>
+            <td colspan="1" id="t596282_row_52col_1">Blend tool - Blend objects by creating a progression of intermediate objects and colors.  </td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t596282_row_53col_0"><img alt="Contour tool" height="23" src="../images/icon/contour_tool.png" width="22" /></td>
+            <td colspan="1" id="t596282_row_53col_1">Contour tool - Apply a series of concentric shapes that radiate into or out of an object.  </td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t596282_row_54col_0"><img alt="Distort tool" height="21" src="../images/icon/distort_tool.png" width="23" /></td>
+            <td colspan="1" id="t596282_row_54col_1">Distort tool -Transform objets by applying Push and Pull, Zipper, or Twister effects.  </td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t596282_row_55col_0"><img alt="Drop Shadow tool" height="20" src="../images/icon/drop_shadow_tool.png" width="21" /></td>
+            <td colspan="1" id="t596282_row_55col_1">Drop Shadow tool - Apply shadows behind or below objects.  </td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t596282_row_56col_0"><img alt="Envelope tool" height="22" src="../images/icon/envelope_tool.png" width="21" /></td>
+            <td colspan="1" id="t596282_row_56col_1">Envelope tool - Change the shape of an object by applying and dragging the nodes of an envelope.  </td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t596282_row_57col_0"><img alt="Extrude tool" height="22" src="../images/icon/extrude_tool.png" width="20" /></td>
+            <td colspan="1" id="t596282_row_57col_1">Extrude tool - Apply 3D efect to objects to create the illusion of depth.  </td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t596282_row_58col_0"><img alt="Transparency tool" height="22" src="../images/icon/transparency_tool.png" width="20" /></td>
+            <td colspan="1" id="t596282_row_58col_1">Transparency tool - Partially reveal image areas underneath the object.  </td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t596282_row_59col_0"><img alt="Color Eyedropper tool" height="22" src="../images/icon/color_eyedropper.png" width="23" /></td>
+            <td colspan="1" id="t596282_row_59col_1">Color Eyedropper tool - Sample colors, and apply them to objects.  </td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t596282_row_60col_0"><img alt="Outline Pen" height="23" src="../images/icon/outline_pen.png" width="21" /></td>
+            <td colspan="1" id="t596282_row_60col_1">Outline Pen (F12)  - Set outline properties sucj as line thickness, corner shape, and arrow type.  </td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t596282_row_61col_0"><img alt="Outline Color" height="23" src="../images/icon/outline_color.png" width="25" /></td>
+            <td colspan="1" id="t596282_row_61col_1">Outline Color (Shift+F12)  - Choose the outline color by using color viewers and color palettes.  </td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t596282_row_62col_0"><img alt="Uniform Fill" height="20" src="../images/icon/uniform_fill.png" width="20" /></td>
+            <td colspan="1" id="t596282_row_62col_1">Uniform Fill (Shift+F11) - Choose a solid fill color for an object by using color palettes, color viewers, color harmonies, or color blends.  </td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t596282_row_63col_0"><img alt="Fountain Fill" height="19" src="../images/icon/fountain_fill.png" width="21" /></td>
+            <td colspan="1" id="t596282_row_63col_1">Fountain Fill (F11) - Fill an object with a gradient of colors or shades.  </td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t596282_row_64col_0"><img alt="Pattern Fill" height="23" src="../images/icon/pattern_fill.png" width="23" /></td>
+            <td colspan="1" id="t596282_row_64col_1">Pattern Fill - Apply a preset pattern fill to an object or create a custom pattern fill.  </td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t596282_row_65col_0"><img alt="Texture Fill" height="20" src="../images/icon/texture_fill.png" width="23" /></td>
+            <td colspan="1" id="t596282_row_65col_1">Texture Fill - Apply preset texture fills to objects to create the illusion of a variety of textures, such as water, clouds and stone.  </td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t596282_row_66col_0"><img alt="PostScript Fill" height="24" src="../images/icon/postscript_fill.png" width="22" /></td>
+            <td colspan="1" id="t596282_row_66col_1">PostScript Fill - Apply an intricate PostScript texture fill to an object.  </td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t596282_row_67col_0"><img alt="Interactive Fill tool" height="22" src="../images/icon/interactive_fill.png" width="21" /></td>
+            <td colspan="1" id="t596282_row_67col_1">Interactive Fill tool (G) - Create a fill dynamically by using markers in the drawing window and property bar to change the angle, midpoint, and color.  </td>
+       </tr>
+
+
+      <tr>
+            <td colspan="1" id="t596282_row_68col_0"><img alt="Mesh Fill tool" height="21" src="../images/icon/mesh_fill.png" width="21" /></td>
+            <td colspan="1" id="t596282_row_68col_1">Mesh Fill tool (M) - Fill an object by blending multiple colors or shades arranged over a mesh grid.  </td>
+       </tr>
+
+</tbody>
+</table>
+                                <script src='../js/colpick.js'></script>
+                                <script src="../js/colorpicker.js"></script>
+
+                                </div>
+                            </div>
+
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane animated fadeIn in" id="tab-2">
+                    <div id="contenttab2"></div>
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane animated fadeIn" id="tab-3" style="margin-top:-20px;margin-left:-20px;margin-right:-20px;background:#ffffff">
+
+                    </div>
+
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- Page Loader -->
+        <div class="page-loader">
+            <div class="preloader" style="text-align:center;">
+                <svg class="pl-circular" viewBox="25 25 50 50">
+                    <circle class="plc-path" cx="50" cy="50" r="20" />
+                </svg><br/><br/>
+                <div style="font-size:8px;margin-left:-80px;width:200px" class="demo"></div>
+            </div>
+        </div>
+
+        <div style="margin-bottom:10px;"><footer id="footer">
+            Copyright &copy; 2017 IDWEBDesigner<br/><a href="index.html">Back to <i class="zmdi zmdi-home"></i> Homepage</a>
+        </footer></div>
+
+        <!-- Javascript Libraries -->
+        <script src="../vendors/bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="../vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+        <script src="../vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="../vendors/bower_components/Waves/dist/waves.min.js"></script>
+        <script src="../vendors/bootstrap-growl/bootstrap-growl.min.js"></script>
+        <script src="../vendors/bower_components/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="../vendors/bower_components/lightgallery/dist/js/lightgallery-all.min.js"></script>
+        <script src="../vendors/bootgrid/jquery.bootgrid.updated.min.js"></script>
+
+        <!-- Placeholder for IE9 -->
+        <!--[if IE 9 ]>
+            <script src="vendors/bower_components/jquery-placeholder/jquery.placeholder.min.js"></script>
+        <![endif]-->
+
+        <script src="../js/app.min.js"></script>
+
+        <!-- Data Table -->
+        <script>
+            $(function()
+            {
+              $("#grid-basic").bootgrid({
+                  caseSensitive: false,
+                    css: {
+                        icon: 'zmdi icon',
+                        iconColumns: 'zmdi-view-module',
+                        iconDown: 'zmdi-sort-amount-desc',
+                        iconRefresh: 'zmdi-refresh',
+                        iconUp: 'zmdi-sort-amount-asc'
+                    },
+              }
+              )
+            });
+        </script>
+
+        <script type="text/javascript">
+            //Basic
+            $('#sa-basic').click(function(e){
+                e.preventDefault();
+                var link = $(this).attr('href');
+
+                swal({
+                    title: "Get Inspire Profesional Logos",
+                    text: "More logos sparately on our Learn Apps: Javascript, NoSQL Database, Virtual Reality, and more...",
+                    showCancelButton: true,
+                    allowOutsideClick: true,
+                },
+                function(){
+                    window.location.href = 'market://details?id=id.web.designer.learn.javascript';
+                });
+            });
+        </script>
+
+    <script type="text/javascript">
+        function rateApp() {
+            android.rateApp();
+       }
+    </script>
+
+    </body>
+
+</html>
