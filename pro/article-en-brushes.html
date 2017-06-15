@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Tutorial CorelDraw Pro</title>
+
+         <script type="text/javascript">
+          <!--
+          if (screen.width >= 2800) {
+            window.location = "http://designer.web.id";
+          }
+          //-->
+        </script>
+
+        <!-- Vendor CSS -->
+        <link href="../vendors/bower_components/animate.css/animate.min.css" rel="stylesheet">
+        <link href="../vendors/bower_components/sweetalert/dist/sweetalert.css" rel="stylesheet">
+        <link href="../vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
+        <link href="../vendors/bower_components/lightgallery/dist/css/lightgallery.min.css" rel="stylesheet">
+        <link href="../vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+        <link href="../vendors/bootgrid/jquery.bootgrid.min.css" rel="stylesheet">
+
+        <!-- CSS -->
+        <link href="../css/app_1.min.css" rel="stylesheet">
+        <link href="../css/app_2.min.css" rel="stylesheet">
+
+        <script src="../js/h5utils.js"></script>
+        <script src="../js/jquery-2.1.0.min.js"></script>
+        <script src="../js/jquery.jscroll.min.js"></script>
+        <script>$(function(){
+        $("#contentloader1").load("http://app.coreldraw.designer.web.id/content-message.html"); $("#contentloader2").load("http://app.coreldraw.designer.web.id/pro/content-right-pro.html");
+        $("#contenttab1").load("http://app.coreldraw.designer.web.id/pro/contenttab2.html");
+        $("#contenttab2").load("http://app.coreldraw.designer.web.id/pro/contenttab2.html");
+        });</script>
+
+        <style>.videoWrapper {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 */
+        padding-top: 25px;
+        height: 0;}
+        .videoWrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;}
+        .lcb-navigation a{background:#999999}
+        </style>
+    </head>
+    <body style="background:#ffffff">
+
+        <!-- Page Loader -->
+        <div class="page-loader">
+            <div class="preloader pls-white">
+                <svg class="pl-circular" viewBox="25 25 50 50">
+                    <circle class="plc-path" cx="50" cy="50" r="20" />
+                </svg>
+            </div>
+
+        </div>
+
+        <header id="header" class="clearfix container">
+            <ul class="h-inner">
+
+                <li class="hi-trigger ma-trigger" data-ma-action="sidebar-open" data-ma-target="#sidebar">
+                    <div class="line-wrap">
+                        <div class="line top"></div>
+                        <div class="line center"></div>
+                        <div class="line bottom"></div>
+                    </div>
+                </li>
+
+                <li class="hi-logo" data-ma-action="sidebar-open" data-ma-target="#sidebar" style="margin-top:8px;">
+                    <span style="font-size:15px;color:#ffffff;"> Tutorial CorelDRAW<sup>&reg;</sup><span>
+                </li>
+
+                <li class="pull-right">
+                    <ul class="hi-menu">
+
+                        <li style="margin-right:-15px;" class="dropdown">
+                            <a data-toggle="dropdown" href="#">
+                                <i class="him-icon zmdi zmdi-notifications-none"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-lg pull-right">
+                                <div class="list-group list-group-light">
+                                    <div class="lg-header">
+                                        LIVE DEVELOPER MESSAGES
+                                    </div>
+
+                                    <article>
+                                      <p style="text-align:center;font-size:1em;"><span id="status"><span id="status"></span></p>
+                                      <ol id="state"></ol>
+                                    </article>
+                                    <script>
+                                    var statusElem  = document.getElementById('status'),
+                                        state               = document.getElementById('state');
+
+                                    function online(event) {
+                                      statusElem.className = navigator.onLine ? 'online' : 'offline';
+                                      statusElem.innerHTML = navigator.onLine ? '' : '<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You&#39;re offline, check network connection.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;content required internet access.';
+                                      state.innerHTML += '&nbsp;';
+                                    }
+
+                                    addEvent(window, 'online', online);
+                                    addEvent(window, 'offline', online);
+                                    online({ type: 'ready' });
+                                    </script>
+
+                                    <div style="margin-top:-30px;" id="contentloader1"></div>
+                                    <a class="view-more view-more-light" href="idwebdesigner.html">Powered by IDWEBDesigner</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li style="margin-right:-15px;" class="ma-trigger" data-ma-action="sidebar-open" data-ma-target="#chat">
+                            <a data-toggle="dropdown" href="#">
+                                <i class="him-icon zmdi zmdi-favorite-outline"></i>
+                            </a>
+                        </li>
+                        <li style="margin-right:-5px;" class="dropdown">
+                            <a data-toggle="dropdown" href="#"><i class="him-icon zmdi zmdi-more-vert"></i></a>
+                            <ul class="dropdown-menu dm-icon pull-right">
+                                <li class="hidden-xs">
+                                    <a data-ma-action="fullscreen" href="#"><i class="zmdi zmdi-fullscreen"></i> Fullscreen</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:window.location.reload();"><i class="zmdi zmdi-refresh-sync"></i> Refresh</a>
+                                </li>
+                                <li>
+                                    <a id="rate-app" onClick="rateApp()">Rate 5 Stars</a>
+                                </li>
+                                <li>
+                                    <a href="update.html"><i class="zmdi zmdi-download"></i>Check update</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="help.html"><i class="zmdi zmdi-help"></i> Help</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="hidden-xs ma-trigger" data-ma-action="sidebar-open" data-ma-target="#chat">
+                            <a href="#"><i class="him-icon zmdi zmdi-comment-alt-text"></i></a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="tab-nav tn-justified tn-icon" role="tablist" style="width:100%">
+                                        <li role="presentation">
+                                            <a class="col-sx-4" href="index.html">
+                                                INDONESIA
+                                            </a>
+                                        </li>
+                                        <li role="presentation" class="active">
+                                            <a class="col-xs-4" href="#tab-2" aria-controls="tab-2" role="tab" data-toggle="tab">
+                                                ENGLISH (PRO)
+                                            </a>
+                                        </li>
+
+                                    </ul>
+        </header>
+
+        <section id="main">
+            <ol class="breadcrumb" style="margin-left:-10px;">
+                <li><a href="developer.html">designer.web.id</a></li>
+                <li><a href="index.html">learn</a></li>
+                <li class="active">virtualreality</li>
+            </ol>
+
+            <aside id="sidebar" class="sidebar c-overflow" style="position:fixed;z-index:1000;margin-top:-70px;height:100%;background:white">
+                <ul class="main-menu">
+                    <li class="mm-profile sub-menu">
+                        <a href="#" data-ma-action="submenu-toggle" class="media">
+                            <img class="pull-left" src="../img/coreldraw.green.png" alt="" height="25px" style="margin-left:-40px;">
+                            <div class="media-body">
+                            <div>Tutorial CorelDRAW<sup>&reg;</sup></div>
+                            <span style="font-size:11px;">Experience by IDWEBDesigner<br/>dev@designer.web.id</span>
+                            </div>
+                        </a>
+
+                        <ul>
+                            <li>
+                                <a href="developer.html">Indonesia Web Designer</a>
+                            </li>
+                            <li>
+                                <div style="margin-left:65px;margin-bottom:10px;font-size:10px;color:#888888;padding-right:20px;">Jl. Wahid Hasyim No.3 Gaten Condongcatur Depok Sleman Yogyakarta, Indonesia.</div>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-info"></i> About CorelDraw</a>
+                        <div style="margin-left:65px;margin-bottom:10px;font-size:12px;color:#579706;"><a href="basics.html">What's is CorelDraw?<br/>Basics Learn</a></div>
+                    </li>
+
+                    <li><a href="index.html"><i class="zmdi zmdi-flag"></i> Tutorial Bahasa Indonesia</a></li>
+                    <li class="sub-menu toggled active">
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-android"></i> Featured Apps</a>
+                        <div style="margin-left:65px;margin-top:10px;font-size:10px;color:#888888;padding-right:20px;">Color Docker: This docker allows you to choose fill and outline colors from a color picker, color sliders, and color palettes. Found with dockers and in the Toolbox.</div>
+
+                        <ul>
+
+                            <li><a href="language.html">Bahasa Indonesia</a></li>
+                            <li style="display:none;"><a href="upgrade.html"><i class="zmdi zmdi-shopping-cart"></i>&nbsp;&nbsp;Upgrade</a></li>
+                            <li class="divider"></li>
+
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-code"></i> Developer</a>
+
+                        <ul>
+                            <li><a href="developer.html">dev@designer.web.id<br/>designer.web.id</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </aside>
+
+            <aside id="chat" class="sidebar">
+
+                                    <article>
+                                      <p style="margin-top:30px;margin-left:15px;font-size:0.7em;"><span id="status2"><span id="status"></span></p>
+                                      <ol id="state2"></ol>
+                                    </article>
+                                    <script>
+                                    var statusElem  = document.getElementById('status2'),
+                                        state               = document.getElementById('state2');
+
+                                    function online(event) {
+                                      statusElem.className = navigator.onLine ? 'online' : 'offline';
+                                      statusElem.innerHTML = navigator.onLine ? '' : '<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You&#39;re offline, check network connection.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;content required internet access.';
+                                      state.innerHTML += '&nbsp;';
+                                    }
+
+                                    addEvent(window, 'online', online);
+                                    addEvent(window, 'offline', online);
+                                    online({ type: 'ready' });
+                                    </script>
+
+                <div style="margin-top:-30px; width:100%" id="contentloader2"></div>
+
+
+
+            </aside>
+
+            <section id="content" style="margin-bottom:-40px;">
+                <div class="container" style="margin-top:-55px;margin-left:-20px;padding-right:0px;">
+                    <div class="tab-content p-20" style="background:#ffffff;">
+
+                    <div role="tabpanel" class="tab-pane animated fadeIn in active" id="tab-1">
+
+                            <!-- Blog Posts -->
+                            <div class="card blog-post" style="margin-bottom:-0px;">
+
+                                <div class="videoWrapper">
+                                <img width="100%" src="../images/green.png" frameborder="0" allowfullscreen></img>
+                                </div>
+
+                                <a class="card-header ch-alt">
+                                    <h2><small>Caption</small></h2>
+                                </a>
+
+                                <div class="card-body card-padding">
+
+                                <h4>Using Corel® PHOTOPAINT™ brushes in CorelDRAW®</h4>
+                                 <br/>
+
+<p>CorelDRAW has a variety of Artistic Media brushes, divided into different categories, covering a wide range of designs and effects. But sometimes, we need something &#8220;more realistic&#8221; and at that point, Corel PHOTO-PAINT provides photo-realistic effects that can be applied to any photo. But what happens if we want to apply these effects to a vector drawing in CorelDRAW? Are both worlds apart? Fortunately, the two programs are linked, which makes it easy for us to use Corel PHOTO-PAINT brushes in CorelDRAW.</p>
+<ul>
+<li>Create a bitmap image</li>
+<li>Edit the bitmap image. This will launch PHOTOPAINT.</li>
+<li>Use the image Sprayer tool and select the brush you wish to use</li>
+</ul>
+
+			<h4>Step 1.</h4>
+<p>Draw a circle or rectangle (with no fill and no outline), and with, for example a width of 40 mm (<strong>Toolbox</strong> &gt; <strong>Ellipse tool</strong> or<strong>Rectangle tool</strong>).</p>
+<p class="small" align="center"><img class="alignnone size-medium wp-image-10772" src="http://learn.corel.com/wp-content/uploads/2015/11/1102-300x298.jpg" alt="1" width="300" height="298" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1102-300x298.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/1102-150x150.jpg 150w, http://learn.corel.com/wp-content/uploads/2015/11/1102-180x180.jpg 180w, http://learn.corel.com/wp-content/uploads/2015/11/1102-85x85.jpg 85w, http://learn.corel.com/wp-content/uploads/2015/11/1102-50x50.jpg 50w, http://learn.corel.com/wp-content/uploads/2015/11/1102.jpg 381w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<h4>Step 2.</h4>
+<p>Convert to bitmap (<strong>Bitmaps</strong> &gt; <strong>Convert to Bitmap&#8230;</strong>), checking the box for &#8216;<strong>Transparent background</strong>&#8216; and choosing as the<strong>Color mode</strong>, RGB or CMYK according your workflow.</p>
+<table align="center">
+<tbody>
+<tr>
+<td align="center">
+<p class="small"><img class="alignnone size-medium wp-image-10773" src="http://learn.corel.com/wp-content/uploads/2015/11/250-300x297.jpg" alt="2" width="300" height="297" srcset="http://learn.corel.com/wp-content/uploads/2015/11/250-300x297.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/250-150x150.jpg 150w, http://learn.corel.com/wp-content/uploads/2015/11/250-85x85.jpg 85w, http://learn.corel.com/wp-content/uploads/2015/11/250-50x50.jpg 50w, http://learn.corel.com/wp-content/uploads/2015/11/250.jpg 350w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+</td>
+<td align="center">
+<p class="small"><img class="alignnone size-medium wp-image-10774" src="http://learn.corel.com/wp-content/uploads/2015/11/337-300x267.jpg" alt="3" width="300" height="267" srcset="http://learn.corel.com/wp-content/uploads/2015/11/337-300x267.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/337.jpg 350w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+</td>
+</tr>
+</tbody>
+</table>
+<h4>Step 3.</h4>
+<p>Right-click the bitmap and choose &#8220;<strong>Edit bitmap&#8230;</strong>&#8220;. This will launch Corel PHOTO-PAINT.</p>
+<h4>Step 4.</h4>
+<p>Press the <strong>i-key</strong> to select the <strong>Image Sprayer tool</strong>. Then from the <strong>Brush Type</strong> drop-down list on the <strong>Property bar</strong>, select the &#8216;<strong>Sparkles</strong>&#8216; brush and adjust the size of the brush in the <strong>Property bar</strong> using the <strong>Size</strong> settings.</p>
+<p class="small" align="center"><img class="alignnone size-medium wp-image-10775" src="http://learn.corel.com/wp-content/uploads/2015/11/435-300x300.jpg" alt="4" width="300" height="300" srcset="http://learn.corel.com/wp-content/uploads/2015/11/435-300x300.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/435-150x150.jpg 150w, http://learn.corel.com/wp-content/uploads/2015/11/435-180x180.jpg 180w, http://learn.corel.com/wp-content/uploads/2015/11/435-367x367.jpg 367w, http://learn.corel.com/wp-content/uploads/2015/11/435-450x450.jpg 450w, http://learn.corel.com/wp-content/uploads/2015/11/435-85x85.jpg 85w, http://learn.corel.com/wp-content/uploads/2015/11/435-50x50.jpg 50w, http://learn.corel.com/wp-content/uploads/2015/11/435.jpg 455w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<h4>Step 5.</h4>
+<p>Close PHOTO-PAINT and the program will prompt you to save. Select &#8220;<strong>Yes</strong>&#8221; and you will return automatically to CorelDRAW with the changes saved.</p>
+<p class="small" align="center"><img class="alignnone size-medium wp-image-10776" src="http://learn.corel.com/wp-content/uploads/2015/11/530-300x300.jpg" alt="5" width="300" height="300" srcset="http://learn.corel.com/wp-content/uploads/2015/11/530-300x300.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/530-150x150.jpg 150w, http://learn.corel.com/wp-content/uploads/2015/11/530-180x180.jpg 180w, http://learn.corel.com/wp-content/uploads/2015/11/530-367x367.jpg 367w, http://learn.corel.com/wp-content/uploads/2015/11/530-85x85.jpg 85w, http://learn.corel.com/wp-content/uploads/2015/11/530-50x50.jpg 50w, http://learn.corel.com/wp-content/uploads/2015/11/530.jpg 433w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<h4>Step 6.</h4>
+<p>Now you can modify the size, add a lens, change the transparency mode, rotate the image, etc. and the result should be something like this:</p>
+<p class="small" align="center"><img class="alignnone size-medium wp-image-10777" src="http://learn.corel.com/wp-content/uploads/2015/11/629-300x145.jpg" alt="6" width="300" height="145" srcset="http://learn.corel.com/wp-content/uploads/2015/11/629-300x145.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/629-600x289.jpg 600w, http://learn.corel.com/wp-content/uploads/2015/11/629-500x241.jpg 500w, http://learn.corel.com/wp-content/uploads/2015/11/629.jpg 730w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<p>And of course, there are many brushes available in Corel PHOTO-PAINT to experiment with.</p>
+<table align="center">
+<tbody>
+<tr>
+<td align="center">
+<p class="small"><img class="alignnone size-medium wp-image-10778" src="http://learn.corel.com/wp-content/uploads/2015/11/729-300x189.jpg" alt="7" width="300" height="189" srcset="http://learn.corel.com/wp-content/uploads/2015/11/729-300x189.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/729.jpg 350w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+</td>
+<td align="center">
+<p class="small"><img class="alignnone size-medium wp-image-10779" src="http://learn.corel.com/wp-content/uploads/2015/11/831-300x174.jpg" alt="8" width="300" height="174" srcset="http://learn.corel.com/wp-content/uploads/2015/11/831-300x174.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/831.jpg 350w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<p class="small" align="center"><img class="alignnone size-medium wp-image-10780" src="http://learn.corel.com/wp-content/uploads/2015/11/921-300x117.jpg" alt="9" width="300" height="117" srcset="http://learn.corel.com/wp-content/uploads/2015/11/921-300x117.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/921-600x234.jpg 600w, http://learn.corel.com/wp-content/uploads/2015/11/921-500x195.jpg 500w, http://learn.corel.com/wp-content/uploads/2015/11/921.jpg 730w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Let try another effect: adding fire.</p>
+<p>We can use a single letter, such as the &#8216;W&#8217; of CorelDRAW, or an entire word.</p>
+<h4>Step 1.</h4>
+<p>You can create a transparent rectangle or circle, as in the previous exercise, and follow the same steps. But this time, we will do something different and create a custom white frame</p>
+<p class="small" align="center"><img class="alignnone size-medium wp-image-10781" src="http://learn.corel.com/wp-content/uploads/2015/11/1017-300x149.jpg" alt="10" width="300" height="149" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1017-300x149.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/1017-600x298.jpg 600w, http://learn.corel.com/wp-content/uploads/2015/11/1017-500x249.jpg 500w, http://learn.corel.com/wp-content/uploads/2015/11/1017.jpg 730w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<h4>Step 2.</h4>
+<p>Convert the white shape around the &#8216;W&#8217; to a bitmap (<strong>Bitmaps</strong> &gt; <strong>Edit Bitmap</strong>), and choose <strong>Edit bitmap</strong> either by <strong>right-clicking</strong> on the bitmap or by clicking on the <strong>Edit Bitmap</strong> button in the <strong>Property bar</strong>. This will open Corel PHOTO-PAINT.</p>
+<h4>Step 3.</h4>
+<p>Press the <strong>i-key</strong> for select the <strong>Image Sprayer tool</strong>. Choose the &#8220;<strong>Fire</strong>&#8221; brush and apply. Adjust the brush size to fit with the file. When finished, close the file in Corel PHOTO-PAINT. The program will prompt if you want to save, select &#8220;Yes&#8221; and will return automatically to CorelDRAW.</p>
+<p>Place the white bitmap with the fire effect behind the letter W in the text (<strong>CTRL+pgdn</strong>).</p>
+<table align="center">
+<tbody>
+<tr>
+<td align="center">
+<p class="small"><img class="alignnone size-medium wp-image-10782" src="http://learn.corel.com/wp-content/uploads/2015/11/1122-292x300.jpg" alt="11" width="292" height="300" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1122-292x300.jpg 292w, http://learn.corel.com/wp-content/uploads/2015/11/1122-50x50.jpg 50w, http://learn.corel.com/wp-content/uploads/2015/11/1122.jpg 350w" sizes="(max-width: 292px) 100vw, 292px" /></p>
+</td>
+<td align="center">
+<p class="small"><img class="alignnone size-medium wp-image-10783" src="http://learn.corel.com/wp-content/uploads/2015/11/1222-291x300.jpg" alt="12" width="291" height="300" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1222-291x300.jpg 291w, http://learn.corel.com/wp-content/uploads/2015/11/1222.jpg 350w" sizes="(max-width: 291px) 100vw, 291px" /></p>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<p class="small" align="center"><img class="alignnone size-medium wp-image-10784" src="http://learn.corel.com/wp-content/uploads/2015/11/1322-300x81.jpg" alt="13" width="300" height="81" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1322-300x81.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/1322-600x162.jpg 600w, http://learn.corel.com/wp-content/uploads/2015/11/1322-500x135.jpg 500w, http://learn.corel.com/wp-content/uploads/2015/11/1322.jpg 730w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+</td>
+</tr>
+</tbody>
+</table>
+<h4>Step 4.</h4>
+<p>But we can do the same with the entire word. In this case, we need to create a simple frame &#8211; a rectangle with no fill and no outline – around the text and the rectangle. Group both Text and Rectangle (<strong>Ctrl+G</strong>) and choose no fill and no outline.</p>
+<p class="small" align="center"><img class="alignnone size-medium wp-image-10785" src="http://learn.corel.com/wp-content/uploads/2015/11/1419-300x97.jpg" alt="14" width="300" height="97" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1419-300x97.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/1419-600x195.jpg 600w, http://learn.corel.com/wp-content/uploads/2015/11/1419-500x162.jpg 500w, http://learn.corel.com/wp-content/uploads/2015/11/1419.jpg 730w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<h4>Step 5.</h4>
+<p>Right-click the bitmap and choose &#8220;<strong>Edit bitmap&#8230;</strong>&#8221; (or choose <strong>Edit Bitmap</strong> from the <strong>Property bar</strong>). This will launch Corel PHOTO-PAINT.</p>
+<p class="small" align="center"><img class="alignnone size-medium wp-image-10786" src="http://learn.corel.com/wp-content/uploads/2015/11/1518-300x97.jpg" alt="15" width="300" height="97" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1518-300x97.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/1518-600x195.jpg 600w, http://learn.corel.com/wp-content/uploads/2015/11/1518-500x162.jpg 500w, http://learn.corel.com/wp-content/uploads/2015/11/1518.jpg 730w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<h4>Step 6.</h4>
+<p>Press the <strong>i-key</strong> to select the <strong>Image Sprayer tool</strong>. Choose the &#8220;<strong>Fire</strong>&#8221; brush and apply. Select the brush size according to the design. You can leave or erase the original text, since it&#8217;s only there as a reference.</p>
+<p class="small" align="center"><img class="alignnone size-medium wp-image-10787" src="http://learn.corel.com/wp-content/uploads/2015/11/1615-300x106.jpg" alt="16" width="300" height="106" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1615-300x106.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/1615-600x212.jpg 600w, http://learn.corel.com/wp-content/uploads/2015/11/1615-500x177.jpg 500w, http://learn.corel.com/wp-content/uploads/2015/11/1615.jpg 730w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<h4>Step 7.</h4>
+<p>When finished, close the file in PHOTO-PAINT and say &#8216;<strong>Yes</strong>&#8216; when prompted to save, to return to CorelDRAW.</p>
+<p>And now we have fire with a transparent background! For this reason is very important to leave the &#8216;<strong>Transparent background</strong>&#8216; box enabled when converting to a bitmap.</p>
+<p>The key is to create the custom shape before converting to a bitmap in order to have the real space to apply the brush to.</p>
+<p class="small" align="center"><img class="alignnone size-medium wp-image-10788" src="http://learn.corel.com/wp-content/uploads/2015/11/1711-300x163.jpg" alt="17" width="300" height="163" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1711-300x163.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/1711-600x325.jpg 600w, http://learn.corel.com/wp-content/uploads/2015/11/1711-500x271.jpg 500w, http://learn.corel.com/wp-content/uploads/2015/11/1711.jpg 730w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<p>The next effect is an old trick, but still very useful: interlacing a bitmap with text.</p>
+<h4>Step 1.</h4>
+<p>Create a new transparent rectangle and convert to a bitmap, or, just open Corel PHOTO-PAINT and then create a new image (<strong>File</strong>&gt; <strong>New</strong>), and set the size according your job (i.e. 10 x 15 cm), and check the option for &gt; &#8216;<strong>Transparent background</strong>&#8216;.</p>
+<p>Using the Image Sprayer tool (<strong>Toolbox</strong> &gt; <strong>Image Sprayer</strong> or, press the <strong>i-key</strong>), and create a simple shape. For example, this line was made with the Rope brush.</p>
+<p class="small" align="center"><img class="alignnone size-medium wp-image-10789" src="http://learn.corel.com/wp-content/uploads/2015/11/1810-300x200.jpg" alt="18" width="300" height="200" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1810-300x200.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/1810-600x400.jpg 600w, http://learn.corel.com/wp-content/uploads/2015/11/1810-500x334.jpg 500w, http://learn.corel.com/wp-content/uploads/2015/11/1810.jpg 730w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<h4>Step 2.</h4>
+<p>Return to CorelDRAW or save the image as a .CPT file and then import it into your CorelDRAW document (<strong>File &gt; Import</strong>). It should look something like this:</p>
+<p class="small" align="center"><img class="alignnone size-medium wp-image-10790" src="http://learn.corel.com/wp-content/uploads/2015/11/1911-300x58.jpg" alt="19" width="300" height="58" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1911-300x58.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/1911-600x117.jpg 600w, http://learn.corel.com/wp-content/uploads/2015/11/1911-500x97.jpg 500w, http://learn.corel.com/wp-content/uploads/2015/11/1911.jpg 730w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<h4>Step 3.</h4>
+<p>Add the text following the shape. Now, break the text apart (<strong>Ctrl+K</strong>) to have individual characters. Move some letters behind the transparent bitmap and leave others in front in order to create the illusion of interlaced objects (this can be easily done by dragging some of the individual text objects below the bitmap in the <strong>Object Manager</strong>).</p>
+<p class="small" align="center"><img class="alignnone size-medium wp-image-10791" src="http://learn.corel.com/wp-content/uploads/2015/11/207-300x75.jpg" alt="20" width="300" height="75" srcset="http://learn.corel.com/wp-content/uploads/2015/11/207-300x75.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/207-600x150.jpg 600w, http://learn.corel.com/wp-content/uploads/2015/11/207-500x125.jpg 500w, http://learn.corel.com/wp-content/uploads/2015/11/207.jpg 730w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<h4>Step 3.</h4>
+<p>There&#8217;re several ways to create the interlace effect but one easy and fast way is to use the <strong>Eraser tool</strong> (<strong>Toolbar</strong> &gt; <strong>Eraser tool</strong>), or by pressing the <strong>X-key</strong> to delete just a part of the letter.</p>
+<p class="small" align="center"><img class="alignnone size-medium wp-image-10792" src="http://learn.corel.com/wp-content/uploads/2015/11/2116-300x141.jpg" alt="21" width="300" height="141" srcset="http://learn.corel.com/wp-content/uploads/2015/11/2116-300x141.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/2116-600x283.jpg 600w, http://learn.corel.com/wp-content/uploads/2015/11/2116-500x236.jpg 500w, http://learn.corel.com/wp-content/uploads/2015/11/2116.jpg 730w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<p>The text should then look like this:</p>
+<p class="small" align="center"><img class="alignnone size-medium wp-image-10793" src="http://learn.corel.com/wp-content/uploads/2015/11/2213-300x113.jpg" alt="22" width="300" height="113" srcset="http://learn.corel.com/wp-content/uploads/2015/11/2213-300x113.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/2213-600x226.jpg 600w, http://learn.corel.com/wp-content/uploads/2015/11/2213-500x188.jpg 500w, http://learn.corel.com/wp-content/uploads/2015/11/2213.jpg 730w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<p>And the final result is&#8230;</p>
+<p class="small" align="center"><img class="alignnone size-medium wp-image-10794" src="http://learn.corel.com/wp-content/uploads/2015/11/2312-300x69.jpg" alt="23" width="300" height="69" srcset="http://learn.corel.com/wp-content/uploads/2015/11/2312-300x69.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/2312-600x137.jpg 600w, http://learn.corel.com/wp-content/uploads/2015/11/2312-500x114.jpg 500w, http://learn.corel.com/wp-content/uploads/2015/11/2312.jpg 730w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<p>Using our imagination, we can create a lot of realistic effects in CorelDRAW.</p>
+<p>Part of the effect will be a bitmap and the rest will be a vector. The mix of both will create fantastic illustrations, since it will combine the perfect shape of a vector with the realistic texture of the bitmaps.</p>
+<p class="small" align="center"><img class="alignnone size-medium wp-image-10795" src="http://learn.corel.com/wp-content/uploads/2015/11/2410-300x144.jpg" alt="24" width="300" height="144" srcset="http://learn.corel.com/wp-content/uploads/2015/11/2410-300x144.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/2410-600x288.jpg 600w, http://learn.corel.com/wp-content/uploads/2015/11/2410-500x240.jpg 500w, http://learn.corel.com/wp-content/uploads/2015/11/2410.jpg 730w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+
+
+
+                                <script src='../js/colpick.js'></script>
+                                <script src="../js/colorpicker.js"></script>
+
+                                </div>
+                            </div>
+
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane animated fadeIn in" id="tab-2">
+                    <div id="contenttab2"></div>
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane animated fadeIn" id="tab-3" style="margin-top:-20px;margin-left:-20px;margin-right:-20px;background:#ffffff">
+
+                    </div>
+
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- Page Loader -->
+        <div class="page-loader">
+            <div class="preloader" style="text-align:center;">
+                <svg class="pl-circular" viewBox="25 25 50 50">
+                    <circle class="plc-path" cx="50" cy="50" r="20" />
+                </svg><br/><br/>
+                <div style="font-size:8px;margin-left:-80px;width:200px" class="demo"></div>
+            </div>
+        </div>
+
+        <div style="margin-bottom:10px;"><footer id="footer">
+            Copyright &copy; 2017 IDWEBDesigner<br/><a href="index.html">Back to <i class="zmdi zmdi-home"></i> Homepage</a>
+        </footer></div>
+
+        <!-- Javascript Libraries -->
+        <script src="../vendors/bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="../vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+        <script src="../vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="../vendors/bower_components/Waves/dist/waves.min.js"></script>
+        <script src="../vendors/bootstrap-growl/bootstrap-growl.min.js"></script>
+        <script src="../vendors/bower_components/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="../vendors/bower_components/lightgallery/dist/js/lightgallery-all.min.js"></script>
+        <script src="../vendors/bootgrid/jquery.bootgrid.updated.min.js"></script>
+
+        <!-- Placeholder for IE9 -->
+        <!--[if IE 9 ]>
+            <script src="vendors/bower_components/jquery-placeholder/jquery.placeholder.min.js"></script>
+        <![endif]-->
+
+        <script src="../js/app.min.js"></script>
+
+        <!-- Data Table -->
+        <script>
+            $(function()
+            {
+              $("#grid-basic").bootgrid({
+                  caseSensitive: false,
+                    css: {
+                        icon: 'zmdi icon',
+                        iconColumns: 'zmdi-view-module',
+                        iconDown: 'zmdi-sort-amount-desc',
+                        iconRefresh: 'zmdi-refresh',
+                        iconUp: 'zmdi-sort-amount-asc'
+                    },
+              }
+              )
+            });
+        </script>
+
+        <script type="text/javascript">
+            //Basic
+            $('#sa-basic').click(function(e){
+                e.preventDefault();
+                var link = $(this).attr('href');
+
+                swal({
+                    title: "Get Inspire Profesional Logos",
+                    text: "More logos sparately on our Learn Apps: Javascript, NoSQL Database, Virtual Reality, and more...",
+                    showCancelButton: true,
+                    allowOutsideClick: true,
+                },
+                function(){
+                    window.location.href = 'market://details?id=id.web.designer.learn.javascript';
+                });
+            });
+        </script>
+
+    <script type="text/javascript">
+        function rateApp() {
+            android.rateApp();
+       }
+    </script>
+
+    </body>
+
+</html>
