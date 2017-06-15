@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Tutorial CorelDraw Pro</title>
+
+         <script type="text/javascript">
+          <!--
+          if (screen.width >= 2800) {
+            window.location = "http://designer.web.id";
+          }
+          //-->
+        </script>
+
+        <!-- Vendor CSS -->
+        <link href="../vendors/bower_components/animate.css/animate.min.css" rel="stylesheet">
+        <link href="../vendors/bower_components/sweetalert/dist/sweetalert.css" rel="stylesheet">
+        <link href="../vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
+        <link href="../vendors/bower_components/lightgallery/dist/css/lightgallery.min.css" rel="stylesheet">
+        <link href="../vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+        <link href="../vendors/bootgrid/jquery.bootgrid.min.css" rel="stylesheet">
+
+        <!-- CSS -->
+        <link href="../css/app_1.min.css" rel="stylesheet">
+        <link href="../css/app_2.min.css" rel="stylesheet">
+
+        <script src="../js/h5utils.js"></script>
+        <script src="../js/jquery-2.1.0.min.js"></script>
+        <script src="../js/jquery.jscroll.min.js"></script>
+        <script>$(function(){
+        $("#contentloader1").load("http://app.coreldraw.designer.web.id/content-message.html"); $("#contentloader2").load("http://app.coreldraw.designer.web.id/pro/content-right-pro.html");
+        $("#contenttab1").load("http://app.coreldraw.designer.web.id/pro/contenttab2.html");
+        $("#contenttab2").load("http://app.coreldraw.designer.web.id/pro/contenttab2.html");
+        });</script>
+
+        <style>.videoWrapper {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 */
+        padding-top: 25px;
+        height: 0;}
+        .videoWrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;}
+        .lcb-navigation a{background:#999999}
+        </style>
+    </head>
+    <body style="background:#ffffff">
+
+        <!-- Page Loader -->
+        <div class="page-loader">
+            <div class="preloader pls-white">
+                <svg class="pl-circular" viewBox="25 25 50 50">
+                    <circle class="plc-path" cx="50" cy="50" r="20" />
+                </svg>
+            </div>
+
+        </div>
+
+        <header id="header" class="clearfix container">
+            <ul class="h-inner">
+
+                <li class="hi-trigger ma-trigger" data-ma-action="sidebar-open" data-ma-target="#sidebar">
+                    <div class="line-wrap">
+                        <div class="line top"></div>
+                        <div class="line center"></div>
+                        <div class="line bottom"></div>
+                    </div>
+                </li>
+
+                <li class="hi-logo" data-ma-action="sidebar-open" data-ma-target="#sidebar" style="margin-top:8px;">
+                    <span style="font-size:15px;color:#ffffff;"> Tutorial CorelDRAW<sup>&reg;</sup><span>
+                </li>
+
+                <li class="pull-right">
+                    <ul class="hi-menu">
+
+                        <li style="margin-right:-15px;" class="dropdown">
+                            <a data-toggle="dropdown" href="#">
+                                <i class="him-icon zmdi zmdi-notifications-none"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-lg pull-right">
+                                <div class="list-group list-group-light">
+                                    <div class="lg-header">
+                                        LIVE DEVELOPER MESSAGES
+                                    </div>
+
+                                    <article>
+                                      <p style="text-align:center;font-size:1em;"><span id="status"><span id="status"></span></p>
+                                      <ol id="state"></ol>
+                                    </article>
+                                    <script>
+                                    var statusElem  = document.getElementById('status'),
+                                        state               = document.getElementById('state');
+
+                                    function online(event) {
+                                      statusElem.className = navigator.onLine ? 'online' : 'offline';
+                                      statusElem.innerHTML = navigator.onLine ? '' : '<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You&#39;re offline, check network connection.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;content required internet access.';
+                                      state.innerHTML += '&nbsp;';
+                                    }
+
+                                    addEvent(window, 'online', online);
+                                    addEvent(window, 'offline', online);
+                                    online({ type: 'ready' });
+                                    </script>
+
+                                    <div style="margin-top:-30px;" id="contentloader1"></div>
+                                    <a class="view-more view-more-light" href="idwebdesigner.html">Powered by IDWEBDesigner</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li style="margin-right:-15px;" class="ma-trigger" data-ma-action="sidebar-open" data-ma-target="#chat">
+                            <a data-toggle="dropdown" href="#">
+                                <i class="him-icon zmdi zmdi-favorite-outline"></i>
+                            </a>
+                        </li>
+                        <li style="margin-right:-5px;" class="dropdown">
+                            <a data-toggle="dropdown" href="#"><i class="him-icon zmdi zmdi-more-vert"></i></a>
+                            <ul class="dropdown-menu dm-icon pull-right">
+                                <li class="hidden-xs">
+                                    <a data-ma-action="fullscreen" href="#"><i class="zmdi zmdi-fullscreen"></i> Fullscreen</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:window.location.reload();"><i class="zmdi zmdi-refresh-sync"></i> Refresh</a>
+                                </li>
+                                <li>
+                                    <a id="rate-app" onClick="rateApp()">Rate 5 Stars</a>
+                                </li>
+                                <li>
+                                    <a href="update.html"><i class="zmdi zmdi-download"></i>Check update</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="help.html"><i class="zmdi zmdi-help"></i> Help</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="hidden-xs ma-trigger" data-ma-action="sidebar-open" data-ma-target="#chat">
+                            <a href="#"><i class="him-icon zmdi zmdi-comment-alt-text"></i></a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="tab-nav tn-justified tn-icon" role="tablist" style="width:100%">
+                                        <li role="presentation">
+                                            <a class="col-sx-4" href="index.html">
+                                                INDONESIA
+                                            </a>
+                                        </li>
+                                        <li role="presentation" class="active">
+                                            <a class="col-xs-4" href="#tab-2" aria-controls="tab-2" role="tab" data-toggle="tab">
+                                                ENGLISH (PRO)
+                                            </a>
+                                        </li>
+
+                                    </ul>
+        </header>
+
+        <section id="main">
+            <ol class="breadcrumb" style="margin-left:-10px;">
+                <li><a href="developer.html">designer.web.id</a></li>
+                <li><a href="index.html">learn</a></li>
+                <li class="active">virtualreality</li>
+            </ol>
+
+            <aside id="sidebar" class="sidebar c-overflow" style="position:fixed;z-index:1000;margin-top:-70px;height:100%;background:white">
+                <ul class="main-menu">
+                    <li class="mm-profile sub-menu">
+                        <a href="#" data-ma-action="submenu-toggle" class="media">
+                            <img class="pull-left" src="../img/coreldraw.green.png" alt="" height="25px" style="margin-left:-40px;">
+                            <div class="media-body">
+                            <div>Tutorial CorelDRAW<sup>&reg;</sup></div>
+                            <span style="font-size:11px;">Experience by IDWEBDesigner<br/>dev@designer.web.id</span>
+                            </div>
+                        </a>
+
+                        <ul>
+                            <li>
+                                <a href="developer.html">Indonesia Web Designer</a>
+                            </li>
+                            <li>
+                                <div style="margin-left:65px;margin-bottom:10px;font-size:10px;color:#888888;padding-right:20px;">Jl. Wahid Hasyim No.3 Gaten Condongcatur Depok Sleman Yogyakarta, Indonesia.</div>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-info"></i> About CorelDraw</a>
+                        <div style="margin-left:65px;margin-bottom:10px;font-size:12px;color:#579706;"><a href="basics.html">What's is CorelDraw?<br/>Basics Learn</a></div>
+                    </li>
+
+                    <li><a href="index.html"><i class="zmdi zmdi-flag"></i> Tutorial Bahasa Indonesia</a></li>
+                    <li class="sub-menu toggled active">
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-android"></i> Featured Apps</a>
+                        <div style="margin-left:65px;margin-top:10px;font-size:10px;color:#888888;padding-right:20px;">Color Docker: This docker allows you to choose fill and outline colors from a color picker, color sliders, and color palettes. Found with dockers and in the Toolbox.</div>
+
+                        <ul>
+
+                            <li><a href="language.html">Bahasa Indonesia</a></li>
+                            <li style="display:none;"><a href="upgrade.html"><i class="zmdi zmdi-shopping-cart"></i>&nbsp;&nbsp;Upgrade</a></li>
+                            <li class="divider"></li>
+
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-code"></i> Developer</a>
+
+                        <ul>
+                            <li><a href="developer.html">dev@designer.web.id<br/>designer.web.id</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </aside>
+
+            <aside id="chat" class="sidebar">
+
+                                    <article>
+                                      <p style="margin-top:30px;margin-left:15px;font-size:0.7em;"><span id="status2"><span id="status"></span></p>
+                                      <ol id="state2"></ol>
+                                    </article>
+                                    <script>
+                                    var statusElem  = document.getElementById('status2'),
+                                        state               = document.getElementById('state2');
+
+                                    function online(event) {
+                                      statusElem.className = navigator.onLine ? 'online' : 'offline';
+                                      statusElem.innerHTML = navigator.onLine ? '' : '<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You&#39;re offline, check network connection.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;content required internet access.';
+                                      state.innerHTML += '&nbsp;';
+                                    }
+
+                                    addEvent(window, 'online', online);
+                                    addEvent(window, 'offline', online);
+                                    online({ type: 'ready' });
+                                    </script>
+
+                <div style="margin-top:-30px; width:100%" id="contentloader2"></div>
+
+
+
+            </aside>
+
+            <section id="content" style="margin-bottom:-40px;">
+                <div class="container" style="margin-top:-55px;margin-left:-20px;padding-right:0px;">
+                    <div class="tab-content p-20" style="background:#ffffff;">
+
+                    <div role="tabpanel" class="tab-pane animated fadeIn in active" id="tab-1">
+
+                            <!-- Blog Posts -->
+                            <div class="card blog-post" style="margin-bottom:-0px;">
+
+                                <div class="videoWrapper">
+                                <img width="100%" src="../images/green.png" frameborder="0" allowfullscreen></img>
+                                </div>
+
+                                <a class="card-header ch-alt">
+                                    <h2><small>For digital artists and graphic designers, being able to adjust and correct images quickly and easily is critical. In this article, we’ll look at several quick methods of punching up your images in Corel PHOTO-PAINT® in a few, easy-to-apply steps.</small></h2>
+                                </a>
+
+                                <div class="card-body card-padding">
+
+                                <h4>Correct Images Quickly and Easily in Corel PHOTO-PAINT®</h4>
+                                 <br/>
+
+<p>For digital artists and graphic designers, being able to adjust and correct images quickly and easily is critical. In this article, we&#8217;ll look at several quick methods of punching up your images in Corel PHOTO-PAINT® in a few easy steps.</p>
+<p>We&#8217;ll also look at which file formats are the best for use on the Web and for work with service bureaus.</p>
+<p>&nbsp;</p>
+<h3><span id="Determining_What_Resolution_to_Use" class="mw-headline">Determining What Resolution to Use</span></h3>
+<p>The destination of your images determines the resolution for your finished product. You can use the following table to determine what resolution you should use:</p>
+<table cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td colspan="1" rowspan="1" width="288">
+<h4><span id="Output" class="mw-headline">Output</span></h4>
+</td>
+<td colspan="1" rowspan="1" width="288">
+<h4><span id="Resolution.2A" class="mw-headline">Resolution*</span></h4>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1" width="288">Web</td>
+<td colspan="1" rowspan="1" width="288">72 dots per inch (dpi)</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1" width="288">Newspaper</td>
+<td colspan="1" rowspan="1" width="288">125 dpi to 170 dpi</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1" width="288">High-quality brochures and magazines</td>
+<td colspan="1" rowspan="1" width="288">200 dpi to 400 dpi</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1" width="288">Book layouts</td>
+<td colspan="1" rowspan="1" width="288">175 dpi to 350 dpi</td>
+</tr>
+</tbody>
+</table>
+<h3><span id="Scanning_Images_for_Corel_PHOTO-PAINT" class="mw-headline"><br />
+Scanning Images for Corel PHOTO-PAINT</span></h3>
+<p>There are a couple of important things to consider when scanning: the quality of your print or film scanner, and the quality of the image being scanned. The higher the quality of both your scanner and the original image, the better the image that you work with in Corel PHOTO-PAINT.</p>
+<p>A high-quality original yields the best results, whether it&#8217;s print or film. Here are some things to look for:</p>
+<ul>
+<li>Good color saturation</li>
+<li>Edge-to-edge sharpness</li>
+<li>Smooth color graduation (no banding)</li>
+<li>Smooth contrast definition from highlights to shadows, where highlights retain some detail and aren&#8217;t blown out, and shadows contain detail and don&#8217;t suddenly fall to solid black.</li>
+</ul>
+<p>It’s a good idea to scan a document at a higher resolution than the one you need. For example, if you&#8217;re scanning an image for the Web, scan at 150 dpi instead of 72 dpi. Once the image is scanned, reduce the image to the size you need.</p>
+<p>&nbsp;</p>
+<h3><span id="Fixing_Moir.C3.A9_Patterns" class="mw-headline">Fixing Moiré Patterns</span></h3>
+<p>When scanning, sometimes you&#8217;ll encounter moiré patterns, rainbow-colored streaks which are caused by a misalignment between the pixels and the scanning device or camera. Sometimes moiré patterns are the result of an original image that has tightly knit, multicolored areas or a tightly repeating pattern, such as a hound&#8217;s tooth design in fabrics.</p>
+<p>In my experience, moiré patterns often occur when scanning images from a magazine. In the process of printing the magazine, dots are overlaid to create the color image that you see. In some cases, scanning such an image creates a moiré pattern.</p>
+<p>You can often reduce moiré patterns by skewing the document while scanning it. With the document flat on the scanner surface, rotate it at an angle from the vertical, and then scan it. After the scan comes up in Corel PHOTO-PAINT, you can rotate the image back to the vertical by clicking <strong>Image &gt; Rotate</strong> and choosing a rotation option.</p>
+<p>&nbsp;</p>
+<div class="floatnone"><img class="alignnone size-medium wp-image-10662" src="http://learn.corel.com/wp-content/uploads/2015/11/190-197x300.jpg" alt="1" width="197" height="300" srcset="http://learn.corel.com/wp-content/uploads/2015/11/190-197x300.jpg 197w, http://learn.corel.com/wp-content/uploads/2015/11/190.jpg 200w" sizes="(max-width: 197px) 100vw, 197px" /></div>
+<div align="center"><em>Skewing an image can often reduce moiré patterns.</em></div>
+<p>You can also quickly and easily remove moiré patterns in Corel PHOTO-PAINT by clicking <strong>Effects &gt; Noise &gt; Remove Moiré.</strong></p>
+<div class="floatnone"><img class="alignnone size-medium wp-image-10663" src="http://learn.corel.com/wp-content/uploads/2015/11/254-300x117.png" alt="2" width="300" height="117" srcset="http://learn.corel.com/wp-content/uploads/2015/11/254-300x117.png 300w, http://learn.corel.com/wp-content/uploads/2015/11/254.png 525w" sizes="(max-width: 300px) 100vw, 300px" /></div>
+<p style="text-align: center;"><em>In the<strong> Remove Moire</strong> dialog box, you can adjust moiré-removal settings.</em></p>
+<h3><span id="Correcting_Exposure_Problems_Quickly" class="mw-headline">Correcting Exposure Problems Quickly</span></h3>
+<p>Corel PHOTO-PAINT lets you quickly correct exposure problems, which are caused by too much light (overexposure) or not enough light (underexposure) at the time the photo was taken. Here are a couple of quick techniques that you can use.</p>
+<p>&nbsp;</p>
+<h4><span id="Using_the_Image_Adjustment_Lab" class="mw-headline">Using the Image Adjustment Lab</span></h4>
+<p>The Image Adjustment Lab consists of automatic and manual controls, which are organized in a logical order for image correction. You can access the Image Adjustment Lab by clicking <strong>Adjust &gt; Image Adjustment Lab</strong>. For a quick fix, click <strong>Auto-Adjust</strong> in the upper-right corner, and then click <strong>OK</strong>. In many cases that will be enough to correct any exposure problems.</p>
+<div align="center"><em><img class="alignnone size-medium wp-image-10664" src="http://learn.corel.com/wp-content/uploads/2015/11/343-300x230.png" alt="3" width="300" height="230" srcset="http://learn.corel.com/wp-content/uploads/2015/11/343-300x230.png 300w, http://learn.corel.com/wp-content/uploads/2015/11/343-600x460.png 600w, http://learn.corel.com/wp-content/uploads/2015/11/343.png 640w" sizes="(max-width: 300px) 100vw, 300px" /></em></div>
+<div align="center"><em>The Image Adjustment Lab</em></div>
+<p>&nbsp;</p>
+<h4><span id="Adjusting_Exposure_in_the_Objects_Manage_Docker" class="mw-headline">Adjusting Exposure in the Objects Manage Docker</span></h4>
+<p>You can also adjust exposure in the <strong>Object Manager</strong> docker, which you can open by clicking <strong>Object &gt; Object Manager</strong>. In the docker, drag the background object down onto the <strong>New Object</strong> button at the bottom of the docker to make a copy of the background.<br />
+Then, choose either <strong>Add</strong> or <strong>Multiply</strong> from the <strong>Merge Mode</strong> list box at the top of the docker. The <strong>Add</strong> mode increases the exposure (often quite dramatically), while the <strong>Multiply</strong> mode decreases the exposure. You may need to make several copies of the background to obtain the exposure you want. You can reduce the effect by adjusting the opacity of an object with the <strong>Opacity</strong> slider.</p>
+<div align="center"><em><img class="alignnone size-medium wp-image-10665" src="http://learn.corel.com/wp-content/uploads/2015/11/444-282x300.png" alt="4" width="282" height="300" srcset="http://learn.corel.com/wp-content/uploads/2015/11/444-282x300.png 282w, http://learn.corel.com/wp-content/uploads/2015/11/444.png 290w" sizes="(max-width: 282px) 100vw, 282px" /></em></div>
+<div style="text-align: center;" align="center"><em>The <strong>Merge Mode</strong> list box (left) and the <strong>Opacity</strong> box (right) are at the top of the <strong>Objects Manager </strong>docker.</em></div>
+<p>&nbsp;</p>
+<div align="center"><em><img class="alignnone size-medium wp-image-10666" src="http://learn.corel.com/wp-content/uploads/2015/11/541-300x169.png" alt="5" width="300" height="169" srcset="http://learn.corel.com/wp-content/uploads/2015/11/541-300x169.png 300w, http://learn.corel.com/wp-content/uploads/2015/11/541-600x339.png 600w, http://learn.corel.com/wp-content/uploads/2015/11/541.png 634w" sizes="(max-width: 300px) 100vw, 300px" /></em></div>
+<div align="center"><em>The <strong>Add</strong> merge mode dramatically increases the exposure.</em></div>
+<p>&nbsp;</p>
+<div align="center"><img class="alignnone size-medium wp-image-10667" src="http://learn.corel.com/wp-content/uploads/2015/11/641-300x170.png" alt="6" width="300" height="170" srcset="http://learn.corel.com/wp-content/uploads/2015/11/641-300x170.png 300w, http://learn.corel.com/wp-content/uploads/2015/11/641-600x341.png 600w, http://learn.corel.com/wp-content/uploads/2015/11/641.png 636w" sizes="(max-width: 300px) 100vw, 300px" /></div>
+<div style="text-align: center;"><em>The <strong>Multiply</strong> merge mode decreases the exposure.</em></div>
+<p>When you&#8217;re satisfied with the exposure, you can merge all objects into one by clicking <strong>Objects &gt; Select All Objects</strong> and then clicking the <strong>Combine Selected Objects</strong> button at the bottom of the <strong>Object Manager </strong>docker.</p>
+<div class="floatnone"><img class="alignnone size-medium wp-image-10668" src="http://learn.corel.com/wp-content/uploads/2015/11/738-300x202.png" alt="7" width="300" height="202" srcset="http://learn.corel.com/wp-content/uploads/2015/11/738-300x202.png 300w, http://learn.corel.com/wp-content/uploads/2015/11/738-600x404.png 600w, http://learn.corel.com/wp-content/uploads/2015/11/738.png 627w" sizes="(max-width: 300px) 100vw, 300px" /></div>
+<p><em>The original image exposure (left) and the image with the <strong>Add</strong> merge mode applied (right)</em></p>
+<h3><span id="Choosing_Output_File_Formats" class="mw-headline">Choosing Output File Formats</span></h3>
+<p style="text-align: left;">Two common image-output destinations are the Web and service bureaus. The file format for your final image is determined by where it is going to be viewed.</p>
+<p style="text-align: left;">For the Web, I recommend using the JPEG format for most images. For 8-bit images, I recommend using the GIF or PNG format. Depending on the image, the compression may be slightly more or less in a PNG file than in a GIF file. Check out this article to learn more about <a href="http://www.paintshoppro.com/en/pages/image-optimization" target="_blank">image optimization for the web</a>.</p>
+<p style="text-align: left;">When you’re working with a service bureau, TIFF is the universally preferred file format. You can also use Corel PHOTO-PAINT to create a PDF, which produces excellent results.</p>
+<p>&nbsp;</p>
+<h3><span id="Exporting_to_PDF_from_Corel_PHOTO-PAINT_and_CorelDRAW" class="mw-headline">Exporting to PDF from Corel PHOTO-PAINT and CorelDRAW</span></h3>
+<p style="text-align: left;">When I created my book cover, I used Corel PHOTO-PAINT to do some color correction on my photographs, which I then imported into CorelDRAW®. Once I completed my layout, I saved it as a TIFF, which merged my photos into the background and gave me a solid black. From there, I imported the image into Corel PHOTO-PAINT and used the <strong>Publish to PDF</strong> command to create the image you see below.</p>
+<div class="floatnone"><img class="alignnone size-full wp-image-10669" src="http://learn.corel.com/wp-content/uploads/2015/11/830.jpg" alt="8" width="200" height="256" /></div>
+<p><em>The final book cover layout</em></p>
+<p style="text-align: left;">To export your file to PDF, click <strong>File &gt; Publish to PDF</strong>. You can access a wide variety of options by clicking <strong>Settings</strong> in the <strong>Publish to PDF</strong> dialog box, which opens the <strong>PDF Settings</strong> dialog box. For example, you can add crop or registration marks, set JPEG compression, and add a password to the file.</p>
+<div class="floatnone"><img class="alignnone size-medium wp-image-10670" src="http://learn.corel.com/wp-content/uploads/2015/11/929-300x233.png" alt="9" width="300" height="233" srcset="http://learn.corel.com/wp-content/uploads/2015/11/929-300x233.png 300w, http://learn.corel.com/wp-content/uploads/2015/11/929.png 587w" sizes="(max-width: 300px) 100vw, 300px" /></div>
+<div><em>The <strong>PDF Settings</strong> dialog box</em></div>
+<p style="text-align: left;">For layouts created solely in CorelDRAW, you can make things easier for the printer by clicking <strong>File &gt; Collect For Output</strong> in CorelDRAW. This launches a wizard that lets you gather all the files in the layout (such as fonts), create a PDF, and store all the files in one folder, making it easy to send the files to a service bureau. I recommend sending the PDF, all the fonts, and the original CDR file. To make things even simpler, use WinZip® to group <a href="http://www.winzip.com/learn/file-compression.html" target="_blank">and compress all your files together</a> before sending them.</p>
+<p style="text-align: left;">In this tutorial, you’ve learned some important design and image manipulation techniques, such as how to set up your layouts, create high-quality scans, make quick exposure corrections, and work with service bureaus. Applying this knowledge will speed up your workflow and make it easier to obtain the results that you seek.</p>
+
+
+
+
+                                <script src='../js/colpick.js'></script>
+                                <script src="../js/colorpicker.js"></script>
+
+                                </div>
+                            </div>
+
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane animated fadeIn in" id="tab-2">
+                    <div id="contenttab2"></div>
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane animated fadeIn" id="tab-3" style="margin-top:-20px;margin-left:-20px;margin-right:-20px;background:#ffffff">
+
+                    </div>
+
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- Page Loader -->
+        <div class="page-loader">
+            <div class="preloader" style="text-align:center;">
+                <svg class="pl-circular" viewBox="25 25 50 50">
+                    <circle class="plc-path" cx="50" cy="50" r="20" />
+                </svg><br/><br/>
+                <div style="font-size:8px;margin-left:-80px;width:200px" class="demo"></div>
+            </div>
+        </div>
+
+        <div style="margin-bottom:10px;"><footer id="footer">
+            Copyright &copy; 2017 IDWEBDesigner<br/><a href="index.html">Back to <i class="zmdi zmdi-home"></i> Homepage</a>
+        </footer></div>
+
+        <!-- Javascript Libraries -->
+        <script src="../vendors/bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="../vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+        <script src="../vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="../vendors/bower_components/Waves/dist/waves.min.js"></script>
+        <script src="../vendors/bootstrap-growl/bootstrap-growl.min.js"></script>
+        <script src="../vendors/bower_components/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="../vendors/bower_components/lightgallery/dist/js/lightgallery-all.min.js"></script>
+        <script src="../vendors/bootgrid/jquery.bootgrid.updated.min.js"></script>
+
+        <!-- Placeholder for IE9 -->
+        <!--[if IE 9 ]>
+            <script src="vendors/bower_components/jquery-placeholder/jquery.placeholder.min.js"></script>
+        <![endif]-->
+
+        <script src="../js/app.min.js"></script>
+
+        <!-- Data Table -->
+        <script>
+            $(function()
+            {
+              $("#grid-basic").bootgrid({
+                  caseSensitive: false,
+                    css: {
+                        icon: 'zmdi icon',
+                        iconColumns: 'zmdi-view-module',
+                        iconDown: 'zmdi-sort-amount-desc',
+                        iconRefresh: 'zmdi-refresh',
+                        iconUp: 'zmdi-sort-amount-asc'
+                    },
+              }
+              )
+            });
+        </script>
+
+        <script type="text/javascript">
+            //Basic
+            $('#sa-basic').click(function(e){
+                e.preventDefault();
+                var link = $(this).attr('href');
+
+                swal({
+                    title: "Get Inspire Profesional Logos",
+                    text: "More logos sparately on our Learn Apps: Javascript, NoSQL Database, Virtual Reality, and more...",
+                    showCancelButton: true,
+                    allowOutsideClick: true,
+                },
+                function(){
+                    window.location.href = 'market://details?id=id.web.designer.learn.javascript';
+                });
+            });
+        </script>
+
+    <script type="text/javascript">
+        function rateApp() {
+            android.rateApp();
+       }
+    </script>
+
+    </body>
+
+</html>

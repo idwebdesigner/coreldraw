@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Tutorial CorelDraw Pro</title>
+
+         <script type="text/javascript">
+          <!--
+          if (screen.width >= 2800) {
+            window.location = "http://designer.web.id";
+          }
+          //-->
+        </script>
+
+        <!-- Vendor CSS -->
+        <link href="../vendors/bower_components/animate.css/animate.min.css" rel="stylesheet">
+        <link href="../vendors/bower_components/sweetalert/dist/sweetalert.css" rel="stylesheet">
+        <link href="../vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
+        <link href="../vendors/bower_components/lightgallery/dist/css/lightgallery.min.css" rel="stylesheet">
+        <link href="../vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+        <link href="../vendors/bootgrid/jquery.bootgrid.min.css" rel="stylesheet">
+
+        <!-- CSS -->
+        <link href="../css/app_1.min.css" rel="stylesheet">
+        <link href="../css/app_2.min.css" rel="stylesheet">
+
+        <script src="../js/h5utils.js"></script>
+        <script src="../js/jquery-2.1.0.min.js"></script>
+        <script src="../js/jquery.jscroll.min.js"></script>
+        <script>$(function(){
+        $("#contentloader1").load("http://app.coreldraw.designer.web.id/content-message.html"); $("#contentloader2").load("http://app.coreldraw.designer.web.id/pro/content-right-pro.html");
+        $("#contenttab1").load("http://app.coreldraw.designer.web.id/pro/contenttab2.html");
+        $("#contenttab2").load("http://app.coreldraw.designer.web.id/pro/contenttab2.html");
+        });</script>
+
+        <style>.videoWrapper {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 */
+        padding-top: 25px;
+        height: 0;}
+        .videoWrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;}
+        .lcb-navigation a{background:#999999}
+        </style>
+    </head>
+    <body style="background:#ffffff">
+
+        <!-- Page Loader -->
+        <div class="page-loader">
+            <div class="preloader pls-white">
+                <svg class="pl-circular" viewBox="25 25 50 50">
+                    <circle class="plc-path" cx="50" cy="50" r="20" />
+                </svg>
+            </div>
+
+        </div>
+
+        <header id="header" class="clearfix container">
+            <ul class="h-inner">
+
+                <li class="hi-trigger ma-trigger" data-ma-action="sidebar-open" data-ma-target="#sidebar">
+                    <div class="line-wrap">
+                        <div class="line top"></div>
+                        <div class="line center"></div>
+                        <div class="line bottom"></div>
+                    </div>
+                </li>
+
+                <li class="hi-logo" data-ma-action="sidebar-open" data-ma-target="#sidebar" style="margin-top:8px;">
+                    <span style="font-size:15px;color:#ffffff;"> Tutorial CorelDRAW<sup>&reg;</sup><span>
+                </li>
+
+                <li class="pull-right">
+                    <ul class="hi-menu">
+
+                        <li style="margin-right:-15px;" class="dropdown">
+                            <a data-toggle="dropdown" href="#">
+                                <i class="him-icon zmdi zmdi-notifications-none"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-lg pull-right">
+                                <div class="list-group list-group-light">
+                                    <div class="lg-header">
+                                        LIVE DEVELOPER MESSAGES
+                                    </div>
+
+                                    <article>
+                                      <p style="text-align:center;font-size:1em;"><span id="status"><span id="status"></span></p>
+                                      <ol id="state"></ol>
+                                    </article>
+                                    <script>
+                                    var statusElem  = document.getElementById('status'),
+                                        state               = document.getElementById('state');
+
+                                    function online(event) {
+                                      statusElem.className = navigator.onLine ? 'online' : 'offline';
+                                      statusElem.innerHTML = navigator.onLine ? '' : '<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You&#39;re offline, check network connection.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;content required internet access.';
+                                      state.innerHTML += '&nbsp;';
+                                    }
+
+                                    addEvent(window, 'online', online);
+                                    addEvent(window, 'offline', online);
+                                    online({ type: 'ready' });
+                                    </script>
+
+                                    <div style="margin-top:-30px;" id="contentloader1"></div>
+                                    <a class="view-more view-more-light" href="idwebdesigner.html">Powered by IDWEBDesigner</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li style="margin-right:-15px;" class="ma-trigger" data-ma-action="sidebar-open" data-ma-target="#chat">
+                            <a data-toggle="dropdown" href="#">
+                                <i class="him-icon zmdi zmdi-favorite-outline"></i>
+                            </a>
+                        </li>
+                        <li style="margin-right:-5px;" class="dropdown">
+                            <a data-toggle="dropdown" href="#"><i class="him-icon zmdi zmdi-more-vert"></i></a>
+                            <ul class="dropdown-menu dm-icon pull-right">
+                                <li class="hidden-xs">
+                                    <a data-ma-action="fullscreen" href="#"><i class="zmdi zmdi-fullscreen"></i> Fullscreen</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:window.location.reload();"><i class="zmdi zmdi-refresh-sync"></i> Refresh</a>
+                                </li>
+                                <li>
+                                    <a id="rate-app" onClick="rateApp()">Rate 5 Stars</a>
+                                </li>
+                                <li>
+                                    <a href="update.html"><i class="zmdi zmdi-download"></i>Check update</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="help.html"><i class="zmdi zmdi-help"></i> Help</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="hidden-xs ma-trigger" data-ma-action="sidebar-open" data-ma-target="#chat">
+                            <a href="#"><i class="him-icon zmdi zmdi-comment-alt-text"></i></a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="tab-nav tn-justified tn-icon" role="tablist" style="width:100%">
+                                        <li role="presentation">
+                                            <a class="col-sx-4" href="index.html">
+                                                INDONESIA
+                                            </a>
+                                        </li>
+                                        <li role="presentation" class="active">
+                                            <a class="col-xs-4" href="#tab-2" aria-controls="tab-2" role="tab" data-toggle="tab">
+                                                ENGLISH (PRO)
+                                            </a>
+                                        </li>
+
+                                    </ul>
+        </header>
+
+        <section id="main">
+            <ol class="breadcrumb" style="margin-left:-10px;">
+                <li><a href="developer.html">designer.web.id</a></li>
+                <li><a href="index.html">learn</a></li>
+                <li class="active">virtualreality</li>
+            </ol>
+
+            <aside id="sidebar" class="sidebar c-overflow" style="position:fixed;z-index:1000;margin-top:-70px;height:100%;background:white">
+                <ul class="main-menu">
+                    <li class="mm-profile sub-menu">
+                        <a href="#" data-ma-action="submenu-toggle" class="media">
+                            <img class="pull-left" src="../img/coreldraw.green.png" alt="" height="25px" style="margin-left:-40px;">
+                            <div class="media-body">
+                            <div>Tutorial CorelDRAW<sup>&reg;</sup></div>
+                            <span style="font-size:11px;">Experience by IDWEBDesigner<br/>dev@designer.web.id</span>
+                            </div>
+                        </a>
+
+                        <ul>
+                            <li>
+                                <a href="developer.html">Indonesia Web Designer</a>
+                            </li>
+                            <li>
+                                <div style="margin-left:65px;margin-bottom:10px;font-size:10px;color:#888888;padding-right:20px;">Jl. Wahid Hasyim No.3 Gaten Condongcatur Depok Sleman Yogyakarta, Indonesia.</div>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-info"></i> About CorelDraw</a>
+                        <div style="margin-left:65px;margin-bottom:10px;font-size:12px;color:#579706;"><a href="basics.html">What's is CorelDraw?<br/>Basics Learn</a></div>
+                    </li>
+
+                    <li><a href="index.html"><i class="zmdi zmdi-flag"></i> Tutorial Bahasa Indonesia</a></li>
+                    <li class="sub-menu toggled active">
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-android"></i> Featured Apps</a>
+                        <div style="margin-left:65px;margin-top:10px;font-size:10px;color:#888888;padding-right:20px;">Color Docker: This docker allows you to choose fill and outline colors from a color picker, color sliders, and color palettes. Found with dockers and in the Toolbox.</div>
+
+                        <ul>
+
+                            <li><a href="language.html">Bahasa Indonesia</a></li>
+                            <li style="display:none;"><a href="upgrade.html"><i class="zmdi zmdi-shopping-cart"></i>&nbsp;&nbsp;Upgrade</a></li>
+                            <li class="divider"></li>
+
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-code"></i> Developer</a>
+
+                        <ul>
+                            <li><a href="developer.html">dev@designer.web.id<br/>designer.web.id</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </aside>
+
+            <aside id="chat" class="sidebar">
+
+                                    <article>
+                                      <p style="margin-top:30px;margin-left:15px;font-size:0.7em;"><span id="status2"><span id="status"></span></p>
+                                      <ol id="state2"></ol>
+                                    </article>
+                                    <script>
+                                    var statusElem  = document.getElementById('status2'),
+                                        state               = document.getElementById('state2');
+
+                                    function online(event) {
+                                      statusElem.className = navigator.onLine ? 'online' : 'offline';
+                                      statusElem.innerHTML = navigator.onLine ? '' : '<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You&#39;re offline, check network connection.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;content required internet access.';
+                                      state.innerHTML += '&nbsp;';
+                                    }
+
+                                    addEvent(window, 'online', online);
+                                    addEvent(window, 'offline', online);
+                                    online({ type: 'ready' });
+                                    </script>
+
+                <div style="margin-top:-30px; width:100%" id="contentloader2"></div>
+
+
+
+            </aside>
+
+            <section id="content" style="margin-bottom:-40px;">
+                <div class="container" style="margin-top:-55px;margin-left:-20px;padding-right:0px;">
+                    <div class="tab-content p-20" style="background:#ffffff;">
+
+                    <div role="tabpanel" class="tab-pane animated fadeIn in active" id="tab-1">
+
+                            <!-- Blog Posts -->
+                            <div class="card blog-post" style="margin-bottom:-0px;">
+
+                                <div class="videoWrapper">
+                                <img width="100%" src="../images/green.png" frameborder="0" allowfullscreen></img>
+                                </div>
+
+                                <a class="card-header ch-alt">
+                                    <h2><small>In this tutorial, we’ll take a tour of the Image Adjustment Lab to see how fast and easy it is to apply automatic, custom, and advanced image corrections to a few digital camera images typical of common photographic problems.</small></h2>
+                                </a>
+
+                                <div class="card-body card-padding">
+
+                                <h4>Fix Photos with the Image Adjustment Lab</h4>
+                                 <br/>
+
+<p>If you&#8217;ve ever found the task of fine-tuning or correcting photo problems using bitmap filters to be a frustrating, trial-and-error exercise, you should take a closer look at the <strong>Image Adjustment Lab</strong> in Corel PHOTO-PAINT and CorelDRAW.</p>
+<p>The Image Adjustment Lab saves you having to navigate through several bitmap filter dialog boxes to change the basic characteristics of an image. It’s a one-stop photo lab where you can experiment and evaluate different color tonal correction settings, and instantly recall and commit to the settings you’ve tested. No more time spent searching for the right setting, saving experimental copies, or trying to remember the slider settings you used ten minutes ago.</p>
+<p>In this tutorial, we’ll take a tour of the Image Adjustment Lab to see how fast and easy it is to apply automatic, custom, and advanced image corrections for a few common digital-photo problems.</p>
+<h3><span id="Opening_the_Image_Adjustment_Lab" class="mw-headline">Opening the Image Adjustment Lab</span></h3>
+<p>With an image open in Corel PHOTO-PAINT, just click <strong>Adjust &gt; Image Adjustment Lab</strong>. In CorelDRAW, with a bitmap selected, click <strong>Bitmap &gt; Image Adjustment Lab</strong>. It includes a working preview area on the left, adjustment sliders on the right, and a row of toolbar buttons across the top.</p>
+<img src="http://learn.corel.com/wp-content/uploads/2015/11/1104-300x235.png"/>
+<p style="text-align: left;">If you’ve worked with bitmap-filter dialog boxes in Corel PHOTO-PAINT, using the previewing features and classic toolbar buttons in the Image Adjustment Lab will be familiar territory. You can use the Rotate buttons for image rotation, and the <strong>Pan</strong> and <strong>Zoom</strong> tools to change the magnification level. A single click zooms in, a right-click zooms out, and dragging allows you to pan directly in the previewing area. There are also toolbar buttons for switching between <strong>Full Preview, Before and after full preview</strong>, or <strong>Before and after split preview modes</strong>.</p>
+<img src="http://learn.corel.com/wp-content/uploads/2015/11/255-300x37.png" />
+<p style="text-align: left;">Below the preview area, you can use the <strong style="font-weight: 600;">Undo, Redo,</strong> or <strong style="font-weight: 600;">Reset</strong> <strong style="font-weight: 600;">to original</strong> buttons to change adjustments you’ve applied.</p>
+<p style="text-align: left;"><img class="alignnone size-full wp-image-10680 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/344.png" alt="3" width="183" height="42" srcset="http://learn.corel.com/wp-content/uploads/2015/11/344.png 183w, http://learn.corel.com/wp-content/uploads/2015/11/344-180x42.png 180w" sizes="(max-width: 183px) 100vw, 183px" /></p>
+<p style="text-align: left;">For basic quick fixes, you can use the <strong style="font-weight: 600;">Auto Adjust</strong> button in combination with the <strong style="font-weight: 600;">Select White Point</strong> and <strong style="font-weight: 600;">Select Black Point</strong> tools.</p>
+<p style="text-align: left;"><img class="alignnone size-full wp-image-10681 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/445.png" alt="4" width="149" height="39" /></p>
+<p style="text-align: left;">The easy-to-use sliders let you alter the color and tone of your image. Use the <strong>Temperature, Tint,</strong> and <strong>Saturation</strong> sliders to correct color casting and adjust color vividness. Use the <strong>Brightness</strong> and <strong>Contrast</strong>sliders to tweak lightness, darkness, and tonal values. Or, use the <strong>Highlights, Shadows,</strong> and <strong>Midtones</strong> sliders to adjust specific tonal ranges. Positioning the mouse pointer over each slider displays information specific to that slider in the the Hints area.</p>
+<p style="text-align: left;"><img class="alignnone size-full wp-image-10682 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/542.png" alt="5" width="227" height="291" /></p>
+<p style="text-align: left;">For the ultimate in experimentation tools, click the <strong style="font-weight: 600;">Create Snapshot</strong> button to save your current settings. A numbered thumbnail image that uses the current settings is added below the preview area each time you take a new snapshot. Clicking a thumbnail loads the preview and resets the slider controls to the applied snapshot settings. You can try out dozens — even hundreds —  of different adjustment settings for evaluation. And the best part is that you don’t have to note what settings were used on each snapshot.</p>
+<p><img class="alignnone size-medium wp-image-10683" src="http://learn.corel.com/wp-content/uploads/2015/11/642-300x99.png" alt="6" width="300" height="99" srcset="http://learn.corel.com/wp-content/uploads/2015/11/642-300x99.png 300w, http://learn.corel.com/wp-content/uploads/2015/11/642-367x122.png 367w, http://learn.corel.com/wp-content/uploads/2015/11/642.png 370w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<p style="text-align: left;">For some hands-on experience, let’s explore how easily you can perform both simple and advanced image correction with the Image Adjustment Lab. We’ll examine three typical types of image correction and enhancement. You can follow along and perform these adjustments, too. Start by downloading and extracting the contents of this Zip file containing three images saved in Corel PHOTO-PAINT format (CPT).</p>
+<p>&nbsp;</p>
+<h3 style="font-weight: 400; text-align: left;">Use <em>Auto Adjust</em> for instant fixes</h3>
+<p style="text-align: left;">The first image, <em>Moon.cpt</em>, requires a simple color cast adjustment. The quickest way to accomplish this is by using the <strong style="font-weight: 600;">Auto Adjust</strong> feature, which can be applied without even opening the Image Adjustment Lab.</p>
+<p><img class="alignnone size-medium wp-image-10684 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/739-300x272.png" alt="7" width="300" height="272" srcset="http://learn.corel.com/wp-content/uploads/2015/11/739-300x272.png 300w, http://learn.corel.com/wp-content/uploads/2015/11/739.png 308w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<p style="text-align: left;">Notice the color cast in the image is making the normally bright white moon color appear yellowish. Clicking <strong>Adjust &gt; Auto Adjust</strong> automatically whitens the image. To preview the results before they are applied, choose <strong>Adjust &gt; Image Adjustment Lab</strong>, and click the <strong>Auto Adjust</strong> button. Regardless on the method you use, the color is corrected without the need to choose any settings at all.</p>
+<p><img class="alignnone size-medium wp-image-10685 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/831-300x273.png" alt="8" width="300" height="273" srcset="http://learn.corel.com/wp-content/uploads/2015/11/831-300x273.png 300w, http://learn.corel.com/wp-content/uploads/2015/11/831.png 308w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<h3 style="text-align: left;"><span id="Recalling_and_evaluating_filter_settings" class="mw-headline">Recalling and evaluating filter settings</span></h3>
+<p style="text-align: left;">Experimenting with and comparing the subtle differences between image-correction filter settings is often an arduous task that requires experience and a keen eye. Unfortunately, it also usually involves creating and saving multiple copies of an image across multiple document windows and testing many settings through trial and error. The <strong>Snapshot</strong> feature in the Image Adjustment Lab eliminates the need for this by making it easy to recall and evaluate different settings you’ve applied. You can follow these steps to see how the Image Adjustment Lab streamlined the process of adjusting the sample image<em>Aquabus.cpt</em>:</p>
+<p style="text-align: left;">1. With <em>Aquabus.cpt</em> open, click <strong>Adjust</strong> &gt; <strong>Image Adjustment Lab</strong>.</p>
+<p style="text-align: left;">2. Click the <strong>Before and after split preview</strong> button.</p>
+<p><img class="alignnone size-medium wp-image-10686 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/930-300x231.png" alt="9" width="300" height="231" srcset="http://learn.corel.com/wp-content/uploads/2015/11/930-300x231.png 300w, http://learn.corel.com/wp-content/uploads/2015/11/930.png 569w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<p style="text-align: left;">3. Adjust the Brightness and Contrast sliders to 30, and click the Create Snapshot button.</p>
+<p style="text-align: left;">Notice a new thumbnail of the current settings now appears below the preview.<br />
+4. Adjust the Saturation slider to 30, and click the Create Snapshot button. <br class="kix-line-break" />A second thumbnail appears in the list.<br />
+5. Adjust the Midtones slider to 30, and click the Create Snapshot button. <br class="kix-line-break" />A third thumbnail appears in the list.</p>
+<p style="text-align: left;"><img class="alignnone size-medium wp-image-10687 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/1026-300x231.png" alt="10" width="300" height="231" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1026-300x231.png 300w, http://learn.corel.com/wp-content/uploads/2015/11/1026.png 415w" sizes="(max-width: 300px) 100vw, 300px" />6. Click the <strong style="font-weight: 600;">Reset to Original</strong> button to clear the current settings from your image preview, and then click directly on one of the thumbnails.</p>
+<p style="text-align: left;">Notice the preview is recalled and the sliders are set to the settings applied when the snapshot was taken. Click a different thumbnail to recall the preview and settings applied to a different snapshot.</p>
+<p style="text-align: left;">7. Select what you feel is the best snapshot in the list, and click <strong style="font-weight: 600;">OK</strong> to apply the settings to the image and close the Image Adjustment Lab.</p>
+<p>&nbsp;</p>
+<h3 style="font-weight: 400; text-align: left;">Applying advanced selection-based adjustments</h3>
+<p style="text-align: left;">The filter effects you can apply with the Image Adjustment Lab are selection based. This means you can make adjustments to specifically selected portions of an image, reducing the time it takes to perform advanced image-correction operations. Our next photo needs different Image Adjustment Lab settings applied to specific areas, making it the perfect candidate. Follow these steps to apply different settings to selected areas in the sample image<em> Flowers.cpt</em>:</p>
+<p style="text-align: left;">1. Open <em>Flowers.cpt</em> in Corel PHOTO-PAINT. Notice the flowers in the foreground of this image need only a slight adjustment while the background needs a more aggressive treatment. To speed the process, I’ve created and saved a separate mask for each of these areas as channels embedded in the CPT file.</p>
+<p style="text-align: left;"><img class="alignnone size-medium wp-image-10688 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/1135-276x300.png" alt="11" width="276" height="300" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1135-276x300.png 276w, http://learn.corel.com/wp-content/uploads/2015/11/1135.png 288w" sizes="(max-width: 276px) 100vw, 276px" /></p>
+<p style="text-align: left;"><span style="line-height: 1.5;">2. Select the flowers in the foreground by clicking <strong>Mask &gt; Load &gt; Background Masked</strong>. A mask now covers the background leaving the flowers exposed.</span></p>
+<p style="text-align: left;"><span style="line-height: 1.5;"><img class="alignnone size-full wp-image-10689 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/1231.png" alt="12" width="294" height="277" /></span></p>
+<p style="text-align: left;"><span style="line-height: 1.5;">3. Click Adjust &gt; Image Adjustment Lab, and adjust the sliders to the following settings:</span></p>
+<p style="text-align: left;"><strong style="font-weight: 600;">Saturation = 30; Brightness = 40; Shadows = 20; and Midtones = 30.</strong><br />
+Notice the flower petals become slightly more colorful. Although the preview shows that adjustments are applied to the entire image, only the exposed areas will be affected in the final result. If you wish, experiment with your own settings, or click <strong style="font-weight: 600;">OK</strong> to apply the changes and close the Image Adjustment Lab.</p>
+<p><img class="alignnone size-medium wp-image-10690 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/1324-300x230.png" alt="13" width="300" height="230" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1324-300x230.png 300w, http://learn.corel.com/wp-content/uploads/2015/11/1324.png 421w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<p style="text-align: left;">4. Remove the current mask selection (<strong style="font-weight: 600;">Ctrl + R</strong>), and load the other saved mask by clicking <strong style="font-weight: 600;">Mask &gt; Load &gt; Flowers masked</strong>. A mask now covers the flower petals leaving the background exposed.</p>
+<p style="text-align: left;"><img class="alignnone size-medium wp-image-10691 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/1424-300x265.png" alt="14" width="300" height="265" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1424-300x265.png 300w, http://learn.corel.com/wp-content/uploads/2015/11/1424.png 302w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<p style="text-align: left;">5. Click <strong style="font-weight: 600;">Adjust &gt; Image Adjustment Lab</strong>, and adjust the sliders to the following settings:</p>
+<p style="text-align: left;"><strong style="font-weight: 600;">Saturation = 70; Brightness = 70; Contrast = -20; Highlights = 50; Shadows = 70;</strong> and<strong style="font-weight: 600;"> Midtones = 50.</strong></p>
+<p style="text-align: left;">6. Open the Image Adjustment Lab again and set the sliders to the following settings:</p>
+<p style="text-align: left;"><strong style="font-weight: 600;">Saturation = 70; Brightness = 70; Contrast = -20; Highlights = 50; Shadows = 70,</strong> and<strong style="font-weight: 600;"> Midtones = 50.</strong> Notice the background in the preview now becomes visible and more colorful. Again, the preview indicates the entire image is affected, but only the selected area will ultimately be affected.</p>
+<p><img src="http://learn.corel.com/wp-content/uploads/2015/11/1520-300x234.png" /></p>
+<p style="text-align: left;">7. Experiment with your own settings, or click <strong style="font-weight: 600;">OK</strong> to apply the changes and close the Image Adjustment Lab. Remove the selection (<strong style="font-weight: 600;">Ctrl + R</strong>) to see the dramatic improvements by using just two Image Adjustment Lab operations.</p>
+<p style="text-align: left;"><img src="http://learn.corel.com/wp-content/uploads/2015/11/1617-295x300.png" /></p>
+<h3 style="text-align: left;"><span id="Tips_and_tricks" class="mw-headline">Tips and tricks</span></h3>
+<p style="text-align: left;">Here are a few tips for getting better results using the Image Adjustment Lab.</p>
+<h4 style="text-align: left;"><span id="Cropping_before_correcting" class="mw-headline">Cropping before correcting</span></h4>
+<p style="text-align: left;">Before using the Image Adjustment Lab, make sure you apply any final cropping to your image. Automated image adjustment values are determined by the entire contents of the image. If your image includes dark, bright, or vividly colorful areas that you plan to eliminate, crop first to avoid these affecting the automatic adjustment levels.</p>
+<h4 style="text-align: left;"><span id="Using_split_preview" class="mw-headline">Using split preview</span></h4>
+<p style="text-align: left;">Use the Image Adjustment Lab&#8217;s <strong>Before and after split preview</strong> mode to evaluate subtle changes in filter settings. If necessary, you can drag the split position to the left or right to see more or less of the preview.</p>
+<p style="text-align: left;"><img class="alignnone size-full wp-image-10694 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/1718.png" alt="17" width="252" height="295" /></p>
+<h4 style="text-align: left;"><span id="Hiding.2C_showing.2C_or_deleting_snapshots" class="mw-headline">Hiding, showing, or deleting snapshots</span></h4>
+<p style="text-align: left;">While working in the Image Adjustment Lab, click the arrow button above the snapshot thumbnail list to show or hide your current snapshots.</p>
+<p style="text-align: left;"><img class="alignnone size-medium wp-image-10695 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/1814-300x280.png" alt="18" width="300" height="280" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1814-300x280.png 300w, http://learn.corel.com/wp-content/uploads/2015/11/1814.png 372w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<h4 style="text-align: left;">You can create an unlimited number of snapshots. Use the navigation buttons on either side of the snapshot list to scroll through your snapshots, and if necessary, delete unwanted snapshots by clicking the close button in the upper-right corner of the thumbnail title bar.</h4>
+<h4 style="text-align: left;"><img class="alignnone size-full wp-image-10696 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/1910.png" alt="19" width="220" height="107" /></h4>
+<p style="text-align: left;">The Image Adjustment Lab in Corel PHOTO-PAINT and CorelDRAW is just the ticket you need to save time when performing either automated or customized image enhancements.</p>
+<p>&nbsp;</p>
+<p style="text-align: left;">Steve Bain is an award-winning illustrator and designer, and an author of nearly a dozen books, including <em>CorelDRAW: The Official Guide</em>.</p>
+
+
+
+
+                                <script src='../js/colpick.js'></script>
+                                <script src="../js/colorpicker.js"></script>
+
+                                </div>
+                            </div>
+
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane animated fadeIn in" id="tab-2">
+                    <div id="contenttab2"></div>
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane animated fadeIn" id="tab-3" style="margin-top:-20px;margin-left:-20px;margin-right:-20px;background:#ffffff">
+
+                    </div>
+
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- Page Loader -->
+        <div class="page-loader">
+            <div class="preloader" style="text-align:center;">
+                <svg class="pl-circular" viewBox="25 25 50 50">
+                    <circle class="plc-path" cx="50" cy="50" r="20" />
+                </svg><br/><br/>
+                <div style="font-size:8px;margin-left:-80px;width:200px" class="demo"></div>
+            </div>
+        </div>
+
+        <div style="margin-bottom:10px;"><footer id="footer">
+            Copyright &copy; 2017 IDWEBDesigner<br/><a href="index.html">Back to <i class="zmdi zmdi-home"></i> Homepage</a>
+        </footer></div>
+
+        <!-- Javascript Libraries -->
+        <script src="../vendors/bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="../vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+        <script src="../vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="../vendors/bower_components/Waves/dist/waves.min.js"></script>
+        <script src="../vendors/bootstrap-growl/bootstrap-growl.min.js"></script>
+        <script src="../vendors/bower_components/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="../vendors/bower_components/lightgallery/dist/js/lightgallery-all.min.js"></script>
+        <script src="../vendors/bootgrid/jquery.bootgrid.updated.min.js"></script>
+
+        <!-- Placeholder for IE9 -->
+        <!--[if IE 9 ]>
+            <script src="vendors/bower_components/jquery-placeholder/jquery.placeholder.min.js"></script>
+        <![endif]-->
+
+        <script src="../js/app.min.js"></script>
+
+        <!-- Data Table -->
+        <script>
+            $(function()
+            {
+              $("#grid-basic").bootgrid({
+                  caseSensitive: false,
+                    css: {
+                        icon: 'zmdi icon',
+                        iconColumns: 'zmdi-view-module',
+                        iconDown: 'zmdi-sort-amount-desc',
+                        iconRefresh: 'zmdi-refresh',
+                        iconUp: 'zmdi-sort-amount-asc'
+                    },
+              }
+              )
+            });
+        </script>
+
+        <script type="text/javascript">
+            //Basic
+            $('#sa-basic').click(function(e){
+                e.preventDefault();
+                var link = $(this).attr('href');
+
+                swal({
+                    title: "Get Inspire Profesional Logos",
+                    text: "More logos sparately on our Learn Apps: Javascript, NoSQL Database, Virtual Reality, and more...",
+                    showCancelButton: true,
+                    allowOutsideClick: true,
+                },
+                function(){
+                    window.location.href = 'market://details?id=id.web.designer.learn.javascript';
+                });
+            });
+        </script>
+
+    <script type="text/javascript">
+        function rateApp() {
+            android.rateApp();
+       }
+    </script>
+
+    </body>
+
+</html>

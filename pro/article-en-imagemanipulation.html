@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Tutorial CorelDraw Pro</title>
+
+         <script type="text/javascript">
+          <!--
+          if (screen.width >= 2800) {
+            window.location = "http://designer.web.id";
+          }
+          //-->
+        </script>
+
+        <!-- Vendor CSS -->
+        <link href="../vendors/bower_components/animate.css/animate.min.css" rel="stylesheet">
+        <link href="../vendors/bower_components/sweetalert/dist/sweetalert.css" rel="stylesheet">
+        <link href="../vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
+        <link href="../vendors/bower_components/lightgallery/dist/css/lightgallery.min.css" rel="stylesheet">
+        <link href="../vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+        <link href="../vendors/bootgrid/jquery.bootgrid.min.css" rel="stylesheet">
+
+        <!-- CSS -->
+        <link href="../css/app_1.min.css" rel="stylesheet">
+        <link href="../css/app_2.min.css" rel="stylesheet">
+
+        <script src="../js/h5utils.js"></script>
+        <script src="../js/jquery-2.1.0.min.js"></script>
+        <script src="../js/jquery.jscroll.min.js"></script>
+        <script>$(function(){
+        $("#contentloader1").load("http://app.coreldraw.designer.web.id/content-message.html"); $("#contentloader2").load("http://app.coreldraw.designer.web.id/pro/content-right-pro.html");
+        $("#contenttab1").load("http://app.coreldraw.designer.web.id/pro/contenttab2.html");
+        $("#contenttab2").load("http://app.coreldraw.designer.web.id/pro/contenttab2.html");
+        });</script>
+
+        <style>.videoWrapper {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 */
+        padding-top: 25px;
+        height: 0;}
+        .videoWrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;}
+        .lcb-navigation a{background:#999999}
+        </style>
+    </head>
+    <body style="background:#ffffff">
+
+        <!-- Page Loader -->
+        <div class="page-loader">
+            <div class="preloader pls-white">
+                <svg class="pl-circular" viewBox="25 25 50 50">
+                    <circle class="plc-path" cx="50" cy="50" r="20" />
+                </svg>
+            </div>
+
+        </div>
+
+        <header id="header" class="clearfix container">
+            <ul class="h-inner">
+
+                <li class="hi-trigger ma-trigger" data-ma-action="sidebar-open" data-ma-target="#sidebar">
+                    <div class="line-wrap">
+                        <div class="line top"></div>
+                        <div class="line center"></div>
+                        <div class="line bottom"></div>
+                    </div>
+                </li>
+
+                <li class="hi-logo" data-ma-action="sidebar-open" data-ma-target="#sidebar" style="margin-top:8px;">
+                    <span style="font-size:15px;color:#ffffff;"> Tutorial CorelDRAW<sup>&reg;</sup><span>
+                </li>
+
+                <li class="pull-right">
+                    <ul class="hi-menu">
+
+                        <li style="margin-right:-15px;" class="dropdown">
+                            <a data-toggle="dropdown" href="#">
+                                <i class="him-icon zmdi zmdi-notifications-none"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-lg pull-right">
+                                <div class="list-group list-group-light">
+                                    <div class="lg-header">
+                                        LIVE DEVELOPER MESSAGES
+                                    </div>
+
+                                    <article>
+                                      <p style="text-align:center;font-size:1em;"><span id="status"><span id="status"></span></p>
+                                      <ol id="state"></ol>
+                                    </article>
+                                    <script>
+                                    var statusElem  = document.getElementById('status'),
+                                        state               = document.getElementById('state');
+
+                                    function online(event) {
+                                      statusElem.className = navigator.onLine ? 'online' : 'offline';
+                                      statusElem.innerHTML = navigator.onLine ? '' : '<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You&#39;re offline, check network connection.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;content required internet access.';
+                                      state.innerHTML += '&nbsp;';
+                                    }
+
+                                    addEvent(window, 'online', online);
+                                    addEvent(window, 'offline', online);
+                                    online({ type: 'ready' });
+                                    </script>
+
+                                    <div style="margin-top:-30px;" id="contentloader1"></div>
+                                    <a class="view-more view-more-light" href="idwebdesigner.html">Powered by IDWEBDesigner</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li style="margin-right:-15px;" class="ma-trigger" data-ma-action="sidebar-open" data-ma-target="#chat">
+                            <a data-toggle="dropdown" href="#">
+                                <i class="him-icon zmdi zmdi-favorite-outline"></i>
+                            </a>
+                        </li>
+                        <li style="margin-right:-5px;" class="dropdown">
+                            <a data-toggle="dropdown" href="#"><i class="him-icon zmdi zmdi-more-vert"></i></a>
+                            <ul class="dropdown-menu dm-icon pull-right">
+                                <li class="hidden-xs">
+                                    <a data-ma-action="fullscreen" href="#"><i class="zmdi zmdi-fullscreen"></i> Fullscreen</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:window.location.reload();"><i class="zmdi zmdi-refresh-sync"></i> Refresh</a>
+                                </li>
+                                <li>
+                                    <a id="rate-app" onClick="rateApp()">Rate 5 Stars</a>
+                                </li>
+                                <li>
+                                    <a href="update.html"><i class="zmdi zmdi-download"></i>Check update</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="help.html"><i class="zmdi zmdi-help"></i> Help</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="hidden-xs ma-trigger" data-ma-action="sidebar-open" data-ma-target="#chat">
+                            <a href="#"><i class="him-icon zmdi zmdi-comment-alt-text"></i></a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="tab-nav tn-justified tn-icon" role="tablist" style="width:100%">
+                                        <li role="presentation">
+                                            <a class="col-sx-4" href="index.html">
+                                                INDONESIA
+                                            </a>
+                                        </li>
+                                        <li role="presentation" class="active">
+                                            <a class="col-xs-4" href="#tab-2" aria-controls="tab-2" role="tab" data-toggle="tab">
+                                                ENGLISH (PRO)
+                                            </a>
+                                        </li>
+
+                                    </ul>
+        </header>
+
+        <section id="main">
+            <ol class="breadcrumb" style="margin-left:-10px;">
+                <li><a href="developer.html">designer.web.id</a></li>
+                <li><a href="index.html">learn</a></li>
+                <li class="active">virtualreality</li>
+            </ol>
+
+            <aside id="sidebar" class="sidebar c-overflow" style="position:fixed;z-index:1000;margin-top:-70px;height:100%;background:white">
+                <ul class="main-menu">
+                    <li class="mm-profile sub-menu">
+                        <a href="#" data-ma-action="submenu-toggle" class="media">
+                            <img class="pull-left" src="../img/coreldraw.green.png" alt="" height="25px" style="margin-left:-40px;">
+                            <div class="media-body">
+                            <div>Tutorial CorelDRAW<sup>&reg;</sup></div>
+                            <span style="font-size:11px;">Experience by IDWEBDesigner<br/>dev@designer.web.id</span>
+                            </div>
+                        </a>
+
+                        <ul>
+                            <li>
+                                <a href="developer.html">Indonesia Web Designer</a>
+                            </li>
+                            <li>
+                                <div style="margin-left:65px;margin-bottom:10px;font-size:10px;color:#888888;padding-right:20px;">Jl. Wahid Hasyim No.3 Gaten Condongcatur Depok Sleman Yogyakarta, Indonesia.</div>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-info"></i> About CorelDraw</a>
+                        <div style="margin-left:65px;margin-bottom:10px;font-size:12px;color:#579706;"><a href="basics.html">What's is CorelDraw?<br/>Basics Learn</a></div>
+                    </li>
+
+                    <li><a href="index.html"><i class="zmdi zmdi-flag"></i> Tutorial Bahasa Indonesia</a></li>
+                    <li class="sub-menu toggled active">
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-android"></i> Featured Apps</a>
+                        <div style="margin-left:65px;margin-top:10px;font-size:10px;color:#888888;padding-right:20px;">Color Docker: This docker allows you to choose fill and outline colors from a color picker, color sliders, and color palettes. Found with dockers and in the Toolbox.</div>
+
+                        <ul>
+
+                            <li><a href="language.html">Bahasa Indonesia</a></li>
+                            <li style="display:none;"><a href="upgrade.html"><i class="zmdi zmdi-shopping-cart"></i>&nbsp;&nbsp;Upgrade</a></li>
+                            <li class="divider"></li>
+
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-code"></i> Developer</a>
+
+                        <ul>
+                            <li><a href="developer.html">dev@designer.web.id<br/>designer.web.id</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </aside>
+
+            <aside id="chat" class="sidebar">
+
+                                    <article>
+                                      <p style="margin-top:30px;margin-left:15px;font-size:0.7em;"><span id="status2"><span id="status"></span></p>
+                                      <ol id="state2"></ol>
+                                    </article>
+                                    <script>
+                                    var statusElem  = document.getElementById('status2'),
+                                        state               = document.getElementById('state2');
+
+                                    function online(event) {
+                                      statusElem.className = navigator.onLine ? 'online' : 'offline';
+                                      statusElem.innerHTML = navigator.onLine ? '' : '<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You&#39;re offline, check network connection.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;content required internet access.';
+                                      state.innerHTML += '&nbsp;';
+                                    }
+
+                                    addEvent(window, 'online', online);
+                                    addEvent(window, 'offline', online);
+                                    online({ type: 'ready' });
+                                    </script>
+
+                <div style="margin-top:-30px; width:100%" id="contentloader2"></div>
+
+
+
+            </aside>
+
+            <section id="content" style="margin-bottom:-40px;">
+                <div class="container" style="margin-top:-55px;margin-left:-20px;padding-right:0px;">
+                    <div class="tab-content p-20" style="background:#ffffff;">
+
+                    <div role="tabpanel" class="tab-pane animated fadeIn in active" id="tab-1">
+
+                            <!-- Blog Posts -->
+                            <div class="card blog-post" style="margin-bottom:-0px;">
+
+                                <div class="videoWrapper">
+                                <img width="100%" src="../images/green.png" frameborder="0" allowfullscreen></img>
+                                </div>
+
+                                <a class="card-header ch-alt">
+                                    <h2><small>Photopaint</small></h2>
+                                </a>
+
+                                <div class="card-body card-padding">
+
+                                <h4>Image Manipulation using PHOTOPAINT</h4>
+                                 <br/>
+
+<p>In this tutorial, you will learn how to use the powerful PHOTOPAINT software to edit your photographs.</p>
+<p>As Stefan Lindblad walks you though his photo manipulation process, you will learn about:</p>
+<ul>
+<li>Analyzing a photo</li>
+<li>Using Photo Filter Lenses</li>
+<li>Adding Halftone Effects</li>
+</ul>
+
+<p class="small"><img class="size-medium wp-image-10752 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/1100-300x193.jpg" alt="1" width="300" height="193" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1100-300x193.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/1100-600x387.jpg 600w, http://learn.corel.com/wp-content/uploads/2015/11/1100-500x322.jpg 500w, http://learn.corel.com/wp-content/uploads/2015/11/1100.jpg 700w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<p>Most of the photographs we take with our cameras, can be turned into something far more exciting and imaginative. I remember walking on the millennium bridge in London, when a local Londoner walking with his lunch date, made a loud comment as if he wanted me to overhear him: &#8220;I don&#8217;t understand why tourists take all these photos all the time&#8221;. Well this Londoner did miss a point – I may have been a tourist but I always take reference photos as well. This is kind of in my DNA as I never know what my next design &amp; illustration work will be about.</p>
+<p>Take this photograph for example, which I took on a trip to the former East Berlin Mitte district in Germany a few years ago. Quite ordinary, right? I walked the streets and came to a bohemian neighborhood. I took several photos, and this one is the one I will be using for this tutorial, so it came in use.</p>
+<div>Analyzing the photo</div>
+<p>Looking back at this neighborhood in Berlin Mitte, I thought it would provide an excellent example of making something ordinary a bit more exiting and imaginative. I always begin by looking at the strong and weaker areas in a photo. They can turn out to be great assets as work progresses during a project.</p>
+<div>Corel PHOTO-PAINT the magical tool</div>
+<p>Open the photograph in Corel PHOTO-PAINT X7 and look at where the present lighting is coming from. The lighting is very bland, almost dull. But what is good, is that it&#8217;s possible to work with the light and shadows and contrasts. I noticed the shadows under the outdoor seating and the tree at the bottom right corner of the picture and will have that in mind later on.</p>
+<p>I start by creating a <strong>New Object</strong> in the <strong>Object Manager Docker</strong> (<strong>Object</strong> &gt; <strong>Create</strong> &gt; <strong>New Object</strong>), and using the <strong>Paint Tool</strong>(<strong>Toolbox</strong> &gt; <strong>Paint tool</strong>), and a soft edge brush nib to add sun rays. I chose the <strong>Art brush</strong> &gt; <strong>Large Soft</strong> from the drop-down list in the <strong>Property Bar</strong>. I increased the width of the nib slightly using the <strong>Nib Size</strong> settings in the <strong>Property Bar</strong>. I now painted 7 sun rays from the sky down onto the street towards the square, using white color. I then adjusted the <strong>opacity</strong> of the brush stroke object by tweaking the <strong>Opacity slider</strong> at the top of the <strong>Object Manager Docker</strong>.</p>
+<p>Next, I used the <strong>Mask Tool</strong> to mask the sky and copy and pasted this (<strong>CTRL+C</strong>, <strong>CTRL+V</strong>), to create a <strong>Group object</strong> with it. This way I only make adjustments to the sky, and not the entire image, when I use the <strong>Lens Object</strong> Adjustment features.</p>
+<p>I make 2-3 duplicates of the mask, so that I can apply different changes to the sky, and quickly turn the specific objects on or off. When I am done, I simply delete any mask objects I don&#8217;t want to keep. So I will end up with one mask object of the sky. While selected, I applied a <strong>Tone Curve Lens</strong> (<strong>Object</strong> &gt; <strong>Create</strong> &gt; <strong>New Lens</strong> &gt; <strong>Tone Curve</strong>) to increase contrast, making dark areas darker and with a rather soft S-Curve (Values in the dialog window: Black approximately 51,54 and White approx. 172, 162).</p>
+<p>Also adding a <strong>Contrast Enhancement Lens Object</strong> effect, placed hierarchically under the <strong>Tone Curve</strong> object and with a <strong>Input Value Clipping</strong> of 12 – 255. I now clean up parts of the mask I don&#8217;t want to keep using the <strong>Eraser Tool</strong> (<strong>Toolbox</strong> &gt; <strong>Eraser Tool</strong>).</p>
+<p>I also applied <strong>Dodge &amp; Burn</strong> effects, increasing shadow effects with the <strong>Effects Tool</strong> &gt; <strong>Dodge &amp; Burn</strong> &gt; <strong>Burn Highlights</strong>, on the windows and facade of the buildings. However, before I use the <strong>Dodge &amp; Burn tool</strong> I first use the <strong>Mask tool</strong> to copy and paste those parts of the image, and save them as separate objects in the <strong>Object Manager Docker</strong>.</p>
+<p class="small"><img class="size-medium wp-image-10753 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/249-300x222.jpg" alt="2" width="300" height="222" srcset="http://learn.corel.com/wp-content/uploads/2015/11/249-300x222.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/249-600x444.jpg 600w, http://learn.corel.com/wp-content/uploads/2015/11/249-500x370.jpg 500w, http://learn.corel.com/wp-content/uploads/2015/11/249.jpg 650w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<p>On some mask objects I repeated the <strong>Dodge &amp; Burn</strong> effect like a paint brush. This gives me the freedom to paint the shadows and contrasts on to the image with the <strong>Effect tool</strong>, like painting with Gouache water colour paint, traditionally used by illustrators and designers before the age of computer graphics. Each coat of the exact same paint, or in this case, each coat of<strong>Dodge &amp; Burn</strong>, makes it darker. In my photo it makes the plaster and cement look more real and adds depth.</p>
+<p>On the red building to the right, I repeated <strong>Dodge &amp; Burn</strong> quite extensively, adding more contrast, depth and darker shadow. This brings the windows more to life.</p>
+<p>Looking at the Parasol just behind the sun rays, I can see that this needs more contrast. I apply contrast using the <strong>Effect Tool</strong> &gt;<strong>Dodge &amp; Burn</strong> &gt; and <strong>Dodge Highlights</strong> instead of <strong>Burn Highlights</strong> as we used earlier. This lightens up the top of the parasols.</p>
+<p>The outdoor awning, over the outdoor tables by the red house to the right, is empty and without any logo or text, which gives me an excellent opportunity to add text or a logo on top of it. I went for &#8220;Coffee&#8221;. With the <strong>Text Tool</strong> (<strong>Toolbox</strong> &gt; <strong>Text tool</strong>), and the color white, I chose a fairly modern bold San Serif font. With the <strong>Pick tool</strong> selected, I use the distortion handles to shape the text to fit the outdoor awning (click on the <strong>Distort icon</strong> in the <strong>Property Bar</strong>). To make it look more real, I applied opacity while I used the <strong>Eraser tool</strong> to erase anything that would overlap the tree, and make it fit in better. When done, I simply removed opacity from the text. I finished it off by adjusting the opacity of the text object to around <strong>30</strong> using the <strong>Opacity slider</strong>in the <strong>Object Manager Docker</strong>.</p>
+<p class="small"><img class="size-medium wp-image-10754 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/335-300x187.jpg" alt="3" width="300" height="187" srcset="http://learn.corel.com/wp-content/uploads/2015/11/335-300x187.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/335-600x374.jpg 600w, http://learn.corel.com/wp-content/uploads/2015/11/335-500x312.jpg 500w, http://learn.corel.com/wp-content/uploads/2015/11/335.jpg 650w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<div>Using the Photo Filter Lens</div>
+<p>I wanted to add a sort of old, yellow feel to the image, so in the <strong>Object Manager Docker</strong> I choose <strong>Lens Object</strong> &gt; <strong>Photo Filter Lens</strong> (or click on <strong>Object</strong> &gt; <strong>Create</strong> &gt; <strong>New Lens</strong> &gt; <strong>Photo Filter</strong>). I then continued by adding another <strong>Lens Object</strong> &gt;<strong>Contrast Enhancement</strong>, and also a <strong>Tone Curve Lens</strong> object.</p>
+<p>After adding a final, <strong>Photo Filter</strong> lens, I moved on. All together, these lenses have added a bolder, old yellow, warmer feel to the whole image. And if we now compare our current image with the original, rather dull lighting, we suddenly have a far more interesting feel.</p>
+<div>Adding a Halftone effect</div>
+<p>To add a <strong>Halftone effect</strong> I created another temporary <strong>New Image</strong> (<strong>File</strong> &gt; <strong>New…</strong>). After painting random brush strokes, I added a <strong>Halftone effect</strong> (<strong>Effects menu</strong> &gt; <strong>Color Transform</strong> &gt; <strong>Halftone</strong>). Meaning I now have a white background object and another with halftone dots. Selecting the <strong>Color Transparency Tool</strong> in the <strong>Toolbar</strong>, I dragged it over the white background colour, making the background transparent. From there I simply copy pasted the object over to my Berlin image as a new object. This way I can control where and how the Halftone dots are distributed over my image.</p>
+<p class="small"><img class="size-medium wp-image-10755 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/433-300x222.jpg" alt="4" width="300" height="222" srcset="http://learn.corel.com/wp-content/uploads/2015/11/433-300x222.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/433-600x443.jpg 600w, http://learn.corel.com/wp-content/uploads/2015/11/433-500x369.jpg 500w, http://learn.corel.com/wp-content/uploads/2015/11/433.jpg 700w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<div>Adding imported art &amp; images to the photo</div>
+<p>But I wasn&#8217;t quite done yet as I had the idea of adding something to the empty house facade facing the square. And I came up with a vector image of a dogs face, like a logo or brand. Or Street Art.</p>
+<p class="small"><img class="size-medium wp-image-10756 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/529-300x226.jpg" alt="5" width="300" height="226" srcset="http://learn.corel.com/wp-content/uploads/2015/11/529-300x226.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/529-600x451.jpg 600w, http://learn.corel.com/wp-content/uploads/2015/11/529-500x376.jpg 500w, http://learn.corel.com/wp-content/uploads/2015/11/529-463x348.jpg 463w, http://learn.corel.com/wp-content/uploads/2015/11/529.jpg 650w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<p>I therefore imported (Ctrl+I), my vector dog image. Although it&#8217;s a CorelDRAW .cdr file in vector format, it&#8217;s no problem for Corel PHOTO-PAINT to open or import.</p>
+<p>Click (don&#8217;t drag to place the file), and in the <strong>Import dialog window</strong> make sure that you choose the &#8220;<strong>Transparent background</strong>&#8221; option before clicking OK. I imported it as a single bitmap object. I reduced the size by dragging it to size using the sizing handles and with the <strong>Pick tool</strong> selected, I shaped it into place on the house facade using the <strong>Transformation</strong> icons in the <strong>Property Bar</strong> and then adjusting the appropriate handles. It&#8217;s important to get the perspective correct so it follows the perspective of the wall facade. And then added some textures to it as well. In this case I used <strong>Textures</strong> in the <strong>Effects menu bar</strong>. To this, I applied some opacity to make it fit better with the wall.</p>
+<p class="small"><img class="size-medium wp-image-10757 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/628-300x225.jpg" alt="6" width="300" height="225" srcset="http://learn.corel.com/wp-content/uploads/2015/11/628-300x225.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/628-600x449.jpg 600w, http://learn.corel.com/wp-content/uploads/2015/11/628-500x374.jpg 500w, http://learn.corel.com/wp-content/uploads/2015/11/628-463x348.jpg 463w, http://learn.corel.com/wp-content/uploads/2015/11/628.jpg 700w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<p>I finished off the image by drawing and painting pennants in various colors using the <strong>Paint tool</strong>. And once those were finished, the resulting photo was suddenly far more captivating than the first one I took. From something quite unexciting to something far more interesting.</p>
+
+
+                                <script src='../js/colpick.js'></script>
+                                <script src="../js/colorpicker.js"></script>
+
+                                </div>
+                            </div>
+
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane animated fadeIn in" id="tab-2">
+                    <div id="contenttab2"></div>
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane animated fadeIn" id="tab-3" style="margin-top:-20px;margin-left:-20px;margin-right:-20px;background:#ffffff">
+
+                    </div>
+
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- Page Loader -->
+        <div class="page-loader">
+            <div class="preloader" style="text-align:center;">
+                <svg class="pl-circular" viewBox="25 25 50 50">
+                    <circle class="plc-path" cx="50" cy="50" r="20" />
+                </svg><br/><br/>
+                <div style="font-size:8px;margin-left:-80px;width:200px" class="demo"></div>
+            </div>
+        </div>
+
+        <div style="margin-bottom:10px;"><footer id="footer">
+            Copyright &copy; 2017 IDWEBDesigner<br/><a href="index.html">Back to <i class="zmdi zmdi-home"></i> Homepage</a>
+        </footer></div>
+
+        <!-- Javascript Libraries -->
+        <script src="../vendors/bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="../vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+        <script src="../vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="../vendors/bower_components/Waves/dist/waves.min.js"></script>
+        <script src="../vendors/bootstrap-growl/bootstrap-growl.min.js"></script>
+        <script src="../vendors/bower_components/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="../vendors/bower_components/lightgallery/dist/js/lightgallery-all.min.js"></script>
+        <script src="../vendors/bootgrid/jquery.bootgrid.updated.min.js"></script>
+
+        <!-- Placeholder for IE9 -->
+        <!--[if IE 9 ]>
+            <script src="vendors/bower_components/jquery-placeholder/jquery.placeholder.min.js"></script>
+        <![endif]-->
+
+        <script src="../js/app.min.js"></script>
+
+        <!-- Data Table -->
+        <script>
+            $(function()
+            {
+              $("#grid-basic").bootgrid({
+                  caseSensitive: false,
+                    css: {
+                        icon: 'zmdi icon',
+                        iconColumns: 'zmdi-view-module',
+                        iconDown: 'zmdi-sort-amount-desc',
+                        iconRefresh: 'zmdi-refresh',
+                        iconUp: 'zmdi-sort-amount-asc'
+                    },
+              }
+              )
+            });
+        </script>
+
+        <script type="text/javascript">
+            //Basic
+            $('#sa-basic').click(function(e){
+                e.preventDefault();
+                var link = $(this).attr('href');
+
+                swal({
+                    title: "Get Inspire Profesional Logos",
+                    text: "More logos sparately on our Learn Apps: Javascript, NoSQL Database, Virtual Reality, and more...",
+                    showCancelButton: true,
+                    allowOutsideClick: true,
+                },
+                function(){
+                    window.location.href = 'market://details?id=id.web.designer.learn.javascript';
+                });
+            });
+        </script>
+
+    <script type="text/javascript">
+        function rateApp() {
+            android.rateApp();
+       }
+    </script>
+
+    </body>
+
+</html>
