@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Tutorial CorelDraw Pro</title>
+
+         <script type="text/javascript">
+          <!--
+          if (screen.width >= 2800) {
+            window.location = "http://designer.web.id";
+          }
+          //-->
+        </script>
+
+        <!-- Vendor CSS -->
+        <link href="../vendors/bower_components/animate.css/animate.min.css" rel="stylesheet">
+        <link href="../vendors/bower_components/sweetalert/dist/sweetalert.css" rel="stylesheet">
+        <link href="../vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
+        <link href="../vendors/bower_components/lightgallery/dist/css/lightgallery.min.css" rel="stylesheet">
+        <link href="../vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+        <link href="../vendors/bootgrid/jquery.bootgrid.min.css" rel="stylesheet">
+
+        <!-- CSS -->
+        <link href="../css/app_1.min.css" rel="stylesheet">
+        <link href="../css/app_2.min.css" rel="stylesheet">
+
+        <script src="../js/h5utils.js"></script>
+        <script src="../js/jquery-2.1.0.min.js"></script>
+        <script src="../js/jquery.jscroll.min.js"></script>
+        <script>$(function(){
+        $("#contentloader1").load("http://app.coreldraw.designer.web.id/content-message.html"); $("#contentloader2").load("http://app.coreldraw.designer.web.id/pro/content-right-pro.html");
+        $("#contenttab1").load("http://app.coreldraw.designer.web.id/pro/contenttab2.html");
+        $("#contenttab2").load("http://app.coreldraw.designer.web.id/pro/contenttab2.html");
+        });</script>
+
+        <style>.videoWrapper {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 */
+        padding-top: 25px;
+        height: 0;}
+        .videoWrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;}
+        .lcb-navigation a{background:#999999}
+        </style>
+    </head>
+    <body style="background:#ffffff">
+
+        <!-- Page Loader -->
+        <div class="page-loader">
+            <div class="preloader pls-white">
+                <svg class="pl-circular" viewBox="25 25 50 50">
+                    <circle class="plc-path" cx="50" cy="50" r="20" />
+                </svg>
+            </div>
+
+        </div>
+
+        <header id="header" class="clearfix container">
+            <ul class="h-inner">
+
+                <li class="hi-trigger ma-trigger" data-ma-action="sidebar-open" data-ma-target="#sidebar">
+                    <div class="line-wrap">
+                        <div class="line top"></div>
+                        <div class="line center"></div>
+                        <div class="line bottom"></div>
+                    </div>
+                </li>
+
+                <li class="hi-logo" data-ma-action="sidebar-open" data-ma-target="#sidebar" style="margin-top:8px;">
+                    <span style="font-size:15px;color:#ffffff;"> Tutorial CorelDRAW<sup>&reg;</sup><span>
+                </li>
+
+                <li class="pull-right">
+                    <ul class="hi-menu">
+
+                        <li style="margin-right:-15px;" class="dropdown">
+                            <a data-toggle="dropdown" href="#">
+                                <i class="him-icon zmdi zmdi-notifications-none"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-lg pull-right">
+                                <div class="list-group list-group-light">
+                                    <div class="lg-header">
+                                        LIVE DEVELOPER MESSAGES
+                                    </div>
+
+                                    <article>
+                                      <p style="text-align:center;font-size:1em;"><span id="status"><span id="status"></span></p>
+                                      <ol id="state"></ol>
+                                    </article>
+                                    <script>
+                                    var statusElem  = document.getElementById('status'),
+                                        state               = document.getElementById('state');
+
+                                    function online(event) {
+                                      statusElem.className = navigator.onLine ? 'online' : 'offline';
+                                      statusElem.innerHTML = navigator.onLine ? '' : '<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You&#39;re offline, check network connection.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;content required internet access.';
+                                      state.innerHTML += '&nbsp;';
+                                    }
+
+                                    addEvent(window, 'online', online);
+                                    addEvent(window, 'offline', online);
+                                    online({ type: 'ready' });
+                                    </script>
+
+                                    <div style="margin-top:-30px;" id="contentloader1"></div>
+                                    <a class="view-more view-more-light" href="idwebdesigner.html">Powered by IDWEBDesigner</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li style="margin-right:-15px;" class="ma-trigger" data-ma-action="sidebar-open" data-ma-target="#chat">
+                            <a data-toggle="dropdown" href="#">
+                                <i class="him-icon zmdi zmdi-favorite-outline"></i>
+                            </a>
+                        </li>
+                        <li style="margin-right:-5px;" class="dropdown">
+                            <a data-toggle="dropdown" href="#"><i class="him-icon zmdi zmdi-more-vert"></i></a>
+                            <ul class="dropdown-menu dm-icon pull-right">
+                                <li class="hidden-xs">
+                                    <a data-ma-action="fullscreen" href="#"><i class="zmdi zmdi-fullscreen"></i> Fullscreen</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:window.location.reload();"><i class="zmdi zmdi-refresh-sync"></i> Refresh</a>
+                                </li>
+                                <li>
+                                    <a id="rate-app" onClick="rateApp()">Rate 5 Stars</a>
+                                </li>
+                                <li>
+                                    <a href="update.html"><i class="zmdi zmdi-download"></i>Check update</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="help.html"><i class="zmdi zmdi-help"></i> Help</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="hidden-xs ma-trigger" data-ma-action="sidebar-open" data-ma-target="#chat">
+                            <a href="#"><i class="him-icon zmdi zmdi-comment-alt-text"></i></a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="tab-nav tn-justified tn-icon" role="tablist" style="width:100%">
+                                        <li role="presentation">
+                                            <a class="col-sx-4" href="index.html">
+                                                INDONESIA
+                                            </a>
+                                        </li>
+                                        <li role="presentation" class="active">
+                                            <a class="col-xs-4" href="#tab-2" aria-controls="tab-2" role="tab" data-toggle="tab">
+                                                ENGLISH (PRO)
+                                            </a>
+                                        </li>
+
+                                    </ul>
+        </header>
+
+        <section id="main">
+            <ol class="breadcrumb" style="margin-left:-10px;">
+                <li><a href="developer.html">designer.web.id</a></li>
+                <li><a href="index.html">learn</a></li>
+                <li class="active">virtualreality</li>
+            </ol>
+
+            <aside id="sidebar" class="sidebar c-overflow" style="position:fixed;z-index:1000;margin-top:-70px;height:100%;background:white">
+                <ul class="main-menu">
+                    <li class="mm-profile sub-menu">
+                        <a href="#" data-ma-action="submenu-toggle" class="media">
+                            <img class="pull-left" src="../img/coreldraw.green.png" alt="" height="25px" style="margin-left:-40px;">
+                            <div class="media-body">
+                            <div>Tutorial CorelDRAW<sup>&reg;</sup></div>
+                            <span style="font-size:11px;">Experience by IDWEBDesigner<br/>dev@designer.web.id</span>
+                            </div>
+                        </a>
+
+                        <ul>
+                            <li>
+                                <a href="developer.html">Indonesia Web Designer</a>
+                            </li>
+                            <li>
+                                <div style="margin-left:65px;margin-bottom:10px;font-size:10px;color:#888888;padding-right:20px;">Jl. Wahid Hasyim No.3 Gaten Condongcatur Depok Sleman Yogyakarta, Indonesia.</div>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-info"></i> About CorelDraw</a>
+                        <div style="margin-left:65px;margin-bottom:10px;font-size:12px;color:#579706;"><a href="basics.html">What's is CorelDraw?<br/>Basics Learn</a></div>
+                    </li>
+
+                    <li><a href="index.html"><i class="zmdi zmdi-flag"></i> Tutorial Bahasa Indonesia</a></li>
+                    <li class="sub-menu toggled active">
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-android"></i> Featured Apps</a>
+                        <div style="margin-left:65px;margin-top:10px;font-size:10px;color:#888888;padding-right:20px;">Color Docker: This docker allows you to choose fill and outline colors from a color picker, color sliders, and color palettes. Found with dockers and in the Toolbox.</div>
+
+                        <ul>
+
+                            <li><a href="language.html">Bahasa Indonesia</a></li>
+                            <li style="display:none;"><a href="upgrade.html"><i class="zmdi zmdi-shopping-cart"></i>&nbsp;&nbsp;Upgrade</a></li>
+                            <li class="divider"></li>
+
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-code"></i> Developer</a>
+
+                        <ul>
+                            <li><a href="developer.html">dev@designer.web.id<br/>designer.web.id</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </aside>
+
+            <aside id="chat" class="sidebar">
+
+                                    <article>
+                                      <p style="margin-top:30px;margin-left:15px;font-size:0.7em;"><span id="status2"><span id="status"></span></p>
+                                      <ol id="state2"></ol>
+                                    </article>
+                                    <script>
+                                    var statusElem  = document.getElementById('status2'),
+                                        state               = document.getElementById('state2');
+
+                                    function online(event) {
+                                      statusElem.className = navigator.onLine ? 'online' : 'offline';
+                                      statusElem.innerHTML = navigator.onLine ? '' : '<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You&#39;re offline, check network connection.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;content required internet access.';
+                                      state.innerHTML += '&nbsp;';
+                                    }
+
+                                    addEvent(window, 'online', online);
+                                    addEvent(window, 'offline', online);
+                                    online({ type: 'ready' });
+                                    </script>
+
+                <div style="margin-top:-30px; width:100%" id="contentloader2"></div>
+
+
+
+            </aside>
+
+            <section id="content" style="margin-bottom:-40px;">
+                <div class="container" style="margin-top:-55px;margin-left:-20px;padding-right:0px;">
+                    <div class="tab-content p-20" style="background:#ffffff;">
+
+                    <div role="tabpanel" class="tab-pane animated fadeIn in active" id="tab-1">
+
+                            <!-- Blog Posts -->
+                            <div class="card blog-post" style="margin-bottom:-0px;">
+
+                                <div class="videoWrapper">
+                                <img width="100%" src="../images/green.png" frameborder="0" allowfullscreen></img>
+                                </div>
+
+                                <a class="card-header ch-alt">
+                                    <h2><small>In this written tutorial, Joe Diaz shows you how to use custom typesets and imagery to create a unique brand image for a women’s clothing store. As a designer, one of the most important parts of your work is developing a brand that works for your client. This tutorial shows you a few of the key tools you need to do that. It also gives you an unique perspective into CorelDRAW Master Joe Diaz’s creative process.</small></h2>
+                                </a>
+
+                                <div class="card-body card-padding">
+
+                                <h4>How to Create a Custom Brand Using Unique Typesets and Imagery</h4>
+                                 <br/>
+
+
+			<p><strong style="font-weight: 600;">Starting with the typestyle</strong></p>
+<p>When designing a logo or brand, I sometimes start with imagery or an icon, and then create a typestyle that matches that graphic. Other times, such as in this design, I want the lettering to be the star of the show, so I focus on that first.</p>
+<p>Knowing your client&#8217;s target audience and then creating something that is attractive to them is key. It&#8217;s actually more important than creating something pleasing to the business owner. In this case, the design is for a women’s clothing store, so I needed a typestyle that’s feminine, something &#8220;lacy. &#8221; After doing some research and creating a few quick little sketches on paper, I had the idea to make the lettering look like ribbon, and to somehow incorporate a &#8220;charm&#8221; image or graphic.<br />
+<strong style="font-weight: 600;">Understanding ribbon script</strong></p>
+<p>Before diving into this project, let&#8217;s look at a quick little trick for creating ribbon text. Ultimately, I won&#8217;t use this method to create this client&#8217;s brand, but it’ll help us get in the right mindset for creating a ribbon script.</p>
+<p>Start by creating a single-line cursive word. You could draw one by hand and scan it, or as in my case,  use the <strong style="font-weight: 600;">Freehand</strong> tool <img class="alignnone size-full wp-image-10497" src="http://learn.corel.com/wp-content/uploads/2015/11/1103.png" alt="1" width="32" height="30" /></p>
+<p>(found in the Curve Tools flyout) and draw it directly in CorelDRAW.</p>
+<p><img class="size-full wp-image-10498 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/239.jpg" alt="2" width="250" height="162" /></p>
+<div class="center">
+<div><em>Figure 1</em></div>
+<p style="text-align: left;">The next step is to duplicate that script (<strong>Ctrl+D</strong>) and stagger the duplicate, in this case down and to the right. You may also want to give each script a unique outline color to help distinguish the two from each other as you work.</p>
+<p><img class="size-full wp-image-10499 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/330.jpg" alt="3" width="250" height="162" /></p>
+<p style="text-align: center;"><em>Figure 2</em></p>
+<p style="text-align: left;">A fast way to change the color of outlines is to select the line or path you want to change, and then right-click a color in the color palette.</p>
+<p style="text-align: left;">Now, find two points, one on each script, that will serve as the start and endpoints of a diagonal line that will be reused to help create the ribbon effect. In this case, I used the startpoint of both scripts.</p>
+<p><img class="size-full wp-image-10500 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/428.jpg" alt="4" width="250" height="162" /></p>
+<div><em>Figure 3</em></div>
+<p style="text-align: left;">I duplicated the gray diagonal line and positioned the duplicates where the ribbon would normally fold over (see Figure 4). For best results, keep the angle of that diagonal line consistent. It also helps to enable the <strong>Snap to Object</strong> command (<strong>Alt+Z</strong>). With this enabled, you can snap the gray lines to the edge of the two scripts. You don&#8217;t have to worry about combining the lines because CorelDRAW has a great tool that we will use to create the shapes that will make up the ribbon, the <strong>Smart Fill</strong> tool</p>
+<p><img class="alignnone size-full wp-image-10501" src="http://learn.corel.com/wp-content/uploads/2015/11/539.png" alt="5" width="29" height="37" /></p>
+<p><img class="size-full wp-image-10502 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/624.jpg" alt="6" width="250" height="162" /></p>
+<p><em>Figure 4</em></p>
+<p><img class="size-full wp-image-10503 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/725.jpg" alt="7" width="250" height="162" /></p>
+<p style="text-align: center;"><em>Figure 5</em></p>
+<p style="text-align: left;">At this point in the design process, I use color again to help me visualize this ribbon effect. I used two shades of blue, one for each side of the ribbon. I also used yellow on the intersecting portions, but just temporarily. Again, you can use the <strong style="font-weight: 600;">Smart Fill</strong> tool to achieve this.</p>
+<p><img class="size-full wp-image-10504 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/826.jpg" alt="8" width="250" height="162" /></p>
+<p><em>Figure 6</em></p>
+<p style="text-align: left;">Now, weld the yellow parts to either the dark blue shapes or the light blue shapes. Either will work. In this case, I chose to weld them to the light blue shapes (see Figure 7).</p>
+<p><img class="size-full wp-image-10505 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/917.jpg" alt="9" width="250" height="162" /></p>
+<div><em>Figure 7</em></div>
+<p style="text-align: left;">To weld two (or multiple) shapes together, just select all the shapes you want to weld, and click the <strong>Weld</strong> button<img class="alignnone size-full wp-image-10506" src="http://learn.corel.com/wp-content/uploads/2015/11/1025.png" alt="10" width="25" height="23" /></p>
+<p style="text-align: left;">on the property bar. Repeat this process for each letter in the design.</p>
+<p><img class="size-full wp-image-10507 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/1119.jpg" alt="11" width="250" height="162" /></p>
+<p style="text-align: center;"><em>Figure 8</em></p>
+<p style="text-align: left;"><strong style="font-weight: 600;">Combining the old with the new</strong></p>
+<p style="text-align: left;">I wanted to create a custom hand-lettered look and feel for the ribbon lettering for this brand design. What better way to achieve that look than to ask my father, a longtime sign painter, to work his magic? Hand-painted lettering has a certain flow that can&#8217;t always be replicated with off-the-shelf fonts, plus I wanted to create something truly unique — something that looks handmade because it was handmade.</p>
+<p><img class="size-medium wp-image-10508 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/1219-300x194.jpg" alt="12" width="300" height="194" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1219-300x194.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/1219.jpg 350w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<p style="text-align: center;"><em>Figure 9</em></p>
+<p style="text-align: left;">One thing to note: If I use the ribbon script that I have outlined in this particular design for a women’s clothing store, I’d wouldn’t get the thick and thin lettering you see in hand-painted work, and that’s one of the things that gives it its character. However, I can use what I have learned when constructing the Corel script to help guide me when creating script for my client’s design.</p>
+<p style="text-align: left;"><strong style="font-weight: 600;">Creating the script</strong></p>
+<p style="text-align: left;">To start I&#8217;ll take the transparency film that my father painted on and place it in our scanner. Next go to <strong style="font-weight: 600;">File -&gt; Acquire Image -&gt; Acquire</strong>. I then select to scan the image as a grayscale image. Once the scan is complete the image will appear on my Drawing Page.</p>
+<p><img class="size-medium wp-image-10509 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/1319-300x194.jpg" alt="13" width="300" height="194" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1319-300x194.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/1319.jpg 350w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<div><em>Figure 10</em></div>
+<p style="text-align: left;">At this stage, I want to make the image dull or faded to make it easier to work over top of it. There’s a couple of things I can do. I could add a transparency to the scanned image using the <strong>Transparency</strong> button <img class="alignnone size-full wp-image-10510" src="http://learn.corel.com/wp-content/uploads/2015/11/1423.png" alt="14" width="31" height="30" /></p>
+<p style="text-align: left;">in the <strong>Object Properties</strong> docker. Alternatively, I could switch to a wireframe view by clicking <strong>View &gt; Wireframe</strong>.</p>
+<p><img class="size-medium wp-image-10511 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/1515-300x194.jpg" alt="15" width="300" height="194" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1515-300x194.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/1515.jpg 350w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<p style="text-align: center;"><em>Figure 11</em></p>
+<p style="text-align: left;">To prevent accidentally selecting the image when working on the shapes above it in the design, I lock the image by right-clicking it and clicking <strong style="font-weight: 600;">Lock Object</strong>.</p>
+<p style="text-align: left;">I like to create guidelines to help create a consistent baseline for my script. Guidelines are easy to create — simply drag from a ruler onto workspace, and one is added where you release the mouse. You can move the guideline at any time by simply selecting it like you would any other shape. In fact, you can also rotate the guideline in the same way you would rotate a shape, by clicking it and clicking it again to display rotation handles. In this design, I need my guidelines to be at an angle, so I will first  rotate the guideline, then duplicate it.</p>
+<p><img class="size-medium wp-image-10512 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/1612-300x194.jpg" alt="16" width="300" height="194" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1612-300x194.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/1612.jpg 350w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<p style="text-align: center;"><em>Figure 12</em></p>
+<p style="text-align: left;">To get shapes and objects to snap to guidelines, click <strong style="font-weight: 600;">View &gt; Snap to &gt; Guidelines</strong>.</p>
+<p style="text-align: left;">At this point, I treat this lettering like any other illustration I might create. So, just as though I were creating an illustration of a car or a person, I make good use of the <strong style="font-weight: 600;">Freehand</strong> tool <img class="alignnone size-full wp-image-10514" src="http://learn.corel.com/wp-content/uploads/2015/11/1717.png" alt="17" width="31" height="30" /></p>
+<p style="text-align: left;">and the <strong>Shape</strong> tool. <img class="alignnone size-full wp-image-10515" src="http://learn.corel.com/wp-content/uploads/2015/11/1813.png" alt="18" width="30" height="31" /></p>
+<p style="text-align: left;">I like to start by roughing out my shapes. With the <strong style="font-weight: 600;">Freehand</strong> tool selected, clicking and holding creates a the line that follows the movement of your mouse. However, if you click once and don&#8217;t hold the mouse button down, you can create straight lines. The straight line is completed when you click a second time. So by creating a series of connecting straight lines that roughly follow the boundaries of this lettering, I make several shapes that will eventually make up this ribbon script.</p>
+<p><img class="size-medium wp-image-10516 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/198-300x194.jpg" alt="19" width="300" height="194" srcset="http://learn.corel.com/wp-content/uploads/2015/11/198-300x194.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/198.jpg 350w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<p style="text-align: center;"><em>Figure 13</em></p>
+<p style="text-align: left;">Next, I use the <strong style="font-weight: 600;">Shape</strong> tool to manipulate the straight lines that I just created. When you are using the <strong style="font-weight: 600;">Shape</strong> tool, the property bar displays commands specific to the tool. I first click the <strong style="font-weight: 600;">Select all nodes</strong> button, <img class="alignnone size-full wp-image-10517" src="http://learn.corel.com/wp-content/uploads/2015/11/208.png" alt="20" width="22" height="26" /></p>
+<p style="text-align: left;">then click the <strong>Convert to curve</strong> button, <img class="alignnone size-full wp-image-10518" src="http://learn.corel.com/wp-content/uploads/2015/11/2114.png" alt="21" width="22" height="23" /></p>
+<p style="text-align: left;">which turns all my straight lines into curves. They will still look like straight lines, but now when I drag anywhere on that line, I can pull it into a curve. I also click the <strong>Smooth node</strong> button <img class="alignnone size-full wp-image-10519" src="http://learn.corel.com/wp-content/uploads/2015/11/2212.png" alt="22" width="26" height="28" /></p>
+<p><img class="alignnone size-medium wp-image-10520" src="http://learn.corel.com/wp-content/uploads/2015/11/2310-300x194.jpg" alt="23" width="300" height="194" srcset="http://learn.corel.com/wp-content/uploads/2015/11/2310-300x194.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/2310.jpg 350w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<p style="text-align: center;"><em>Figure 14</em></p>
+<p style="text-align: left;">I work my way through each letter, taking what I&#8217;ve learned from creating the Corel script and applying it in this design. To save time, I duplicate letters that are used more than once, like e and u. I also change a few things that I wasn&#8217;t happy with in the hand lettering.</p>
+<p><img class="size-full wp-image-10521 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/245.jpg" alt="24" width="175" height="113" /></p>
+<p><img class="size-full wp-image-10522 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/252.jpg" alt="25" width="175" height="113" /></p>
+<p style="text-align: center;"><em>Figures 15-16</em></p>
+<p style="text-align: left;"><strong style="font-weight: 600;">Adding some color</strong></p>
+<p style="text-align: left;">Now it&#8217;s time to add some color. I start by adding a background color to work over top of. The client requested grays and greens for this brand, so I&#8217;m going to start with a dark gray background. I then change the color of the outlines of my script to white for the time being so I can see what I&#8217;m doing.</p>
+<p><img class="size-medium wp-image-10523 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/262-300x194.jpg" alt="26" width="300" height="194" srcset="http://learn.corel.com/wp-content/uploads/2015/11/262-300x194.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/262.jpg 350w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<div><em>Figure 17</em></div>
+<p style="text-align: left;">Unlike the Corel script, I want this script to have more dimension to it, so I&#8217;m going use gradients to help give it the appearance of shading. I like to use the<strong> Interactive Fill</strong> tool <img class="alignnone size-full wp-image-10524" src="http://learn.corel.com/wp-content/uploads/2015/11/274.png" alt="27" width="23" height="23" /></p>
+<p style="text-align: left;">to help me achieve this. I often create a simple reference image that helps me keep my gradients on every letter consistent. In this case, I&#8217;ll just make a ring.</p>
+</div>
+<div class="center"><img class="size-medium wp-image-10525 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/282-300x195.jpg" alt="28" width="300" height="195" srcset="http://learn.corel.com/wp-content/uploads/2015/11/282-300x195.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/282.jpg 350w" sizes="(max-width: 300px) 100vw, 300px" /></div>
+<div class="center">
+<div><em>Figure 18</em></div>
+<p style="text-align: left;">If I was making an illustration of buildings and I wanted to make the angle of the light source and shading consistent, I might draw a cube as a reference.</p>
+<p style="text-align: left;">The reference circle isn&#8217;t just used as a visual aid. You can also use the <strong>Attributes Eyedropper</strong> tool <img class="alignnone size-full wp-image-10526" src="http://learn.corel.com/wp-content/uploads/2015/11/293.png" alt="29" width="30" height="33" /></p>
+<p style="text-align: left;">(found in the <strong>Eyedropper Tool</strong> flyout) to copy the attributes from your reference image and apply them to your lettering. Using the <strong>Attributes Eyedropper tool</strong>, simply position your cursor over part of the reference image and click. You&#8217;ll notice that the Eyedropper cursor changes to look like a paint bucket. You now can apply that set of attributes to any shape you want.</p>
+<p><img class="size-full wp-image-10527 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/301.jpg" alt="30" width="125" height="81" /></p>
+<p style="text-align: center;"><em>Figures 19-21</em></p>
+<p style="text-align: left;">Before you know it, you&#8217;ve got a real nice, eye catching, custom ribbon script.</p>
+<p style="text-align: left;"><strong style="font-weight: 600;">Adding some imagery</strong></p>
+<p style="text-align: left;">Now that we have our script finalized, it&#8217;s time to add the supporting imagery. For this job, the client wanted to use a design from one of her earrings to act as the &#8220;charm&#8221; in this brand. The shape of this charm was then to be used throughout the store.</p>
+<p style="text-align: left;">First, we start by importing a photo we took.</p>
+<p><img class="alignnone size-medium wp-image-10528" src="http://learn.corel.com/wp-content/uploads/2015/11/3110-300x194.jpg" alt="31" width="300" height="194" srcset="http://learn.corel.com/wp-content/uploads/2015/11/3110-300x194.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/3110.jpg 350w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<div><em>Figure 22</em></div>
+<p style="text-align: left;">Because I have multiple monitors, I open up the folder containing the photo on one screen, while CorelDRAW is open on the other. I simply drag the photo file from one screen to another and onto the CorelDRAW window. However, you can also click <strong>File &gt; Import</strong> to import photos.</p>
+<p style="text-align: left;">With the photo imported, I lock the photo and switch to wireframe view and draw directly over top of the photo. This charm design is a pretty basic when you break it all down into different shapes. I use basic squares created with the <strong>Rectangle</strong> tool</p>
+<p><img class="alignnone size-full wp-image-10529" src="http://learn.corel.com/wp-content/uploads/2015/11/3211.png" alt="32" width="18" height="19" /></p>
+<p style="text-align: left;">and circles created with the <strong>Ellipse</strong> tool.</p>
+<p><img class="alignnone size-full wp-image-10530" src="http://learn.corel.com/wp-content/uploads/2015/11/3310.png" alt="33" width="18" height="21" /></p>
+<p style="text-align: left;">to rebuild this design from scratch.</p>
+</div>
+<p><img class="alignnone size-full wp-image-10532" src="http://learn.corel.com/wp-content/uploads/2015/11/341.jpg" alt="34" width="125" height="81" /></p>
+<p><img class="alignnone size-full wp-image-10533" src="http://learn.corel.com/wp-content/uploads/2015/11/351.jpg" alt="35" width="125" height="81" /></p>
+<p><img class="alignnone size-full wp-image-10535" src="http://learn.corel.com/wp-content/uploads/2015/11/361.jpg" alt="36" width="125" height="81" /></p>
+<div style="text-align: center;"><em>Figures 23-25</em></div>
+<p style="text-align: left;">When using the <strong>Ellipse</strong> and <strong>Rectangle</strong> tools, holding down the <strong>Ctrl</strong> key while you drag out the shape creates perfect circles and squares. When piecing these shapes together, I make sure <strong>Snap to Objects</strong> is enabled. This feature lets you choose from a variety of snapping points. For example, you can snap the center of the circles to the corner of the square. I then duplicate shapes and groups of shapes to keep things symmetrical, making good use of the <strong>Weld</strong>, <strong>Trim</strong></p>
+<p><img class="alignnone size-full wp-image-10537" src="http://learn.corel.com/wp-content/uploads/2015/11/372.png" alt="37" width="20" height="22" /></p>
+<p style="text-align: left;">and <strong>Combine</strong></p>
+<p><img class="alignnone size-full wp-image-10539" src="http://learn.corel.com/wp-content/uploads/2015/11/382.png" alt="38" width="22" height="28" /></p>
+<p style="text-align: left;">tools found on the property bar when you select a shape.</p>
+<p style="text-align: left;">After the charm has been recreated, I can start adding colors.</p>
+<p><img class="alignnone size-medium wp-image-10540" src="http://learn.corel.com/wp-content/uploads/2015/11/391-300x195.jpg" alt="39" width="300" height="195" srcset="http://learn.corel.com/wp-content/uploads/2015/11/391-300x195.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/391.jpg 350w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<p style="text-align: center;"><em>Figure 26</em></p>
+<p style="text-align: left;">I use the<strong style="font-weight: 600;"> Interactive Fill</strong> tool to give this design gradient shading, keeping in mind how light might interact with something metallic like this, and the highlights and shadows created by that interaction. And I most definitely take advantage of my reference image.</p>
+<p style="text-align: left;">You might try one time-saving trick I do with the <strong style="font-weight: 600;">Color Eyedropper</strong> tool to capture colors from my reference photo and apply it to the illustration. This tool can even be used to capture gradients. When the<strong style="font-weight: 600;">Interactive Fill</strong> tool is active, the colors used in a given gradient appear on the property bar. That dropdown picker also has a <strong style="font-weight: 600;">Color Eyedropper</strong> tool, which you can use to sample colors from your reference image.</p>
+<p style="text-align: left;">Now, I simply finalize the charm image by adding a few extra little details.</p>
+<p><img class="alignnone size-medium wp-image-10541" src="http://learn.corel.com/wp-content/uploads/2015/11/401-300x201.png" alt="40" width="300" height="201" srcset="http://learn.corel.com/wp-content/uploads/2015/11/401-300x201.png 300w, http://learn.corel.com/wp-content/uploads/2015/11/401.png 359w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<p style="text-align: center;"><em>Figure 27</em></p>
+<p style="text-align: left;">Then, I combine both the script and illustration to finalize this logo.</p>
+<p><img class="alignnone size-medium wp-image-10542" src="http://learn.corel.com/wp-content/uploads/2015/11/4110-300x194.jpg" alt="41" width="300" height="194" srcset="http://learn.corel.com/wp-content/uploads/2015/11/4110-300x194.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/4110.jpg 400w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<p style="text-align: center;"><em>Figure 28</em></p>
+<p style="text-align: left;">After the logo is finished, I can use that design again to create other promotional and marketing materials, like signs, business cards, product labels, and more.</p>
+
+
+
+                                <script src='../js/colpick.js'></script>
+                                <script src="../js/colorpicker.js"></script>
+
+                                </div>
+                            </div>
+
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane animated fadeIn in" id="tab-2">
+                    <div id="contenttab2"></div>
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane animated fadeIn" id="tab-3" style="margin-top:-20px;margin-left:-20px;margin-right:-20px;background:#ffffff">
+
+                    </div>
+
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- Page Loader -->
+        <div class="page-loader">
+            <div class="preloader" style="text-align:center;">
+                <svg class="pl-circular" viewBox="25 25 50 50">
+                    <circle class="plc-path" cx="50" cy="50" r="20" />
+                </svg><br/><br/>
+                <div style="font-size:8px;margin-left:-80px;width:200px" class="demo"></div>
+            </div>
+        </div>
+
+        <div style="margin-bottom:10px;"><footer id="footer">
+            Copyright &copy; 2017 IDWEBDesigner<br/><a href="index.html">Back to <i class="zmdi zmdi-home"></i> Homepage</a>
+        </footer></div>
+
+        <!-- Javascript Libraries -->
+        <script src="../vendors/bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="../vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+        <script src="../vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="../vendors/bower_components/Waves/dist/waves.min.js"></script>
+        <script src="../vendors/bootstrap-growl/bootstrap-growl.min.js"></script>
+        <script src="../vendors/bower_components/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="../vendors/bower_components/lightgallery/dist/js/lightgallery-all.min.js"></script>
+        <script src="../vendors/bootgrid/jquery.bootgrid.updated.min.js"></script>
+
+        <!-- Placeholder for IE9 -->
+        <!--[if IE 9 ]>
+            <script src="vendors/bower_components/jquery-placeholder/jquery.placeholder.min.js"></script>
+        <![endif]-->
+
+        <script src="../js/app.min.js"></script>
+
+        <!-- Data Table -->
+        <script>
+            $(function()
+            {
+              $("#grid-basic").bootgrid({
+                  caseSensitive: false,
+                    css: {
+                        icon: 'zmdi icon',
+                        iconColumns: 'zmdi-view-module',
+                        iconDown: 'zmdi-sort-amount-desc',
+                        iconRefresh: 'zmdi-refresh',
+                        iconUp: 'zmdi-sort-amount-asc'
+                    },
+              }
+              )
+            });
+        </script>
+
+        <script type="text/javascript">
+            //Basic
+            $('#sa-basic').click(function(e){
+                e.preventDefault();
+                var link = $(this).attr('href');
+
+                swal({
+                    title: "Get Inspire Profesional Logos",
+                    text: "More logos sparately on our Learn Apps: Javascript, NoSQL Database, Virtual Reality, and more...",
+                    showCancelButton: true,
+                    allowOutsideClick: true,
+                },
+                function(){
+                    window.location.href = 'market://details?id=id.web.designer.learn.javascript';
+                });
+            });
+        </script>
+
+    <script type="text/javascript">
+        function rateApp() {
+            android.rateApp();
+       }
+    </script>
+
+    </body>
+
+</html>
