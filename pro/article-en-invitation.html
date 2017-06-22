@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Tutorial CorelDraw Pro</title>
+
+         <script type="text/javascript">
+          <!--
+          if (screen.width >= 2800) {
+            window.location = "http://designer.web.id";
+          }
+          //-->
+        </script>
+
+        <!-- Vendor CSS -->
+        <link href="../vendors/bower_components/animate.css/animate.min.css" rel="stylesheet">
+        <link href="../vendors/bower_components/sweetalert/dist/sweetalert.css" rel="stylesheet">
+        <link href="../vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
+        <link href="../vendors/bower_components/lightgallery/dist/css/lightgallery.min.css" rel="stylesheet">
+        <link href="../vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+        <link href="../vendors/bootgrid/jquery.bootgrid.min.css" rel="stylesheet">
+
+        <!-- CSS -->
+        <link href="../css/app_1.min.css" rel="stylesheet">
+        <link href="../css/app_2.min.css" rel="stylesheet">
+
+        <script src="../js/h5utils.js"></script>
+        <script src="../js/jquery-2.1.0.min.js"></script>
+        <script src="../js/jquery.jscroll.min.js"></script>
+        <script>$(function(){
+        $("#contentloader1").load("http://app.coreldraw.designer.web.id/content-message.html"); $("#contentloader2").load("http://app.coreldraw.designer.web.id/pro/content-right-pro.html");
+        $("#contenttab1").load("http://app.coreldraw.designer.web.id/pro/contenttab2.html");
+        $("#contenttab2").load("http://app.coreldraw.designer.web.id/pro/contenttab2.html");
+        });</script>
+
+        <style>.videoWrapper {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 */
+        padding-top: 25px;
+        height: 0;}
+        .videoWrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;}
+        .lcb-navigation a{background:#999999}
+        </style>
+    </head>
+    <body style="background:#ffffff">
+
+        <!-- Page Loader -->
+        <div class="page-loader">
+            <div class="preloader pls-white">
+                <svg class="pl-circular" viewBox="25 25 50 50">
+                    <circle class="plc-path" cx="50" cy="50" r="20" />
+                </svg>
+            </div>
+
+        </div>
+
+        <header id="header" class="clearfix container">
+            <ul class="h-inner">
+
+                <li class="hi-trigger ma-trigger" data-ma-action="sidebar-open" data-ma-target="#sidebar">
+                    <div class="line-wrap">
+                        <div class="line top"></div>
+                        <div class="line center"></div>
+                        <div class="line bottom"></div>
+                    </div>
+                </li>
+
+                <li class="hi-logo" data-ma-action="sidebar-open" data-ma-target="#sidebar" style="margin-top:8px;">
+                    <span style="font-size:15px;color:#ffffff;"> Tutorial CorelDRAW<sup>&reg;</sup><span>
+                </li>
+
+                <li class="pull-right">
+                    <ul class="hi-menu">
+
+                        <li style="margin-right:-15px;" class="dropdown">
+                            <a data-toggle="dropdown" href="#">
+                                <i class="him-icon zmdi zmdi-notifications-none"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-lg pull-right">
+                                <div class="list-group list-group-light">
+                                    <div class="lg-header">
+                                        LIVE DEVELOPER MESSAGES
+                                    </div>
+
+                                    <article>
+                                      <p style="text-align:center;font-size:1em;"><span id="status"><span id="status"></span></p>
+                                      <ol id="state"></ol>
+                                    </article>
+                                    <script>
+                                    var statusElem  = document.getElementById('status'),
+                                        state               = document.getElementById('state');
+
+                                    function online(event) {
+                                      statusElem.className = navigator.onLine ? 'online' : 'offline';
+                                      statusElem.innerHTML = navigator.onLine ? '' : '<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You&#39;re offline, check network connection.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;content required internet access.';
+                                      state.innerHTML += '&nbsp;';
+                                    }
+
+                                    addEvent(window, 'online', online);
+                                    addEvent(window, 'offline', online);
+                                    online({ type: 'ready' });
+                                    </script>
+
+                                    <div style="margin-top:-30px;" id="contentloader1"></div>
+                                    <a class="view-more view-more-light" href="idwebdesigner.html">Powered by IDWEBDesigner</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li style="margin-right:-15px;" class="ma-trigger" data-ma-action="sidebar-open" data-ma-target="#chat">
+                            <a data-toggle="dropdown" href="#">
+                                <i class="him-icon zmdi zmdi-favorite-outline"></i>
+                            </a>
+                        </li>
+                        <li style="margin-right:-5px;" class="dropdown">
+                            <a data-toggle="dropdown" href="#"><i class="him-icon zmdi zmdi-more-vert"></i></a>
+                            <ul class="dropdown-menu dm-icon pull-right">
+                                <li class="hidden-xs">
+                                    <a data-ma-action="fullscreen" href="#"><i class="zmdi zmdi-fullscreen"></i> Fullscreen</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:window.location.reload();"><i class="zmdi zmdi-refresh-sync"></i> Refresh</a>
+                                </li>
+                                <li>
+                                    <a id="rate-app" onClick="rateApp()">Rate 5 Stars</a>
+                                </li>
+                                <li>
+                                    <a href="update.html"><i class="zmdi zmdi-download"></i>Check update</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="help.html"><i class="zmdi zmdi-help"></i> Help</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="hidden-xs ma-trigger" data-ma-action="sidebar-open" data-ma-target="#chat">
+                            <a href="#"><i class="him-icon zmdi zmdi-comment-alt-text"></i></a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="tab-nav tn-justified tn-icon" role="tablist" style="width:100%">
+                                        <li role="presentation">
+                                            <a class="col-sx-4" href="index.html">
+                                                INDONESIA
+                                            </a>
+                                        </li>
+                                        <li role="presentation" class="active">
+                                            <a class="col-xs-4" href="#tab-2" aria-controls="tab-2" role="tab" data-toggle="tab">
+                                                ENGLISH (PRO)
+                                            </a>
+                                        </li>
+
+                                    </ul>
+        </header>
+
+        <section id="main">
+            <ol class="breadcrumb" style="margin-left:-10px;">
+                <li><a href="developer.html">designer.web.id</a></li>
+                <li><a href="index.html">learn</a></li>
+                <li class="active">virtualreality</li>
+            </ol>
+
+            <aside id="sidebar" class="sidebar c-overflow" style="position:fixed;z-index:1000;margin-top:-70px;height:100%;background:white">
+                <ul class="main-menu">
+                    <li class="mm-profile sub-menu">
+                        <a href="#" data-ma-action="submenu-toggle" class="media">
+                            <img class="pull-left" src="../img/coreldraw.green.png" alt="" height="25px" style="margin-left:-40px;">
+                            <div class="media-body">
+                            <div>Tutorial CorelDRAW<sup>&reg;</sup></div>
+                            <span style="font-size:11px;">Experience by IDWEBDesigner<br/>dev@designer.web.id</span>
+                            </div>
+                        </a>
+
+                        <ul>
+                            <li>
+                                <a href="developer.html">Indonesia Web Designer</a>
+                            </li>
+                            <li>
+                                <div style="margin-left:65px;margin-bottom:10px;font-size:10px;color:#888888;padding-right:20px;">Jl. Wahid Hasyim No.3 Gaten Condongcatur Depok Sleman Yogyakarta, Indonesia.</div>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-info"></i> About CorelDraw</a>
+                        <div style="margin-left:65px;margin-bottom:10px;font-size:12px;color:#579706;"><a href="basics.html">What's is CorelDraw?<br/>Basics Learn</a></div>
+                    </li>
+
+                    <li><a href="index.html"><i class="zmdi zmdi-flag"></i> Tutorial Bahasa Indonesia</a></li>
+                    <li class="sub-menu toggled active">
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-android"></i> Featured Apps</a>
+                        <div style="margin-left:65px;margin-top:10px;font-size:10px;color:#888888;padding-right:20px;">Color Docker: This docker allows you to choose fill and outline colors from a color picker, color sliders, and color palettes. Found with dockers and in the Toolbox.</div>
+
+                        <ul>
+
+                            <li><a href="language.html">Bahasa Indonesia</a></li>
+                            <li style="display:none;"><a href="upgrade.html"><i class="zmdi zmdi-shopping-cart"></i>&nbsp;&nbsp;Upgrade</a></li>
+                            <li class="divider"></li>
+
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-code"></i> Developer</a>
+
+                        <ul>
+                            <li><a href="developer.html">dev@designer.web.id<br/>designer.web.id</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </aside>
+
+            <aside id="chat" class="sidebar">
+
+                                    <article>
+                                      <p style="margin-top:30px;margin-left:15px;font-size:0.7em;"><span id="status2"><span id="status"></span></p>
+                                      <ol id="state2"></ol>
+                                    </article>
+                                    <script>
+                                    var statusElem  = document.getElementById('status2'),
+                                        state               = document.getElementById('state2');
+
+                                    function online(event) {
+                                      statusElem.className = navigator.onLine ? 'online' : 'offline';
+                                      statusElem.innerHTML = navigator.onLine ? '' : '<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You&#39;re offline, check network connection.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;content required internet access.';
+                                      state.innerHTML += '&nbsp;';
+                                    }
+
+                                    addEvent(window, 'online', online);
+                                    addEvent(window, 'offline', online);
+                                    online({ type: 'ready' });
+                                    </script>
+
+                <div style="margin-top:-30px; width:100%" id="contentloader2"></div>
+
+
+
+            </aside>
+
+            <section id="content" style="margin-bottom:-40px;">
+                <div class="container" style="margin-top:-55px;margin-left:-20px;padding-right:0px;">
+                    <div class="tab-content p-20" style="background:#ffffff;">
+
+                    <div role="tabpanel" class="tab-pane animated fadeIn in active" id="tab-1">
+
+                            <!-- Blog Posts -->
+                            <div class="card blog-post" style="margin-bottom:-0px;">
+
+                                <div class="videoWrapper">
+                                <img width="100%" src="../images/green.png" frameborder="0" allowfullscreen></img>
+                                </div>
+
+                                <a class="card-header ch-alt">
+                                    <h2><small><p>In today&#8217;s tutorial we are going to have fun creating our own party invitation card. We&#8217;ll be adding text and creating colorful vector objects.</p>
+<p>You will learn how to:</p>
+<ul>
+<li>Create a colorful background</li>
+<li>Make basic shapes and create simple figures</li>
+<li>Add text to your card</li>
+</ul></small></h2>
+                                </a>
+
+                                <div class="card-body card-padding">
+
+                                <h4>Creating a Party Invitation Card</h4>
+                                 <br/>
+
+
+			<p>In today&#8217;s tutorial we are going to have fun creating our own party invitation card. We&#8217;ll be adding text and creating colorful vector objects.</p>
+<p class="small"><img class="wp-image-10553 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/178-300x116.jpg" alt="1" width="509" height="197" srcset="http://learn.corel.com/wp-content/uploads/2015/11/178-300x116.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/178-600x233.jpg 600w, http://learn.corel.com/wp-content/uploads/2015/11/178.jpg 650w" sizes="(max-width: 509px) 100vw, 509px" /></p>
+<p><strong>Step 1 – Create a New Document</strong></p>
+<ol>
+<li>Start by opening a new document. Go to: <strong>File</strong> &gt; then click on <strong>New…</strong> (or use the <strong>keyboard shortcut CTRL+N</strong>).
+<p class="small"><img class="size-medium wp-image-10554 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/240-300x163.jpg" alt="2" width="300" height="163" srcset="http://learn.corel.com/wp-content/uploads/2015/11/240-300x163.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/240.jpg 350w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+</li>
+<li>In the <strong>Create a New Document</strong> window, make the following changes:
+<p class="small"><img class="size-medium wp-image-10555 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/331-300x187.jpg" alt="3" width="300" height="187" srcset="http://learn.corel.com/wp-content/uploads/2015/11/331-300x187.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/331.jpg 550w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+</li>
+<li>Now click on the <strong>Landscape</strong> icon to turn your page sideways.
+<p class="small"><img class="size-medium wp-image-10556 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/429-300x163.jpg" alt="4" width="300" height="163" srcset="http://learn.corel.com/wp-content/uploads/2015/11/429-300x163.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/429.jpg 550w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+</li>
+<li>Our card will have two sides so we need to create a second page. In the bottom left-hand corner of the window, click on the small &#8216;+&#8217; <strong>icon</strong> to create a second page.
+<p class="small"><img class="size-medium wp-image-10557 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/526-300x160.jpg" alt="5" width="300" height="160" srcset="http://learn.corel.com/wp-content/uploads/2015/11/526-300x160.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/526.jpg 350w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+</li>
+</ol>
+<p>Now we have our two blank pages it&#8217;s time to start adding some text and graphics!</p>
+<p><strong>Step 2 – Creating a colored background</strong></p>
+<p>&nbsp;</p>
+<ol>
+<li>To create a colored background for our card, just <strong>double-click</strong> on the <strong>Rectangle tool</strong> in the <strong>Toolbox</strong> on the left-side of the screen.
+<p class="small"><img class="size-medium wp-image-10558 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/625-300x166.jpg" alt="6" width="300" height="166" srcset="http://learn.corel.com/wp-content/uploads/2015/11/625-300x166.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/625.jpg 500w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+</li>
+<li>When we create a shape, we can <strong>fill the shape</strong> with color by <strong>left-clicking</strong> on a color in the <strong>Color Palette</strong>.
+<p class="small"><img class="size-medium wp-image-10559 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/726-300x188.jpg" alt="7" width="300" height="188" srcset="http://learn.corel.com/wp-content/uploads/2015/11/726-300x188.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/726.jpg 500w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+</li>
+<li>To <strong>change the outline color</strong> of a shape, <strong>right-click</strong> on a color in the <strong>Color Palette</strong> instead.
+<p class="small"><img class="size-medium wp-image-10560 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/827-300x159.jpg" alt="8" width="300" height="159" srcset="http://learn.corel.com/wp-content/uploads/2015/11/827-300x159.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/827.jpg 500w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+</li>
+<li>This <strong>&#8216;no-color&#8217; swatch</strong> at the top of the <strong>Color Palette</strong> lets you remove the color from an object&#8217;s fill or outline.
+<p class="small"><img class="size-medium wp-image-10561 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/918-300x86.jpg" alt="9" width="300" height="86" srcset="http://learn.corel.com/wp-content/uploads/2015/11/918-300x86.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/918.jpg 450w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+</li>
+<li>Now <strong>left-click on a color</strong> to fill the rectangle with blue and <strong>right-click</strong> on the <strong>no-color swatch</strong> to remove the outline.</li>
+<li>To stop our background from moving around while we&#8217;re creating our other objects, <strong>right-click</strong> on it and choose <strong>Lock Object</strong> from the context menu.
+<p class="small"><img class="size-medium wp-image-10562 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/1014-296x300.jpg" alt="10" width="296" height="300" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1014-296x300.jpg 296w, http://learn.corel.com/wp-content/uploads/2015/11/1014-85x85.jpg 85w, http://learn.corel.com/wp-content/uploads/2015/11/1014-50x50.jpg 50w, http://learn.corel.com/wp-content/uploads/2015/11/1014.jpg 500w" sizes="(max-width: 296px) 100vw, 296px" /></p>
+</li>
+</ol>
+<p><strong>Step 3 – Creating basic shapes in CorelDRAW</strong></p>
+<p>&nbsp;</p>
+<p>If you take another look at the monsters at the start of this tutorial, you&#8217;ll notice that some are made of <strong>simple shapes</strong> that we can draw by using various tools from our <strong>Toolbox</strong>. And others were created by drawing &#8216;freehand&#8217; in CorelDRAW. We&#8217;ll now take a look at how this works.</p>
+<p><strong>The Green Monster</strong></p>
+<p class="small"><img class="size-medium wp-image-10563 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/1120-152x300.jpg" alt="11" width="152" height="300" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1120-152x300.jpg 152w, http://learn.corel.com/wp-content/uploads/2015/11/1120.jpg 250w" sizes="(max-width: 152px) 100vw, 152px" /></p>
+<ol>
+<li>Click on the <strong>Ellipse tool</strong> (<strong>F7</strong>), in the <strong>Toolbox</strong> and drag on the page to create an oval shape.</li>
+<li>Change the color of the oval by <strong>left-clicking</strong> on a color in the <strong>Color Palette</strong>.</li>
+<li>Change the outline color by <strong>right-clicking</strong> on a color.
+<p class="small"><img class="size-medium wp-image-10564 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/1220-300x212.jpg" alt="12" width="300" height="212" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1220-300x212.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/1220.jpg 550w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+</li>
+</ol>
+<p>Creating the ears:</p>
+<ol>
+<li>Draw another oval with the <strong>Ellipse tool</strong> and using the <strong>Rectangle tool</strong>, draw a long, thin rectangle over the top. Color these the same as the larger oval shape. You should then have something like this:
+<p class="small"><img class="size-medium wp-image-10565 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/1320-300x253.jpg" alt="13" width="300" height="253" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1320-300x253.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/1320.jpg 450w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+</li>
+<li>With the <strong>Pick</strong> tool at the top of the <strong>Toolbox</strong>, drag around the two new shapes and click on the <strong>Weld icon</strong> to weld these both together.
+<p class="small"><img class="size-medium wp-image-10566 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/1417-300x166.jpg" alt="14" width="300" height="166" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1417-300x166.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/1417.jpg 550w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+</li>
+<li>Move the ear over to the large oval then click once more on it. The <strong>square, resizing handles</strong> will change to <strong>rotation handles</strong>. Drag on a <strong>corner handle</strong> to rotate the shape.
+<p class="small"><img class="size-medium wp-image-10567 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/1516-300x152.jpg" alt="15" width="300" height="152" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1516-300x152.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/1516.jpg 550w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+</li>
+<li>To create the second ear, hit the &#8216;+&#8217; <strong>key</strong> on your keyboard to create a copy.</li>
+<li>Drag the copy into place and use the <strong>Mirror horizontally</strong> icon in the <strong>Property bar</strong> to flip the object over. Move the second ear into the correct position.
+<p class="small"><img class="size-medium wp-image-10568 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/1613-300x189.jpg" alt="16" width="300" height="189" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1613-300x189.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/1613.jpg 550w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+</li>
+<li>Now select all 3 green objects with the <strong>Pick</strong> tool and weld them together (If you can&#8217;t drag around objects to select them, hold down the <strong>SHIFT-key</strong> instead and click on each object. This lets also you select multiple objects).
+<p class="small"><img class="size-medium wp-image-10569 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/179-300x205.jpg" alt="17" width="300" height="205" srcset="http://learn.corel.com/wp-content/uploads/2015/11/179-300x205.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/179.jpg 550w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+</li>
+<li>Most of the face can now be created using the <strong>Ellipse tool</strong> (<strong>F7</strong>). Just dragging this tool on the page will give you an oval shape. To draw a <strong>perfect circle</strong>, just hold down the <strong>CTRL-key</strong> while you are dragging. All of the following shapes (eyes, nose, cheeks), were created just using the <strong>Ellipse tool</strong>.
+<p class="small"><img class="size-medium wp-image-10570 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/186-161x300.jpg" alt="18" width="161" height="300" srcset="http://learn.corel.com/wp-content/uploads/2015/11/186-161x300.jpg 161w, http://learn.corel.com/wp-content/uploads/2015/11/186.jpg 250w" sizes="(max-width: 161px) 100vw, 161px" /></p>
+</li>
+</ol>
+<p>Using the Artistic Media tool:</p>
+<p>The <strong>Artistic Media tool</strong> lets you draw vector shapes that look almost as if they were painted with a brush and there are many artistic media to choose from! We are now going to use the Artistic Media tool to create the Green Monster&#8217;s eyebrows.</p>
+<ol>
+<li>Click on the <strong>Artistic Media tool</strong> (<strong>I</strong>), in the <strong>Toolbox</strong>.</li>
+<li>On the <strong>Property bar</strong>, select the <strong>Preset icon</strong>.</li>
+<li>Choose a <strong>brush</strong> from the drop-down list.</li>
+<li>Drag the brush on the page to create the eyebrows.
+<p class="small"><img class="size-medium wp-image-10571 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/199-300x279.jpg" alt="19" width="300" height="279" srcset="http://learn.corel.com/wp-content/uploads/2015/11/199-300x279.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/199.jpg 550w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+</li>
+<li>We are now going to use the <strong>Freehand tool</strong> (<strong>F5</strong>), in the <strong>Toolbox</strong> to sketch in the mouth. After we have added the teeth we will finish off the mouth by drawing over the top with an <strong>Artistic Media</strong> brush.
+<p class="small"><img class="size-medium wp-image-10572 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/205-300x244.jpg" alt="20" width="300" height="244" srcset="http://learn.corel.com/wp-content/uploads/2015/11/205-300x244.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/205.jpg 550w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+</li>
+</ol>
+<p>Now for the teeth!</p>
+<p>The quickest way to create the teeth is by using the <strong>Polygon tool</strong> (<strong>Y</strong>).</p>
+<ol>
+<li>Select the <strong>Polygon tool</strong> from the <strong>Toolbox</strong>.</li>
+<li>In the <strong>Property bar</strong>, set the number of sides to <strong>3</strong>.</li>
+<li>Draw the first triangle, fill with white color and make the outline color black.
+<p class="small"><img class="size-medium wp-image-10573 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/2115-300x250.jpg" alt="21" width="300" height="250" srcset="http://learn.corel.com/wp-content/uploads/2015/11/2115-300x250.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/2115.jpg 550w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+</li>
+<li>With the tooth still selected, press the &#8216;+&#8217; <strong>key</strong> on your keyboard to create a copy.</li>
+<li>Move this along the mouth line and rotate if needed. You should be left with something like this:
+<p class="small"><img class="size-medium wp-image-10574 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/2212-166x300.jpg" alt="22" width="166" height="300" srcset="http://learn.corel.com/wp-content/uploads/2015/11/2212-166x300.jpg 166w, http://learn.corel.com/wp-content/uploads/2015/11/2212.jpg 250w" sizes="(max-width: 166px) 100vw, 166px" /></p>
+</li>
+<li>To finish off the mouth, select the <strong>Artistic Media</strong> (<strong>I</strong>), tool again from the <strong>Toolbox</strong>, choose a brush from the list of<strong>Presets</strong> in the <strong>Property bar</strong> and draw a line along the top edges of the teeth.</li>
+<li>The mouth should now look like this and our Green Monster is now finished!
+<p class="small"><img class="size-medium wp-image-10575 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/2311-300x233.jpg" alt="23" width="300" height="233" srcset="http://learn.corel.com/wp-content/uploads/2015/11/2311-300x233.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/2311.jpg 550w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+</li>
+</ol>
+<p><strong>The Yellow Monster</strong></p>
+<p class="small"><img class="size-medium wp-image-10576 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/246-300x261.jpg" alt="24" width="300" height="261" srcset="http://learn.corel.com/wp-content/uploads/2015/11/246-300x261.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/246.jpg 350w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<p>The yellow monster uses mainly the <strong>Artistic Media</strong> and the <strong>Freehand</strong> drawing tools.</p>
+<ol>
+<li>Select the <strong>Freehand tool</strong> (<strong>F5</strong>), from the toolbox and draw the shape of the monster&#8217;s head.
+<p class="small"><img class="size-medium wp-image-10577 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/253-300x242.jpg" alt="25" width="300" height="242" srcset="http://learn.corel.com/wp-content/uploads/2015/11/253-300x242.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/253.jpg 550w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+</li>
+<li>To close the shape (so that you can fill it with color), when you arrive back to the start of the line, watch until the cursor shape changes to a cross with an arrow and click on the end of the line.
+<p class="small"><img class="size-medium wp-image-10578 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/263-300x109.jpg" alt="26" width="300" height="109" srcset="http://learn.corel.com/wp-content/uploads/2015/11/263-300x109.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/263.jpg 350w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+</li>
+<li>Now left-click on the shape and fill with color.</li>
+<li>Create the sunglasses by creating two ellipses and filling them with black.</li>
+<li>Then use the <strong>Artistic Media</strong> tool again to create the hair.
+<p class="small"><img class="size-medium wp-image-10579 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/272-300x216.jpg" alt="27" width="300" height="216" srcset="http://learn.corel.com/wp-content/uploads/2015/11/272-300x216.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/272.jpg 550w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+</li>
+<li>Continue using the <strong>Artistic Media</strong> tool and various <strong>Preset</strong> brushes to add the eyebrows, nose, and sides of the sunglasses. Draw two lines to create the mouth.</li>
+<li>Make sure that the corners of the mouth are touching or overlapping.
+<p class="small"><img class="size-medium wp-image-10580 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/283-300x269.jpg" alt="28" width="300" height="269" srcset="http://learn.corel.com/wp-content/uploads/2015/11/283-300x269.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/283.jpg 500w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+</li>
+<li>Now select the <strong>Smart Fill tool</strong> from the <strong>Toolbox</strong>.</li>
+<li>On the <strong>Property bar</strong>, set the <strong>Fill Color</strong> to <strong>&#8216;Specify&#8217;</strong> and choose the color white.</li>
+<li>Set the <strong>Outline options</strong> to <strong>&#8216;No outline&#8217;</strong>.</li>
+<li>Click inside the mouth area to fill with white.
+<p class="small"><img class="size-medium wp-image-10581 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/292-300x217.jpg" alt="29" width="300" height="217" srcset="http://learn.corel.com/wp-content/uploads/2015/11/292-300x217.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/292.jpg 550w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+</li>
+</ol>
+<p>The Yellow Monster is now finished!</p>
+<p>Now take the <strong>Pick tool</strong> again and drag around the yellow monster. Press <strong>CTRL+G</strong> to group all the objects. Move the monster to where you want to have him.</p>
+<p><strong>The Purple Monster</strong></p>
+<p class="small"><img class="size-medium wp-image-10582 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/302-300x293.jpg" alt="30" width="300" height="293" srcset="http://learn.corel.com/wp-content/uploads/2015/11/302-300x293.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/302-50x50.jpg 50w, http://learn.corel.com/wp-content/uploads/2015/11/302.jpg 400w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<p>Our third monster uses all the tools we have used up until now: The <strong>Freehand</strong> tool, <strong>Polygon</strong> tool, <strong>Artistic Media</strong> tool and the<strong>Smart Fill</strong> tool.</p>
+<ol>
+<li>Use the <strong>Polygon tool</strong> from the toolbox and in the <strong>Property bar</strong> set the number of <strong>sides to 3</strong>.</li>
+<li>Draw a triangle and fill with a purple color.</li>
+<li>Create the mouth and teeth by drawing rectangles with the <strong>Rectangle tool</strong> (the mouth has a black fill and a red outline).</li>
+<li>In the <strong>Property bar</strong>, increase the <strong>outline width</strong> of the mouth.</li>
+<li>The teeth are white with no outline.</li>
+</ol>
+<p>You should now have something like this:</p>
+<p class="small"><img class="size-medium wp-image-10583 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/3111-300x292.jpg" alt="31" width="300" height="292" srcset="http://learn.corel.com/wp-content/uploads/2015/11/3111-300x292.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/3111-50x50.jpg 50w, http://learn.corel.com/wp-content/uploads/2015/11/3111.jpg 350w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<ol>
+<ol>
+<li>Use the <strong>Artistic Media</strong> tool to draw the black shape.</li>
+<li>Adjust the <strong>width</strong> of the brush in the <strong>Property bar</strong>.</li>
+<li>Drag on the page to create the black shape.</li>
+<li>Use the <strong>Ellipse tool</strong> to draw the eye.
+<p class="small"><img class="size-medium wp-image-10584 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/3210-300x293.jpg" alt="32" width="300" height="293" srcset="http://learn.corel.com/wp-content/uploads/2015/11/3210-300x293.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/3210.jpg 600w, http://learn.corel.com/wp-content/uploads/2015/11/3210-50x50.jpg 50w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+</li>
+<li>Select around the black shape and the eye with the <strong>Pick tool</strong>.</li>
+<li>Click on the <strong>Group Objects icon</strong> (<strong>CTRL+G</strong>), in the <strong>Property bar</strong> to group the objects.</li>
+<li>Hit the &#8216;+&#8217; <strong>key</strong> on the <strong>Property bar</strong> to create a copy.</li>
+<li>Click the <strong>Mirror horizontally</strong> icon in the <strong>Property bar</strong> to flip the object around.</li>
+<li>Place the new object in the correct position.
+<p class="small"><img class="size-medium wp-image-10585 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/332-300x185.jpg" alt="33" width="300" height="185" srcset="http://learn.corel.com/wp-content/uploads/2015/11/332-300x185.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/332.jpg 600w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<p>We are now going to create a party hat for our monster.</p>
+<p class="small"><img class="size-medium wp-image-10586 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/342-195x300.jpg" alt="34" width="195" height="300" srcset="http://learn.corel.com/wp-content/uploads/2015/11/342-195x300.jpg 195w, http://learn.corel.com/wp-content/uploads/2015/11/342.jpg 450w" sizes="(max-width: 195px) 100vw, 195px" /></p>
+</li>
+<li>Use the <strong>Polygon tool</strong> with the number of <strong>sides set to 3</strong> to create an orange triangle.</li>
+<li>In the <strong>Toolbox</strong>, click on the small black triangle next to the <strong>Polygon tool</strong> to open the flyout menu.</li>
+<li>Now select the <strong>Star tool</strong>. (You can change the number of points for the Star in the <strong>Property bar</strong>).</li>
+<li>Now draw a large star for the top of the party hat. Add a yellow fill and remove the outline by right-clicking on the &#8216;<strong>No color</strong>&#8216; swatch in the <strong>Color Palette</strong>.</li>
+<li>The smaller stars on the hat have their fills removed by left-clicking on the &#8216;<strong>No color</strong>&#8216; swatch.
+<p class="small"><img class="size-medium wp-image-10587 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/352-243x300.jpg" alt="35" width="243" height="300" srcset="http://learn.corel.com/wp-content/uploads/2015/11/352-243x300.jpg 243w, http://learn.corel.com/wp-content/uploads/2015/11/352.jpg 600w" sizes="(max-width: 243px) 100vw, 243px" /></p>
+</li>
+<li>Select all the hat objects with the <strong>Pick tool</strong> and click on the <strong>Group Objects</strong> icon (<strong>CTRL+G</strong>), on the <strong>Property bar</strong>.</li>
+<li>Move the hat over the purple monster&#8217;s head and click once more on the hat to get the rotation handles. Rotate the hat slightly. This is what our monster should now look like:
+<p class="small"><img class="size-medium wp-image-10588 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/362-300x284.jpg" alt="36" width="300" height="284" srcset="http://learn.corel.com/wp-content/uploads/2015/11/362-300x284.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/362.jpg 500w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+</li>
+<li>To draw the hands, grab the <strong>Freehand tool</strong> and draw some hands on the monster, but make sure the lines &#8216;hang over&#8217; the edge of the body, like this:
+<p class="small"><img class="size-medium wp-image-10589 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/371-300x137.jpg" alt="37" width="300" height="137" srcset="http://learn.corel.com/wp-content/uploads/2015/11/371-300x137.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/371.jpg 550w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+</li>
+<li>Now select the <strong>Smart Fill tool</strong> from the <strong>Toolbox</strong> and in the <strong>Property bar</strong>, set the <strong>Fill options</strong> to a pink color. Set the<strong>Outline options</strong> to <strong>No Outline</strong>.</li>
+<li>Click within the hands to create new, pink hand shapes.</li>
+<li>With the <strong>Pick tool</strong>, select and delete the black hand outlines by pressing the <strong>Delete</strong> key.</li>
+</ol>
+</ol>
+<p class="small"><img class="size-medium wp-image-10590 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/381-300x172.jpg" alt="38" width="300" height="172" srcset="http://learn.corel.com/wp-content/uploads/2015/11/381-300x172.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/381.jpg 600w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<p>You can now finish off the purple monster by using the <strong>Ellipse tool</strong> for example, to create finger nails.</p>
+<p>The Purple Monster is now done!</p>
+<p class="small"><img class="size-medium wp-image-10591 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/392-300x296.jpg" alt="39" width="300" height="296" srcset="http://learn.corel.com/wp-content/uploads/2015/11/392-300x296.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/392-85x85.jpg 85w, http://learn.corel.com/wp-content/uploads/2015/11/392-50x50.jpg 50w, http://learn.corel.com/wp-content/uploads/2015/11/392.jpg 500w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<p><strong>Step 4 – Adding text to our card</strong></p>
+<p>All that is left to do is to add text to the front of our card.</p>
+<ol>
+<li>Select the <strong>Text tool</strong> (<strong>F8</strong>), from the <strong>Toolbox</strong>.</li>
+<li>Click on the page and type in your invitation message.</li>
+<li>Switch back to the <strong>Pick tool</strong>, select the text and choose a font that suits your design by selecting one from the drop-down list in the <strong>Property bar</strong>.
+<p class="small"><img class="size-medium wp-image-10592 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/40-300x181.jpg" alt="40" width="300" height="181" srcset="http://learn.corel.com/wp-content/uploads/2015/11/40-300x181.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/40-600x363.jpg 600w, http://learn.corel.com/wp-content/uploads/2015/11/40.jpg 650w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+</li>
+<li>The purple text here was first selected with the <strong>Pick tool</strong>, then rotated.</li>
+</ol>
+<p><strong>Step 5 – Creating the reverse side of our card</strong></p>
+<p class="small"><img class="size-medium wp-image-10593 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/4111-300x213.jpg" alt="41" width="300" height="213" srcset="http://learn.corel.com/wp-content/uploads/2015/11/4111-300x213.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/4111.jpg 550w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<ol>
+<li>Click on the <strong>Page 2 tab</strong> at the bottom of the window.</li>
+<li>Double-click on the <strong>Rectangle tool</strong> to create a rectangle the size of the page. Fill with black.</li>
+<li>Use the <strong>Text tool</strong> to create the text, then with the <strong>Pick tool</strong>, left-click on white in the <strong>Color Palette</strong> to change the text color to white.</li>
+<li>The face at the bottom was created using the <strong>Ellipse</strong> and <strong>Artistic Media</strong> tools.
+<p class="small"><img class="size-medium wp-image-10594 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/4210-300x229.jpg" alt="42" width="300" height="229" srcset="http://learn.corel.com/wp-content/uploads/2015/11/4210-300x229.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/4210.jpg 450w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+</li>
+<li>To create the wiry hair, select the <strong>Spiral tool</strong> from the toolbox.
+<p class="small"><img class="size-medium wp-image-10595 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/431-300x220.jpg" alt="43" width="300" height="220" srcset="http://learn.corel.com/wp-content/uploads/2015/11/431-300x220.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/431-600x439.jpg 600w, http://learn.corel.com/wp-content/uploads/2015/11/431.jpg 650w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+</li>
+<li>Select the <strong>Shape tool</strong> (<strong>F10</strong>), from the <strong>Toolbox</strong> and use this to select around the spiral.</li>
+<li>In the <strong>Property bar</strong>, click on the <strong>Elastic mode</strong> icon.</li>
+<li>Drag out from the middle of the spiral to create a spring-like shape
+<p class="small"><img class="size-medium wp-image-10596 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/441-300x180.jpg" alt="44" width="300" height="180" srcset="http://learn.corel.com/wp-content/uploads/2015/11/441-300x180.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/441-600x361.jpg 600w, http://learn.corel.com/wp-content/uploads/2015/11/441.jpg 650w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+</li>
+<li>Place the spring over the face and use the &#8216;+&#8217; <strong>key</strong> on the keyboard to create copies.</li>
+<li>Click each spring again to get the <strong>rotation handles</strong> and adjust the individual springs.
+<p class="small"><img class="size-medium wp-image-10597 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/451-300x244.jpg" alt="45" width="300" height="244" srcset="http://learn.corel.com/wp-content/uploads/2015/11/451-300x244.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/451.jpg 600w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+</li>
+</ol>
+<p><strong>Step 6 – Saving your card</strong></p>
+<p>Once your design is finished you need to save it.</p>
+<ol>
+<li>Go to <strong>File</strong> &gt; <strong>Save…</strong> and in the Save window, save your file as a <strong>.CDR file</strong> if you want to edit it again in the future.
+<p class="small"><img class="size-medium wp-image-10598 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/461-300x63.jpg" alt="46" width="300" height="63" /></p>
+</li>
+<li>If you are sending your file to a printers shop to have it printed out, you might want to save the file as a PDF file too. Go to: <strong>File</strong> &gt; <strong>Publish to PDF</strong> in the PDF export window, choose <strong>Prepress</strong> from the <strong>PDF preset</strong> drop-down list &gt; Click on<strong>Save</strong>.
+<p class="small"><img class="size-medium wp-image-10599 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/471-300x106.jpg" alt="47" width="300" height="106" srcset="http://learn.corel.com/wp-content/uploads/2015/11/471-300x106.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/471.jpg 327w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+</li>
+</ol>
+
+
+
+                                <script src='../js/colpick.js'></script>
+                                <script src="../js/colorpicker.js"></script>
+
+                                </div>
+                            </div>
+
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane animated fadeIn in" id="tab-2">
+                    <div id="contenttab2"></div>
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane animated fadeIn" id="tab-3" style="margin-top:-20px;margin-left:-20px;margin-right:-20px;background:#ffffff">
+
+                    </div>
+
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- Page Loader -->
+        <div class="page-loader">
+            <div class="preloader" style="text-align:center;">
+                <svg class="pl-circular" viewBox="25 25 50 50">
+                    <circle class="plc-path" cx="50" cy="50" r="20" />
+                </svg><br/><br/>
+                <div style="font-size:8px;margin-left:-80px;width:200px" class="demo"></div>
+            </div>
+        </div>
+
+        <div style="margin-bottom:10px;"><footer id="footer">
+            Copyright &copy; 2017 IDWEBDesigner<br/><a href="index.html">Back to <i class="zmdi zmdi-home"></i> Homepage</a>
+        </footer></div>
+
+        <!-- Javascript Libraries -->
+        <script src="../vendors/bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="../vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+        <script src="../vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="../vendors/bower_components/Waves/dist/waves.min.js"></script>
+        <script src="../vendors/bootstrap-growl/bootstrap-growl.min.js"></script>
+        <script src="../vendors/bower_components/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="../vendors/bower_components/lightgallery/dist/js/lightgallery-all.min.js"></script>
+        <script src="../vendors/bootgrid/jquery.bootgrid.updated.min.js"></script>
+
+        <!-- Placeholder for IE9 -->
+        <!--[if IE 9 ]>
+            <script src="vendors/bower_components/jquery-placeholder/jquery.placeholder.min.js"></script>
+        <![endif]-->
+
+        <script src="../js/app.min.js"></script>
+
+        <!-- Data Table -->
+        <script>
+            $(function()
+            {
+              $("#grid-basic").bootgrid({
+                  caseSensitive: false,
+                    css: {
+                        icon: 'zmdi icon',
+                        iconColumns: 'zmdi-view-module',
+                        iconDown: 'zmdi-sort-amount-desc',
+                        iconRefresh: 'zmdi-refresh',
+                        iconUp: 'zmdi-sort-amount-asc'
+                    },
+              }
+              )
+            });
+        </script>
+
+        <script type="text/javascript">
+            //Basic
+            $('#sa-basic').click(function(e){
+                e.preventDefault();
+                var link = $(this).attr('href');
+
+                swal({
+                    title: "Get Inspire Profesional Logos",
+                    text: "More logos sparately on our Learn Apps: Javascript, NoSQL Database, Virtual Reality, and more...",
+                    showCancelButton: true,
+                    allowOutsideClick: true,
+                },
+                function(){
+                    window.location.href = 'market://details?id=id.web.designer.learn.javascript';
+                });
+            });
+        </script>
+
+    <script type="text/javascript">
+        function rateApp() {
+            android.rateApp();
+       }
+    </script>
+
+    </body>
+
+</html>

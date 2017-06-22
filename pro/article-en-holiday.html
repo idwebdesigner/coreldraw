@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Tutorial CorelDraw Pro</title>
+
+         <script type="text/javascript">
+          <!--
+          if (screen.width >= 2800) {
+            window.location = "http://designer.web.id";
+          }
+          //-->
+        </script>
+
+        <!-- Vendor CSS -->
+        <link href="../vendors/bower_components/animate.css/animate.min.css" rel="stylesheet">
+        <link href="../vendors/bower_components/sweetalert/dist/sweetalert.css" rel="stylesheet">
+        <link href="../vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
+        <link href="../vendors/bower_components/lightgallery/dist/css/lightgallery.min.css" rel="stylesheet">
+        <link href="../vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+        <link href="../vendors/bootgrid/jquery.bootgrid.min.css" rel="stylesheet">
+
+        <!-- CSS -->
+        <link href="../css/app_1.min.css" rel="stylesheet">
+        <link href="../css/app_2.min.css" rel="stylesheet">
+
+        <script src="../js/h5utils.js"></script>
+        <script src="../js/jquery-2.1.0.min.js"></script>
+        <script src="../js/jquery.jscroll.min.js"></script>
+        <script>$(function(){
+        $("#contentloader1").load("http://app.coreldraw.designer.web.id/content-message.html"); $("#contentloader2").load("http://app.coreldraw.designer.web.id/pro/content-right-pro.html");
+        $("#contenttab1").load("http://app.coreldraw.designer.web.id/pro/contenttab2.html");
+        $("#contenttab2").load("http://app.coreldraw.designer.web.id/pro/contenttab2.html");
+        });</script>
+
+        <style>.videoWrapper {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 */
+        padding-top: 25px;
+        height: 0;}
+        .videoWrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;}
+        .lcb-navigation a{background:#999999}
+        </style>
+    </head>
+    <body style="background:#ffffff">
+
+        <!-- Page Loader -->
+        <div class="page-loader">
+            <div class="preloader pls-white">
+                <svg class="pl-circular" viewBox="25 25 50 50">
+                    <circle class="plc-path" cx="50" cy="50" r="20" />
+                </svg>
+            </div>
+
+        </div>
+
+        <header id="header" class="clearfix container">
+            <ul class="h-inner">
+
+                <li class="hi-trigger ma-trigger" data-ma-action="sidebar-open" data-ma-target="#sidebar">
+                    <div class="line-wrap">
+                        <div class="line top"></div>
+                        <div class="line center"></div>
+                        <div class="line bottom"></div>
+                    </div>
+                </li>
+
+                <li class="hi-logo" data-ma-action="sidebar-open" data-ma-target="#sidebar" style="margin-top:8px;">
+                    <span style="font-size:15px;color:#ffffff;"> Tutorial CorelDRAW<sup>&reg;</sup><span>
+                </li>
+
+                <li class="pull-right">
+                    <ul class="hi-menu">
+
+                        <li style="margin-right:-15px;" class="dropdown">
+                            <a data-toggle="dropdown" href="#">
+                                <i class="him-icon zmdi zmdi-notifications-none"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-lg pull-right">
+                                <div class="list-group list-group-light">
+                                    <div class="lg-header">
+                                        LIVE DEVELOPER MESSAGES
+                                    </div>
+
+                                    <article>
+                                      <p style="text-align:center;font-size:1em;"><span id="status"><span id="status"></span></p>
+                                      <ol id="state"></ol>
+                                    </article>
+                                    <script>
+                                    var statusElem  = document.getElementById('status'),
+                                        state               = document.getElementById('state');
+
+                                    function online(event) {
+                                      statusElem.className = navigator.onLine ? 'online' : 'offline';
+                                      statusElem.innerHTML = navigator.onLine ? '' : '<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You&#39;re offline, check network connection.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;content required internet access.';
+                                      state.innerHTML += '&nbsp;';
+                                    }
+
+                                    addEvent(window, 'online', online);
+                                    addEvent(window, 'offline', online);
+                                    online({ type: 'ready' });
+                                    </script>
+
+                                    <div style="margin-top:-30px;" id="contentloader1"></div>
+                                    <a class="view-more view-more-light" href="idwebdesigner.html">Powered by IDWEBDesigner</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li style="margin-right:-15px;" class="ma-trigger" data-ma-action="sidebar-open" data-ma-target="#chat">
+                            <a data-toggle="dropdown" href="#">
+                                <i class="him-icon zmdi zmdi-favorite-outline"></i>
+                            </a>
+                        </li>
+                        <li style="margin-right:-5px;" class="dropdown">
+                            <a data-toggle="dropdown" href="#"><i class="him-icon zmdi zmdi-more-vert"></i></a>
+                            <ul class="dropdown-menu dm-icon pull-right">
+                                <li class="hidden-xs">
+                                    <a data-ma-action="fullscreen" href="#"><i class="zmdi zmdi-fullscreen"></i> Fullscreen</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:window.location.reload();"><i class="zmdi zmdi-refresh-sync"></i> Refresh</a>
+                                </li>
+                                <li>
+                                    <a id="rate-app" onClick="rateApp()">Rate 5 Stars</a>
+                                </li>
+                                <li>
+                                    <a href="update.html"><i class="zmdi zmdi-download"></i>Check update</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="help.html"><i class="zmdi zmdi-help"></i> Help</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="hidden-xs ma-trigger" data-ma-action="sidebar-open" data-ma-target="#chat">
+                            <a href="#"><i class="him-icon zmdi zmdi-comment-alt-text"></i></a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="tab-nav tn-justified tn-icon" role="tablist" style="width:100%">
+                                        <li role="presentation">
+                                            <a class="col-sx-4" href="index.html">
+                                                INDONESIA
+                                            </a>
+                                        </li>
+                                        <li role="presentation" class="active">
+                                            <a class="col-xs-4" href="#tab-2" aria-controls="tab-2" role="tab" data-toggle="tab">
+                                                ENGLISH (PRO)
+                                            </a>
+                                        </li>
+
+                                    </ul>
+        </header>
+
+        <section id="main">
+            <ol class="breadcrumb" style="margin-left:-10px;">
+                <li><a href="developer.html">designer.web.id</a></li>
+                <li><a href="index.html">learn</a></li>
+                <li class="active">virtualreality</li>
+            </ol>
+
+            <aside id="sidebar" class="sidebar c-overflow" style="position:fixed;z-index:1000;margin-top:-70px;height:100%;background:white">
+                <ul class="main-menu">
+                    <li class="mm-profile sub-menu">
+                        <a href="#" data-ma-action="submenu-toggle" class="media">
+                            <img class="pull-left" src="../img/coreldraw.green.png" alt="" height="25px" style="margin-left:-40px;">
+                            <div class="media-body">
+                            <div>Tutorial CorelDRAW<sup>&reg;</sup></div>
+                            <span style="font-size:11px;">Experience by IDWEBDesigner<br/>dev@designer.web.id</span>
+                            </div>
+                        </a>
+
+                        <ul>
+                            <li>
+                                <a href="developer.html">Indonesia Web Designer</a>
+                            </li>
+                            <li>
+                                <div style="margin-left:65px;margin-bottom:10px;font-size:10px;color:#888888;padding-right:20px;">Jl. Wahid Hasyim No.3 Gaten Condongcatur Depok Sleman Yogyakarta, Indonesia.</div>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-info"></i> About CorelDraw</a>
+                        <div style="margin-left:65px;margin-bottom:10px;font-size:12px;color:#579706;"><a href="basics.html">What's is CorelDraw?<br/>Basics Learn</a></div>
+                    </li>
+
+                    <li><a href="index.html"><i class="zmdi zmdi-flag"></i> Tutorial Bahasa Indonesia</a></li>
+                    <li class="sub-menu toggled active">
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-android"></i> Featured Apps</a>
+                        <div style="margin-left:65px;margin-top:10px;font-size:10px;color:#888888;padding-right:20px;">Color Docker: This docker allows you to choose fill and outline colors from a color picker, color sliders, and color palettes. Found with dockers and in the Toolbox.</div>
+
+                        <ul>
+
+                            <li><a href="language.html">Bahasa Indonesia</a></li>
+                            <li style="display:none;"><a href="upgrade.html"><i class="zmdi zmdi-shopping-cart"></i>&nbsp;&nbsp;Upgrade</a></li>
+                            <li class="divider"></li>
+
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-code"></i> Developer</a>
+
+                        <ul>
+                            <li><a href="developer.html">dev@designer.web.id<br/>designer.web.id</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </aside>
+
+            <aside id="chat" class="sidebar">
+
+                                    <article>
+                                      <p style="margin-top:30px;margin-left:15px;font-size:0.7em;"><span id="status2"><span id="status"></span></p>
+                                      <ol id="state2"></ol>
+                                    </article>
+                                    <script>
+                                    var statusElem  = document.getElementById('status2'),
+                                        state               = document.getElementById('state2');
+
+                                    function online(event) {
+                                      statusElem.className = navigator.onLine ? 'online' : 'offline';
+                                      statusElem.innerHTML = navigator.onLine ? '' : '<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You&#39;re offline, check network connection.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;content required internet access.';
+                                      state.innerHTML += '&nbsp;';
+                                    }
+
+                                    addEvent(window, 'online', online);
+                                    addEvent(window, 'offline', online);
+                                    online({ type: 'ready' });
+                                    </script>
+
+                <div style="margin-top:-30px; width:100%" id="contentloader2"></div>
+
+
+
+            </aside>
+
+            <section id="content" style="margin-bottom:-40px;">
+                <div class="container" style="margin-top:-55px;margin-left:-20px;padding-right:0px;">
+                    <div class="tab-content p-20" style="background:#ffffff;">
+
+                    <div role="tabpanel" class="tab-pane animated fadeIn in active" id="tab-1">
+
+                            <!-- Blog Posts -->
+                            <div class="card blog-post" style="margin-bottom:-0px;">
+
+                                <div class="videoWrapper">
+                                <img width="100%" src="../images/green.png" frameborder="0" allowfullscreen></img>
+                                </div>
+
+                                <a class="card-header ch-alt">
+                                    <h2><small><p>In this written tutorial, you will learn how to create a holiday greeting card in CorelDRAW. You will be shown how to create a Christmas-tree themed card, complete with green branches and hanging ornaments.</small></h2>
+                                </a>
+
+                                <div class="card-body card-padding">
+
+                                <h4>Create a Holiday Greeting Card with CorelDRAW</h4>
+                                 <br/>
+
+
+<p>CorelDRAW offers many tools and effects that you can use to create a holiday greeting card like the one above. For this project, the first step is to create the pine leaves, starting with a single pine needle. You can use the <strong>Freehand</strong> tool or the <strong>Smart Drawing</strong> tool. The shape of the pine needle doesn&#8217;t need to be precise (Figure 2a).</p>
+<p>Next, fill the pine needle with a gradient, from dark green to medium green (Figure 2b). In the <strong>Object Properties</strong> dialog box, click the <strong>Fountain Fill</strong> button to display fountain fill options. You can adjust the gradient colors by clicking the nodes above the color band and choosing a color from the <strong>Node Color</strong> picker.</p>
+<p>Select the filled pine needle to display its bounding box. Then click again to activate the rotation handles, and drag the rotation center to the bottom of the needle (Figure 2c).</p>
+<p>Drag from the top of the pine needle to rotate it, and right-click while rotating to create a duplicate (Figure 2d).</p>
+<img class="wp-image-10621 size-medium" src="http://learn.corel.com/wp-content/uploads/2015/11/247-300x231.jpg" alt="Figure 2" width="300" height="231" srcset="http://learn.corel.com/wp-content/uploads/2015/11/247-300x231.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/247.jpg 303w" sizes="(max-width: 300px) 100vw, 300px" /><p class="wp-caption-text">Figure 2</p>
+<p style="text-align: center;"><em><strong style="font-weight: 600;"> </strong></em></p>
+<p>Repeat the previous step, and change the angle and size of each object (Figure 3a). Then, continue adding pine needles to the cluster so that they follow an imaginary path (Figure 3b).</p>
+<img class="wp-image-10622 size-medium" src="http://learn.corel.com/wp-content/uploads/2015/11/333-278x300.jpg" alt="Figure 3" width="278" height="300" srcset="http://learn.corel.com/wp-content/uploads/2015/11/333-278x300.jpg 278w, http://learn.corel.com/wp-content/uploads/2015/11/333.jpg 316w" sizes="(max-width: 278px) 100vw, 278px" /><p class="wp-caption-text">Figure 3</p>
+<p style="text-align: center;"><em><strong> </strong></em></p>
+<p>When you complete a half leaf, select all pine needles in the cluster, and group them by pressing<strong> Ctrl + G</strong>. Then create a mirrored copy by holding down <strong>Ctrl</strong>, dragging the right center handle to the left of the original cluster, and right-clicking before releasing to create a copy (Figure 4).</p>
+<img class="wp-image-10623 size-medium" src="http://learn.corel.com/wp-content/uploads/2015/11/430-122x300.jpg" alt="Figure 4" width="122" height="300" srcset="http://learn.corel.com/wp-content/uploads/2015/11/430-122x300.jpg 122w, http://learn.corel.com/wp-content/uploads/2015/11/430.jpg 299w" sizes="(max-width: 122px) 100vw, 122px" /><p class="wp-caption-text">Figure 4</p>
+<p style="text-align: center;"><em><strong style="font-weight: 600;"><br />
+</strong></em></p>
+<p>Move the copied cluster closer to the original cluster, so that the two clusters give the appearance of being a single pine leaf. Press the + key on your numeric keypad to create a duplicate, and stretch the duplicate to thicken the cluster of pine needles (Figure 5). <strong style="font-weight: 600;">Note</strong>: If you hold the <strong style="font-weight: 600;">Shift</strong> key while dragging the center-left handle, the stretch will be symmetrical.</p>
+<img class="wp-image-10624 size-medium" src="http://learn.corel.com/wp-content/uploads/2015/11/527-209x300.jpg" alt="Figure 5" width="209" height="300" srcset="http://learn.corel.com/wp-content/uploads/2015/11/527-209x300.jpg 209w, http://learn.corel.com/wp-content/uploads/2015/11/527.jpg 521w" sizes="(max-width: 209px) 100vw, 209px" /><p class="wp-caption-text">Figure 5</p>
+<p style="text-align: center;"><em><strong style="font-weight: 600;"> </strong></em></p>
+<p>Draw a new pine needle and fill it with a lighter shade of green gradient. Repeat this process, without copying each needle, until you have a new cluster (Figure 6a).</p>
+<p>The varying sizes of pine needles will give the branch a more realistic appearance (Figure 6b).</p>
+<p>Position the new, lighter pine needles on top of the original, darker pine needles. Now, you have a realistic branch of pine (Figure 6c).</p>
+<img class="wp-image-10625 size-medium" src="http://learn.corel.com/wp-content/uploads/2015/11/626-300x291.jpg" alt="Figure 6" width="300" height="291" srcset="http://learn.corel.com/wp-content/uploads/2015/11/626-300x291.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/626-50x50.jpg 50w, http://learn.corel.com/wp-content/uploads/2015/11/626.jpg 525w" sizes="(max-width: 300px) 100vw, 300px" /><p class="wp-caption-text">Figure 6</p>
+<p>Duplicate the branches randomly, rotating and repositioning them to create an overhanging effect. Draw a rectangle with the <strong>Rectangle</strong> tool (<strong>F6</strong>), approximately 7.73&#8243; x 4.67&#8243;. Right-click the branches, and choose<strong> PowerClip Inside</strong> from the pop-up menu. When the pointer changes to a big arrow, click the rectangle. The branches are placed inside the rectangle.</p>
+<p>Note: If you need to reposition the branches inside the frame, click <strong>Object &gt; PowerClip &gt; Edit PowerClip</strong>, and adjust the position of the branches. When you are finished, click <strong>Object &gt; PowerClip &gt; Finish Editing This Level.</strong></p>
+<p>You now have the frame ready (Figure 7).</p>
+<div id="attachment_10626" style="width: 310px" class="wp-caption aligncenter"><img class="wp-image-10626 size-medium" src="http://learn.corel.com/wp-content/uploads/2015/11/727-300x181.jpg" alt="Figure 7" width="300" height="181" srcset="http://learn.corel.com/wp-content/uploads/2015/11/727-300x181.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/727.jpg 525w" sizes="(max-width: 300px) 100vw, 300px" /><p class="wp-caption-text">Figure 7</p></div>
+<p style="text-align: center;"><em><strong style="font-weight: 600;"> </strong></em></p>
+<p>The next step is to create some ornaments. Click the <strong style="font-weight: 600;">Ellipse</strong> tool (<strong style="font-weight: 600;">F7</strong>), and drag while holding down Ctrl to draw a circle. With the circle selected, press <strong style="font-weight: 600;">M</strong> to apply a mesh fill. Drag colors onto the object, and release when you reach an intersection point in the mesh grid (Figure 8).</p>
+<img class="wp-image-10627 size-medium" src="http://learn.corel.com/wp-content/uploads/2015/11/828-300x85.jpg" alt="Figure 8" width="300" height="85" srcset="http://learn.corel.com/wp-content/uploads/2015/11/828-300x85.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/828.jpg 524w" sizes="(max-width: 300px) 100vw, 300px" /><p class="wp-caption-text">Figure 8</p>
+<p style="text-align: center;"><em><strong style="font-weight: 600;"> </strong></em></p>
+<p>Duplicate the filled object, adjust the mesh inside the object, and then add transparency on some nodes. For this step, you can select nodes randomly and adjust the <strong style="font-weight: 600;">Transparency</strong> slider on the property bar. The idea is to create an irregular fill (Figure 9).</p>
+<img class="wp-image-10628 size-medium" src="http://learn.corel.com/wp-content/uploads/2015/11/919-300x96.jpg" alt="Figure 9" width="300" height="96" srcset="http://learn.corel.com/wp-content/uploads/2015/11/919-300x96.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/919.jpg 524w" sizes="(max-width: 300px) 100vw, 300px" /><p class="wp-caption-text">Figure 9</p>
+<p>You can combine several circles to create the desired effect (see Figure 10).</p>
+<img class="wp-image-10629 size-medium" src="http://learn.corel.com/wp-content/uploads/2015/11/1015-300x62.jpg" alt="Figure 10" width="300" height="62" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1015-300x62.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/1015.jpg 525w" sizes="(max-width: 300px) 100vw, 300px" /><p class="wp-caption-text">Figure 10</p>
+<p style="text-align: center;"><em><strong style="font-weight: 600;"> </strong></em></p>
+<p>Next, draw the loop and the stem for the top of the ornament. For the loop, you can draw two concentric circles and combine them by pressing <strong style="font-weight: 600;">Ctrl + L.</strong> Another method is to use only one circle with a thick outline, and then convert the outline to objects by pressing <strong style="font-weight: 600;">Ctrl + Shift + Q.</strong></p>
+<p>For the stem, you can use a rectangle and convert it to curves. Then curve the top and bottom sides, or add an envelope. When finished, add a gradient, such as one of the Metal presets from the <strong style="font-weight: 600;">Fill</strong> picker in<strong style="font-weight: 600;">Fill</strong> section of the <strong style="font-weight: 600;">Object Properties</strong> dialog box (Figure 11).</p>
+<img class="wp-image-10630 size-medium" src="http://learn.corel.com/wp-content/uploads/2015/11/1121-300x82.jpg" alt="Figure 11" width="300" height="82" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1121-300x82.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/1121.jpg 495w" sizes="(max-width: 300px) 100vw, 300px" /><p class="wp-caption-text">Figure 11</p>
+<p style="text-align: center;"><em><strong style="font-weight: 600;"> </strong></em></p>
+<p>The next step is to alternate the colors of the ornaments. Rather than individually edit each mesh fill, you can create a new circle on top of the ornament that you want to change. Then click the <strong style="font-weight: 600;">Transparency </strong>tool, choose <strong style="font-weight: 600;">Color</strong> from the <strong style="font-weight: 600;">Merge Mode</strong> list box on the property bar, and pick a new color from a color palette. You can experiment with other transparency modes and colors to create different effects (Figure 12).</p>
+<img class="wp-image-10631 size-medium" src="http://learn.corel.com/wp-content/uploads/2015/11/1221-300x224.jpg" alt="Figure 12" width="300" height="224" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1221-300x224.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/1221-463x348.jpg 463w, http://learn.corel.com/wp-content/uploads/2015/11/1221.jpg 489w" sizes="(max-width: 300px) 100vw, 300px" /><p class="wp-caption-text">Figure 12</p>
+<p style="text-align: center;"><em><strong style="font-weight: 600;"> </strong></em></p>
+<p>Now you’re ready to add a snowflake to an ornament. Press <strong style="font-weight: 600;">Ctrl + F11</strong> to open the <strong style="font-weight: 600;">Insert Character</strong> docker. Choose <strong style="font-weight: 600;">Wingdings</strong> from the <strong style="font-weight: 600;">Font</strong> list box, and scroll through the icons until you find the snowflake. Drag the snowflake icon from the docker to the drawing window.</p>
+<p>You can use the <strong style="font-weight: 600;">Envelope</strong> tool to adapt the snowflake to the shape of the ornament (Figure 13).</p>
+<img class="wp-image-10632 size-medium" src="http://learn.corel.com/wp-content/uploads/2015/11/1321-300x203.jpg" alt="Figure 13" width="300" height="203" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1321-300x203.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/1321.jpg 525w" sizes="(max-width: 300px) 100vw, 300px" /><p class="wp-caption-text">Figure 13</p>
+<p style="text-align: center;"><em><strong style="font-weight: 600;"> </strong></em></p>
+<p>You can also create your own designs to decorate the ornaments, making use of other tools and effects, such as drop shadow, transparency, and PowerClip (see Figure 14).</p>
+<img class="wp-image-10633 size-medium" src="http://learn.corel.com/wp-content/uploads/2015/11/1418-300x84.jpg" alt="Figure 14" width="300" height="84" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1418-300x84.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/1418.jpg 524w" sizes="(max-width: 300px) 100vw, 300px" /><p class="wp-caption-text">Figure 14</p>
+<p style="text-align: center;"><em><strong style="font-weight: 600;"> </strong></em></p>
+<p>Next, add some ornaments to the framed pine branches. You will need to draw some lines to link the ornaments with the branches (Figure 15).</p>
+<img class="wp-image-10634 size-medium" src="http://learn.corel.com/wp-content/uploads/2015/11/1517-300x181.jpg" alt="Figure 15" width="300" height="181" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1517-300x181.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/1517.jpg 525w" sizes="(max-width: 300px) 100vw, 300px" /><p class="wp-caption-text">Figure 15</p>
+<p style="text-align: center;"><em><strong style="font-weight: 600;"> </strong></em></p>
+<p>At this point, you can add a background for the framed design. Once again, a mesh fill will provide better results, although you could also use a fountain fill or other fills. You can choose any color for the background. By using a mesh fill, you can create custom gradients, with dark edges and a lighter center (Figure 16).</p>
+<img class="wp-image-10635 size-medium" src="http://learn.corel.com/wp-content/uploads/2015/11/1614-300x296.jpg" alt="Figure 16" width="300" height="296" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1614-300x296.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/1614-85x85.jpg 85w, http://learn.corel.com/wp-content/uploads/2015/11/1614-50x50.jpg 50w, http://learn.corel.com/wp-content/uploads/2015/11/1614.jpg 525w" sizes="(max-width: 300px) 100vw, 300px" /><p class="wp-caption-text">Figure 16</p>
+<p>To add a snow effect to the background, you can create a white circle. Then, use the <strong>Drop Shadow</strong> tool to apply a white drop shadow centered on the circle. On the property bar, choose <strong>Normal</strong> from the <strong>Merge mode</strong> list box and <strong>Outside</strong> from the <strong>Feathering direction</strong> list box, and then set the <strong>Drop shadow opacity</strong> slider to <strong>50</strong>%.</p>
+<p>Then, press <strong>Ctrl + K</strong> to break the objects apart, resulting in the original circle and a new translucent object (Figure 17).</p>
+<img class="wp-image-10636 size-medium" src="http://learn.corel.com/wp-content/uploads/2015/11/1710-300x65.jpg" alt="Figure 17" width="300" height="65" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1710-300x65.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/1710.jpg 525w" sizes="(max-width: 300px) 100vw, 300px" /><p class="wp-caption-text">Figure 17</p>
+<p>You can now duplicate the translucent object randomly, changing the size and position of the circles to create a blurry snowdrop background (Figure 18).</p>
+<img class="wp-image-10637 size-medium" src="http://learn.corel.com/wp-content/uploads/2015/11/188-300x181.jpg" alt="Figure 18" width="300" height="181" srcset="http://learn.corel.com/wp-content/uploads/2015/11/188-300x181.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/188.jpg 525w" sizes="(max-width: 300px) 100vw, 300px" /><p class="wp-caption-text">Figure 18</p>
+<p style="text-align: center;"><em><strong style="font-weight: 600;"> </strong></em></p>
+<p>Next, you need to add the background to the framed design, adjusting the size, order, and number of circles to create either a snow landscape or a blurred background. The background can be as simple or as complex as you want. The only limit is your imagination (Figure 19).</p>
+<img class="wp-image-10638 size-medium" src="http://learn.corel.com/wp-content/uploads/2015/11/1910-151x300.jpg" alt="Figure 19" width="151" height="300" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1910-151x300.jpg 151w, http://learn.corel.com/wp-content/uploads/2015/11/1910-516x1024.jpg 516w, http://learn.corel.com/wp-content/uploads/2015/11/1910.jpg 525w" sizes="(max-width: 151px) 100vw, 151px" /><p class="wp-caption-text">Figure 19</p>
+<p style="text-align: center;"><em><strong style="font-weight: 600;"> </strong></em></p>
+<p>The final step is to add the text for your greeting, and then print your cards. I&#8217;ve chosen a Candombe font, but you can use any font that&#8217;s installed on your PC (Figure 20).</p>
+<p>Happy Holidays!</p>
+<img class="wp-image-10639 size-medium" src="http://learn.corel.com/wp-content/uploads/2015/11/206-300x218.jpg" alt="Figure 20" width="300" height="218" srcset="http://learn.corel.com/wp-content/uploads/2015/11/206-300x218.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/206.jpg 525w" sizes="(max-width: 300px) 100vw, 300px" /><p class="wp-caption-text">Figure 20</p>
+<p style="text-align: center;"><em><strong> </strong></em></p>
+
+
+
+                                <script src='../js/colpick.js'></script>
+                                <script src="../js/colorpicker.js"></script>
+
+                                </div>
+                            </div>
+
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane animated fadeIn in" id="tab-2">
+                    <div id="contenttab2"></div>
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane animated fadeIn" id="tab-3" style="margin-top:-20px;margin-left:-20px;margin-right:-20px;background:#ffffff">
+
+                    </div>
+
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- Page Loader -->
+        <div class="page-loader">
+            <div class="preloader" style="text-align:center;">
+                <svg class="pl-circular" viewBox="25 25 50 50">
+                    <circle class="plc-path" cx="50" cy="50" r="20" />
+                </svg><br/><br/>
+                <div style="font-size:8px;margin-left:-80px;width:200px" class="demo"></div>
+            </div>
+        </div>
+
+        <div style="margin-bottom:10px;"><footer id="footer">
+            Copyright &copy; 2017 IDWEBDesigner<br/><a href="index.html">Back to <i class="zmdi zmdi-home"></i> Homepage</a>
+        </footer></div>
+
+        <!-- Javascript Libraries -->
+        <script src="../vendors/bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="../vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+        <script src="../vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="../vendors/bower_components/Waves/dist/waves.min.js"></script>
+        <script src="../vendors/bootstrap-growl/bootstrap-growl.min.js"></script>
+        <script src="../vendors/bower_components/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="../vendors/bower_components/lightgallery/dist/js/lightgallery-all.min.js"></script>
+        <script src="../vendors/bootgrid/jquery.bootgrid.updated.min.js"></script>
+
+        <!-- Placeholder for IE9 -->
+        <!--[if IE 9 ]>
+            <script src="vendors/bower_components/jquery-placeholder/jquery.placeholder.min.js"></script>
+        <![endif]-->
+
+        <script src="../js/app.min.js"></script>
+
+        <!-- Data Table -->
+        <script>
+            $(function()
+            {
+              $("#grid-basic").bootgrid({
+                  caseSensitive: false,
+                    css: {
+                        icon: 'zmdi icon',
+                        iconColumns: 'zmdi-view-module',
+                        iconDown: 'zmdi-sort-amount-desc',
+                        iconRefresh: 'zmdi-refresh',
+                        iconUp: 'zmdi-sort-amount-asc'
+                    },
+              }
+              )
+            });
+        </script>
+
+        <script type="text/javascript">
+            //Basic
+            $('#sa-basic').click(function(e){
+                e.preventDefault();
+                var link = $(this).attr('href');
+
+                swal({
+                    title: "Get Inspire Profesional Logos",
+                    text: "More logos sparately on our Learn Apps: Javascript, NoSQL Database, Virtual Reality, and more...",
+                    showCancelButton: true,
+                    allowOutsideClick: true,
+                },
+                function(){
+                    window.location.href = 'market://details?id=id.web.designer.learn.javascript';
+                });
+            });
+        </script>
+
+    <script type="text/javascript">
+        function rateApp() {
+            android.rateApp();
+       }
+    </script>
+
+    </body>
+
+</html>

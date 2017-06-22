@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Tutorial CorelDraw Pro</title>
+
+         <script type="text/javascript">
+          <!--
+          if (screen.width >= 2800) {
+            window.location = "http://designer.web.id";
+          }
+          //-->
+        </script>
+
+        <!-- Vendor CSS -->
+        <link href="../vendors/bower_components/animate.css/animate.min.css" rel="stylesheet">
+        <link href="../vendors/bower_components/sweetalert/dist/sweetalert.css" rel="stylesheet">
+        <link href="../vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
+        <link href="../vendors/bower_components/lightgallery/dist/css/lightgallery.min.css" rel="stylesheet">
+        <link href="../vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+        <link href="../vendors/bootgrid/jquery.bootgrid.min.css" rel="stylesheet">
+
+        <!-- CSS -->
+        <link href="../css/app_1.min.css" rel="stylesheet">
+        <link href="../css/app_2.min.css" rel="stylesheet">
+
+        <script src="../js/h5utils.js"></script>
+        <script src="../js/jquery-2.1.0.min.js"></script>
+        <script src="../js/jquery.jscroll.min.js"></script>
+        <script>$(function(){
+        $("#contentloader1").load("http://app.coreldraw.designer.web.id/content-message.html"); $("#contentloader2").load("http://app.coreldraw.designer.web.id/pro/content-right-pro.html");
+        $("#contenttab1").load("http://app.coreldraw.designer.web.id/pro/contenttab2.html");
+        $("#contenttab2").load("http://app.coreldraw.designer.web.id/pro/contenttab2.html");
+        });</script>
+
+        <style>.videoWrapper {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 */
+        padding-top: 25px;
+        height: 0;}
+        .videoWrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;}
+        .lcb-navigation a{background:#999999}
+        </style>
+    </head>
+    <body style="background:#ffffff">
+
+        <!-- Page Loader -->
+        <div class="page-loader">
+            <div class="preloader pls-white">
+                <svg class="pl-circular" viewBox="25 25 50 50">
+                    <circle class="plc-path" cx="50" cy="50" r="20" />
+                </svg>
+            </div>
+
+        </div>
+
+        <header id="header" class="clearfix container">
+            <ul class="h-inner">
+
+                <li class="hi-trigger ma-trigger" data-ma-action="sidebar-open" data-ma-target="#sidebar">
+                    <div class="line-wrap">
+                        <div class="line top"></div>
+                        <div class="line center"></div>
+                        <div class="line bottom"></div>
+                    </div>
+                </li>
+
+                <li class="hi-logo" data-ma-action="sidebar-open" data-ma-target="#sidebar" style="margin-top:8px;">
+                    <span style="font-size:15px;color:#ffffff;"> Tutorial CorelDRAW<sup>&reg;</sup><span>
+                </li>
+
+                <li class="pull-right">
+                    <ul class="hi-menu">
+
+                        <li style="margin-right:-15px;" class="dropdown">
+                            <a data-toggle="dropdown" href="#">
+                                <i class="him-icon zmdi zmdi-notifications-none"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-lg pull-right">
+                                <div class="list-group list-group-light">
+                                    <div class="lg-header">
+                                        LIVE DEVELOPER MESSAGES
+                                    </div>
+
+                                    <article>
+                                      <p style="text-align:center;font-size:1em;"><span id="status"><span id="status"></span></p>
+                                      <ol id="state"></ol>
+                                    </article>
+                                    <script>
+                                    var statusElem  = document.getElementById('status'),
+                                        state               = document.getElementById('state');
+
+                                    function online(event) {
+                                      statusElem.className = navigator.onLine ? 'online' : 'offline';
+                                      statusElem.innerHTML = navigator.onLine ? '' : '<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You&#39;re offline, check network connection.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;content required internet access.';
+                                      state.innerHTML += '&nbsp;';
+                                    }
+
+                                    addEvent(window, 'online', online);
+                                    addEvent(window, 'offline', online);
+                                    online({ type: 'ready' });
+                                    </script>
+
+                                    <div style="margin-top:-30px;" id="contentloader1"></div>
+                                    <a class="view-more view-more-light" href="idwebdesigner.html">Powered by IDWEBDesigner</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li style="margin-right:-15px;" class="ma-trigger" data-ma-action="sidebar-open" data-ma-target="#chat">
+                            <a data-toggle="dropdown" href="#">
+                                <i class="him-icon zmdi zmdi-favorite-outline"></i>
+                            </a>
+                        </li>
+                        <li style="margin-right:-5px;" class="dropdown">
+                            <a data-toggle="dropdown" href="#"><i class="him-icon zmdi zmdi-more-vert"></i></a>
+                            <ul class="dropdown-menu dm-icon pull-right">
+                                <li class="hidden-xs">
+                                    <a data-ma-action="fullscreen" href="#"><i class="zmdi zmdi-fullscreen"></i> Fullscreen</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:window.location.reload();"><i class="zmdi zmdi-refresh-sync"></i> Refresh</a>
+                                </li>
+                                <li>
+                                    <a id="rate-app" onClick="rateApp()">Rate 5 Stars</a>
+                                </li>
+                                <li>
+                                    <a href="update.html"><i class="zmdi zmdi-download"></i>Check update</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="help.html"><i class="zmdi zmdi-help"></i> Help</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="hidden-xs ma-trigger" data-ma-action="sidebar-open" data-ma-target="#chat">
+                            <a href="#"><i class="him-icon zmdi zmdi-comment-alt-text"></i></a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="tab-nav tn-justified tn-icon" role="tablist" style="width:100%">
+                                        <li role="presentation">
+                                            <a class="col-sx-4" href="index.html">
+                                                INDONESIA
+                                            </a>
+                                        </li>
+                                        <li role="presentation" class="active">
+                                            <a class="col-xs-4" href="#tab-2" aria-controls="tab-2" role="tab" data-toggle="tab">
+                                                ENGLISH (PRO)
+                                            </a>
+                                        </li>
+
+                                    </ul>
+        </header>
+
+        <section id="main">
+            <ol class="breadcrumb" style="margin-left:-10px;">
+                <li><a href="developer.html">designer.web.id</a></li>
+                <li><a href="index.html">learn</a></li>
+                <li class="active">virtualreality</li>
+            </ol>
+
+            <aside id="sidebar" class="sidebar c-overflow" style="position:fixed;z-index:1000;margin-top:-70px;height:100%;background:white">
+                <ul class="main-menu">
+                    <li class="mm-profile sub-menu">
+                        <a href="#" data-ma-action="submenu-toggle" class="media">
+                            <img class="pull-left" src="../img/coreldraw.green.png" alt="" height="25px" style="margin-left:-40px;">
+                            <div class="media-body">
+                            <div>Tutorial CorelDRAW<sup>&reg;</sup></div>
+                            <span style="font-size:11px;">Experience by IDWEBDesigner<br/>dev@designer.web.id</span>
+                            </div>
+                        </a>
+
+                        <ul>
+                            <li>
+                                <a href="developer.html">Indonesia Web Designer</a>
+                            </li>
+                            <li>
+                                <div style="margin-left:65px;margin-bottom:10px;font-size:10px;color:#888888;padding-right:20px;">Jl. Wahid Hasyim No.3 Gaten Condongcatur Depok Sleman Yogyakarta, Indonesia.</div>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-info"></i> About CorelDraw</a>
+                        <div style="margin-left:65px;margin-bottom:10px;font-size:12px;color:#579706;"><a href="basics.html">What's is CorelDraw?<br/>Basics Learn</a></div>
+                    </li>
+
+                    <li><a href="index.html"><i class="zmdi zmdi-flag"></i> Tutorial Bahasa Indonesia</a></li>
+                    <li class="sub-menu toggled active">
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-android"></i> Featured Apps</a>
+                        <div style="margin-left:65px;margin-top:10px;font-size:10px;color:#888888;padding-right:20px;">Color Docker: This docker allows you to choose fill and outline colors from a color picker, color sliders, and color palettes. Found with dockers and in the Toolbox.</div>
+
+                        <ul>
+
+                            <li><a href="language.html">Bahasa Indonesia</a></li>
+                            <li style="display:none;"><a href="upgrade.html"><i class="zmdi zmdi-shopping-cart"></i>&nbsp;&nbsp;Upgrade</a></li>
+                            <li class="divider"></li>
+
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-code"></i> Developer</a>
+
+                        <ul>
+                            <li><a href="developer.html">dev@designer.web.id<br/>designer.web.id</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </aside>
+
+            <aside id="chat" class="sidebar">
+
+                                    <article>
+                                      <p style="margin-top:30px;margin-left:15px;font-size:0.7em;"><span id="status2"><span id="status"></span></p>
+                                      <ol id="state2"></ol>
+                                    </article>
+                                    <script>
+                                    var statusElem  = document.getElementById('status2'),
+                                        state               = document.getElementById('state2');
+
+                                    function online(event) {
+                                      statusElem.className = navigator.onLine ? 'online' : 'offline';
+                                      statusElem.innerHTML = navigator.onLine ? '' : '<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You&#39;re offline, check network connection.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;content required internet access.';
+                                      state.innerHTML += '&nbsp;';
+                                    }
+
+                                    addEvent(window, 'online', online);
+                                    addEvent(window, 'offline', online);
+                                    online({ type: 'ready' });
+                                    </script>
+
+                <div style="margin-top:-30px; width:100%" id="contentloader2"></div>
+
+
+
+            </aside>
+
+            <section id="content" style="margin-bottom:-40px;">
+                <div class="container" style="margin-top:-55px;margin-left:-20px;padding-right:0px;">
+                    <div class="tab-content p-20" style="background:#ffffff;">
+
+                    <div role="tabpanel" class="tab-pane animated fadeIn in active" id="tab-1">
+
+                            <!-- Blog Posts -->
+                            <div class="card blog-post" style="margin-bottom:-0px;">
+
+                                <div class="videoWrapper">
+                                <img width="100%" src="../images/green.png" frameborder="0" allowfullscreen></img>
+                                </div>
+
+                                <a class="card-header ch-alt">
+                                    <h2><small>In this written tutorial, you will learn how to use the variety of content available through Corel CONNECT to create holiday projects in CorelDRAW, like a greeting card. We’ll walk you through each step of the design, showing you some neat tricks that you can apply to create your own personalized card. This is a great project that you can do with your kids, and you can apply these techniques to other design projects as well!</small></h2>
+                                </a>
+
+                                <div class="card-body card-padding">
+
+                                <h4>Using Corel CONNECT for Holiday Projects</h4>
+                                 <br/>
+
+			<p>In this tutorial I would like to show you how to use the wealth of content included in CorelDRAW Graphics Suite to quickly create a seasonal greeting card. You can easily use this content and these techniques for a variety of other holiday projects, like creating party invitations, holiday newsletters, and much more.</p>
+<p><img class="alignnone size-full wp-image-25805" src="http://learn.corel.com/wp-content/uploads/2016/12/Fig_01_FinalCard.jpg" alt="fig_01_finalcard" width="650" height="423" srcset="http://learn.corel.com/wp-content/uploads/2016/12/Fig_01_FinalCard.jpg 650w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_01_FinalCard-300x195.jpg 300w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_01_FinalCard-600x390.jpg 600w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_01_FinalCard-500x325.jpg 500w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_01_FinalCard-480x312.jpg 480w" sizes="(max-width: 650px) 100vw, 650px" /></p>
+<p><strong>Step 1. Collecting your assets in Corel CONNECT</strong></p>
+<p>We are going to start by gathering images and graphics that might work for our card by using keywords in Corel CONNECT to search for content.</p>
+<p>Launch Corel CONNECT, either as a standalone application, or by opening the <strong>Connect</strong> and <strong>Tray dockers</strong> in CorelDRAW (<strong>Window</strong> &gt; <strong>Dockers</strong> &gt; <strong>Connect and Tray dockers</strong>). With all filters enabled (<strong>Folders, Vectors, Bitmaps and Fonts</strong>), in address field at the top of the window type in the first search word &#8216;snow&#8217;. Hit Enter.</p>
+<p>Depending on which search locations are activated in the <strong>Libraries</strong> and <strong>Favorites</strong> panels on the left, CONNECT will now present you with a selection of snow-themed images and vector graphics. Also, if you perhaps have a photo of your own snowy garden that you want to use, this can be dragged from outside of Corel CONNECT to the <strong>Tray</strong> too!</p>
+<p>&nbsp;</p>
+<p><img class="alignnone size-full wp-image-25806" src="http://learn.corel.com/wp-content/uploads/2016/12/Fig_02_CONNECT.jpg" alt="fig_02_connect" width="600" height="337" srcset="http://learn.corel.com/wp-content/uploads/2016/12/Fig_02_CONNECT.jpg 600w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_02_CONNECT-300x169.jpg 300w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_02_CONNECT-500x281.jpg 500w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_02_CONNECT-480x270.jpg 480w" sizes="(max-width: 600px) 100vw, 600px" /></p>
+<p>Drag any elements that you might like to use to the <strong>collection tray</strong> at the bottom of the screen. (Note: Images and Clipart carrying an <strong>S-icon</strong> are included in the <strong>Standard CorelDRAW Membership</strong>, those with a P-icon are available only to customers with a <strong>Premium Membership</strong>).</p>
+<p>Let&#8217;s do another search by replacing the search word &#8216;snow&#8217;, this time with &#8216;Santa&#8217;. Drag any suitable clipart images to the <strong>Tray</strong>.</p>
+<p>I grabbed elements from other <strong>Clipart</strong> folders, dragged them to the <strong>Tray</strong> and ended up with a collection of graphics and images ̶ mostly from CorelDRAW Graphics Suite&#8217;s Extra Content but also a stock photo ̶ to experiment with.</p>
+<p>&nbsp;</p>
+<p><img class="alignnone size-full wp-image-25807" src="http://learn.corel.com/wp-content/uploads/2016/12/Fig_03_CollectionTray.png" alt="fig_03_collectiontray" width="550" height="58" srcset="http://learn.corel.com/wp-content/uploads/2016/12/Fig_03_CollectionTray.png 550w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_03_CollectionTray-300x32.png 300w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_03_CollectionTray-500x53.png 500w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_03_CollectionTray-480x51.png 480w" sizes="(max-width: 550px) 100vw, 550px" /></p>
+<p><strong>Step 2. Creating the card design in CorelDRAW</strong></p>
+<p>Now that we have all our creative assets, it&#8217;s time to get started on the card design itself.</p>
+<p>Open a new CorelDRAW file: <strong>File</strong> &gt; <strong>New…</strong> (<strong>Ctrl+N</strong>).</p>
+<p>In this case I have chosen a photo card page size in Landscape format, but you can of course, choose the paper size best suited to your purpose.</p>
+<p>&nbsp;</p>
+<p><img class="alignnone size-full wp-image-25808" src="http://learn.corel.com/wp-content/uploads/2016/12/Fig_04_NewDocument.png" alt="fig_04_newdocument" width="450" height="515" srcset="http://learn.corel.com/wp-content/uploads/2016/12/Fig_04_NewDocument.png 450w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_04_NewDocument-262x300.png 262w" sizes="(max-width: 450px) 100vw, 450px" /></p>
+<p>In CorelDRAW, I now click on the <strong>Quick Customize</strong> icon to open up the <strong>Dockers</strong> selection, and set a check next to the <strong>Tray</strong> docker to open it.</p>
+<p>&nbsp;</p>
+<p><img class="alignnone size-full wp-image-25809" src="http://learn.corel.com/wp-content/uploads/2016/12/Fig_05_Tray.jpg" alt="fig_05_tray" width="300" height="696" srcset="http://learn.corel.com/wp-content/uploads/2016/12/Fig_05_Tray.jpg 300w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_05_Tray-129x300.jpg 129w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<p>I first imported a background image by dragging the image from the <strong>Tray</strong> to the document.</p>
+<p>The image is much larger than my card and needs to be resampled. To do this I click on <strong>Bitmaps</strong> &gt; <strong>Resample</strong>.</p>
+<p>In the <strong>Resample dialog box</strong>, I leave the resolution at <strong>300 dpi</strong> if I want to have my card professionally printed. But if I&#8217;m printing the cards myself at home, then a resolution of <strong>150 dpi</strong> would probably suffice.</p>
+<p>I now change the <strong>image dimensions</strong> (width and height), to roughly match my card size. I don&#8217;t uncheck the box for maintaining the <strong>aspect ratio</strong>, as this could result in the image becoming distorted. I would rather leave it a little bit larger with the correct <strong>aspect ratio</strong> and just crop off the excess afterwards. For this reason I&#8217;ll be setting the width to about 7”.</p>
+<p>&nbsp;</p>
+<p><img class="alignnone size-full wp-image-25810" src="http://learn.corel.com/wp-content/uploads/2016/12/Fig_06_Resample.png" alt="fig_06_resample" width="400" height="283" srcset="http://learn.corel.com/wp-content/uploads/2016/12/Fig_06_Resample.png 400w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_06_Resample-300x212.png 300w" sizes="(max-width: 400px) 100vw, 400px" /></p>
+<p>Click <strong>OK</strong> then press <strong>&#8216;P&#8217;</strong> on the keyboard to center the resampled image on the page.</p>
+<p>Now go into <strong>Wireframe</strong> view (<strong>View</strong> &gt; <strong>Wireframe</strong>), and using the <strong>Crop tool</strong> (<strong>Toolbox</strong> &gt; <strong>Crop tool</strong>), and crop the image to the size of the page (In the <strong>Standard toolbar</strong> at the top of the screen below the <strong>Menu bar</strong>, turn off <strong>Snap To</strong> &gt; <strong>Objects</strong> for this, and check snap to <strong>Page</strong>. This will make cropping to page size easier). After cropping, disable snap to <strong>Page</strong> and re-check snap to <strong>Objects</strong>.</p>
+<p>I now want to create a dark border around my image which will serve as a background for the decorative frame that I am going to include. Double-click on the <strong>Rectangle tool</strong> (<strong>Toolbox</strong> &gt; <strong>Rectangle tool</strong>), to create a page frame.</p>
+<p>In the <strong>Object Manager docker</strong> you can see that the frame is sitting below the bitmap. Drag it above the bitmap.</p>
+<p>Using the <strong>Color Eyedropper tool</strong> in the <strong>Toolbox</strong>, I sample one of the darker greys in the background image then click inside the frame to fill it with color.</p>
+<p>Press the <strong>&#8216;+&#8217; key</strong> on the numerical keypad (or use <strong>Ctrl+C/Ctrl+V</strong> to copy and paste the rectangle back in). Fill the second rectangle with white and holding down the <strong>Shift+key</strong>, resize inwards to create a grey border.</p>
+<p>Select both rectangles and click on the <strong>Simplify</strong> command from the <strong>Property</strong> bar.</p>
+<p>&nbsp;</p>
+<p><img class="alignnone size-full wp-image-25811" src="http://learn.corel.com/wp-content/uploads/2016/12/Fig_07_Simplify.png" alt="fig_07_simplify" width="397" height="138" srcset="http://learn.corel.com/wp-content/uploads/2016/12/Fig_07_Simplify.png 397w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_07_Simplify-300x104.png 300w" sizes="(max-width: 397px) 100vw, 397px" /></p>
+<p>After simplifying, remove the white rectangle and you should be left with this grey frame.</p>
+<p>&nbsp;</p>
+<p><img class="alignnone size-full wp-image-25812" src="http://learn.corel.com/wp-content/uploads/2016/12/Fig_08_Border.jpg" alt="fig_08_border" width="550" height="359" srcset="http://learn.corel.com/wp-content/uploads/2016/12/Fig_08_Border.jpg 550w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_08_Border-300x196.jpg 300w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_08_Border-500x326.jpg 500w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_08_Border-480x313.jpg 480w" sizes="(max-width: 550px) 100vw, 550px" /></p>
+<p>&nbsp;</p>
+<p>I now want to add a festive frame to my design, so I drag the vector frame that I found in Corel CONNECT to the page.</p>
+<p>This frame is of course too large and in portrait format, but being vector, I can simply add a <strong>90° rotation</strong> in the <strong>Property bar</strong> &gt; press <strong>&#8216;P&#8217;</strong> to center the frame on the page &gt; then holding down the <strong>Shift-key</strong>, I can re-size the frame inwards without any loss of quality.</p>
+<p>&nbsp;</p>
+<p><img class="alignnone size-full wp-image-25813" src="http://learn.corel.com/wp-content/uploads/2016/12/Fig_09_Frame.jpg" alt="fig_09_frame" width="600" height="412" srcset="http://learn.corel.com/wp-content/uploads/2016/12/Fig_09_Frame.jpg 600w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_09_Frame-300x206.jpg 300w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_09_Frame-500x343.jpg 500w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_09_Frame-480x330.jpg 480w" sizes="(max-width: 600px) 100vw, 600px" /></p>
+<p>&nbsp;</p>
+<p>Here is the frame after rotating 90° and resizing.</p>
+<p>&nbsp;</p>
+<p><img class="alignnone size-full wp-image-25815" src="http://learn.corel.com/wp-content/uploads/2016/12/Fig_10_Frameresized.jpg" alt="fig_10_frameresized" width="550" height="360" srcset="http://learn.corel.com/wp-content/uploads/2016/12/Fig_10_Frameresized.jpg 550w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_10_Frameresized-300x196.jpg 300w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_10_Frameresized-500x327.jpg 500w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_10_Frameresized-480x314.jpg 480w" sizes="(max-width: 550px) 100vw, 550px" /></p>
+<p>&nbsp;</p>
+<p>I am going to replace the color of the leaves in the border, which don&#8217;t really match the tone of the background, with another, more suitable color by using the Find and Replace command (<strong>Edit</strong> &gt; <strong>Find and Replace</strong> &gt; <strong>Find Objects</strong>…).</p>
+<p>&nbsp;</p>
+<p><img class="alignnone size-full wp-image-25816" src="http://learn.corel.com/wp-content/uploads/2016/12/Fig_11_FindandReplace.jpg" alt="fig_11_findandreplace" width="480" height="361" srcset="http://learn.corel.com/wp-content/uploads/2016/12/Fig_11_FindandReplace.jpg 480w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_11_FindandReplace-300x226.jpg 300w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_11_FindandReplace-463x348.jpg 463w" sizes="(max-width: 480px) 100vw, 480px" /></p>
+<p>&nbsp;</p>
+<p>In the <strong>Find and Replace</strong> dialog box, select <strong>Begin a New Search</strong> &gt; <strong>Next</strong>.</p>
+<p>Click on the <strong>Fills tab</strong> and choose <strong>Uniform Color</strong>.</p>
+<p>On the next page click on <strong>Specific Uniform Color Fill</strong> and use the <strong>Eyedropper tool</strong> to pick up the green of the leaves in the frame (this is the color that will be replaced).</p>
+<p>&nbsp;</p>
+<p><img class="alignnone size-full wp-image-25817" src="http://learn.corel.com/wp-content/uploads/2016/12/Fig_12_SpecifyFill.jpg" alt="fig_12_specifyfill" width="580" height="376" srcset="http://learn.corel.com/wp-content/uploads/2016/12/Fig_12_SpecifyFill.jpg 580w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_12_SpecifyFill-300x194.jpg 300w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_12_SpecifyFill-500x324.jpg 500w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_12_SpecifyFill-480x311.jpg 480w" sizes="(max-width: 580px) 100vw, 580px" /></p>
+<p>Click on <strong>Next</strong> &gt; <strong>Finish</strong> &gt; <strong>Find All</strong> &gt; say <strong>Yes</strong> when asked if the objects can be ungrouped.</p>
+<p>With all green leaf objects now selected, choose a darker, more fitting green from the <strong>Color Palette</strong>.</p>
+<p>&nbsp;</p>
+<p><img class="alignnone size-full wp-image-25818" src="http://learn.corel.com/wp-content/uploads/2016/12/Fig_13_ColorChange.jpg" alt="fig_13_colorchange" width="580" height="285" srcset="http://learn.corel.com/wp-content/uploads/2016/12/Fig_13_ColorChange.jpg 580w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_13_ColorChange-300x147.jpg 300w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_13_ColorChange-500x246.jpg 500w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_13_ColorChange-480x236.jpg 480w" sizes="(max-width: 580px) 100vw, 580px" /></p>
+<p>&nbsp;</p>
+<p>Don&#8217;t forget to save your document now and again (<strong>Ctrl+S</strong>), especially when working on a longer project.</p>
+<p>Because all the elements of my design are looking rather &#8216;flat&#8217; and I would like to add a bit more depth to it, I am going to select the grey border and choosing the <strong>Drop Shadow tool</strong> from the <strong>Toolbox</strong>, I am going to apply a shadow to it (<strong>Flat Bottom Right</strong>).</p>
+<p>&nbsp;</p>
+<p><img class="alignnone size-full wp-image-25819" src="http://learn.corel.com/wp-content/uploads/2016/12/Fig_14_DropShadow.png" alt="fig_14_dropshadow" width="280" height="449" srcset="http://learn.corel.com/wp-content/uploads/2016/12/Fig_14_DropShadow.png 280w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_14_DropShadow-187x300.png 187w" sizes="(max-width: 280px) 100vw, 280px" /></p>
+<p>&nbsp;</p>
+<p>I am not going to reposition the shadow, instead, using the command <strong>CTRL+K</strong>, I am going to <strong>break the shadow and the border apart</strong>. This will then allow me to resize and reposition the shadow, so that it appears only on the inside of the border and not around the outside only. After breaking the shadow apart and resizing and centering it I now have a shadow along the inside edge of my border.</p>
+<p>&nbsp;</p>
+<p><img class="alignnone size-full wp-image-25820" src="http://learn.corel.com/wp-content/uploads/2016/12/Fig_15_Breakshadowapart.jpg" alt="fig_15_breakshadowapart" width="450" height="294" srcset="http://learn.corel.com/wp-content/uploads/2016/12/Fig_15_Breakshadowapart.jpg 450w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_15_Breakshadowapart-300x196.jpg 300w" sizes="(max-width: 450px) 100vw, 450px" /></p>
+<p>&nbsp;</p>
+<p>The next step is to grab another of my clipart images from the <strong>Tray docker</strong> – Santa!</p>
+<p>I go back to the <strong>Drop Shadow tool</strong>, and with Santa resized and selected, I select the <strong>Perspective Bottom Right</strong> shadow from the drop-down list on the <strong>Property bar</strong>, adjusting the interactive handle until the shadow is in the right position.</p>
+<p>&nbsp;</p>
+<p><img class="alignnone size-full wp-image-25821" src="http://learn.corel.com/wp-content/uploads/2016/12/Fig_16_Santa.jpg" alt="fig_16_santa" width="550" height="510" srcset="http://learn.corel.com/wp-content/uploads/2016/12/Fig_16_Santa.jpg 550w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_16_Santa-300x278.jpg 300w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_16_Santa-500x464.jpg 500w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_16_Santa-480x445.jpg 480w" sizes="(max-width: 550px) 100vw, 550px" /></p>
+<p>&nbsp;</p>
+<p>It&#8217;s now time to add some text to my design. To find the best font for the job, I am going to open the new, <strong>Font Playground</strong> docker by clicking on either: <strong>Text</strong> &gt; <strong>Font Playground</strong>, or just opening up the docker directly using the <strong>Quick Customize</strong> button on the <strong>dockers panel</strong>.</p>
+<p>Once open, I replace the default text in <strong>Font Playground</strong> with my own: “Seasons Greetings!”</p>
+<p>&nbsp;</p>
+<p><img class="alignnone size-full wp-image-25822" src="http://learn.corel.com/wp-content/uploads/2016/12/Fig_17_FontPlayground.png" alt="fig_17_fontplayground" width="400" height="667" srcset="http://learn.corel.com/wp-content/uploads/2016/12/Fig_17_FontPlayground.png 400w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_17_FontPlayground-180x300.png 180w" sizes="(max-width: 400px) 100vw, 400px" /></p>
+<p>&nbsp;</p>
+<p>I can now select each font panel in turn and choose an alternative font from the <strong>Font List</strong>.</p>
+<p>Once I have a few suitable candidates, I just need to drag these to my card to see which one works best.</p>
+<p>&nbsp;</p>
+<p><img class="alignnone size-full wp-image-25823" src="http://learn.corel.com/wp-content/uploads/2016/12/Fig_18_ChoosingFont.jpg" alt="fig_18_choosingfont" width="550" height="473" srcset="http://learn.corel.com/wp-content/uploads/2016/12/Fig_18_ChoosingFont.jpg 550w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_18_ChoosingFont-300x258.jpg 300w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_18_ChoosingFont-500x430.jpg 500w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_18_ChoosingFont-480x413.jpg 480w" sizes="(max-width: 550px) 100vw, 550px" /></p>
+<p>&nbsp;</p>
+<p>I notice that two of the fonts that I selected ̶ Alize and Gabriola ̶ offer me quite a few alternative stylistic sets (the alternative stylistic sets available within an OpenType font, depend on what the font manufacturer has built into that particular font).</p>
+<p>To see which styles are available, I simply select the text and click on the black arrow that appears below it, whenever alternative styles are available. (Note! You can only select one line of text at a time when applying alternative stylistic sets).</p>
+<p>&nbsp;</p>
+<p><img class="alignnone size-full wp-image-25824" src="http://learn.corel.com/wp-content/uploads/2016/12/Fig_19_OpenType.jpg" alt="fig_19_opentype" width="600" height="686" srcset="http://learn.corel.com/wp-content/uploads/2016/12/Fig_19_OpenType.jpg 600w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_19_OpenType-262x300.jpg 262w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_19_OpenType-500x572.jpg 500w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_19_OpenType-480x549.jpg 480w" sizes="(max-width: 600px) 100vw, 600px" /></p>
+<p>&nbsp;</p>
+<p>I think I&#8217;m going to go with <strong>Gabriola</strong> &gt; <strong>Stylistic Set 7</strong> and remove the other text samples.</p>
+<p>&nbsp;</p>
+<p><img class="alignnone size-full wp-image-25826" src="http://learn.corel.com/wp-content/uploads/2016/12/Fig_20_StylisticSet7.jpg" alt="fig_20_stylisticset7" width="550" height="427" srcset="http://learn.corel.com/wp-content/uploads/2016/12/Fig_20_StylisticSet7.jpg 550w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_20_StylisticSet7-300x233.jpg 300w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_20_StylisticSet7-500x388.jpg 500w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_20_StylisticSet7-480x373.jpg 480w" sizes="(max-width: 550px) 100vw, 550px" /></p>
+<p>&nbsp;</p>
+<p>Finally, to make the text pop out a little more, I go back to my <strong>Drop Shadow</strong> tool, and choose a <strong>Small Glow</strong> from the <strong>Presets</strong> in the <strong>Property Bar</strong>.</p>
+<p>I leave the <strong>Drop Shadow Opacity</strong> at <strong>100%</strong>, but lower the <strong>Shadow feathering</strong> to <strong>8</strong>, and change the glow color to <strong>white</strong>, to get a more defined shadow.</p>
+<p>&nbsp;</p>
+<p><img class="alignnone size-full wp-image-25827" src="http://learn.corel.com/wp-content/uploads/2016/12/Fig_21_SmallGlow.jpg" alt="fig_21_smallglow" width="550" height="218" srcset="http://learn.corel.com/wp-content/uploads/2016/12/Fig_21_SmallGlow.jpg 550w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_21_SmallGlow-300x119.jpg 300w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_21_SmallGlow-500x198.jpg 500w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_21_SmallGlow-480x190.jpg 480w" sizes="(max-width: 550px) 100vw, 550px" /></p>
+<p>&nbsp;</p>
+<p>You can of course add as much text as you like to your card to personalize it even further. Other than that, our card is finished!</p>
+<p>&nbsp;</p>
+<p><img class="alignnone size-full wp-image-25805" src="http://learn.corel.com/wp-content/uploads/2016/12/Fig_01_FinalCard.jpg" alt="fig_01_finalcard" width="650" height="423" srcset="http://learn.corel.com/wp-content/uploads/2016/12/Fig_01_FinalCard.jpg 650w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_01_FinalCard-300x195.jpg 300w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_01_FinalCard-600x390.jpg 600w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_01_FinalCard-500x325.jpg 500w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_01_FinalCard-480x312.jpg 480w" sizes="(max-width: 650px) 100vw, 650px" /></p>
+
+
+
+                                <script src='../js/colpick.js'></script>
+                                <script src="../js/colorpicker.js"></script>
+
+                                </div>
+                            </div>
+
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane animated fadeIn in" id="tab-2">
+                    <div id="contenttab2"></div>
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane animated fadeIn" id="tab-3" style="margin-top:-20px;margin-left:-20px;margin-right:-20px;background:#ffffff">
+
+                    </div>
+
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- Page Loader -->
+        <div class="page-loader">
+            <div class="preloader" style="text-align:center;">
+                <svg class="pl-circular" viewBox="25 25 50 50">
+                    <circle class="plc-path" cx="50" cy="50" r="20" />
+                </svg><br/><br/>
+                <div style="font-size:8px;margin-left:-80px;width:200px" class="demo"></div>
+            </div>
+        </div>
+
+        <div style="margin-bottom:10px;"><footer id="footer">
+            Copyright &copy; 2017 IDWEBDesigner<br/><a href="index.html">Back to <i class="zmdi zmdi-home"></i> Homepage</a>
+        </footer></div>
+
+        <!-- Javascript Libraries -->
+        <script src="../vendors/bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="../vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+        <script src="../vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="../vendors/bower_components/Waves/dist/waves.min.js"></script>
+        <script src="../vendors/bootstrap-growl/bootstrap-growl.min.js"></script>
+        <script src="../vendors/bower_components/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="../vendors/bower_components/lightgallery/dist/js/lightgallery-all.min.js"></script>
+        <script src="../vendors/bootgrid/jquery.bootgrid.updated.min.js"></script>
+
+        <!-- Placeholder for IE9 -->
+        <!--[if IE 9 ]>
+            <script src="vendors/bower_components/jquery-placeholder/jquery.placeholder.min.js"></script>
+        <![endif]-->
+
+        <script src="../js/app.min.js"></script>
+
+        <!-- Data Table -->
+        <script>
+            $(function()
+            {
+              $("#grid-basic").bootgrid({
+                  caseSensitive: false,
+                    css: {
+                        icon: 'zmdi icon',
+                        iconColumns: 'zmdi-view-module',
+                        iconDown: 'zmdi-sort-amount-desc',
+                        iconRefresh: 'zmdi-refresh',
+                        iconUp: 'zmdi-sort-amount-asc'
+                    },
+              }
+              )
+            });
+        </script>
+
+        <script type="text/javascript">
+            //Basic
+            $('#sa-basic').click(function(e){
+                e.preventDefault();
+                var link = $(this).attr('href');
+
+                swal({
+                    title: "Get Inspire Profesional Logos",
+                    text: "More logos sparately on our Learn Apps: Javascript, NoSQL Database, Virtual Reality, and more...",
+                    showCancelButton: true,
+                    allowOutsideClick: true,
+                },
+                function(){
+                    window.location.href = 'market://details?id=id.web.designer.learn.javascript';
+                });
+            });
+        </script>
+
+    <script type="text/javascript">
+        function rateApp() {
+            android.rateApp();
+       }
+    </script>
+
+    </body>
+
+</html>
