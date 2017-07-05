@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Tutorial CorelDraw Pro</title>
+
+         <script type="text/javascript">
+          <!--
+          if (screen.width >= 2800) {
+            window.location = "http://designer.web.id";
+          }
+          //-->
+        </script>
+
+        <!-- Vendor CSS -->
+        <link href="../vendors/bower_components/animate.css/animate.min.css" rel="stylesheet">
+        <link href="../vendors/bower_components/sweetalert/dist/sweetalert.css" rel="stylesheet">
+        <link href="../vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
+        <link href="../vendors/bower_components/lightgallery/dist/css/lightgallery.min.css" rel="stylesheet">
+        <link href="../vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+        <link href="../vendors/bootgrid/jquery.bootgrid.min.css" rel="stylesheet">
+
+        <!-- CSS -->
+        <link href="../css/app_1.min.css" rel="stylesheet">
+        <link href="../css/app_2.min.css" rel="stylesheet">
+
+        <script src="../js/h5utils.js"></script>
+        <script src="../js/jquery-2.1.0.min.js"></script>
+        <script src="../js/jquery.jscroll.min.js"></script>
+        <script>$(function(){
+        $("#contentloader1").load("http://app.coreldraw.designer.web.id/content-message.html"); $("#contentloader2").load("http://app.coreldraw.designer.web.id/pro/content-right-pro.html");
+        $("#contenttab1").load("http://app.coreldraw.designer.web.id/pro/contenttab2.html");
+        $("#contenttab2").load("http://app.coreldraw.designer.web.id/pro/contenttab2.html");
+        });</script>
+
+        <style>.videoWrapper {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 */
+        padding-top: 25px;
+        height: 0;}
+        .videoWrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;}
+        .lcb-navigation a{background:#999999}
+        </style>
+    </head>
+    <body style="background:#ffffff">
+
+        <!-- Page Loader -->
+        <div class="page-loader">
+            <div class="preloader pls-white">
+                <svg class="pl-circular" viewBox="25 25 50 50">
+                    <circle class="plc-path" cx="50" cy="50" r="20" />
+                </svg>
+            </div>
+
+        </div>
+
+        <header id="header" class="clearfix container">
+            <ul class="h-inner">
+
+                <li class="hi-trigger ma-trigger" data-ma-action="sidebar-open" data-ma-target="#sidebar">
+                    <div class="line-wrap">
+                        <div class="line top"></div>
+                        <div class="line center"></div>
+                        <div class="line bottom"></div>
+                    </div>
+                </li>
+
+                <li class="hi-logo" data-ma-action="sidebar-open" data-ma-target="#sidebar" style="margin-top:8px;">
+                    <span style="font-size:15px;color:#ffffff;"> Tutorial CorelDRAW<sup>&reg;</sup><span>
+                </li>
+
+                <li class="pull-right">
+                    <ul class="hi-menu">
+
+                        <li style="margin-right:-15px;" class="dropdown">
+                            <a data-toggle="dropdown" href="#">
+                                <i class="him-icon zmdi zmdi-notifications-none"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-lg pull-right">
+                                <div class="list-group list-group-light">
+                                    <div class="lg-header">
+                                        LIVE DEVELOPER MESSAGES
+                                    </div>
+
+                                    <article>
+                                      <p style="text-align:center;font-size:1em;"><span id="status"><span id="status"></span></p>
+                                      <ol id="state"></ol>
+                                    </article>
+                                    <script>
+                                    var statusElem  = document.getElementById('status'),
+                                        state               = document.getElementById('state');
+
+                                    function online(event) {
+                                      statusElem.className = navigator.onLine ? 'online' : 'offline';
+                                      statusElem.innerHTML = navigator.onLine ? '' : '<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You&#39;re offline, check network connection.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;content required internet access.';
+                                      state.innerHTML += '&nbsp;';
+                                    }
+
+                                    addEvent(window, 'online', online);
+                                    addEvent(window, 'offline', online);
+                                    online({ type: 'ready' });
+                                    </script>
+
+                                    <div style="margin-top:-30px;" id="contentloader1"></div>
+                                    <a class="view-more view-more-light" href="idwebdesigner.html">Powered by IDWEBDesigner</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li style="margin-right:-15px;" class="ma-trigger" data-ma-action="sidebar-open" data-ma-target="#chat">
+                            <a data-toggle="dropdown" href="#">
+                                <i class="him-icon zmdi zmdi-favorite-outline"></i>
+                            </a>
+                        </li>
+                        <li style="margin-right:-5px;" class="dropdown">
+                            <a data-toggle="dropdown" href="#"><i class="him-icon zmdi zmdi-more-vert"></i></a>
+                            <ul class="dropdown-menu dm-icon pull-right">
+                                <li class="hidden-xs">
+                                    <a data-ma-action="fullscreen" href="#"><i class="zmdi zmdi-fullscreen"></i> Fullscreen</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:window.location.reload();"><i class="zmdi zmdi-refresh-sync"></i> Refresh</a>
+                                </li>
+                                <li>
+                                    <a id="rate-app" onClick="rateApp()">Rate 5 Stars</a>
+                                </li>
+                                <li>
+                                    <a href="update.html"><i class="zmdi zmdi-download"></i>Check update</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="help.html"><i class="zmdi zmdi-help"></i> Help</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="hidden-xs ma-trigger" data-ma-action="sidebar-open" data-ma-target="#chat">
+                            <a href="#"><i class="him-icon zmdi zmdi-comment-alt-text"></i></a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="tab-nav tn-justified tn-icon" role="tablist" style="width:100%">
+                                        <li role="presentation" class="active">
+                                            <a class="col-sx-4" href="index.html">
+                                                &nbsp;
+                                            </a>
+                                        </li>
+
+                                    </ul>
+        </header>
+
+        <section id="main">
+            <ol class="breadcrumb" style="margin-left:-10px;">
+                <li><a href="developer.html">designer.web.id</a></li>
+                <li><a href="index.html">learn</a></li>
+                <li class="active">virtualreality</li>
+            </ol>
+
+            <aside id="sidebar" class="sidebar c-overflow" style="position:fixed;z-index:1000;margin-top:-70px;height:100%;background:white">
+                <ul class="main-menu">
+                    <li class="mm-profile sub-menu">
+                        <a href="#" data-ma-action="submenu-toggle" class="media">
+                            <img class="pull-left" src="../img/coreldraw.green.png" alt="" height="25px" style="margin-left:-40px;">
+                            <div class="media-body">
+                            <div>Tutorial CorelDRAW<sup>&reg;</sup></div>
+                            <span style="font-size:11px;">Experience by IDWEBDesigner<br/>dev@designer.web.id</span>
+                            </div>
+                        </a>
+
+                        <ul>
+                            <li>
+                                <a href="developer.html">Indonesia Web Designer</a>
+                            </li>
+                            <li>
+                                <div style="margin-left:65px;margin-bottom:10px;font-size:10px;color:#888888;padding-right:20px;">Jl. Wahid Hasyim No.3 Gaten Condongcatur Depok Sleman Yogyakarta, Indonesia.</div>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-info"></i> About CorelDraw</a>
+                        <div style="margin-left:65px;margin-bottom:10px;font-size:12px;color:#579706;"><a href="basics.html">What's is CorelDraw?<br/>Basics Learn</a></div>
+                    </li>
+
+                    <li><a href="index.html"><i class="zmdi zmdi-flag"></i> Tutorial Bahasa Indonesia</a></li>
+                    <li class="sub-menu toggled active">
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-android"></i> Featured Apps</a>
+                        <div style="margin-left:65px;margin-top:10px;font-size:10px;color:#888888;padding-right:20px;">Color Docker: This docker allows you to choose fill and outline colors from a color picker, color sliders, and color palettes. Found with dockers and in the Toolbox.</div>
+
+                        <ul>
+
+                            <li><a href="language.html">Bahasa Indonesia</a></li>
+                            <li style="display:none;"><a href="upgrade.html"><i class="zmdi zmdi-shopping-cart"></i>&nbsp;&nbsp;Upgrade</a></li>
+                            <li class="divider"></li>
+
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-code"></i> Developer</a>
+
+                        <ul>
+                            <li><a href="developer.html">dev@designer.web.id<br/>designer.web.id</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </aside>
+
+            <aside id="chat" class="sidebar">
+
+                                    <article>
+                                      <p style="margin-top:30px;margin-left:15px;font-size:0.7em;"><span id="status2"><span id="status"></span></p>
+                                      <ol id="state2"></ol>
+                                    </article>
+                                    <script>
+                                    var statusElem  = document.getElementById('status2'),
+                                        state               = document.getElementById('state2');
+
+                                    function online(event) {
+                                      statusElem.className = navigator.onLine ? 'online' : 'offline';
+                                      statusElem.innerHTML = navigator.onLine ? '' : '<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You&#39;re offline, check network connection.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;content required internet access.';
+                                      state.innerHTML += '&nbsp;';
+                                    }
+
+                                    addEvent(window, 'online', online);
+                                    addEvent(window, 'offline', online);
+                                    online({ type: 'ready' });
+                                    </script>
+
+                <div style="margin-top:-30px; width:100%" id="contentloader2"></div>
+
+
+
+            </aside>
+
+            <section id="content" style="margin-bottom:-40px;">
+                <div class="container" style="margin-top:-55px;margin-left:-20px;padding-right:0px;">
+                    <div class="tab-content p-20" style="background:#ffffff;">
+
+                    <div role="tabpanel" class="tab-pane animated fadeIn in active" id="tab-1">
+
+                            <!-- Blog Posts -->
+                            <div class="card blog-post" style="margin-bottom:-0px;">
+
+                                <div class="videoWrapper">
+                                <img width="100%" src="../images/green.png" frameborder="0" allowfullscreen></img>
+                                </div>
+
+                                <a class="card-header ch-alt">
+                                    <h2><small>Tutorial ini menawarkan petunjuk sederhana untuk mengimpor file Adobe Illustrator (AI), PhotoShop (PSD) dan PDF ke CorelDRAW sehingga Anda dapat mengerjakannya. Bagus jika Anda berkolaborasi dengan perancang atau klien lain, atau jika Anda menggunakan produk Abode sebagai bagian dari alur kerja desain Anda sendiri.</small></h2>
+                                </a>
+
+                                <div class="card-body card-padding">
+
+                                <h4>Impor Adobe Illustrator, PhotoShop dan File PDF</h4>
+                                 <br/>
+			<p>Tips ini telah diperbarui untuk CorelDRAW® Graphics Suite X7. Sementara fitur serupa mungkin tersedia di rilis sebelumnya, tipsnya akan sepenuhnya berlaku untuk CorelDRAW Graphics Suite X7 dan versi yang lebih baru saja.</p>
+<p>CorelDRAW menyediakan dukungan yang disempurnakan untuk format file Adobe Illustrator (AI) terbaru dan termasuk file CS6, Portable Document Format (PDF), dan format file Adobe Photoshop (PSD) dan termasuk format file CS6. Sekarang lebih mudah untuk membuka, mengimpor, dan mengedit file dalam format ini. Beberapa perangkat tambahan penting meliputi:</p>
+<ul>
+<li>Dukungan untuk format file PDF / A dan Acrobat 9 (PDF 1.7) & penomoran Bates</li>
+<li>ukungan untuk menentukan ukuran halaman dengan objek selama ekspor PDF</li>
+<li>CorelDRAW X7 menjaga tampilan lapisan penyesuaian dan efek palet Masker dari file PSD yang diimpor</li>
+<li>Dukungan untuk papan berganda AI, pelestarian transparansi gradien, blob brush strokes dan bagian Preflight yang baru</li>
+<li>Corel PHOTO-PAINT® X7 mempertahankan media vibrance, grayscale, dan filter filter yang dapat diedit dari file PSD yang diimpor dan diekspor.</li>
+</ul>
+<p>Anda dapat membuka file AI dan PDF dengan menggunakan perintah <strong>File &gt; Open</strong> seperti file CorelDRAW lainnya, atau Anda dapat mengimpornya. Saat Anda membuka file AI dan PDF, file dibuka sebagai file CorelDRAW. Bila Anda mengimpor file AI dan PDF, mereka dibuka sebagai file CorelDRAW. Bila Anda mengimpor file AI dan PDF, mereka diimpor sebagai objek berkelompok dan dapat ditempatkan di manapun dalam gambar Anda saat ini.</p>
+<h4>Untuk mengimpor file Adobe Illustrator (AI) atau Adobe Photoshop (PSD)</h4>
+<p>Anda dapat mengimpor semua file AI & PSD dan termasuk file CS6. Untuk file yang tersimpan dalam Adobe Illustrator CS atau yang lebih tinggi, teks dapat diimpor sebagai teks atau kurva jika file tersebut kompatibel dengan PDF. Jika file tidak kompatibel dengan PDF, Anda harus terlebih dulu mengonversi semua teks menjadi garis besar dengan menggunakan perintah <strong>Type &gt; Create Outlines</strong> di Adobe Illustrator agar teks dapat diimpor.</p>
+<ol>
+<li>Klik <strong>File &gt; Import</strong>.</li>
+<li>Cari folder tempat file disimpan.</li>
+<li>Pilih <strong>AI &#8211; Adobe Illustrator</strong> dari kotak daftar <strong>Files of type</strong>.</li>
+<li>Klik nama file, dan klik <strong>Import</strong>.Jika Anda mengimpor file yang kompatibel dengan PDF yang berisi teks, kotak dialog <strong>Import PDF</strong> muncul. Di bagian <strong>Import text</strong> sebagai area, aktifkan opsi <strong>Text</strong> atau <strong>Curves</strong>. Jika Anda tidak yakin pilihan mana yang akan dipilih, lihat Untuk mengimpor file PDF. Ketika Anda mengimpor teks sebagai teks, <strong>Font substitution</strong> untuk kotak dialog font yang hilang akan muncul jika Anda tidak memiliki semua font yang digunakan dalam file yang terinstal. Pilih pengaturan yang Anda inginkan, dan klik <strong>OK</strong>.</li>
+<li>Saat kursor impor muncul, lakukan salah satu dari yang berikut:
+<ul>
+<li>Klik halaman gambar untuk mempertahankan file asli dan posisi pojok kiri atas tempat Anda mengklik.</li>
+<li>Klik dan seret pada halaman gambar untuk mengubah ukuran file. Kursor impor menampilkan dimensi file ukuran saat Anda menyeretnya <br />
+Menggambar halaman.</li>
+<li>Tekan <strong>Enter</strong> untuk memusatkan file pada halaman gambar.</li>
+</ul>
+</li>
+</ol>
+<p align="center"><img class="alignnone size-full wp-image-9865" src="http://learn.corel.com/wp-content/uploads/2015/11/AI_PDF_01.jpg" alt="AI_PDF_01" width="234" height="119" /><br />
+<em>Kursor impor menunjukkan nama file dan <br />
+Dimensi file yang akan Anda impor.</em></p>
+<p>Grafik Adobe Illustrator diimpor ke dalam program sebagai kelompok objek. Klik  <strong>Object &gt; Group &gt; Ungroup Objects (CTRL+U)</strong> untuk memanipulasi objek dalam grafik impor.</p>
+<h4>Untuk mengimpor file PDF</h4>
+<p>Anda bisa mendapatkan hasil terbaik untuk teks dalam dokumen PDF Anda dengan memilih mengimpor teks sebagai teks atau kurva. Petunjuk berikut akan membantu Anda membuat pilihan yang tepat:</p>
+<ul>
+<li>Saat teks diimpor sebagai teks, font dan teks dipelihara, dan teks dapat diedit sepenuhnya sebagai teks artistik atau paragraf. Namun, beberapa efek dan format mungkin hilang. Pilihan ini disarankan jika Anda memiliki file PDF yang berisi blok teks besar, seperti buletin, dan Anda ingin memformat ulang teks atau menambahkan konten teks.</li>
+<li>Bila teks diimpor sebagai kurva, tampilan teks, termasuk semua efek yang diterapkan padanya, dipelihara, dan setiap huruf diubah menjadi objek kurva. Dengan opsi ini, fitur pemformatan teks tidak dapat lagi digunakan untuk mengedit teks. Jika Anda memiliki file PDF yang berisi sejumlah teks kecil yang tidak memerlukan pengeditan, atau jika Anda tidak memiliki font yang digunakan dalam file PDF, Anda harus mengimpor teks sebagai kurva.</li>
+</ul>
+<ol>
+<li>Tekan <strong>Ctrl + I</strong>.</li>
+<li>Cari folder tempat file disimpan.</li>
+<li>Pilih <strong>PDF &#8211; Adobe Portable Document Format</strong> dari daftar kotak <strong>Files of type</strong>.</li>
+<li>Klik nama file, dan klik <strong>Import</strong>.Jika file ini dilindungi oleh kata sandi, ketik kata sandi yang valid di kotak <strong>Password</strong>.</li>
+<li>Di kotak dialog <strong>Import PDF</strong>, pilih salah satu opsi berikut di dalam <strong>Import text</strong> sebagai area:
+<ul>
+<li><strong>Text</strong> &#8211; memungkinkan Anda mengedit dan memformat ulang teks dari file PDF. Jika salah satu font yang digunakan dalam file PDF hilang, pilih pengaturan yang Anda inginkan dalam <strong>Font substitution </strong> untuk kotak dialog yang hilang, dan klik <strong>OK</strong>.</li>
+<li><strong>Curves</strong> &#8211; Mengubah teks menjadi kurva, memungkinkan Anda mempertahankan tampilan teks asli</li>
+</ul>
+</li>
+</ol>
+<p align="center"><img class="alignnone size-full wp-image-9866" src="http://learn.corel.com/wp-content/uploads/2015/11/AI_PDF_02.jpg" alt="AI_PDF_02" width="407" height="222" srcset="http://learn.corel.com/wp-content/uploads/2015/11/AI_PDF_02.jpg 407w, http://learn.corel.com/wp-content/uploads/2015/11/AI_PDF_02-300x164.jpg 300w" sizes="(max-width: 407px) 100vw, 407px" /></p>
+<p><em>Kotak dialog Impor PDF</em></p>
+<blockquote><p>
+Jika Anda mengimpor dokumen multipage, pilih halaman yang ingin Anda impor, dan klik OK.
+</p></blockquote>
+<p align="center"><img class="alignnone size-full wp-image-9867" src="http://learn.corel.com/wp-content/uploads/2015/11/AI_PDF_03.jpg" alt="AI_PDF_03" width="406" height="365" srcset="http://learn.corel.com/wp-content/uploads/2015/11/AI_PDF_03.jpg 406w, http://learn.corel.com/wp-content/uploads/2015/11/AI_PDF_03-300x270.jpg 300w" sizes="(max-width: 406px) 100vw, 406px" /></p>
+<p><em>Saat Anda mengimpor PDF multipage, kotak dialog Import PDF mengembang untuk membiarkan Anda memilih halaman yang akan diimpor.</em></p>
+<ol start="7">
+<li>Saat kursor impor muncul, klik halaman gambar. Anda juga bisa mengklik dan menyeret untuk mengubah ukuran file, atau tekan <strong>Enter</strong> untuk menempatkan file di bagian tengah dokumen.</li>
+</ol>
+
+
+                                <script src='../js/colpick.js'></script>
+                                <script src="../js/colorpicker.js"></script>
+
+                                </div>
+                            </div>
+
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane animated fadeIn in" id="tab-2">
+                    <div id="contenttab2"></div>
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane animated fadeIn" id="tab-3" style="margin-top:-20px;margin-left:-20px;margin-right:-20px;background:#ffffff">
+
+                    </div>
+
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- Page Loader -->
+        <div class="page-loader">
+            <div class="preloader" style="text-align:center;">
+                <svg class="pl-circular" viewBox="25 25 50 50">
+                    <circle class="plc-path" cx="50" cy="50" r="20" />
+                </svg><br/><br/>
+                <div style="font-size:8px;margin-left:-80px;width:200px" class="demo"></div>
+            </div>
+        </div>
+
+        <div style="margin-bottom:10px;"><footer id="footer">
+            Copyright &copy; 2017 IDWEBDesigner<br/><a href="index.html">Back to <i class="zmdi zmdi-home"></i> Homepage</a>
+        </footer></div>
+
+        <!-- Javascript Libraries -->
+        <script src="../vendors/bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="../vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+        <script src="../vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="../vendors/bower_components/Waves/dist/waves.min.js"></script>
+        <script src="../vendors/bootstrap-growl/bootstrap-growl.min.js"></script>
+        <script src="../vendors/bower_components/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="../vendors/bower_components/lightgallery/dist/js/lightgallery-all.min.js"></script>
+        <script src="../vendors/bootgrid/jquery.bootgrid.updated.min.js"></script>
+
+        <!-- Placeholder for IE9 -->
+        <!--[if IE 9 ]>
+            <script src="vendors/bower_components/jquery-placeholder/jquery.placeholder.min.js"></script>
+        <![endif]-->
+
+        <script src="../js/app.min.js"></script>
+
+        <!-- Data Table -->
+        <script>
+            $(function()
+            {
+              $("#grid-basic").bootgrid({
+                  caseSensitive: false,
+                    css: {
+                        icon: 'zmdi icon',
+                        iconColumns: 'zmdi-view-module',
+                        iconDown: 'zmdi-sort-amount-desc',
+                        iconRefresh: 'zmdi-refresh',
+                        iconUp: 'zmdi-sort-amount-asc'
+                    },
+              }
+              )
+            });
+        </script>
+
+        <script type="text/javascript">
+            //Basic
+            $('#sa-basic').click(function(e){
+                e.preventDefault();
+                var link = $(this).attr('href');
+
+                swal({
+                    title: "Get Inspire Profesional Logos",
+                    text: "More logos sparately on our Learn Apps: Javascript, NoSQL Database, Virtual Reality, and more...",
+                    showCancelButton: true,
+                    allowOutsideClick: true,
+                },
+                function(){
+                    window.location.href = 'market://details?id=id.web.designer.learn.javascript';
+                });
+            });
+        </script>
+
+    <script type="text/javascript">
+        function rateApp() {
+            android.rateApp();
+       }
+    </script>
+
+    </body>
+
+</html>

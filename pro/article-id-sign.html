@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Tutorial CorelDraw Pro</title>
+
+         <script type="text/javascript">
+          <!--
+          if (screen.width >= 2800) {
+            window.location = "http://designer.web.id";
+          }
+          //-->
+        </script>
+
+        <!-- Vendor CSS -->
+        <link href="../vendors/bower_components/animate.css/animate.min.css" rel="stylesheet">
+        <link href="../vendors/bower_components/sweetalert/dist/sweetalert.css" rel="stylesheet">
+        <link href="../vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
+        <link href="../vendors/bower_components/lightgallery/dist/css/lightgallery.min.css" rel="stylesheet">
+        <link href="../vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+        <link href="../vendors/bootgrid/jquery.bootgrid.min.css" rel="stylesheet">
+
+        <!-- CSS -->
+        <link href="../css/app_1.min.css" rel="stylesheet">
+        <link href="../css/app_2.min.css" rel="stylesheet">
+
+        <script src="../js/h5utils.js"></script>
+        <script src="../js/jquery-2.1.0.min.js"></script>
+        <script src="../js/jquery.jscroll.min.js"></script>
+        <script>$(function(){
+        $("#contentloader1").load("http://app.coreldraw.designer.web.id/content-message.html"); $("#contentloader2").load("http://app.coreldraw.designer.web.id/pro/content-right-pro.html");
+        $("#contenttab1").load("http://app.coreldraw.designer.web.id/pro/contenttab2.html");
+        $("#contenttab2").load("http://app.coreldraw.designer.web.id/pro/contenttab2.html");
+        });</script>
+
+        <style>.videoWrapper {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 */
+        padding-top: 25px;
+        height: 0;}
+        .videoWrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;}
+        .lcb-navigation a{background:#999999}
+        </style>
+    </head>
+    <body style="background:#ffffff">
+
+        <!-- Page Loader -->
+        <div class="page-loader">
+            <div class="preloader pls-white">
+                <svg class="pl-circular" viewBox="25 25 50 50">
+                    <circle class="plc-path" cx="50" cy="50" r="20" />
+                </svg>
+            </div>
+
+        </div>
+
+        <header id="header" class="clearfix container">
+            <ul class="h-inner">
+
+                <li class="hi-trigger ma-trigger" data-ma-action="sidebar-open" data-ma-target="#sidebar">
+                    <div class="line-wrap">
+                        <div class="line top"></div>
+                        <div class="line center"></div>
+                        <div class="line bottom"></div>
+                    </div>
+                </li>
+
+                <li class="hi-logo" data-ma-action="sidebar-open" data-ma-target="#sidebar" style="margin-top:8px;">
+                    <span style="font-size:15px;color:#ffffff;"> Tutorial CorelDRAW<sup>&reg;</sup><span>
+                </li>
+
+                <li class="pull-right">
+                    <ul class="hi-menu">
+
+                        <li style="margin-right:-15px;" class="dropdown">
+                            <a data-toggle="dropdown" href="#">
+                                <i class="him-icon zmdi zmdi-notifications-none"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-lg pull-right">
+                                <div class="list-group list-group-light">
+                                    <div class="lg-header">
+                                        LIVE DEVELOPER MESSAGES
+                                    </div>
+
+                                    <article>
+                                      <p style="text-align:center;font-size:1em;"><span id="status"><span id="status"></span></p>
+                                      <ol id="state"></ol>
+                                    </article>
+                                    <script>
+                                    var statusElem  = document.getElementById('status'),
+                                        state               = document.getElementById('state');
+
+                                    function online(event) {
+                                      statusElem.className = navigator.onLine ? 'online' : 'offline';
+                                      statusElem.innerHTML = navigator.onLine ? '' : '<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You&#39;re offline, check network connection.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;content required internet access.';
+                                      state.innerHTML += '&nbsp;';
+                                    }
+
+                                    addEvent(window, 'online', online);
+                                    addEvent(window, 'offline', online);
+                                    online({ type: 'ready' });
+                                    </script>
+
+                                    <div style="margin-top:-30px;" id="contentloader1"></div>
+                                    <a class="view-more view-more-light" href="idwebdesigner.html">Powered by IDWEBDesigner</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li style="margin-right:-15px;" class="ma-trigger" data-ma-action="sidebar-open" data-ma-target="#chat">
+                            <a data-toggle="dropdown" href="#">
+                                <i class="him-icon zmdi zmdi-favorite-outline"></i>
+                            </a>
+                        </li>
+                        <li style="margin-right:-5px;" class="dropdown">
+                            <a data-toggle="dropdown" href="#"><i class="him-icon zmdi zmdi-more-vert"></i></a>
+                            <ul class="dropdown-menu dm-icon pull-right">
+                                <li class="hidden-xs">
+                                    <a data-ma-action="fullscreen" href="#"><i class="zmdi zmdi-fullscreen"></i> Fullscreen</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:window.location.reload();"><i class="zmdi zmdi-refresh-sync"></i> Refresh</a>
+                                </li>
+                                <li>
+                                    <a id="rate-app" onClick="rateApp()">Rate 5 Stars</a>
+                                </li>
+                                <li>
+                                    <a href="update.html"><i class="zmdi zmdi-download"></i>Check update</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="help.html"><i class="zmdi zmdi-help"></i> Help</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="hidden-xs ma-trigger" data-ma-action="sidebar-open" data-ma-target="#chat">
+                            <a href="#"><i class="him-icon zmdi zmdi-comment-alt-text"></i></a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="tab-nav tn-justified tn-icon" role="tablist" style="width:100%">
+                                        <li role="presentation">
+                                            <a class="col-sx-4" href="index.html">
+                                                INDONESIA
+                                            </a>
+                                        </li>
+                                        <li role="presentation" class="active">
+                                            <a class="col-xs-4" href="#tab-2" aria-controls="tab-2" role="tab" data-toggle="tab">
+                                                ENGLISH (PRO)
+                                            </a>
+                                        </li>
+
+                                    </ul>
+        </header>
+
+        <section id="main">
+            <ol class="breadcrumb" style="margin-left:-10px;">
+                <li><a href="developer.html">designer.web.id</a></li>
+                <li><a href="index.html">learn</a></li>
+                <li class="active">virtualreality</li>
+            </ol>
+
+            <aside id="sidebar" class="sidebar c-overflow" style="position:fixed;z-index:1000;margin-top:-70px;height:100%;background:white">
+                <ul class="main-menu">
+                    <li class="mm-profile sub-menu">
+                        <a href="#" data-ma-action="submenu-toggle" class="media">
+                            <img class="pull-left" src="../img/coreldraw.green.png" alt="" height="25px" style="margin-left:-40px;">
+                            <div class="media-body">
+                            <div>Tutorial CorelDRAW<sup>&reg;</sup></div>
+                            <span style="font-size:11px;">Experience by IDWEBDesigner<br/>dev@designer.web.id</span>
+                            </div>
+                        </a>
+
+                        <ul>
+                            <li>
+                                <a href="developer.html">Indonesia Web Designer</a>
+                            </li>
+                            <li>
+                                <div style="margin-left:65px;margin-bottom:10px;font-size:10px;color:#888888;padding-right:20px;">Jl. Wahid Hasyim No.3 Gaten Condongcatur Depok Sleman Yogyakarta, Indonesia.</div>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-info"></i> About CorelDraw</a>
+                        <div style="margin-left:65px;margin-bottom:10px;font-size:12px;color:#579706;"><a href="basics.html">What's is CorelDraw?<br/>Basics Learn</a></div>
+                    </li>
+
+                    <li><a href="index.html"><i class="zmdi zmdi-flag"></i> Tutorial Bahasa Indonesia</a></li>
+                    <li class="sub-menu toggled active">
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-android"></i> Featured Apps</a>
+                        <div style="margin-left:65px;margin-top:10px;font-size:10px;color:#888888;padding-right:20px;">Color Docker: This docker allows you to choose fill and outline colors from a color picker, color sliders, and color palettes. Found with dockers and in the Toolbox.</div>
+
+                        <ul>
+
+                            <li><a href="language.html">Bahasa Indonesia</a></li>
+                            <li style="display:none;"><a href="upgrade.html"><i class="zmdi zmdi-shopping-cart"></i>&nbsp;&nbsp;Upgrade</a></li>
+                            <li class="divider"></li>
+
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-code"></i> Developer</a>
+
+                        <ul>
+                            <li><a href="developer.html">dev@designer.web.id<br/>designer.web.id</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </aside>
+
+            <aside id="chat" class="sidebar">
+
+                                    <article>
+                                      <p style="margin-top:30px;margin-left:15px;font-size:0.7em;"><span id="status2"><span id="status"></span></p>
+                                      <ol id="state2"></ol>
+                                    </article>
+                                    <script>
+                                    var statusElem  = document.getElementById('status2'),
+                                        state               = document.getElementById('state2');
+
+                                    function online(event) {
+                                      statusElem.className = navigator.onLine ? 'online' : 'offline';
+                                      statusElem.innerHTML = navigator.onLine ? '' : '<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You&#39;re offline, check network connection.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;content required internet access.';
+                                      state.innerHTML += '&nbsp;';
+                                    }
+
+                                    addEvent(window, 'online', online);
+                                    addEvent(window, 'offline', online);
+                                    online({ type: 'ready' });
+                                    </script>
+
+                <div style="margin-top:-30px; width:100%" id="contentloader2"></div>
+
+
+
+            </aside>
+
+            <section id="content" style="margin-bottom:-40px;">
+                <div class="container" style="margin-top:-55px;margin-left:-20px;padding-right:0px;">
+                    <div class="tab-content p-20" style="background:#ffffff;">
+
+                    <div role="tabpanel" class="tab-pane animated fadeIn in active" id="tab-1">
+
+                            <!-- Blog Posts -->
+                            <div class="card blog-post" style="margin-bottom:-0px;">
+
+                                <div class="videoWrapper">
+                                <img width="100%" src="../images/green.png" frameborder="0" allowfullscreen></img>
+                                </div>
+
+                                <a class="card-header ch-alt">
+                                    <h2><small>Dalam tutorial ini, Joe Diaz menuntun Anda melalui proses merancang sebuah tanda untuk sebuah rumah bersejarah dan museum lokal dengan CorelDRAW.</small></h2>
+                                </a>
+
+                                <div class="card-body card-padding">
+
+                                <h4>Cara membuat Sign (Tanda)</h4>
+                                 <br/>
+
+			<p>Dalam tutorial ini, saya akan memandu Anda melalui proses perancangan tanda untuk rumah bersejarah dan museum lokal. Setelah mendiskusikan kebutuhan klien dan mempelajari bangunan yang mereka inginkan agar pas, saya mulai dengan desain saya.</p>
+<div class="center">
+<div class="floatnone"><img class="alignnone size-medium wp-image-10401" src="http://learn.corel.com/wp-content/uploads/2015/11/175-300x198.jpg" alt="1" width="300" height="198" srcset="http://learn.corel.com/wp-content/uploads/2015/11/175-300x198.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/175-600x397.jpg 600w, http://learn.corel.com/wp-content/uploads/2015/11/175.jpg 720w" sizes="(max-width: 300px) 100vw, 300px" /></div>
+</div>
+<p>Selama saya duduk bersama klien, kita membahas hal-hal seperti ukuran dan anggaran. Untuk proyek ini, kami memutuskan pos dan panel yang tampak tradisional, tanda berdiri sendiri. Wajah tanda akan dibuat dari lembaran aluminium 6&#8217;x4&#8242;. Saya mulai dengan membuat persegi panjang 6&#8217;x4&#8242;. Salah satu hal hebat tentang penggunaan CorelDRAW untuk merancang tanda adalah bahwa sebenarnya kita bisa mendesain secara penuh, bukan satu inci sama dengan kaki.</p>
+<div class="center">
+<div class="floatnone"><img class="alignnone size-medium wp-image-10402" src="http://learn.corel.com/wp-content/uploads/2015/11/236-300x168.jpg" alt="2" width="300" height="168" srcset="http://learn.corel.com/wp-content/uploads/2015/11/236-300x168.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/236-600x335.jpg 600w, http://learn.corel.com/wp-content/uploads/2015/11/236.jpg 720w" sizes="(max-width: 300px) 100vw, 300px" /></div>
+</div>
+<p>Tanda ini tidak hanya menjadi persegi panjang sekalipun. Kami ingin memotong bentuk yang menarik yang sesuai dengan desain rumah, jadi saya mulai dengan membuat dua persegi panjang di dalam kotak pertama 6&#8217;x4&#8242;. Saya menyelaraskan ketiga persegi panjang tersebut dengan menggunakan perintah di <strong>Arrange</strong> &gt;<strong>Align and Distribute</strong>.</p>
+<div class="center">
+<div class="floatnone"><img class="alignnone size-medium wp-image-10403" src="http://learn.corel.com/wp-content/uploads/2015/11/329-300x151.jpg" alt="3" width="300" height="151" srcset="http://learn.corel.com/wp-content/uploads/2015/11/329-300x151.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/329-600x302.jpg 600w, http://learn.corel.com/wp-content/uploads/2015/11/329.jpg 720w" sizes="(max-width: 300px) 100vw, 300px" /></div>
+</div>
+<p>Selanjutnya, saya membuat kotak. Dengan menggunakan <strong>Rectangle (F6)</strong> tool dan menekan <strong>Ctrl</strong>, I can create a perfect square. saya bisa membuat kotak yang sempurna. Saya kemudian memilih kotak dengan menggunakan <strong>Pick</strong> tool.  Saya klik di kotak untuk kedua kalinya untuk mengakses gagang memutar dan skew. Saya kemudian memutar kotak <strong>45 derajat</strong>. Menekan <strong>Ctrl</strong> sementara Anda memutar bentuk akan snap bentuk di 15 derajat bertahap.</p>
+<div class="center">
+<div class="floatnone"><img class="alignnone size-medium wp-image-10404" src="http://learn.corel.com/wp-content/uploads/2015/11/426-300x173.jpg" alt="4" width="300" height="173" srcset="http://learn.corel.com/wp-content/uploads/2015/11/426-300x173.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/426-600x347.jpg 600w, http://learn.corel.com/wp-content/uploads/2015/11/426.jpg 720w" sizes="(max-width: 300px) 100vw, 300px" /></div>
+</div>
+<p>Sekarang, dengan  <strong>Pick</strong> tool lagi, saya akan mendistorsi dan menskalakan alun-alun menjadi bentuk berlian dan menjepret bagian tengah bentuk baru itu ke tengah salah satu sisi persegi panjang yang lebih tinggi. Anda dapat menekan <strong>Alt + Z</strong> untuk mengaktifkan dan mematikan <strong>Snap to Objects</strong>. Begitu bentuk berlian ada di tempat yang saya inginkan, saya menduplikat bentuk itu dengan menekan</strong>, dan kemudian memindahkan bentuk berlian kedua di sisi berlawanan dari segi empat yang sama.</p>
+<div class="center">
+<div class="floatnone"><img class="alignnone size-medium wp-image-10405" src="http://learn.corel.com/wp-content/uploads/2015/11/524-300x148.jpg" alt="5" width="300" height="148" srcset="http://learn.corel.com/wp-content/uploads/2015/11/524-300x148.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/524-600x297.jpg 600w, http://learn.corel.com/wp-content/uploads/2015/11/524.jpg 720w" sizes="(max-width: 300px) 100vw, 300px" /></div>
+</div>
+<p>Sekarang saya memiliki bentuk kasar dari tanda yang saya inginkan, saya akan memilih semua bentuk kecuali kotak 6&#8217;x4&#8242;. Untuk memilih beberapa bentuk, tahan <strong>Shift</strong> dan klik kiri pada semua elemen disain yang ingin Anda pilih. Setelah bentuk dipilih, saya klik tombol <strong>Weld</strong>  yang akan tersedia dari bilah properti saat Anda memiliki dua atau lebih elemen berbeda yang dipilih.</p>
+<p>Saya lalu memilih memberi tanda warna abu-abu hangat.</p>
+<div class="center">
+<div class="floatnone"><img class="alignnone size-medium wp-image-10406" src="http://learn.corel.com/wp-content/uploads/2015/11/622-300x153.jpg" alt="6" width="300" height="153" srcset="http://learn.corel.com/wp-content/uploads/2015/11/622-300x153.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/622-600x307.jpg 600w, http://learn.corel.com/wp-content/uploads/2015/11/622-450x231.jpg 450w, http://learn.corel.com/wp-content/uploads/2015/11/622.jpg 720w" sizes="(max-width: 300px) 100vw, 300px" /></div>
+</div>
+<p>Pada titik ini, saya bisa mengambil kesempatan ini untuk merencanakan struktur rangka aluminium dari tanda ini. Pembuat tanda bisa menggunakan media komposit aluminium / kayu yang lebih tebal; Namun, menggunakan produk seperti itu berarti mengkhawatirkan umur panjang tanda itu. Kayu tidak akan bertahan lama selama aluminium, dan karena klien menginginkannya bertahan selama mungkin, kita akan membangun mayoritas dari aluminium ringan dan tahan lama ini dan menghindari penggunaan kayu dimanapun kita bisa. Jadi dalam kasus ini, kita akan menggunakan bingkai tubing aluminium 1&#8243; yang terjepit di antara dua lembar aluminium ukuran 0,080. Selembar 0,080 gauge aluminium adalah produk yang kuat namun memerlukan struktur kerangka sehingga cukup kaku diantara kedua tiang.</p>
+<p>Tanda ini akan bertahan lebih lama dari cat tahan lama yang akan kami catat. Seiring berjalannya waktu, grafik yang dicat mungkin perlu dicat ulang, namun tanda itu sendiri tidak perlu diganti untuk waktu yang sangat lama. Di CorelDRAW, saya hanya membuat serangkaian 1&#8243; persegi panjang tebal dan menempatkannya sesuai dengan bagaimana itu akan dibangun. Kemudian saya akan menduplikat desain yang telah saya buat sejauh ini dan menetapkan salah satu salinan ke samping untuk digunakan nanti. Saya kemudian menghapus 1&#8243; persegi panjang tebal sehingga saya dapat terus merancang bagian grafis dari tanda itu.</p>
+<div class="center">
+<div class="floatnone"><img class="alignnone size-medium wp-image-10407" src="http://learn.corel.com/wp-content/uploads/2015/11/724-300x153.jpg" alt="7" width="300" height="153" srcset="http://learn.corel.com/wp-content/uploads/2015/11/724-300x153.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/724-600x307.jpg 600w, http://learn.corel.com/wp-content/uploads/2015/11/724-450x231.jpg 450w, http://learn.corel.com/wp-content/uploads/2015/11/724.jpg 720w" sizes="(max-width: 300px) 100vw, 300px" /></div>
+</div>
+<p>Sekarang saatnya merancang tulisan. Dalam hal ini, kami ingin membuat tulisan yang tampak tebal. Jika tulisan terlihat terlalu tipis, mereka akan memberi ilusi bahwa tandanya lemah, bahkan jika posisinya lebih tipis lebih kuat dari pada untuk menunjang aluminium ringan. Untuk proyek ini, kita mungkin bisa lolos dengan menggunakan posting 4&#215;4 yang diobati, tapi agar aman kita malah akan menggunakan 6&#215;6 posting. Untuk membuat tulisan tampak lebih tebal lagi, kita bisa membuat lengan baju agar pas di atas tulisan. Lengannya akan dibuat dari PVC tahan lama.</p>
+<p>Jadi saya akan membuat dua 7 1/4&#8243; persegi panjang lebar, sekitar 52&#8243; tinggi. Kemudian dengan <strong>Rectangle</strong> tool, saya membuat dua persegi panjang pendek di bagian atas setiap posting, lalu sebuah segitiga di atas untuk menggambarkan huruf sangat sederhana untuk tanda ini. Saya kemudian menetapkan warna pada tulisan menggunakan warna yang ditemukan di pekerjaan cat bangunan.</p>
+<p>&nbsp;</p>
+<div class="center">
+<div class="floatnone"><img class="alignnone size-medium wp-image-10408" src="http://learn.corel.com/wp-content/uploads/2015/11/825-300x175.jpg" alt="8" width="300" height="175" srcset="http://learn.corel.com/wp-content/uploads/2015/11/825-300x175.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/825-600x350.jpg 600w, http://learn.corel.com/wp-content/uploads/2015/11/825.jpg 720w" sizes="(max-width: 300px) 100vw, 300px" /></div>
+</div>
+<p>Selanjutnya, saya akan menggunakan <strong>Contour</strong> tool untuk memilih wajah tanda dan ketik kotak <strong>Contour offset</strong>  pada property bar. Contour pertama adalah 2 1/4&#8243; di dalam, lalu 2 contour lagi — masing-masing ½&#8221; diimbangi didalamnya. Setelah salah satu kontur dibuat, saya perlu klik kanan pada kontur yang baru dibuat dengan <strong>Pick</strong> tool dan klik <strong>Arrange</strong> &gt; <strong>Break Contour Group Apart</strong> Sebelum saya bisa menetapkan contour yang berbeda dengan bentuk baru itu.</p>
+<div class="center">
+<div class="floatnone"><img class="alignnone size-medium wp-image-10409" src="http://learn.corel.com/wp-content/uploads/2015/11/916-300x172.jpg" alt="9" width="300" height="172" srcset="http://learn.corel.com/wp-content/uploads/2015/11/916-300x172.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/916-600x344.jpg 600w, http://learn.corel.com/wp-content/uploads/2015/11/916.jpg 720w" sizes="(max-width: 300px) 100vw, 300px" /></div>
+</div>
+<p>Selanjutnya, saya menetapkan warna pada bentuk yang baru dibuat (memilih warna yang ditemukan di bangunan). Saya kemudian membuat 2 bentuk lagi dengan cara yang sama seperti yang dijelaskan sebelumnya. Bentuk-bentuk ini dimaksudkan untuk meniru beberapa elemen arsitektur bangunan, dalam hal ini fitur di atas jendela.</p>
+<div class="center">
+<div class="floatnone"><img class="alignnone size-medium wp-image-10410" src="http://learn.corel.com/wp-content/uploads/2015/11/1013-300x170.jpg" alt="10" width="300" height="170" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1013-300x170.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/1013-600x341.jpg 600w, http://learn.corel.com/wp-content/uploads/2015/11/1013.jpg 720w" sizes="(max-width: 300px) 100vw, 300px" /></div>
+</div>
+<p>Saya kemudian memilih bentuk baru itu dan menerapkan offset 1/2&#8243; contour, kali ini ke arah luar. Lalu aku memilih <strong>Pick</strong> tool, klik kanan contour, dan klik <strong>Arrange</strong> &gt; <strong>Break Contour Group Apart</strong>.</p>
+<div class="center">
+<div class="floatnone"><img class="alignnone size-medium wp-image-10411" src="http://learn.corel.com/wp-content/uploads/2015/11/1118-300x175.jpg" alt="11" width="300" height="175" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1118-300x175.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/1118-600x351.jpg 600w, http://learn.corel.com/wp-content/uploads/2015/11/1118.jpg 720w" sizes="(max-width: 300px) 100vw, 300px" /></div>
+</div>
+<p>Di sini, saya memilih contour yang terpisah, tahan tombol <strong>Shift</strong> untuk memilih bentuk yang mereka dudukkan di atas, lalu klik tombol <strong>Trim</strong> pada property bar. Lalu saya bisa menghapus kontur yang terpisah. Setelah itu, saya menugaskan warna hijau tua ke bentuk itu.</p>
+<div class="center">
+<div class="floatnone"><img class="alignnone size-medium wp-image-10412" src="http://learn.corel.com/wp-content/uploads/2015/11/1218-300x176.jpg" alt="12" width="300" height="176" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1218-300x176.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/1218-600x353.jpg 600w, http://learn.corel.com/wp-content/uploads/2015/11/1218.jpg 720w" sizes="(max-width: 300px) 100vw, 300px" /></div>
+</div>
+<div class="center"></div>
+<p>Sekarang saatnya menambahkan beberapa huruf. Ini adalah tanda setelah semua. Saya memilih font serif bersih yang bagus. Mudah dibaca dan terlihat tradisional, dan akan cocok dengan gaya rumah dengan baik. Cukup pilih <strong>Text (F8)</strong> tool, letakkan kursor di tempat Anda ingin mulai mengetik. Klik sekali dan kemudian mulai mengetik. Untuk mengubah font dan ukuran huruf, Anda dapat memilih pengaturan pilihan dari panel properti. Untuk bagian ini, saya ingin memilih teks dan tanda tangan dan menggunakan alat align untuk memastikan semuanya agar sesuai. Anda bisa mengklik <strong>Arrange</strong> &gt; <strong>Align and Distribute</strong> &gt; <strong>Align Centers Vertically</strong>. Sebagai alternatif, Anda bisa mengklik  <strong>Windows</strong> &gt;<strong>Dockers</strong> &gt; <strong>Align and Distribute</strong> untuk mengakses menyelaraskan dan mendistribusikan perintah dari Align and Distribute docker. = Pada titik ini, saya juga ingin menghapus garis besar dari semua bentuk tubuh saya. Anda bisa melakukan ini dengan memilih semuanya di layar (<strong>Ctrl + A</strong>), gerakkan mouse ke salah satu palet warna Anda, lalu klik kanan <strong>white swatch</strong> dengan X melaluinya (tanpa warna).</p>
+<div class="center">
+<div class="floatnone"><img class="alignnone size-medium wp-image-10413" src="http://learn.corel.com/wp-content/uploads/2015/11/1318-300x174.jpg" alt="13" width="300" height="174" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1318-300x174.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/1318-600x348.jpg 600w, http://learn.corel.com/wp-content/uploads/2015/11/1318.jpg 720w" sizes="(max-width: 300px) 100vw, 300px" /></div>
+</div>
+<p>Saya tidak senang dengan default kerning (ruang antar huruf), jadi saya akan menggunakan <strong>Shape (F10)</strong> tool untuk memilih teks kali ini. Bila Anda menggunakan <strong>Shape</strong> tool untuk memilih teks, Anda diberi kerning tool. Mereka muncul di setiap sisi teks yang dipilih dan terlihat seperti persegi kecil, tiga garis, dan segitiga. Di sisi kanan teks yang dipilih, seret kerning tool untuk mengatur jarak antar huruf. Ikon dengan segitiga menghadap ke bawah memungkinkan Anda mengatur jarak antar baris teks. Anda juga bisa memilih simpul putih kecil dan memanipulasi huruf tersendiri.</p>
+<div class="center">
+<div class="floatnone"><img class="alignnone size-medium wp-image-10414" src="http://learn.corel.com/wp-content/uploads/2015/11/1416-300x174.jpg" alt="14" width="300" height="174" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1416-300x174.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/1416-600x348.jpg 600w, http://learn.corel.com/wp-content/uploads/2015/11/1416.jpg 720w" sizes="(max-width: 300px) 100vw, 300px" /></div>
+</div>
+<p>Selanjutnya, saya akan memilih huruf <strong>HUMISTON</strong> di baris paling atas dan klik <strong>Arrange</strong> &gt; <strong>Break Artistic Text Apart</strong>. Sekarang saya akan sedikit meningkatkan ukuran <strong>H</strong> dan <strong>N</strong> dengan menggunakan <strong>Pick</strong> tool untuk memilihnya (secara terpisah) dan kemudian menyeret untuk mengukur ukuran setiap huruf.</p>
+<div class="center">
+<div class="floatnone"><img class="alignnone size-medium wp-image-10415" src="http://learn.corel.com/wp-content/uploads/2015/11/1514-300x173.jpg" alt="15" width="300" height="173" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1514-300x173.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/1514-600x345.jpg 600w, http://learn.corel.com/wp-content/uploads/2015/11/1514.jpg 720w" sizes="(max-width: 300px) 100vw, 300px" /></div>
+</div>
+<p>Pada titik ini, saya memilih teks <strong>HUMISTON</strong> dan teks <strong>HOUSE</strong> klik kanan pada huruf yang dipilih dan pilih <strong>Convert to Curves</strong> dari menu drop-down. Dengan huruf yang masih dipilih, klik tombol <strong>Weld</strong> pada property bar. Sekarang huruf adalah satu bentuk dan tidak dapat dimanipulasi sebagai teks lagi, yang berarti Anda tidak dapat mengubah font, mengetik ulang huruf, atau menggunakan opsi kerning.</p>
+<p><strong>Catatan:</strong> ika Anda membuat tata letak tanda tangan sendiri, pastikan Anda puas dengan apa yang Anda miliki sebelum mengubah teks menjadi kurva; Jika tidak, Anda mungkin harus membuat ulang tulisan itu.</p>
+<p>Sekarang, saya akan membuat kontur kuning  .3&#8243; di sekitar huruf. Bisa warnanya apapun. Saya memilih kuning untuk mempermudah melihat apa yang sedang saya lakukan pada langkah selanjutnya. Lalu aku klik kanan pada kontur dan pilih  <strong>Break Contour Group Apart</strong>.</p>
+<div class="center">
+<div class="floatnone"><img class="alignnone size-medium wp-image-10416" src="http://learn.corel.com/wp-content/uploads/2015/11/1611-300x172.jpg" alt="16" width="300" height="172" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1611-300x172.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/1611-600x343.jpg 600w, http://learn.corel.com/wp-content/uploads/2015/11/1611.jpg 720w" sizes="(max-width: 300px) 100vw, 300px" /></div>
+</div>
+<p>Selanjutnya, saya memilih huruf off-putih (bukan kontur kuning), dan duplikatnya dengan menekan <strong>Ctrl + D</strong>. Saya akan menjadikannya hijau gelap yang sama dengan yang saya gunakan dan menggesernya ke bawah dan menurunkannya sedikit saja. .</p>
+<div class="center">
+<div class="floatnone"><img class="alignnone size-medium wp-image-10417" src="http://learn.corel.com/wp-content/uploads/2015/11/176-300x173.jpg" alt="17" width="300" height="173" srcset="http://learn.corel.com/wp-content/uploads/2015/11/176-300x173.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/176-600x347.jpg 600w, http://learn.corel.com/wp-content/uploads/2015/11/176.jpg 720w" sizes="(max-width: 300px) 100vw, 300px" /></div>
+</div>
+<p>Dengan huruf hijau tua yang dipilih, saya kemudian klik <strong>Arrange</strong> &gt; <strong>Order</strong> &gt; <strong>Behind</strong>. Kursor saya akan berubah menjadi panah hitam besar. Saya menggunakannya untuk memilih bentuk kontur kuning, yang menggerakkan huruf hijau tua di balik kontur kuning.</p>
+<p><strong>Catatan:</strong> Anda juga dapat memilih objek dan menggunakan tombol <strong>Page Up</strong> dan <strong>Page Down</strong> pada keyboard untuk memindahkan elemen ke atas atau ke bawah lapisan.</p>
+<div class="center">
+<div class="floatnone"><img class="alignnone size-medium wp-image-10418" src="http://learn.corel.com/wp-content/uploads/2015/11/185-300x175.jpg" alt="18" width="300" height="175" srcset="http://learn.corel.com/wp-content/uploads/2015/11/185-300x175.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/185-600x349.jpg 600w, http://learn.corel.com/wp-content/uploads/2015/11/185.jpg 720w" sizes="(max-width: 300px) 100vw, 300px" /></div>
+</div>
+<p>Sekarang, saya memilih kontur kuning, lalu huruf hijau tua ada di belakangnya, lalu klik tombol <strong>Trim</strong> pada panel properti. Dan kemudian saya bisa menghapus kontur kuning, yang membuat kita memiliki efek drop-shadow yang bagus.</p>
+<div class="center">
+<div class="floatnone"><img class="alignnone size-medium wp-image-10419" src="http://learn.corel.com/wp-content/uploads/2015/11/197-300x167.jpg" alt="19" width="300" height="167" srcset="http://learn.corel.com/wp-content/uploads/2015/11/197-300x167.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/197-600x334.jpg 600w, http://learn.corel.com/wp-content/uploads/2015/11/197.jpg 720w" sizes="(max-width: 300px) 100vw, 300px" /></div>
+</div>
+<p>Selanjutnya, saya akan menciptakan efek garis horizon untuk penulisan huruf dengan membuat dua buah persegi panjang yang melampaui huruf. Kotak-kotak ini hanya perlu menutupi bagian atas dari setiap baris tulisan. Saya kemudian dengan cepat  <strong>Mengasah </strong> dua persegi panjang bersama-sama.</p>
+<div class="center">
+<div class="floatnone"><img class="alignnone size-medium wp-image-10420" src="http://learn.corel.com/wp-content/uploads/2015/11/204-300x174.jpg" alt="20" width="300" height="174" srcset="http://learn.corel.com/wp-content/uploads/2015/11/204-300x174.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/204-600x348.jpg 600w, http://learn.corel.com/wp-content/uploads/2015/11/204.jpg 720w" sizes="(max-width: 300px) 100vw, 300px" /></div>
+</div>
+<p>Dengan dua persegi panjang yang masih dipilih, saya tahan <strong>Shift</strong> dan pilih hurufnya juga. Di bar properti, saya kemudian klik tombol <strong>Intersect</strong>. Dan kemudian saya mengubah bentuk yang baru dibuat menjadi putih, dan menghapus dua persegi panjang.</p>
+<div class="center">
+<div class="floatnone"><img class="alignnone size-medium wp-image-10421" src="http://learn.corel.com/wp-content/uploads/2015/11/2114-300x170.jpg" alt="21" width="300" height="170" srcset="http://learn.corel.com/wp-content/uploads/2015/11/2114-300x170.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/2114-600x341.jpg 600w, http://learn.corel.com/wp-content/uploads/2015/11/2114.jpg 720w" sizes="(max-width: 300px) 100vw, 300px" /></div>
+</div>
+<p>Setelah tulisannya hampir selesai, saya akan menambahkan beberapa grafis aksen untuk mendukung desain ini. Saya akan mulai dengan membuat beberapa gulungan sederhana agar sesuai dengan ruang negatif di kedua sisi kata &#8216;house&#8217;.</p>
+<p>Untuk membuat gulungan ini, saya menggunakan <strong>Freehand (F5)</strong> tool an klik sekali di bawah sudut kiri <strong>H</strong> di &#8216;Humiston&#8217;. Lalu dengan menggerakkan kursor ke kanan, saya melihat garis lurus. Dengan menekan  <strong>Shift</strong>, saya dapat menyimpan garis itu persis 180 derajat. Satu lagi klik mouse yang sederhana melengkapi barisnya.</p>
+<p>Dengan <strong>Freehand</strong> tool still active, ang masih aktif, saya bisa klik dan seret untuk menggambar swirls. Kemudian saya dapat menggunakan  <strong>Shape (F10)</strong> tool untuk membersihkan pusaran dengan memanipulasi garis dan menambahkan atau melepaskan nodus, jika perlu.</p>
+<div class="center">
+<div class="floatnone"><img class="alignnone size-medium wp-image-10422" src="http://learn.corel.com/wp-content/uploads/2015/11/2211-300x174.jpg" alt="22" width="300" height="174" srcset="http://learn.corel.com/wp-content/uploads/2015/11/2211-300x174.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/2211-600x348.jpg 600w, http://learn.corel.com/wp-content/uploads/2015/11/2211.jpg 720w" sizes="(max-width: 300px) 100vw, 300px" /></div>
+</div>
+<p>Dengan bentuk gulungan yang digambar, sekarang saya bisa menambahkan ketebalan pada garis tersebut dengan memilihnya dan menekan <strong>F12</strong> untuk mengakses kotak dialog <strong>Outline Pen</strong>. Dari kotak <strong>Width</strong>, saya memilih sesuatu yang lebih tebal dari  <strong>Hairline</strong>.</p>
+<div class="center">
+<div class="floatnone"><img class="alignnone size-medium wp-image-10423" src="http://learn.corel.com/wp-content/uploads/2015/11/237-300x170.jpg" alt="23" width="300" height="170" srcset="http://learn.corel.com/wp-content/uploads/2015/11/237-300x170.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/237-600x341.jpg 600w, http://learn.corel.com/wp-content/uploads/2015/11/237.jpg 720w" sizes="(max-width: 300px) 100vw, 300px" /></div>
+</div>
+<p>Sekarang saya mengambil bentuk itu dengan garis besar yang lebih tebal, dan <strong>Arrange</strong> &gt; <strong>Convert Outline to Object</strong>. Saya kemudian mengelas scrollwork bersama-sama, mengubahnya menjadi warna hijau tua yang saya gunakan, dan menggunakan <strong>Shape</strong> tool untuk menyempurnakan gulungannya. Setelah puas, saya menduplikat bentuk itu  (<strong>Ctrl + D</strong>) lalu klik tombol <strong>Mirror text horizontally</strong> pada property bar. Saya menempatkan bentuk membalik di bawah <strong>N</strong>, di sisi kata &#8216;House&#8217;.</p>
+<div class="center">
+<div class="floatnone"><img class="alignnone size-medium wp-image-10424" src="http://learn.corel.com/wp-content/uploads/2015/11/244-300x176.jpg" alt="24" width="300" height="176" srcset="http://learn.corel.com/wp-content/uploads/2015/11/244-300x176.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/244-600x353.jpg 600w, http://learn.corel.com/wp-content/uploads/2015/11/244.jpg 720w" sizes="(max-width: 300px) 100vw, 300px" /></div>
+</div>
+<p>Selanjutnya, saya akan membuat ilustrasi sederhana tentang rumah yang sebenarnya untuk dipasang di papan nama. Ilustrasi ini juga bisa digunakan untuk proyek lain, seperti brosur atau selebaran. Saya menggunakan foto untuk membuat ilustrasi. Foto ini diambil sebelum rumah dicat ulang, namun akan sangat bagus untuk membuat grafik bergaya kecil untuk tanda ini. Untuk mengimpor foto tersebut, saya klik  <strong>File</strong> &gt;<strong>Import</strong>, browse ke tempat foto tersebut disimpan, dan klik <strong>Import</strong>.</p>
+<div class="center">
+<div class="floatnone"><img class="alignnone size-medium wp-image-10425" src="http://learn.corel.com/wp-content/uploads/2015/11/251-300x218.jpg" alt="25" width="300" height="218" srcset="http://learn.corel.com/wp-content/uploads/2015/11/251-300x218.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/251-600x435.jpg 600w, http://learn.corel.com/wp-content/uploads/2015/11/251.jpg 720w" sizes="(max-width: 300px) 100vw, 300px" /></div>
+</div>
+<p>Saya menggunakan <strong>Freehand</strong> tool untuk membuat garis lurus dan bentuk vektor dasar melintang foto; Perhatikan bayangan dan pencahayaan, namun tetap berusaha untuk tetap menjaga ilustrasi sederhana dan tepat sasaran. Kuncinya di sini adalah bersikap sugestif, karena saya tidak perlu menciptakan semua garis dan rincian rumah.</p>
+<div class="center">
+<div class="floatnone"><img class="alignnone size-medium wp-image-10426" src="http://learn.corel.com/wp-content/uploads/2015/11/261-300x218.jpg" alt="26" width="300" height="218" srcset="http://learn.corel.com/wp-content/uploads/2015/11/261-300x218.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/261-600x435.jpg 600w, http://learn.corel.com/wp-content/uploads/2015/11/261.jpg 720w" sizes="(max-width: 300px) 100vw, 300px" /></div>
+</div>
+<p>Setelah saya senang dengan pekerjaan saya, saya menghapus fotonya. Lalu saya akan membuat latar belakang marun di belakang ilustrasi rumah, dengan warna yang sama dengan latar belakang teks. Dengan menggunakan <strong>Freehand</strong> tool sekali lagi, saya membuat siluet pohon sederhana dan bagian belakang rumah. Sekali lagi saya menggunakan warna hijau tua untuk bagian ilustrasi ini. Lalu, saya membuat bagian rumah yang tidak rata yang saya gunakan untuk tulisan itu, sementara dindingnya akan menjadi warna abu-abu hangat yang saya gunakan untuk papan luar pada papan tanda.</p>
+<div class="center">
+<div class="floatnone"><img class="alignnone size-medium wp-image-10427" src="http://learn.corel.com/wp-content/uploads/2015/11/271-300x218.jpg" alt="27" width="300" height="218" srcset="http://learn.corel.com/wp-content/uploads/2015/11/271-300x218.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/271-600x435.jpg 600w, http://learn.corel.com/wp-content/uploads/2015/11/271.jpg 720w" sizes="(max-width: 300px) 100vw, 300px" /></div>
+</div>
+<p>Selanjutnya, saya memilih keseluruhan ilustrasi rumah yang tidak termasuk latar belakang marun, dan serahkan ke tanda untuk penempatan di atas tulisan tersebut. Tata letak tanda ini hampir siap, tapi saya perlu melakukan beberapa hal lagi sebelum menghubungi klien. Pada titik ini, saya ingin menduplikat tanda itu sehingga saya bisa membuat dua cetakan sketsa yang berbeda.</p>
+<div class="center">
+<div class="floatnone"><img class="alignnone size-medium wp-image-10428" src="http://learn.corel.com/wp-content/uploads/2015/11/281-300x168.jpg" alt="28" width="300" height="168" srcset="http://learn.corel.com/wp-content/uploads/2015/11/281-300x168.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/281-600x337.jpg 600w, http://learn.corel.com/wp-content/uploads/2015/11/281.jpg 720w" sizes="(max-width: 300px) 100vw, 300px" /></div>
+</div>
+<p>Sketsa pertama ini untuk klien. Kami telah merancang template sketsa sendiri yang kami gunakan untuk semua proyek kami. Template adalah file terpisah, jadi saya klik  <strong>File</strong> &gt; <strong>Import</strong> dan lacak file template skrip CDR. Setelah diimpor, saya menempatkannya pada desain. Template sketsa mencakup tanda air untuk membantu melindungi karya seni, persyaratan, informasi kontak, dan tempat bagi klien untuk menandatangani persetujuan desain yang diusulkan. Dengan menciptakan ilustrasi rumput dan dedaunan dan latar belakang kemiringan yang sederhana, saya dapat membuat presentasi yang bagus untuk klien.</p>
+<div class="center">
+<div class="floatnone"><img class="alignnone size-medium wp-image-10429" src="http://learn.corel.com/wp-content/uploads/2015/11/291-300x232.jpg" alt="29" width="300" height="232" srcset="http://learn.corel.com/wp-content/uploads/2015/11/291-300x232.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/291-600x463.jpg 600w, http://learn.corel.com/wp-content/uploads/2015/11/291.jpg 676w" sizes="(max-width: 300px) 100vw, 300px" /></div>
+</div>
+<p>Sketsa lainnya digunakan saat produksi tanda. Dengan <strong>Parallel Dimension</strong> tool, saya bisa klik sekali untuk mengatur titik awal garis dimensi, seret ke tempat yang saya inginkan dari titik akhir dan lepaskan, lalu gerakkan kursor ke posisi garis dimensi dan klik untuk menempatkannya. CorelDRAW secara otomatis menampilkan pengukuran. Bergantung pada ukuran disain, saya mungkin perlu meningkatkan ketebalan garis dan ukuran font pengukuran. Penting untuk dicatat bahwa jika saya membuat skala sketsa khusus ini untuk mencetaknya pada printer desktop, Pertama-tama saya ingin memilih semua garis dimensi dan menonaktifkan opsi <strong>Dynamic Dimensioning</strong> di docker Properti Objek. Jika tidak, ketika saya menurunkan desain ke bawah, pengukuran akan berubah untuk mencerminkan ukuran baru desain skala bawah.</p>
+<div class="center">
+<div class="floatnone"><img class="alignnone size-medium wp-image-10430" src="http://learn.corel.com/wp-content/uploads/2015/11/30-300x217.jpg" alt="30" width="300" height="217" srcset="http://learn.corel.com/wp-content/uploads/2015/11/30-300x217.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/30.jpg 584w" sizes="(max-width: 300px) 100vw, 300px" /></div>
+</div>
+<p>Setelah disain telah disetujui oleh klien, kita mulai bekerja menghasilkan tanda. Kami menggunakan file CorelDRAW yang sama untuk mengetahui bahan pesanan apa, untuk membuat pola, dan untuk merencanakan mask cat. Kami plot dari CorelDRAW dengan menggunakan plugin bernama CoCut.</p>
+<p>Seperti yang bisa Anda lihat, CorelDRAW X6 adalah perangkat lunak perancangan yang fantastis karena tidak hanya mendesain tanda tapi juga membantu tahap produksi pembuatan tanda.</p>
+
+
+
+
+                                <script src='../js/colpick.js'></script>
+                                <script src="../js/colorpicker.js"></script>
+
+                                </div>
+                            </div>
+
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane animated fadeIn in" id="tab-2">
+                    <div id="contenttab2"></div>
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane animated fadeIn" id="tab-3" style="margin-top:-20px;margin-left:-20px;margin-right:-20px;background:#ffffff">
+
+                    </div>
+
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- Page Loader -->
+        <div class="page-loader">
+            <div class="preloader" style="text-align:center;">
+                <svg class="pl-circular" viewBox="25 25 50 50">
+                    <circle class="plc-path" cx="50" cy="50" r="20" />
+                </svg><br/><br/>
+                <div style="font-size:8px;margin-left:-80px;width:200px" class="demo"></div>
+            </div>
+        </div>
+
+        <div style="margin-bottom:10px;"><footer id="footer">
+            Copyright &copy; 2017 IDWEBDesigner<br/><a href="index.html">Back to <i class="zmdi zmdi-home"></i> Homepage</a>
+        </footer></div>
+
+        <!-- Javascript Libraries -->
+        <script src="../vendors/bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="../vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+        <script src="../vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="../vendors/bower_components/Waves/dist/waves.min.js"></script>
+        <script src="../vendors/bootstrap-growl/bootstrap-growl.min.js"></script>
+        <script src="../vendors/bower_components/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="../vendors/bower_components/lightgallery/dist/js/lightgallery-all.min.js"></script>
+        <script src="../vendors/bootgrid/jquery.bootgrid.updated.min.js"></script>
+
+        <!-- Placeholder for IE9 -->
+        <!--[if IE 9 ]>
+            <script src="vendors/bower_components/jquery-placeholder/jquery.placeholder.min.js"></script>
+        <![endif]-->
+
+        <script src="../js/app.min.js"></script>
+
+        <!-- Data Table -->
+        <script>
+            $(function()
+            {
+              $("#grid-basic").bootgrid({
+                  caseSensitive: false,
+                    css: {
+                        icon: 'zmdi icon',
+                        iconColumns: 'zmdi-view-module',
+                        iconDown: 'zmdi-sort-amount-desc',
+                        iconRefresh: 'zmdi-refresh',
+                        iconUp: 'zmdi-sort-amount-asc'
+                    },
+              }
+              )
+            });
+        </script>
+
+        <script type="text/javascript">
+            //Basic
+            $('#sa-basic').click(function(e){
+                e.preventDefault();
+                var link = $(this).attr('href');
+
+                swal({
+                    title: "Get Inspire Profesional Logos",
+                    text: "More logos sparately on our Learn Apps: Javascript, NoSQL Database, Virtual Reality, and more...",
+                    showCancelButton: true,
+                    allowOutsideClick: true,
+                },
+                function(){
+                    window.location.href = 'market://details?id=id.web.designer.learn.javascript';
+                });
+            });
+        </script>
+
+    <script type="text/javascript">
+        function rateApp() {
+            android.rateApp();
+       }
+    </script>
+
+    </body>
+
+</html>

@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Tutorial CorelDraw Pro</title>
+
+         <script type="text/javascript">
+          <!--
+          if (screen.width >= 2800) {
+            window.location = "http://designer.web.id";
+          }
+          //-->
+        </script>
+
+        <!-- Vendor CSS -->
+        <link href="../vendors/bower_components/animate.css/animate.min.css" rel="stylesheet">
+        <link href="../vendors/bower_components/sweetalert/dist/sweetalert.css" rel="stylesheet">
+        <link href="../vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
+        <link href="../vendors/bower_components/lightgallery/dist/css/lightgallery.min.css" rel="stylesheet">
+        <link href="../vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+        <link href="../vendors/bootgrid/jquery.bootgrid.min.css" rel="stylesheet">
+
+        <!-- CSS -->
+        <link href="../css/app_1.min.css" rel="stylesheet">
+        <link href="../css/app_2.min.css" rel="stylesheet">
+
+        <script src="../js/h5utils.js"></script>
+        <script src="../js/jquery-2.1.0.min.js"></script>
+        <script src="../js/jquery.jscroll.min.js"></script>
+        <script>$(function(){
+        $("#contentloader1").load("http://app.coreldraw.designer.web.id/content-message.html"); $("#contentloader2").load("http://app.coreldraw.designer.web.id/pro/content-right-pro.html");
+        $("#contenttab1").load("http://app.coreldraw.designer.web.id/pro/contenttab2.html");
+        $("#contenttab2").load("http://app.coreldraw.designer.web.id/pro/contenttab2.html");
+        });</script>
+
+        <style>.videoWrapper {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 */
+        padding-top: 25px;
+        height: 0;}
+        .videoWrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;}
+        .lcb-navigation a{background:#999999}
+        </style>
+    </head>
+    <body style="background:#ffffff">
+
+        <!-- Page Loader -->
+        <div class="page-loader">
+            <div class="preloader pls-white">
+                <svg class="pl-circular" viewBox="25 25 50 50">
+                    <circle class="plc-path" cx="50" cy="50" r="20" />
+                </svg>
+            </div>
+
+        </div>
+
+        <header id="header" class="clearfix container">
+            <ul class="h-inner">
+
+                <li class="hi-trigger ma-trigger" data-ma-action="sidebar-open" data-ma-target="#sidebar">
+                    <div class="line-wrap">
+                        <div class="line top"></div>
+                        <div class="line center"></div>
+                        <div class="line bottom"></div>
+                    </div>
+                </li>
+
+                <li class="hi-logo" data-ma-action="sidebar-open" data-ma-target="#sidebar" style="margin-top:8px;">
+                    <span style="font-size:15px;color:#ffffff;"> Tutorial CorelDRAW<sup>&reg;</sup><span>
+                </li>
+
+                <li class="pull-right">
+                    <ul class="hi-menu">
+
+                        <li style="margin-right:-15px;" class="dropdown">
+                            <a data-toggle="dropdown" href="#">
+                                <i class="him-icon zmdi zmdi-notifications-none"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-lg pull-right">
+                                <div class="list-group list-group-light">
+                                    <div class="lg-header">
+                                        LIVE DEVELOPER MESSAGES
+                                    </div>
+
+                                    <article>
+                                      <p style="text-align:center;font-size:1em;"><span id="status"><span id="status"></span></p>
+                                      <ol id="state"></ol>
+                                    </article>
+                                    <script>
+                                    var statusElem  = document.getElementById('status'),
+                                        state               = document.getElementById('state');
+
+                                    function online(event) {
+                                      statusElem.className = navigator.onLine ? 'online' : 'offline';
+                                      statusElem.innerHTML = navigator.onLine ? '' : '<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You&#39;re offline, check network connection.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;content required internet access.';
+                                      state.innerHTML += '&nbsp;';
+                                    }
+
+                                    addEvent(window, 'online', online);
+                                    addEvent(window, 'offline', online);
+                                    online({ type: 'ready' });
+                                    </script>
+
+                                    <div style="margin-top:-30px;" id="contentloader1"></div>
+                                    <a class="view-more view-more-light" href="idwebdesigner.html">Powered by IDWEBDesigner</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li style="margin-right:-15px;" class="ma-trigger" data-ma-action="sidebar-open" data-ma-target="#chat">
+                            <a data-toggle="dropdown" href="#">
+                                <i class="him-icon zmdi zmdi-favorite-outline"></i>
+                            </a>
+                        </li>
+                        <li style="margin-right:-5px;" class="dropdown">
+                            <a data-toggle="dropdown" href="#"><i class="him-icon zmdi zmdi-more-vert"></i></a>
+                            <ul class="dropdown-menu dm-icon pull-right">
+                                <li class="hidden-xs">
+                                    <a data-ma-action="fullscreen" href="#"><i class="zmdi zmdi-fullscreen"></i> Fullscreen</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:window.location.reload();"><i class="zmdi zmdi-refresh-sync"></i> Refresh</a>
+                                </li>
+                                <li>
+                                    <a id="rate-app" onClick="rateApp()">Rate 5 Stars</a>
+                                </li>
+                                <li>
+                                    <a href="update.html"><i class="zmdi zmdi-download"></i>Check update</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="help.html"><i class="zmdi zmdi-help"></i> Help</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="hidden-xs ma-trigger" data-ma-action="sidebar-open" data-ma-target="#chat">
+                            <a href="#"><i class="him-icon zmdi zmdi-comment-alt-text"></i></a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="tab-nav tn-justified tn-icon" role="tablist" style="width:100%">
+                                        <li role="presentation">
+                                            <a class="col-sx-4" href="index.html">
+                                                INDONESIA
+                                            </a>
+                                        </li>
+                                        <li role="presentation" class="active">
+                                            <a class="col-xs-4" href="#tab-2" aria-controls="tab-2" role="tab" data-toggle="tab">
+                                                ENGLISH (PRO)
+                                            </a>
+                                        </li>
+
+                                    </ul>
+        </header>
+
+        <section id="main">
+            <ol class="breadcrumb" style="margin-left:-10px;">
+                <li><a href="developer.html">designer.web.id</a></li>
+                <li><a href="index.html">learn</a></li>
+                <li class="active">virtualreality</li>
+            </ol>
+
+            <aside id="sidebar" class="sidebar c-overflow" style="position:fixed;z-index:1000;margin-top:-70px;height:100%;background:white">
+                <ul class="main-menu">
+                    <li class="mm-profile sub-menu">
+                        <a href="#" data-ma-action="submenu-toggle" class="media">
+                            <img class="pull-left" src="../img/coreldraw.green.png" alt="" height="25px" style="margin-left:-40px;">
+                            <div class="media-body">
+                            <div>Tutorial CorelDRAW<sup>&reg;</sup></div>
+                            <span style="font-size:11px;">Experience by IDWEBDesigner<br/>dev@designer.web.id</span>
+                            </div>
+                        </a>
+
+                        <ul>
+                            <li>
+                                <a href="developer.html">Indonesia Web Designer</a>
+                            </li>
+                            <li>
+                                <div style="margin-left:65px;margin-bottom:10px;font-size:10px;color:#888888;padding-right:20px;">Jl. Wahid Hasyim No.3 Gaten Condongcatur Depok Sleman Yogyakarta, Indonesia.</div>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-info"></i> About CorelDraw</a>
+                        <div style="margin-left:65px;margin-bottom:10px;font-size:12px;color:#579706;"><a href="basics.html">What's is CorelDraw?<br/>Basics Learn</a></div>
+                    </li>
+
+                    <li><a href="index.html"><i class="zmdi zmdi-flag"></i> Tutorial Bahasa Indonesia</a></li>
+                    <li class="sub-menu toggled active">
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-android"></i> Featured Apps</a>
+                        <div style="margin-left:65px;margin-top:10px;font-size:10px;color:#888888;padding-right:20px;">Color Docker: This docker allows you to choose fill and outline colors from a color picker, color sliders, and color palettes. Found with dockers and in the Toolbox.</div>
+
+                        <ul>
+
+                            <li><a href="language.html">Bahasa Indonesia</a></li>
+                            <li style="display:none;"><a href="upgrade.html"><i class="zmdi zmdi-shopping-cart"></i>&nbsp;&nbsp;Upgrade</a></li>
+                            <li class="divider"></li>
+
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-code"></i> Developer</a>
+
+                        <ul>
+                            <li><a href="developer.html">dev@designer.web.id<br/>designer.web.id</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </aside>
+
+            <aside id="chat" class="sidebar">
+
+                                    <article>
+                                      <p style="margin-top:30px;margin-left:15px;font-size:0.7em;"><span id="status2"><span id="status"></span></p>
+                                      <ol id="state2"></ol>
+                                    </article>
+                                    <script>
+                                    var statusElem  = document.getElementById('status2'),
+                                        state               = document.getElementById('state2');
+
+                                    function online(event) {
+                                      statusElem.className = navigator.onLine ? 'online' : 'offline';
+                                      statusElem.innerHTML = navigator.onLine ? '' : '<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You&#39;re offline, check network connection.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;content required internet access.';
+                                      state.innerHTML += '&nbsp;';
+                                    }
+
+                                    addEvent(window, 'online', online);
+                                    addEvent(window, 'offline', online);
+                                    online({ type: 'ready' });
+                                    </script>
+
+                <div style="margin-top:-30px; width:100%" id="contentloader2"></div>
+
+
+
+            </aside>
+
+            <section id="content" style="margin-bottom:-40px;">
+                <div class="container" style="margin-top:-55px;margin-left:-20px;padding-right:0px;">
+                    <div class="tab-content p-20" style="background:#ffffff;">
+
+                    <div role="tabpanel" class="tab-pane animated fadeIn in active" id="tab-1">
+
+                            <!-- Blog Posts -->
+                            <div class="card blog-post" style="margin-bottom:-0px;">
+
+                                <div class="videoWrapper">
+                                <img width="100%" src="../images/green.png" frameborder="0" allowfullscreen></img>
+                                </div>
+
+                                <a class="card-header ch-alt">
+                                    <h2><small><p>Tutorial ini akan menunjukkan cara membuat grafis presentasi dengan CorelDRAW X3. Manfaatkan fitur desain CorelDRAW yang lebih canggih untuk membuat presentasi profesional yang dipoles dan rinci. Untuk menunjukkan slide-show Anda di layar penuh, Anda hanya perlu mengekspor dokumen Anda sebagai PDF layar penuh.</small></h2>
+                                </a>
+
+                                <div class="card-body card-padding">
+
+                                <h4>Membuat Grafik untuk Presentasi PDF Layar Penuh </h4>
+                                 <br/>
+
+<p>Anda dapat dengan mudah membuat presentasi yang hebat dengan CorelDRAW dengan mengekspor dokumen Anda sebagai PDF layar penuh. Anda membuat presentasi Anda menonjol dengan membuat halaman master yang eye-catching, menggunakan grafik untuk menyampaikan pesan Anda, dan menambahkan tombol navigasi. Untuk hasil terbaik, mulailah dengan dokumen baru dengan orientasi landscape.</p>
+<p>Anda dapat mengubah orientasi dokumen yang terbuka dengan mengklik tombol  <strong style="font-weight: 600;">Landscape</strong> pada panel properti.<br />
+<img class="alignnone size-full wp-image-9997" src="http://learn.corel.com/wp-content/uploads/2015/11/2014-11-14_1538.png" alt="2014-11-14_1538" width="410" height="117" srcset="http://learn.corel.com/wp-content/uploads/2015/11/2014-11-14_1538.png 410w, http://learn.corel.com/wp-content/uploads/2015/11/2014-11-14_1538-300x86.png 300w" sizes="(max-width: 410px) 100vw, 410px" /></p>
+<p>Ukuran dokumen tidak masalah, karena hasil akhirnya, layar penuh PDF, akan muat ke layar.</p>
+<p><strong style="font-weight: 600;">Membuat halaman utama</strong></p>
+<p>Sekarang, Anda akan membuat halaman utama, yang berisi semua elemen desain - seperti latar belakang, logo atau judul - yang akan ditampilkan di semua halaman.</p>
+<p>1. Klik <strong style="font-weight: 600;">Window &gt; Dockers &gt; Object Manager. </strong>Object Manager docker terbuka di sisi kanan layar.</p>
+<p><img class="alignnone size-full wp-image-9998" src="http://learn.corel.com/wp-content/uploads/2015/11/2014-11-14_1539.png" alt="2014-11-14_1539" width="274" height="322" srcset="http://learn.corel.com/wp-content/uploads/2015/11/2014-11-14_1539.png 274w, http://learn.corel.com/wp-content/uploads/2015/11/2014-11-14_1539-255x300.png 255w" sizes="(max-width: 274px) 100vw, 274px" /></p>
+<p>2. Di Object Manager, klik kanan <strong style="font-weight: 600;">Master Page</strong>, dan klik <strong style="font-weight: 600;">New Master Layer</strong> (semua halaman).</p>
+<p>3. Ganti nama layer ini <strong style="font-weight: 600;">General</strong>, dan layer baru, <strong style="font-weight: 600;">General (semua halaman),</strong> dibuat.</p>
+<p>4. Selanjutnya, impor gambar untuk latar belakang dengan mengklik <strong style="font-weight: 600;">Window &gt; Dockers &gt; Connect</strong>, dan menyeret gambar atau clipart yang dikehendaki ke halaman.</p>
+<p>5. Agar skala gambar sesuai dengan halaman dengan menyeret titik tengah di bagian atas dan samping gambar.</p>
+<p>Terlepas dari apa gambar yang Anda pilih untuk latar belakang, kemungkinan itu akan mengganggu teks dan pesan lainnya. Untuk membuat teks dan pesan menonjol, Anda harus membuat beberapa kotak informasi.</p>
+<p>6. Untuk memasukkan kotak informasi, buat dua persegi panjang seperti yang ditunjukkan di bawah ini dengan menggunakan tool dari toolbox.</p>
+<p><img class="alignnone size-full wp-image-10012" src="http://learn.corel.com/wp-content/uploads/2015/11/Dc6.jpg" alt="Dc6" width="560" height="401" srcset="http://learn.corel.com/wp-content/uploads/2015/11/Dc6.jpg 560w, http://learn.corel.com/wp-content/uploads/2015/11/Dc6-300x215.jpg 300w" sizes="(max-width: 560px) 100vw, 560px" /></p>
+<p>7. Untuk mengitari sudut persegi empat, pilih persegi panjangnya, lalu pilih Shape tool dari toolbox.</p>
+<p><img class="alignnone wp-image-9999 size-full" src="http://learn.corel.com/wp-content/uploads/2015/11/2014-11-14_1542.png" alt="2014-11-14_1542" width="71" height="203" /></p>
+<p>8. Kotak empat memiliki empat titik jangkar, satu di setiap sudutnya. Bila Anda menarik salah satu dari titik-titik ini, Anda bisa melewati tikungan. Perhatikan bahwa property bar sensitif konteks, sehingga menampilkan kontrol yang terkait langsung dengan apa yang Anda lakukan.</p>
+<p>Di sebelah kanan bidang ini, ada 'ikon kunci. Saat Anda menonaktifkan kunci ini, Anda bisa mengitari sudut secara terpisah.</p>
+<p><img class="alignnone size-full wp-image-10000" src="http://learn.corel.com/wp-content/uploads/2015/11/2014-11-14_1543.png" alt="2014-11-14_1543" width="374" height="75" srcset="http://learn.corel.com/wp-content/uploads/2015/11/2014-11-14_1543.png 374w, http://learn.corel.com/wp-content/uploads/2015/11/2014-11-14_1543-300x60.png 300w, http://learn.corel.com/wp-content/uploads/2015/11/2014-11-14_1543-367x75.png 367w" sizes="(max-width: 374px) 100vw, 374px" /></p>
+<p>9. Sekarang, isi persegi panjang dengan menggunakan <strong style="font-weight: 600;">Fill</strong> tool di kotak peralatan dengan abu-abu 50%, yang sesuai untuk teks putih.</p>
+<p>10. Selanjutnya, buat area hitam di bagian atas persegi panjang yang berisi teks, dengan menggambar garis horizontal menggunakan <strong style="font-weight: 600;">Bezier</strong> tool.</p>
+<p>11. Klik <strong style="font-weight: 600;">Smart Fill</strong> tool, Pilih hitam, dan isi area tersebut.</p>
+<p>12. Persegi panjang ke kiri akan digunakan sebagai area navigasi, dan yang ke kanan akan digunakan untuk informasi aktual. Anda mungkin ingin menggambar garis abu-abu gelap untuk memisahkan tajuk teks dari sub-informasi menggunakan <strong style="font-weight: 600;">Bezier</strong> tool.</p>
+<p>Anda bisa menggambar garis horizontal sempurna dengan menekan tombol Ctrl dan mengklik titik awal dan akhir garis.</p>
+<p>13. Anda dapat mengubah ketebalan garis pada property bar dengan memilih garis dengan Pick tool. Anda dapat mengubah warna garis hanya dengan mengklik kanan sebuah warna pada palet Warna.</p>
+<p><img class="alignnone size-full wp-image-10001" src="http://learn.corel.com/wp-content/uploads/2015/11/2014-11-14_1546.png" alt="2014-11-14_1546" width="310" height="85" srcset="http://learn.corel.com/wp-content/uploads/2015/11/2014-11-14_1546.png 310w, http://learn.corel.com/wp-content/uploads/2015/11/2014-11-14_1546-300x82.png 300w" sizes="(max-width: 310px) 100vw, 310px" /></p>
+<p>Sekarang Anda bisa memasukkan logo perusahaan ke bingkai kanan atas dengan mengklik File &gt; Import, browsing komputer Anda untuk menemukan logo, dan klik tombol <strong style="font-weight: 600;">Import</strong> pada kotak dialog Import.</p>
+<p>Sisipkan teks header menggunakan <strong style="font-weight: 600;">Text</strong> tool untuk melengkapi halaman utama:</p>
+<p><img class="alignnone size-full wp-image-10013" src="http://learn.corel.com/wp-content/uploads/2015/11/Dc9.jpg" alt="Dc9" width="560" height="396" srcset="http://learn.corel.com/wp-content/uploads/2015/11/Dc9.jpg 560w, http://learn.corel.com/wp-content/uploads/2015/11/Dc9-300x212.jpg 300w" sizes="(max-width: 560px) 100vw, 560px" /></p>
+<p>Nekarang Anda memiliki konten utama, yang akan konsisten di semua halaman.</p>
+<p>angan ragu untuk bereksperimen dengan wadah informasi yang berbeda. Gambar sebelumnya menunjukkan contoh lain, di mana bingkai kiri bawah akan berisi tombol navigasi.</p>
+<p>Sekarang Anda bisa mulai mengerjakan isi dari setiap halaman. Untuk beralih dari halaman Utama ke halaman masing-masing, klik dua kali ikon halaman:</p>
+<p><img class="alignnone size-full wp-image-10002" src="http://learn.corel.com/wp-content/uploads/2015/11/2014-11-14_1548.png" alt="2014-11-14_1548" width="242" height="268" /></p>
+<p><strong style="font-weight: 600;">Membuat diagram lingkaran</strong></p>
+<p>&nbsp;</p>
+<p><img class="alignnone size-full wp-image-10014" src="http://learn.corel.com/wp-content/uploads/2015/11/Dc11.jpg" alt="Dc11" width="560" height="400" srcset="http://learn.corel.com/wp-content/uploads/2015/11/Dc11.jpg 560w, http://learn.corel.com/wp-content/uploads/2015/11/Dc11-300x214.jpg 300w" sizes="(max-width: 560px) 100vw, 560px" /></p>
+<p>Di halaman ini, Anda akan menggambar pie chart lima buah.</p>
+<ol>
+<li>Gambarlah lingkaran dengan <strong style="font-weight: 600;">Ellipse</strong> tool, dan isi dengan warna oranye terang.</li>
+<li>Salin lingkaran, dan tempelkan 4 kali.</li>
+<li>Pilih lingkaran atas, dan pilih <strong style="font-weight: 600;">Shape</strong> tool.</li>
+</ol>
+<p>Garis besar lingkaran akan muncul dengan garis putus-putus dan titik jangkar di bagian atas lingkaran. Saat Anda menyeret titik jangkar ini berlawanan arah jarum jam, Anda membuat irisan pie dengan menyeret ke dalam lingkaran, dan segmen garis, saat Anda menyeret ke luar lingkaran.</p>
+<ol start="4">
+<li>Tarik titik jangkar ke sudut 36 derajat untuk membuat potongan pie pertama.<img class="alignnone size-full wp-image-10003" src="http://learn.corel.com/wp-content/uploads/2015/11/2014-11-14_1549.png" alt="2014-11-14_1549" width="233" height="106" /></li>
+<li>Denggelapkan warna oranye dengan menekan <strong style="font-weight: 600;">Ctrl</strong> dan mengklik hitam di palet Warna satu atau dua kali. Untuk setiap klik, Anda menambahkan 10% warna hitam ke warna oranye.</li>
+<li>Ulangi langkah-langkahnya dengan lingkaran lainnya, buat irisan warna lebih besar dan lebih gelap saat Anda pergi.</li>
+<li>Tambahkan beberapa teks putih di samping irisan.</li>
+</ol>
+<p><strong style="font-weight: 600;">Membuat flow chart (diagram alir)</strong></p>
+<p>Diagram alir adalah cara lain untuk mengkomunikasikan informasi yang kompleks. CorelDRAW memiliki banyak simbol siap pakai yang dirancang khusus untuk diagram alir. Dan Anda bisa menghubungkan simbol dengan garis yang terkunci pada simbol. Saat Anda mengatur ulang simbol pada grafik, garis akan secara otomatis mengikuti simbol.</p>
+<p><img class="alignnone size-full wp-image-10015" src="http://learn.corel.com/wp-content/uploads/2015/11/Dc14.jpg" alt="Dc14" width="560" height="398" srcset="http://learn.corel.com/wp-content/uploads/2015/11/Dc14.jpg 560w, http://learn.corel.com/wp-content/uploads/2015/11/Dc14-300x213.jpg 300w" sizes="(max-width: 560px) 100vw, 560px" /></p>
+<p>Di toolbox, Anda akan menemukan  <strong style="font-weight: 600;">Basic Shapes</strong> flyout.</p>
+<p><img class="alignnone size-full wp-image-10004" src="http://learn.corel.com/wp-content/uploads/2015/11/2014-11-14_1552.png" alt="2014-11-14_1552" width="209" height="222" /></p>
+<p>Saluran terbang ini berisi banyak alat untuk menambahkan berbagai gambar siap pakai untuk Anda, termasuk <strong style="font-weight: 600;">Flowchart Shapes</strong> tool. Saat Anda mengklik salah satu dari tool, Anda bisa mengklik <strong style="font-weight: 600;">Perfect Shapes</strong> pada property bar untuk mengakses bentuk yang tersedia.</p>
+<p><img class="alignnone size-full wp-image-10005" src="http://learn.corel.com/wp-content/uploads/2015/11/2014-11-14_1553.png" alt="2014-11-14_1553" width="218" height="186" /></p>
+<p>ntuk menambahkan bentuk, pilih saja, dan dan klik gambar Anda. Anda dapat meningkatkan bentuk dengan menambahkan bayangan menggunakan <strong style="font-weight: 600;">Drop Shadow</strong> tool dari <strong style="font-weight: 600;">Interactive Tools</strong> flyout</p>
+<p>&nbsp;</p>
+<p><img class="alignnone size-full wp-image-10006" src="http://learn.corel.com/wp-content/uploads/2015/11/2014-11-14_1554.png" alt="2014-11-14_1554" width="239" height="194" /></p>
+<ol>
+<li>Menggunakan Drop Shadow tool, klik bentuk yang ingin Anda terapkan.</li>
+<li>Tarik dari tengah atau sisi objek sampai drop shadow adalah ukuran yang Anda inginkan.</li>
+</ol>
+<p>Untuk menambahkan sentuhan akhir pada flowchart, Anda dapat menambahkan garis konektor antar bentuk. Anda dapat menyesuaikan garis konektor dengan memodifikasi ketebalan dan menambahkan panah.</p>
+<p><img class="alignnone size-full wp-image-10007" src="http://learn.corel.com/wp-content/uploads/2015/11/2014-11-14_1555.png" alt="2014-11-14_1555" width="288" height="232" /></p>
+<p>Connector Tools flyout menawarkan alat untuk menciptakan berbagai garis konektor, seperti lurus, siku-siku, dan banyak lagi.</p>
+<p><img class="alignnone size-full wp-image-10008" src="http://learn.corel.com/wp-content/uploads/2015/11/2014-11-14_1556.png" alt="2014-11-14_1556" width="415" height="162" srcset="http://learn.corel.com/wp-content/uploads/2015/11/2014-11-14_1556.png 415w, http://learn.corel.com/wp-content/uploads/2015/11/2014-11-14_1556-300x117.png 300w" sizes="(max-width: 415px) 100vw, 415px" /></p>
+<h4 style="font-weight: 400;"><strong style="font-weight: 600;">embuat tombol navigasi interaktif</strong></h4>
+<p>Anda mungkin telah memperhatikan tombol navigasi di kotak kiri bawah pada gambar contoh. Ini adalah rangkaian segitiga yang menawarkan navigasi dokumen opitons.</p>
+<p><img class="alignnone size-full wp-image-10009" src="http://learn.corel.com/wp-content/uploads/2015/11/2014-11-14_1557.png" alt="2014-11-14_1557" width="208" height="70" /></p>
+<p>Anda dapat membuat bentuk apapun dalam gambar Anda secara interaktif dengan mengklik kanan dan mengklik<strong style="font-weight: 600;"> Internet Links,</strong> yang menyediakan daftar halaman dalam dokumen Anda. Cukup pilih halaman yang sesuai untuk tombol anda.</p>
+<p>&nbsp;</p>
+<h4 style="font-weight: 400;">Penerbitan presentasi Anda sebagai PDF layar penuh</h4>
+<p>Akhirnya, saatnya menerbitkan dokumen Anda sebagai PDF layar penuh.</p>
+<p>Klik <strong style="font-weight: 600;">File &gt; Publish To PDF.</strong></p>
+<p>Di kotak dialog <strong style="font-weight: 600;">Publish To PDF</strong>, klik tombol Settings.</p>
+<p><img class="alignnone size-full wp-image-10010" src="http://learn.corel.com/wp-content/uploads/2015/11/2014-11-14_1558.png" alt="2014-11-14_1558" width="624" height="469" srcset="http://learn.corel.com/wp-content/uploads/2015/11/2014-11-14_1558.png 624w, http://learn.corel.com/wp-content/uploads/2015/11/2014-11-14_1558-300x225.png 300w, http://learn.corel.com/wp-content/uploads/2015/11/2014-11-14_1558-600x451.png 600w, http://learn.corel.com/wp-content/uploads/2015/11/2014-11-14_1558-463x348.png 463w" sizes="(max-width: 624px) 100vw, 624px" /></p>
+<p>Di kotak dialog <strong style="font-weight: 600;">PDF Settings</strong> , klik <strong style="font-weight: 600;">Document</strong> tab, dan aktifkan<strong style="font-weight: 600;"> Full Screen</strong> and <strong style="font-weight: 600;">Include</strong> <strong style="font-weight: 600;">hyperlinks</strong>, dan klik tombol <strong style="font-weight: 600;">OK</strong>.</p>
+<p>Saat Anda membuka PDF, ini akan terbuka di layar penuh.</p>
+
+
+
+
+                                <script src='../js/colpick.js'></script>
+                                <script src="../js/colorpicker.js"></script>
+
+                                </div>
+                            </div>
+
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane animated fadeIn in" id="tab-2">
+                    <div id="contenttab2"></div>
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane animated fadeIn" id="tab-3" style="margin-top:-20px;margin-left:-20px;margin-right:-20px;background:#ffffff">
+
+                    </div>
+
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- Page Loader -->
+        <div class="page-loader">
+            <div class="preloader" style="text-align:center;">
+                <svg class="pl-circular" viewBox="25 25 50 50">
+                    <circle class="plc-path" cx="50" cy="50" r="20" />
+                </svg><br/><br/>
+                <div style="font-size:8px;margin-left:-80px;width:200px" class="demo"></div>
+            </div>
+        </div>
+
+        <div style="margin-bottom:10px;"><footer id="footer">
+            Copyright &copy; 2017 IDWEBDesigner<br/><a href="index.html">Back to <i class="zmdi zmdi-home"></i> Homepage</a>
+        </footer></div>
+
+        <!-- Javascript Libraries -->
+        <script src="../vendors/bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="../vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+        <script src="../vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="../vendors/bower_components/Waves/dist/waves.min.js"></script>
+        <script src="../vendors/bootstrap-growl/bootstrap-growl.min.js"></script>
+        <script src="../vendors/bower_components/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="../vendors/bower_components/lightgallery/dist/js/lightgallery-all.min.js"></script>
+        <script src="../vendors/bootgrid/jquery.bootgrid.updated.min.js"></script>
+
+        <!-- Placeholder for IE9 -->
+        <!--[if IE 9 ]>
+            <script src="vendors/bower_components/jquery-placeholder/jquery.placeholder.min.js"></script>
+        <![endif]-->
+
+        <script src="../js/app.min.js"></script>
+
+        <!-- Data Table -->
+        <script>
+            $(function()
+            {
+              $("#grid-basic").bootgrid({
+                  caseSensitive: false,
+                    css: {
+                        icon: 'zmdi icon',
+                        iconColumns: 'zmdi-view-module',
+                        iconDown: 'zmdi-sort-amount-desc',
+                        iconRefresh: 'zmdi-refresh',
+                        iconUp: 'zmdi-sort-amount-asc'
+                    },
+              }
+              )
+            });
+        </script>
+
+        <script type="text/javascript">
+            //Basic
+            $('#sa-basic').click(function(e){
+                e.preventDefault();
+                var link = $(this).attr('href');
+
+                swal({
+                    title: "Get Inspire Profesional Logos",
+                    text: "More logos sparately on our Learn Apps: Javascript, NoSQL Database, Virtual Reality, and more...",
+                    showCancelButton: true,
+                    allowOutsideClick: true,
+                },
+                function(){
+                    window.location.href = 'market://details?id=id.web.designer.learn.javascript';
+                });
+            });
+        </script>
+
+    <script type="text/javascript">
+        function rateApp() {
+            android.rateApp();
+       }
+    </script>
+
+    </body>
+
+</html>

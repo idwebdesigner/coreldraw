@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Tutorial CorelDraw Pro</title>
+
+         <script type="text/javascript">
+          <!--
+          if (screen.width >= 2800) {
+            window.location = "http://designer.web.id";
+          }
+          //-->
+        </script>
+
+        <!-- Vendor CSS -->
+        <link href="../vendors/bower_components/animate.css/animate.min.css" rel="stylesheet">
+        <link href="../vendors/bower_components/sweetalert/dist/sweetalert.css" rel="stylesheet">
+        <link href="../vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
+        <link href="../vendors/bower_components/lightgallery/dist/css/lightgallery.min.css" rel="stylesheet">
+        <link href="../vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+        <link href="../vendors/bootgrid/jquery.bootgrid.min.css" rel="stylesheet">
+
+        <!-- CSS -->
+        <link href="../css/app_1.min.css" rel="stylesheet">
+        <link href="../css/app_2.min.css" rel="stylesheet">
+
+        <script src="../js/h5utils.js"></script>
+        <script src="../js/jquery-2.1.0.min.js"></script>
+        <script src="../js/jquery.jscroll.min.js"></script>
+        <script>$(function(){
+        $("#contentloader1").load("http://app.coreldraw.designer.web.id/content-message.html"); $("#contentloader2").load("http://app.coreldraw.designer.web.id/pro/content-right-pro.html");
+        $("#contenttab1").load("http://app.coreldraw.designer.web.id/pro/contenttab2.html");
+        $("#contenttab2").load("http://app.coreldraw.designer.web.id/pro/contenttab2.html");
+        });</script>
+
+        <style>.videoWrapper {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 */
+        padding-top: 25px;
+        height: 0;}
+        .videoWrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;}
+        .lcb-navigation a{background:#999999}
+        </style>
+    </head>
+    <body style="background:#ffffff">
+
+        <!-- Page Loader -->
+        <div class="page-loader">
+            <div class="preloader pls-white">
+                <svg class="pl-circular" viewBox="25 25 50 50">
+                    <circle class="plc-path" cx="50" cy="50" r="20" />
+                </svg>
+            </div>
+
+        </div>
+
+        <header id="header" class="clearfix container">
+            <ul class="h-inner">
+
+                <li class="hi-trigger ma-trigger" data-ma-action="sidebar-open" data-ma-target="#sidebar">
+                    <div class="line-wrap">
+                        <div class="line top"></div>
+                        <div class="line center"></div>
+                        <div class="line bottom"></div>
+                    </div>
+                </li>
+
+                <li class="hi-logo" data-ma-action="sidebar-open" data-ma-target="#sidebar" style="margin-top:8px;">
+                    <span style="font-size:15px;color:#ffffff;"> Tutorial CorelDRAW<sup>&reg;</sup><span>
+                </li>
+
+                <li class="pull-right">
+                    <ul class="hi-menu">
+
+                        <li style="margin-right:-15px;" class="dropdown">
+                            <a data-toggle="dropdown" href="#">
+                                <i class="him-icon zmdi zmdi-notifications-none"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-lg pull-right">
+                                <div class="list-group list-group-light">
+                                    <div class="lg-header">
+                                        LIVE DEVELOPER MESSAGES
+                                    </div>
+
+                                    <article>
+                                      <p style="text-align:center;font-size:1em;"><span id="status"><span id="status"></span></p>
+                                      <ol id="state"></ol>
+                                    </article>
+                                    <script>
+                                    var statusElem  = document.getElementById('status'),
+                                        state               = document.getElementById('state');
+
+                                    function online(event) {
+                                      statusElem.className = navigator.onLine ? 'online' : 'offline';
+                                      statusElem.innerHTML = navigator.onLine ? '' : '<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You&#39;re offline, check network connection.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;content required internet access.';
+                                      state.innerHTML += '&nbsp;';
+                                    }
+
+                                    addEvent(window, 'online', online);
+                                    addEvent(window, 'offline', online);
+                                    online({ type: 'ready' });
+                                    </script>
+
+                                    <div style="margin-top:-30px;" id="contentloader1"></div>
+                                    <a class="view-more view-more-light" href="idwebdesigner.html">Powered by IDWEBDesigner</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li style="margin-right:-15px;" class="ma-trigger" data-ma-action="sidebar-open" data-ma-target="#chat">
+                            <a data-toggle="dropdown" href="#">
+                                <i class="him-icon zmdi zmdi-favorite-outline"></i>
+                            </a>
+                        </li>
+                        <li style="margin-right:-5px;" class="dropdown">
+                            <a data-toggle="dropdown" href="#"><i class="him-icon zmdi zmdi-more-vert"></i></a>
+                            <ul class="dropdown-menu dm-icon pull-right">
+                                <li class="hidden-xs">
+                                    <a data-ma-action="fullscreen" href="#"><i class="zmdi zmdi-fullscreen"></i> Fullscreen</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:window.location.reload();"><i class="zmdi zmdi-refresh-sync"></i> Refresh</a>
+                                </li>
+                                <li>
+                                    <a id="rate-app" onClick="rateApp()">Rate 5 Stars</a>
+                                </li>
+                                <li>
+                                    <a href="update.html"><i class="zmdi zmdi-download"></i>Check update</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="help.html"><i class="zmdi zmdi-help"></i> Help</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="hidden-xs ma-trigger" data-ma-action="sidebar-open" data-ma-target="#chat">
+                            <a href="#"><i class="him-icon zmdi zmdi-comment-alt-text"></i></a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="tab-nav tn-justified tn-icon" role="tablist" style="width:100%">
+                                        <li role="presentation">
+                                            <a class="col-sx-4" href="index.html">
+                                                INDONESIA
+                                            </a>
+                                        </li>
+                                        <li role="presentation" class="active">
+                                            <a class="col-xs-4" href="#tab-2" aria-controls="tab-2" role="tab" data-toggle="tab">
+                                                ENGLISH (PRO)
+                                            </a>
+                                        </li>
+
+                                    </ul>
+        </header>
+
+        <section id="main">
+            <ol class="breadcrumb" style="margin-left:-10px;">
+                <li><a href="developer.html">designer.web.id</a></li>
+                <li><a href="index.html">learn</a></li>
+                <li class="active">virtualreality</li>
+            </ol>
+
+            <aside id="sidebar" class="sidebar c-overflow" style="position:fixed;z-index:1000;margin-top:-70px;height:100%;background:white">
+                <ul class="main-menu">
+                    <li class="mm-profile sub-menu">
+                        <a href="#" data-ma-action="submenu-toggle" class="media">
+                            <img class="pull-left" src="../img/coreldraw.green.png" alt="" height="25px" style="margin-left:-40px;">
+                            <div class="media-body">
+                            <div>Tutorial CorelDRAW<sup>&reg;</sup></div>
+                            <span style="font-size:11px;">Experience by IDWEBDesigner<br/>dev@designer.web.id</span>
+                            </div>
+                        </a>
+
+                        <ul>
+                            <li>
+                                <a href="developer.html">Indonesia Web Designer</a>
+                            </li>
+                            <li>
+                                <div style="margin-left:65px;margin-bottom:10px;font-size:10px;color:#888888;padding-right:20px;">Jl. Wahid Hasyim No.3 Gaten Condongcatur Depok Sleman Yogyakarta, Indonesia.</div>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-info"></i> About CorelDraw</a>
+                        <div style="margin-left:65px;margin-bottom:10px;font-size:12px;color:#579706;"><a href="basics.html">What's is CorelDraw?<br/>Basics Learn</a></div>
+                    </li>
+
+                    <li><a href="index.html"><i class="zmdi zmdi-flag"></i> Tutorial Bahasa Indonesia</a></li>
+                    <li class="sub-menu toggled active">
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-android"></i> Featured Apps</a>
+                        <div style="margin-left:65px;margin-top:10px;font-size:10px;color:#888888;padding-right:20px;">Color Docker: This docker allows you to choose fill and outline colors from a color picker, color sliders, and color palettes. Found with dockers and in the Toolbox.</div>
+
+                        <ul>
+
+                            <li><a href="language.html">Bahasa Indonesia</a></li>
+                            <li style="display:none;"><a href="upgrade.html"><i class="zmdi zmdi-shopping-cart"></i>&nbsp;&nbsp;Upgrade</a></li>
+                            <li class="divider"></li>
+
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-code"></i> Developer</a>
+
+                        <ul>
+                            <li><a href="developer.html">dev@designer.web.id<br/>designer.web.id</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </aside>
+
+            <aside id="chat" class="sidebar">
+
+                                    <article>
+                                      <p style="margin-top:30px;margin-left:15px;font-size:0.7em;"><span id="status2"><span id="status"></span></p>
+                                      <ol id="state2"></ol>
+                                    </article>
+                                    <script>
+                                    var statusElem  = document.getElementById('status2'),
+                                        state               = document.getElementById('state2');
+
+                                    function online(event) {
+                                      statusElem.className = navigator.onLine ? 'online' : 'offline';
+                                      statusElem.innerHTML = navigator.onLine ? '' : '<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You&#39;re offline, check network connection.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;content required internet access.';
+                                      state.innerHTML += '&nbsp;';
+                                    }
+
+                                    addEvent(window, 'online', online);
+                                    addEvent(window, 'offline', online);
+                                    online({ type: 'ready' });
+                                    </script>
+
+                <div style="margin-top:-30px; width:100%" id="contentloader2"></div>
+
+
+
+            </aside>
+
+            <section id="content" style="margin-bottom:-40px;">
+                <div class="container" style="margin-top:-55px;margin-left:-20px;padding-right:0px;">
+                    <div class="tab-content p-20" style="background:#ffffff;">
+
+                    <div role="tabpanel" class="tab-pane animated fadeIn in active" id="tab-1">
+
+                            <!-- Blog Posts -->
+                            <div class="card blog-post" style="margin-bottom:-0px;">
+
+                                <div class="videoWrapper">
+                                <img width="100%" src="../images/green.png" frameborder="0" allowfullscreen></img>
+                                </div>
+
+                                <a class="card-header ch-alt">
+                                    <h2><small><p>Dalam tutorial hari ini kita akan bersenang-senang menciptakan kartu undangan pesta kita sendiri. Kami akan menambahkan teks dan membuat objek vektor berwarna.</p>
+<p>Anda akan belajar bagaimana untuk:</p>
+<ul>
+<li>Membuat latar belakang yang berwarna</li>
+<li>Membuat bentuk dasar dan Membuat angka sederhana</li>
+<li>Menambahkan teks ke kartu Anda</li>
+</ul></small></h2>
+                                </a>
+
+                                <div class="card-body card-padding">
+
+                                <h4>Membuat Kartu Undangan Pesta</h4>
+                                 <br/>
+
+
+			<p>Dalam tutorial hari ini kita akan bersenang-senang menciptakan kartu undangan pesta kita sendiri. Kami akan menambahkan teks dan membuat objek vektor berwarna.</p>
+<p class="small"><img class="wp-image-10553 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/178-300x116.jpg" alt="1" width="509" height="197" srcset="http://learn.corel.com/wp-content/uploads/2015/11/178-300x116.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/178-600x233.jpg 600w, http://learn.corel.com/wp-content/uploads/2015/11/178.jpg 650w" sizes="(max-width: 509px) 100vw, 509px" /></p>
+<p><strong>Langkah 1 - Buat Dokumen Baru</strong></p>
+<ol>
+<li>Mulailah dengan membuka dokumen baru. Buka: <strong>File</strong> &gt; lalu klik <strong>New…</strong> (atau gunakan <strong>keyboard shortcut CTRL+N</strong>).
+<p class="small"><img class="size-medium wp-image-10554 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/240-300x163.jpg" alt="2" width="300" height="163" srcset="http://learn.corel.com/wp-content/uploads/2015/11/240-300x163.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/240.jpg 350w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+</li>
+<li>Di jendela <strong>Create a New Document</strong>, uat perubahan berikut:
+<p class="small"><img class="size-medium wp-image-10555 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/331-300x187.jpg" alt="3" width="300" height="187" srcset="http://learn.corel.com/wp-content/uploads/2015/11/331-300x187.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/331.jpg 550w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+</li>
+<li>Sekarang klik ikon <strong>Landscape</strong> untuk membalikkan halaman Anda ke samping.
+<p class="small"><img class="size-medium wp-image-10556 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/429-300x163.jpg" alt="4" width="300" height="163" srcset="http://learn.corel.com/wp-content/uploads/2015/11/429-300x163.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/429.jpg 550w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+</li>
+<li>Kartu kita akan memiliki dua sisi sehingga kita perlu membuat halaman kedua. Di sudut kiri bawah jendela, klik <strong>ikon</strong> &#8216;+&#8217;  untuk membuat halaman kedua.
+<p class="small"><img class="size-medium wp-image-10557 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/526-300x160.jpg" alt="5" width="300" height="160" srcset="http://learn.corel.com/wp-content/uploads/2015/11/526-300x160.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/526.jpg 350w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+</li>
+</ol>
+<p>Sekarang kita memiliki dua halaman kosong kita sekarang saatnya untuk mulai menambahkan beberapa teks dan grafik!</p>
+<p><strong>Langkah 2 - Membuat latar belakang berwarna</strong></p>
+<p>&nbsp;</p>
+<ol>
+<li>Untuk membuat latar belakang warna untuk kartu kami, cukup <strong>klik dua kali</strong> pada <strong>Rectangle tool</strong> di <strong>Toolbox</strong> di sisi kiri layar.
+<p class="small"><img class="size-medium wp-image-10558 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/625-300x166.jpg" alt="6" width="300" height="166" srcset="http://learn.corel.com/wp-content/uploads/2015/11/625-300x166.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/625.jpg 500w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+</li>
+<li>Saat kita membuat bentuk, kita bisa mengisi <strong>bentuk berwarna</strong> dengan <strong>mengklik kiri</strong> pada <strong>Color Palette</strong>.
+<p class="small"><img class="size-medium wp-image-10559 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/726-300x188.jpg" alt="7" width="300" height="188" srcset="http://learn.corel.com/wp-content/uploads/2015/11/726-300x188.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/726.jpg 500w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+</li>
+<li>Untuk <strong>mengubah garis besar </strong> bentuk warna, <strong>klik kanan</strong> pada warna di <strong>Color Palette</strong>.
+<p class="small"><img class="size-medium wp-image-10560 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/827-300x159.jpg" alt="8" width="300" height="159" srcset="http://learn.corel.com/wp-content/uploads/2015/11/827-300x159.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/827.jpg 500w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+</li>
+<li> <strong>Gergaji &#8216;tidak berwarna&#8217;</strong> di bagian atas <strong>Color Palette</strong> memungkinkan Anda menghapus warna dari fill atau garis objek.
+<p class="small"><img class="size-medium wp-image-10561 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/918-300x86.jpg" alt="9" width="300" height="86" srcset="http://learn.corel.com/wp-content/uploads/2015/11/918-300x86.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/918.jpg 450w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+</li>
+<li>Sekarang <strong>klik kiri pada warna</strong> untuk mengisi persegi panjang dengan warna biru dan <strong>klik kanan</strong> pada <strong>no-color swatch</strong> untuk menghapus garis besar.</li>
+<li>Untuk menghentikan latar belakang kita dari bergerak saat kita membuat objek lain, <strong>klik kanan</strong> dan pilih <strong>Lock Object</strong> dari menu konteks.
+<p class="small"><img class="size-medium wp-image-10562 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/1014-296x300.jpg" alt="10" width="296" height="300" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1014-296x300.jpg 296w, http://learn.corel.com/wp-content/uploads/2015/11/1014-85x85.jpg 85w, http://learn.corel.com/wp-content/uploads/2015/11/1014-50x50.jpg 50w, http://learn.corel.com/wp-content/uploads/2015/11/1014.jpg 500w" sizes="(max-width: 296px) 100vw, 296px" /></p>
+</li>
+</ol>
+<p><strong>Langkah 3 - Membuat bentuk dasar di CorelDRAW</strong></p>
+<p>&nbsp;</p>
+<p>Jika Anda melihat monster lagi di awal tutorial ini, Anda akan melihat bahwa ada beberapa <strong>bentuk sederhana</strong> ang bisa kita gambar dengan menggunakan berbagai alat dari <strong>Toolbox</strong>.Dan yang lainnya diciptakan dengan menggambar &#8216;freehand&#8217; di CorelDRAW. Sekarang kita akan melihat bagaimana ini bekerja.</p>
+<p><strong>Monster Hijau</strong></p>
+<p class="small"><img class="size-medium wp-image-10563 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/1120-152x300.jpg" alt="11" width="152" height="300" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1120-152x300.jpg 152w, http://learn.corel.com/wp-content/uploads/2015/11/1120.jpg 250w" sizes="(max-width: 152px) 100vw, 152px" /></p>
+<ol>
+<li>Klik pada <strong>Ellipse tool</strong> (<strong>F7</strong>), di <strong>Toolbox</strong> dan seret pada halaman untuk membuat bentuk oval.</li>
+<li>Ubah warna oval dengan <strong>klik kiri</strong> pada warna di <strong>Color Palette</strong>.</li>
+<li>Ubah warna garis besar dengan <strong>klik kanan</strong> pada sebuah warna.
+<p class="small"><img class="size-medium wp-image-10564 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/1220-300x212.jpg" alt="12" width="300" height="212" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1220-300x212.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/1220.jpg 550w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+</li>
+</ol>
+<p>Menciptakan telinga:</p>
+<ol>
+<li>Gambarkan oval lain dengan <strong>Ellipse tool</strong> dan gunakan <strong>Rectangle tool</strong>, gambar persegi panjang yang panjang dan tipis di atas. Warna ini sama dengan bentuk oval yang lebih besar. Anda harus memiliki sesuatu seperti ini:
+<p class="small"><img class="size-medium wp-image-10565 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/1320-300x253.jpg" alt="13" width="300" height="253" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1320-300x253.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/1320.jpg 450w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+</li>
+<li>Dengan <strong>Pick</strong> tool di bagian atas <strong>Toolbox</strong>, tariklah dua bentuk baru dan klik pada <strong>Weld icon</strong> untuk mengelas keduanya.
+<p class="small"><img class="size-medium wp-image-10566 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/1417-300x166.jpg" alt="14" width="300" height="166" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1417-300x166.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/1417.jpg 550w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+</li>
+<li>Pindahkan telinga ke oval besar lalu klik sekali lagi di atasnya. <strong>Persegi, pegangan ukuran</strong> akan berubah menjadi <strong>pegangan rotasi</strong>. Seret pada <strong>corner handle</strong> untuk memutar bentuknya.
+<p class="small"><img class="size-medium wp-image-10567 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/1516-300x152.jpg" alt="15" width="300" height="152" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1516-300x152.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/1516.jpg 550w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+</li>
+<li>Untuk membuat telinga kedua, tekan tombol &#8216;+&#8217;  pada keyboard Anda untuk membuat salinan.</li>
+<li>Seret salinannya ke tempatnya dan gunakan ikon <strong>Mirror horizontally</strong> di <strong>Property bar</strong> untuk membalik objek. Pindahkan telinga kedua ke posisi yang benar.
+<p class="small"><img class="size-medium wp-image-10568 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/1613-300x189.jpg" alt="16" width="300" height="189" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1613-300x189.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/1613.jpg 550w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+</li>
+<li>Sekarang pilih semua 3 benda hijau dengan  <strong>Pick</strong> tool dan lepaskan mereka bersama-sama (Jika Anda tidak dapat menarik benda untuk dipilih, tahan tombol <strong>SHIF</strong> dan klik pada masing-masing objek. Ini juga memungkinkan Anda memilih beberapa objek).
+<p class="small"><img class="size-medium wp-image-10569 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/179-300x205.jpg" alt="17" width="300" height="205" srcset="http://learn.corel.com/wp-content/uploads/2015/11/179-300x205.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/179.jpg 550w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+</li>
+<li>Sebagian besar wajah sekarang bisa dibuat dengan menggunakan <strong>Ellipse tool</strong> (<strong>F7</strong>). Hanya menyeret alat ini pada halaman akan memberi Anda bentuk oval. Untuk menggambar <strong>lingkaran sempurna</strong>, tahan tombol <strong>CTRL</strong> saat Anda menyeret. Semua bentuk berikut (mata, hidung, pipi), diciptakan hanya dengan menggunakan <strong>Ellipse tool</strong>.
+<p class="small"><img class="size-medium wp-image-10570 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/186-161x300.jpg" alt="18" width="161" height="300" srcset="http://learn.corel.com/wp-content/uploads/2015/11/186-161x300.jpg 161w, http://learn.corel.com/wp-content/uploads/2015/11/186.jpg 250w" sizes="(max-width: 161px) 100vw, 161px" /></p>
+</li>
+</ol>
+<p>Menggunakan Artistic Media tool:</p>
+<p> <strong>Artistic Media tool</strong> Memungkinkan Anda menggambar bentuk vektor yang terlihat hampir seolah-olah mereka dilukis dengan brush dan ada banyak media artistik untuk dipilih! Kami sekarang akan menggunakan Artistic Media tool untuk menciptakan alis Green Monster.</p>
+<ol>
+<li>Klik pada <strong>Artistic Media tool</strong> (<strong>I</strong>), di <strong>Toolbox</strong>.</li>
+<li>Pada <strong>Property bar</strong>, pilih <strong>Preset icon</strong>.</li>
+<li>Pilih <strong>brush</strong> dari daftar drop-down.</li>
+<li>Seret brush di halaman untuk membuat alis.
+<p class="small"><img class="size-medium wp-image-10571 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/199-300x279.jpg" alt="19" width="300" height="279" srcset="http://learn.corel.com/wp-content/uploads/2015/11/199-300x279.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/199.jpg 550w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+</li>
+<li>Kita sekarang akan menggunakan <strong>Freehand tool</strong> (<strong>F5</strong>), di <strong>Toolbox</strong> untuk membuat sketsa di mulut. Setelah kita menambahkan gigi kita akan menyelesaikan mulut dengan menarik bagian atas menggunakan <strong>Artistic Media</strong> brush.
+<p class="small"><img class="size-medium wp-image-10572 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/205-300x244.jpg" alt="20" width="300" height="244" srcset="http://learn.corel.com/wp-content/uploads/2015/11/205-300x244.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/205.jpg 550w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+</li>
+</ol>
+<p>Sekarang untuk gigi!</p>
+<p>Cara tercepat untuk membuat gigi adalah dengan menggunakan  <strong>Polygon tool</strong> (<strong>Y</strong>).</p>
+<ol>
+<li>Pilih <strong>Polygon tool</strong> dari <strong>Toolbox</strong>.</li>
+<li>Di <strong>Property bar</strong>, atur jumlah sisi ke <strong>3</strong>.</li>
+<li>Gambarkan segitiga pertama, isi dengan warna putih dan buat garis besar warna hitam.
+<p class="small"><img class="size-medium wp-image-10573 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/2115-300x250.jpg" alt="21" width="300" height="250" srcset="http://learn.corel.com/wp-content/uploads/2015/11/2115-300x250.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/2115.jpg 550w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+</li>
+<li>Dengan gigi yang masih dipilih, tekan tombol &#8216;+&#8217;  pada keyboard Anda untuk membuat salinan.</li>
+<li>Pindahkan ini di sepanjang garis mulut dan putar jika diperlukan. Anda harus ditinggalkan dengan sesuatu seperti ini:
+<p class="small"><img class="size-medium wp-image-10574 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/2212-166x300.jpg" alt="22" width="166" height="300" srcset="http://learn.corel.com/wp-content/uploads/2015/11/2212-166x300.jpg 166w, http://learn.corel.com/wp-content/uploads/2015/11/2212.jpg 250w" sizes="(max-width: 166px) 100vw, 166px" /></p>
+</li>
+<li>Untuk menyelesaikannya, pilih <strong>Artistic Media</strong> (<strong>I</strong>), dari  <strong>Toolbox</strong>, pilih kuas dari daftar of<strong>Presets</strong> di <strong>Property bar</strong> dan gambar garis di sepanjang tepi atas gigi.</li>
+<li>ulut sekarang harus terlihat seperti ini dan Monster Hijau kita sekarang sudah selesai!
+<p class="small"><img class="size-medium wp-image-10575 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/2311-300x233.jpg" alt="23" width="300" height="233" srcset="http://learn.corel.com/wp-content/uploads/2015/11/2311-300x233.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/2311.jpg 550w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+</li>
+</ol>
+<p><strong>Monster Kuning</strong></p>
+<p class="small"><img class="size-medium wp-image-10576 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/246-300x261.jpg" alt="24" width="300" height="261" srcset="http://learn.corel.com/wp-content/uploads/2015/11/246-300x261.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/246.jpg 350w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<p>Monster kuning menggunakan   <strong>Artistic Media</strong> dan <strong>Freehand</strong> drawing tool.</p>
+<ol>
+<li>Pilih <strong>Freehand tool</strong> (<strong>F5</strong>), dari toolbox dan gambar bentuk kepala monster.
+<p class="small"><img class="size-medium wp-image-10577 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/253-300x242.jpg" alt="25" width="300" height="242" srcset="http://learn.corel.com/wp-content/uploads/2015/11/253-300x242.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/253.jpg 550w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+</li>
+<li>Untuk menutup bentuknya (sehingga Anda bisa mengisinya dengan warna), saat Anda kembali ke awal jalur, perhatikan sampai bentuk kursor berubah menjadi tanda panah dengan tanda panah dan klik di akhir baris.
+<p class="small"><img class="size-medium wp-image-10578 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/263-300x109.jpg" alt="26" width="300" height="109" srcset="http://learn.corel.com/wp-content/uploads/2015/11/263-300x109.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/263.jpg 350w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+</li>
+<li>Sekarang klik kiri pada bentuk dan isi dengan warna.</li>
+<li>Buat kacamata hitam dengan membuat dua elips dan mengisinya dengan warna hitam.</li>
+<li>Kemudian gunakan <strong>Artistic Media</strong> tool lagi untuk membuat rambut.
+<p class="small"><img class="size-medium wp-image-10579 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/272-300x216.jpg" alt="27" width="300" height="216" srcset="http://learn.corel.com/wp-content/uploads/2015/11/272-300x216.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/272.jpg 550w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+</li>
+<li>Lanjutkan menggunakan <strong>Artistic Media</strong> tool dan berbagai <strong>Preset</strong> brushes untuk menambahkan alis, hidung, dan sisi kacamata hitam. Gambarkan dua garis untuk membuat mulut.</li>
+<li>Pastikan sudut mulut menyentuh atau tumpang tindih.
+<p class="small"><img class="size-medium wp-image-10580 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/283-300x269.jpg" alt="28" width="300" height="269" srcset="http://learn.corel.com/wp-content/uploads/2015/11/283-300x269.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/283.jpg 500w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+</li>
+<li>Sekarang pilih <strong>Smart Fill tool</strong> dari <strong>Toolbox</strong>.</li>
+<li>Pada <strong>Property bar</strong>, atur <strong>Fill Color</strong> untuk <strong>&#8216;Specify&#8217;</strong> dan pilih warna putih.</li>
+<li>Atur <strong>Opsi bergaris</strong> menjadi <strong>&#8216;Tidak bergaris&#8217;</strong>.</li>
+<li>Klik di dalam area mulut untuk mengisi dengan warna putih.
+<p class="small"><img class="size-medium wp-image-10581 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/292-300x217.jpg" alt="29" width="300" height="217" srcset="http://learn.corel.com/wp-content/uploads/2015/11/292-300x217.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/292.jpg 550w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+</li>
+</ol>
+<p>Monster Kuning sekarang sudah selesai!</p>
+<p>Sekaranag pilih <strong>Pick tool</strong> lagi dan tariklah monster kuning itu. Tekan <strong>CTRL+G</strong> untuk mengelompokkan semua objek. Pindahkan monster ke tempat yang Anda inginkan untuk memilikinya.</p>
+<p><strong>Rakasa Ungu</strong></p>
+<p class="small"><img class="size-medium wp-image-10582 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/302-300x293.jpg" alt="30" width="300" height="293" srcset="http://learn.corel.com/wp-content/uploads/2015/11/302-300x293.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/302-50x50.jpg 50w, http://learn.corel.com/wp-content/uploads/2015/11/302.jpg 400w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<p>Rakasa ketiga kami menggunakan semua alat yang telah kami gunakan sampai sekarang: <strong>Freehand</strong> tool, <strong>Polygon</strong> tool, <strong>Artistic Media</strong> tool dan <strong>Smart Fill</strong> tool.</p>
+<ol>
+<li>Gunakan <strong>Polygon tool</strong> dari toolbox dan di <strong>Property bar</strong> atur jumlah <strong>sisi ke 3</strong>.</li>
+<li>Gambarlah segitiga dan isi dengan warna ungu.</li>
+<li>Buat mulut dan gigi dengan menggambar persegi panjang dengan  <strong>Rectangle tool</strong> (mulut memiliki warna hitam dan garis besar merah).</li>
+<li>Di <strong>Property bar</strong>, meningkatkan <strong>garis besar lebar</strong> mulut.</li>
+<li>Giginya putih tanpa garis besar.</li>
+</ol>
+<p>Anda sekarang harus memiliki gambar seperti ini:</p>
+<p class="small"><img class="size-medium wp-image-10583 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/3111-300x292.jpg" alt="31" width="300" height="292" srcset="http://learn.corel.com/wp-content/uploads/2015/11/3111-300x292.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/3111-50x50.jpg 50w, http://learn.corel.com/wp-content/uploads/2015/11/3111.jpg 350w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<ol>
+<ol>
+<li>Gunakan <strong>Artistic Media</strong> tool untuk menggambar bentuk hitam.</li>
+<li>sesuaikan <strong>lebar</strong> brush di <strong>Property bar</strong>.</li>
+<li>Tarik pada halaman untuk membuat bentuk hitam.</li>
+<li>Gunakan <strong>Ellipse tool</strong> untuk menggambar warna.
+<p class="small"><img class="size-medium wp-image-10584 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/3210-300x293.jpg" alt="32" width="300" height="293" srcset="http://learn.corel.com/wp-content/uploads/2015/11/3210-300x293.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/3210.jpg 600w, http://learn.corel.com/wp-content/uploads/2015/11/3210-50x50.jpg 50w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+</li>
+<li>Pilih di sekitar bentuk hitam dan mata dengan <strong>Pick tool</strong>.</li>
+<li>Klik pada ikon <strong>Group Objects</strong> (<strong>CTRL+G</strong>), di <strong>Property bar</strong> untuk mengelompokkan objek.</li>
+<li>Tekan Tombol &#8216;+&#8217;  pada <strong>Property bar</strong> untuk membuat salinan.</li>
+<li>Klik ikon <strong>Mirror horizontally</strong> di <strong>Property bar</strong> untuk membalik objek sekitar</li>
+<li>Tempatkan objek baru pada posisi yang benar.
+<p class="small"><img class="size-medium wp-image-10585 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/332-300x185.jpg" alt="33" width="300" height="185" srcset="http://learn.corel.com/wp-content/uploads/2015/11/332-300x185.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/332.jpg 600w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<p>Kita sekarang akan membuat topi pesta untuk monster kita.</p>
+<p class="small"><img class="size-medium wp-image-10586 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/342-195x300.jpg" alt="34" width="195" height="300" srcset="http://learn.corel.com/wp-content/uploads/2015/11/342-195x300.jpg 195w, http://learn.corel.com/wp-content/uploads/2015/11/342.jpg 450w" sizes="(max-width: 195px) 100vw, 195px" /></p>
+</li>
+<li>Gunakan <strong>Polygon tool</strong> dengan jumlah <strong>sisi yang disetel ke 3</strong> untuk membuat segitiga oranye.</li>
+<li>Di <strong>Toolbox</strong>, klik pada segitiga hitam kecil di sebelah <strong>Polygon tool</strong> untuk membuka menu flyout.</li>
+<li>Sekarang pilih <strong>Star tool</strong>. (Anda dapat mengubah jumlah poin untuk Bintang di <strong>Property bar</strong>).</li>
+<li>Sekarang gambarlah sebuah bintang besar untuk bagian atas topi partai. Tambahkan fill kuning dan lepaskan garis besar dengan mengklik kanan pada &#8216;<strong>No color</strong>&#8216; swatch di <strong>Color Palette</strong>.</li>
+<li>Bintang-bintang yang lebih kecil di atas topi telah diperbaiki dengan mengklik kiri pada &#8216;<strong>No color</strong>&#8216; swatch.
+<p class="small"><img class="size-medium wp-image-10587 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/352-243x300.jpg" alt="35" width="243" height="300" srcset="http://learn.corel.com/wp-content/uploads/2015/11/352-243x300.jpg 243w, http://learn.corel.com/wp-content/uploads/2015/11/352.jpg 600w" sizes="(max-width: 243px) 100vw, 243px" /></p>
+</li>
+<li>Pilih semua objek topi dengan <strong>Pick tool</strong> dan klik pada ikon <strong>Group Objects</strong> (<strong>CTRL+G</strong>), pada <strong>Property bar</strong>.</li>
+<li>Pindahkan topi di atas kepala monster ungu dan klik sekali lagi pada topi untuk mendapatkan pegangan rotasi. Putar sedikit topi. Inilah yang seharusnya dimiliki monster kita saat ini:
+<p class="small"><img class="size-medium wp-image-10588 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/362-300x284.jpg" alt="36" width="300" height="284" srcset="http://learn.corel.com/wp-content/uploads/2015/11/362-300x284.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/362.jpg 500w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+</li>
+<li>Untuk menarik tangan, ambil <strong>Freehand tool</strong> dan tarik beberapa tangan pada monster itu, tapi pastikan garis 'menggantung di atas' tepi tubuh, seperti ini:
+<p class="small"><img class="size-medium wp-image-10589 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/371-300x137.jpg" alt="37" width="300" height="137" srcset="http://learn.corel.com/wp-content/uploads/2015/11/371-300x137.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/371.jpg 550w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+</li>
+<li>Sekarang pilih <strong>Smart Fill tool</strong> dari <strong>Toolbox</strong> dan di <strong>Property bar</strong>, atur<strong>Opsi Fill</strong> ke warna pink. Tetapkan<strong>Outline options</strong> ke <strong>No Outline</strong>.</li>
+<li>Klik di tangan untuk membuat bentuk tangan baru berwarna pink.</li>
+<li>Dengan <strong>Pick tool</strong>, pilih dan hapus garis besar tangan hitam dengan menekan tombol <strong>Delete</strong>.</li>
+</ol>
+</ol>
+<p class="small"><img class="size-medium wp-image-10590 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/381-300x172.jpg" alt="38" width="300" height="172" srcset="http://learn.corel.com/wp-content/uploads/2015/11/381-300x172.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/381.jpg 600w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<p>Anda sekarang bisa menghabisi monster ungu dengan menggunakan <strong>Ellipse tool</strong> misalnya, untuk membuat kuku jari.</p>
+<p>Monster Ungu sekarang sudah selesai!</p>
+<p class="small"><img class="size-medium wp-image-10591 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/392-300x296.jpg" alt="39" width="300" height="296" srcset="http://learn.corel.com/wp-content/uploads/2015/11/392-300x296.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/392-85x85.jpg 85w, http://learn.corel.com/wp-content/uploads/2015/11/392-50x50.jpg 50w, http://learn.corel.com/wp-content/uploads/2015/11/392.jpg 500w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<p><strong>Langkah 4 - Menambahkan teks ke kartu kami</strong></p>
+<p>Yang dilakukan adalah menambahkan teks ke bagian depan kartu.</p>
+<ol>
+<li>Pilih <strong>Text tool</strong> (<strong>F8</strong>), dari <strong>Toolbox</strong>.</li>
+<li>Klik pada halaman dan ketik pesan undangan Anda.</li>
+<li>Beralih kembali ke <strong>Pick tool</strong>, pilih teks dan pilih font yang sesuai dengan desain Anda dengan memilih salah satu dari daftar drop-down di <strong>Property bar</strong>.
+<p class="small"><img class="size-medium wp-image-10592 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/40-300x181.jpg" alt="40" width="300" height="181" srcset="http://learn.corel.com/wp-content/uploads/2015/11/40-300x181.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/40-600x363.jpg 600w, http://learn.corel.com/wp-content/uploads/2015/11/40.jpg 650w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+</li>
+<li>Teks ungu di sini pertama kali dipilih dengan <strong>Pick tool</strong>, lalu diputar.</li>
+</ol>
+<p><strong>Langkah 5 - Menciptakan sisi belakang kartu</strong></p>
+<p class="small"><img class="size-medium wp-image-10593 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/4111-300x213.jpg" alt="41" width="300" height="213" srcset="http://learn.corel.com/wp-content/uploads/2015/11/4111-300x213.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/4111.jpg 550w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<ol>
+<li>Klik pada <strong>Page 2 tab</strong> di bagian bawah jendela.</li>
+<li>Klik dua kali pada  <strong>Rectangle tool</strong> untuk membuat persegi panjang seukuran halaman. Isi dengan warna hitam.</li>
+<li>Gunakan <strong>Text tool</strong> untuk membuat teks, lalu dengan <strong>Pick tool</strong>, klik kiri putih di <strong>Color Palette</strong> untuk mengubah warna teks menjadi putih.</li>
+<li>Wajah di bagian bawah dibuat menggunakan <strong>Ellipse</strong> dan <strong>Artistic Media</strong> tool.
+<p class="small"><img class="size-medium wp-image-10594 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/4210-300x229.jpg" alt="42" width="300" height="229" srcset="http://learn.corel.com/wp-content/uploads/2015/11/4210-300x229.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/4210.jpg 450w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+</li>
+<li>Untuk membuat rambut kurus, pilih <strong>Spiral tool</strong> dari toolbox.
+<p class="small"><img class="size-medium wp-image-10595 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/431-300x220.jpg" alt="43" width="300" height="220" srcset="http://learn.corel.com/wp-content/uploads/2015/11/431-300x220.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/431-600x439.jpg 600w, http://learn.corel.com/wp-content/uploads/2015/11/431.jpg 650w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+</li>
+<li>Pilih <strong>Shape tool</strong> (<strong>F10</strong>), dari <strong>Toolbox</strong> dan gunakan ini untuk memilih sekitar spiral.</li>
+<li>Di <strong>Property bar</strong>, Klik pada ikon <strong>Elastic mode</strong>.</li>
+<li>Tarik keluar dari tengah spiral untuk menciptakan bentuk seperti musim semi
+<p class="small"><img class="size-medium wp-image-10596 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/441-300x180.jpg" alt="44" width="300" height="180" srcset="http://learn.corel.com/wp-content/uploads/2015/11/441-300x180.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/441-600x361.jpg 600w, http://learn.corel.com/wp-content/uploads/2015/11/441.jpg 650w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+</li>
+<li>Letakkan pegas di atas wajah dan gunakan <strong>tombol</strong> '+' pada keyboard untuk membuat salinan.</li>
+<li>Klik setiap musim semi lagi untuk mendapatkan <strong>rotation handles</strong> dan atur spring individu.
+<p class="small"><img class="size-medium wp-image-10597 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/451-300x244.jpg" alt="45" width="300" height="244" srcset="http://learn.corel.com/wp-content/uploads/2015/11/451-300x244.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/451.jpg 600w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+</li>
+</ol>
+<p><strong>Langkah 6 - Menyimpan kartu Anda</strong></p>
+<p>Once your design is finished you need to save it.</p>
+<ol>
+<li>Buka <strong>File</strong> &gt; <strong>Save…</strong> dan di jendela simpan file Anda sebagai <strong>.CDR file</strong> jika Anda ingin mengeditnya lagi di masa mendatang.
+<p class="small"><img class="size-medium wp-image-10598 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/461-300x63.jpg" alt="46" width="300" height="63" /></p>
+</li>
+<li>Jika Anda mengirim file Anda ke toko printer agar dicetak, Anda mungkin ingin menyimpan file tersebut sebagai file PDF juga. Buka: <strong>File</strong> &gt; <strong>Publish to PDF</strong> ke PDF export window, pilih <strong>Prepress</strong> dari daftar drop-down <strong>PDF preset</strong>  &gt; Klik<strong>Save</strong>.
+<p class="small"><img class="size-medium wp-image-10599 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/471-300x106.jpg" alt="47" width="300" height="106" srcset="http://learn.corel.com/wp-content/uploads/2015/11/471-300x106.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/471.jpg 327w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+</li>
+</ol>
+
+
+
+                                <script src='../js/colpick.js'></script>
+                                <script src="../js/colorpicker.js"></script>
+
+                                </div>
+                            </div>
+
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane animated fadeIn in" id="tab-2">
+                    <div id="contenttab2"></div>
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane animated fadeIn" id="tab-3" style="margin-top:-20px;margin-left:-20px;margin-right:-20px;background:#ffffff">
+
+                    </div>
+
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- Page Loader -->
+        <div class="page-loader">
+            <div class="preloader" style="text-align:center;">
+                <svg class="pl-circular" viewBox="25 25 50 50">
+                    <circle class="plc-path" cx="50" cy="50" r="20" />
+                </svg><br/><br/>
+                <div style="font-size:8px;margin-left:-80px;width:200px" class="demo"></div>
+            </div>
+        </div>
+
+        <div style="margin-bottom:10px;"><footer id="footer">
+            Copyright &copy; 2017 IDWEBDesigner<br/><a href="index.html">Back to <i class="zmdi zmdi-home"></i> Homepage</a>
+        </footer></div>
+
+        <!-- Javascript Libraries -->
+        <script src="../vendors/bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="../vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+        <script src="../vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="../vendors/bower_components/Waves/dist/waves.min.js"></script>
+        <script src="../vendors/bootstrap-growl/bootstrap-growl.min.js"></script>
+        <script src="../vendors/bower_components/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="../vendors/bower_components/lightgallery/dist/js/lightgallery-all.min.js"></script>
+        <script src="../vendors/bootgrid/jquery.bootgrid.updated.min.js"></script>
+
+        <!-- Placeholder for IE9 -->
+        <!--[if IE 9 ]>
+            <script src="vendors/bower_components/jquery-placeholder/jquery.placeholder.min.js"></script>
+        <![endif]-->
+
+        <script src="../js/app.min.js"></script>
+
+        <!-- Data Table -->
+        <script>
+            $(function()
+            {
+              $("#grid-basic").bootgrid({
+                  caseSensitive: false,
+                    css: {
+                        icon: 'zmdi icon',
+                        iconColumns: 'zmdi-view-module',
+                        iconDown: 'zmdi-sort-amount-desc',
+                        iconRefresh: 'zmdi-refresh',
+                        iconUp: 'zmdi-sort-amount-asc'
+                    },
+              }
+              )
+            });
+        </script>
+
+        <script type="text/javascript">
+            //Basic
+            $('#sa-basic').click(function(e){
+                e.preventDefault();
+                var link = $(this).attr('href');
+
+                swal({
+                    title: "Get Inspire Profesional Logos",
+                    text: "More logos sparately on our Learn Apps: Javascript, NoSQL Database, Virtual Reality, and more...",
+                    showCancelButton: true,
+                    allowOutsideClick: true,
+                },
+                function(){
+                    window.location.href = 'market://details?id=id.web.designer.learn.javascript';
+                });
+            });
+        </script>
+
+    <script type="text/javascript">
+        function rateApp() {
+            android.rateApp();
+       }
+    </script>
+
+    </body>
+
+</html>

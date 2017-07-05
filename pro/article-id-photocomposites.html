@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Tutorial CorelDraw Pro</title>
+
+         <script type="text/javascript">
+          <!--
+          if (screen.width >= 2800) {
+            window.location = "http://designer.web.id";
+          }
+          //-->
+        </script>
+
+        <!-- Vendor CSS -->
+        <link href="../vendors/bower_components/animate.css/animate.min.css" rel="stylesheet">
+        <link href="../vendors/bower_components/sweetalert/dist/sweetalert.css" rel="stylesheet">
+        <link href="../vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
+        <link href="../vendors/bower_components/lightgallery/dist/css/lightgallery.min.css" rel="stylesheet">
+        <link href="../vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+        <link href="../vendors/bootgrid/jquery.bootgrid.min.css" rel="stylesheet">
+
+        <!-- CSS -->
+        <link href="../css/app_1.min.css" rel="stylesheet">
+        <link href="../css/app_2.min.css" rel="stylesheet">
+
+        <script src="../js/h5utils.js"></script>
+        <script src="../js/jquery-2.1.0.min.js"></script>
+        <script src="../js/jquery.jscroll.min.js"></script>
+        <script>$(function(){
+        $("#contentloader1").load("http://app.coreldraw.designer.web.id/content-message.html"); $("#contentloader2").load("http://app.coreldraw.designer.web.id/pro/content-right-pro.html");
+        $("#contenttab1").load("http://app.coreldraw.designer.web.id/pro/contenttab2.html");
+        $("#contenttab2").load("http://app.coreldraw.designer.web.id/pro/contenttab2.html");
+        });</script>
+
+        <style>.videoWrapper {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 */
+        padding-top: 25px;
+        height: 0;}
+        .videoWrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;}
+        .lcb-navigation a{background:#999999}
+        </style>
+    </head>
+    <body style="background:#ffffff">
+
+        <!-- Page Loader -->
+        <div class="page-loader">
+            <div class="preloader pls-white">
+                <svg class="pl-circular" viewBox="25 25 50 50">
+                    <circle class="plc-path" cx="50" cy="50" r="20" />
+                </svg>
+            </div>
+
+        </div>
+
+        <header id="header" class="clearfix container">
+            <ul class="h-inner">
+
+                <li class="hi-trigger ma-trigger" data-ma-action="sidebar-open" data-ma-target="#sidebar">
+                    <div class="line-wrap">
+                        <div class="line top"></div>
+                        <div class="line center"></div>
+                        <div class="line bottom"></div>
+                    </div>
+                </li>
+
+                <li class="hi-logo" data-ma-action="sidebar-open" data-ma-target="#sidebar" style="margin-top:8px;">
+                    <span style="font-size:15px;color:#ffffff;"> Tutorial CorelDRAW<sup>&reg;</sup><span>
+                </li>
+
+                <li class="pull-right">
+                    <ul class="hi-menu">
+
+                        <li style="margin-right:-15px;" class="dropdown">
+                            <a data-toggle="dropdown" href="#">
+                                <i class="him-icon zmdi zmdi-notifications-none"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-lg pull-right">
+                                <div class="list-group list-group-light">
+                                    <div class="lg-header">
+                                        LIVE DEVELOPER MESSAGES
+                                    </div>
+
+                                    <article>
+                                      <p style="text-align:center;font-size:1em;"><span id="status"><span id="status"></span></p>
+                                      <ol id="state"></ol>
+                                    </article>
+                                    <script>
+                                    var statusElem  = document.getElementById('status'),
+                                        state               = document.getElementById('state');
+
+                                    function online(event) {
+                                      statusElem.className = navigator.onLine ? 'online' : 'offline';
+                                      statusElem.innerHTML = navigator.onLine ? '' : '<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You&#39;re offline, check network connection.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;content required internet access.';
+                                      state.innerHTML += '&nbsp;';
+                                    }
+
+                                    addEvent(window, 'online', online);
+                                    addEvent(window, 'offline', online);
+                                    online({ type: 'ready' });
+                                    </script>
+
+                                    <div style="margin-top:-30px;" id="contentloader1"></div>
+                                    <a class="view-more view-more-light" href="idwebdesigner.html">Powered by IDWEBDesigner</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li style="margin-right:-15px;" class="ma-trigger" data-ma-action="sidebar-open" data-ma-target="#chat">
+                            <a data-toggle="dropdown" href="#">
+                                <i class="him-icon zmdi zmdi-favorite-outline"></i>
+                            </a>
+                        </li>
+                        <li style="margin-right:-5px;" class="dropdown">
+                            <a data-toggle="dropdown" href="#"><i class="him-icon zmdi zmdi-more-vert"></i></a>
+                            <ul class="dropdown-menu dm-icon pull-right">
+                                <li class="hidden-xs">
+                                    <a data-ma-action="fullscreen" href="#"><i class="zmdi zmdi-fullscreen"></i> Fullscreen</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:window.location.reload();"><i class="zmdi zmdi-refresh-sync"></i> Refresh</a>
+                                </li>
+                                <li>
+                                    <a id="rate-app" onClick="rateApp()">Rate 5 Stars</a>
+                                </li>
+                                <li>
+                                    <a href="update.html"><i class="zmdi zmdi-download"></i>Check update</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="help.html"><i class="zmdi zmdi-help"></i> Help</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="hidden-xs ma-trigger" data-ma-action="sidebar-open" data-ma-target="#chat">
+                            <a href="#"><i class="him-icon zmdi zmdi-comment-alt-text"></i></a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="tab-nav tn-justified tn-icon" role="tablist" style="width:100%">
+                                        <li role="presentation">
+                                            <a class="col-sx-4" href="index.html">
+                                                INDONESIA
+                                            </a>
+                                        </li>
+                                        <li role="presentation" class="active">
+                                            <a class="col-xs-4" href="#tab-2" aria-controls="tab-2" role="tab" data-toggle="tab">
+                                                ENGLISH (PRO)
+                                            </a>
+                                        </li>
+
+                                    </ul>
+        </header>
+
+        <section id="main">
+            <ol class="breadcrumb" style="margin-left:-10px;">
+                <li><a href="developer.html">designer.web.id</a></li>
+                <li><a href="index.html">learn</a></li>
+                <li class="active">virtualreality</li>
+            </ol>
+
+            <aside id="sidebar" class="sidebar c-overflow" style="position:fixed;z-index:1000;margin-top:-70px;height:100%;background:white">
+                <ul class="main-menu">
+                    <li class="mm-profile sub-menu">
+                        <a href="#" data-ma-action="submenu-toggle" class="media">
+                            <img class="pull-left" src="../img/coreldraw.green.png" alt="" height="25px" style="margin-left:-40px;">
+                            <div class="media-body">
+                            <div>Tutorial CorelDRAW<sup>&reg;</sup></div>
+                            <span style="font-size:11px;">Experience by IDWEBDesigner<br/>dev@designer.web.id</span>
+                            </div>
+                        </a>
+
+                        <ul>
+                            <li>
+                                <a href="developer.html">Indonesia Web Designer</a>
+                            </li>
+                            <li>
+                                <div style="margin-left:65px;margin-bottom:10px;font-size:10px;color:#888888;padding-right:20px;">Jl. Wahid Hasyim No.3 Gaten Condongcatur Depok Sleman Yogyakarta, Indonesia.</div>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-info"></i> About CorelDraw</a>
+                        <div style="margin-left:65px;margin-bottom:10px;font-size:12px;color:#579706;"><a href="basics.html">What's is CorelDraw?<br/>Basics Learn</a></div>
+                    </li>
+
+                    <li><a href="index.html"><i class="zmdi zmdi-flag"></i> Tutorial Bahasa Indonesia</a></li>
+                    <li class="sub-menu toggled active">
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-android"></i> Featured Apps</a>
+                        <div style="margin-left:65px;margin-top:10px;font-size:10px;color:#888888;padding-right:20px;">Color Docker: This docker allows you to choose fill and outline colors from a color picker, color sliders, and color palettes. Found with dockers and in the Toolbox.</div>
+
+                        <ul>
+
+                            <li><a href="language.html">Bahasa Indonesia</a></li>
+                            <li style="display:none;"><a href="upgrade.html"><i class="zmdi zmdi-shopping-cart"></i>&nbsp;&nbsp;Upgrade</a></li>
+                            <li class="divider"></li>
+
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-code"></i> Developer</a>
+
+                        <ul>
+                            <li><a href="developer.html">dev@designer.web.id<br/>designer.web.id</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </aside>
+
+            <aside id="chat" class="sidebar">
+
+                                    <article>
+                                      <p style="margin-top:30px;margin-left:15px;font-size:0.7em;"><span id="status2"><span id="status"></span></p>
+                                      <ol id="state2"></ol>
+                                    </article>
+                                    <script>
+                                    var statusElem  = document.getElementById('status2'),
+                                        state               = document.getElementById('state2');
+
+                                    function online(event) {
+                                      statusElem.className = navigator.onLine ? 'online' : 'offline';
+                                      statusElem.innerHTML = navigator.onLine ? '' : '<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You&#39;re offline, check network connection.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;content required internet access.';
+                                      state.innerHTML += '&nbsp;';
+                                    }
+
+                                    addEvent(window, 'online', online);
+                                    addEvent(window, 'offline', online);
+                                    online({ type: 'ready' });
+                                    </script>
+
+                <div style="margin-top:-30px; width:100%" id="contentloader2"></div>
+
+
+
+            </aside>
+
+            <section id="content" style="margin-bottom:-40px;">
+                <div class="container" style="margin-top:-55px;margin-left:-20px;padding-right:0px;">
+                    <div class="tab-content p-20" style="background:#ffffff;">
+
+                    <div role="tabpanel" class="tab-pane animated fadeIn in active" id="tab-1">
+
+                            <!-- Blog Posts -->
+                            <div class="card blog-post" style="margin-bottom:-0px;">
+
+                                <div class="videoWrapper">
+                                <img width="100%" src="../images/green.png" frameborder="0" allowfullscreen></img>
+                                </div>
+
+                                <a class="card-header ch-alt">
+                                    <h2><small>Lab Cutout di Corel® PHOTO-PAINT ™ memungkinkan Anda untuk mengekstrak atau menyalin elemen foto dari gambar digital manapun dengan presisi dan kemudahan relatif. Lebih dari sekadar alat pilihan cepat, Lab Cutout secara akurat mendeteksi hampir semua bentuk dan mempertahankan detail gambar yang bagus. Ini secara otomatis menerapkan pemotongan bulu transparan, dan ini memungkinkan Anda memutuskan apakah potongan Anda akan menjadi objek tanpa latar belakang, objek di atas gambar asli, atau a klip mask yang menyertai gambar aslinya.</small></h2>
+                                </a>
+
+                                <div class="card-body card-padding">
+
+                                <h4>Buat Komposit Foto</h4>
+                                 <br/>
+
+
+			<p>Fungsi masking kompleks Lab Cutout memungkinkan Anda membuat komposit foto berkualitas tinggi. Setelah elemen foto dipotong, Anda bisa memanipulasinya seperti objek mengambang lainnya. Misalnya, Anda bisa mencampurnya dengan elemen gambar lainnya untuk membuat komposisi foto yang sesuai. Pada gambar di bawah, gambar perenang itu mudah diisolasi dan disisipkan ke dalam adegan yang berbeda, dengan hasil yang realistis.</p>
+<p><img class="size-medium wp-image-10267 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/174-290x300.jpg" alt="1" width="290" height="300" srcset="http://learn.corel.com/wp-content/uploads/2015/11/174-290x300.jpg 290w, http://learn.corel.com/wp-content/uploads/2015/11/174.jpg 507w" sizes="(max-width: 290px) 100vw, 290px" /></p>
+<p>Lab Cutout pada dasarnya adalah aplikasi plug-in yang telah diintegrasikan ke dalam Corel PHOTO-PAINT. Semua kontrol terkandung dalam satu kotak dialog yang terbagi menjadi dua area dasar.</p>
+<p><img class="size-medium wp-image-10268 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/247-300x205.png" alt="2" width="300" height="205" srcset="http://learn.corel.com/wp-content/uploads/2015/11/247-300x205.png 300w, http://learn.corel.com/wp-content/uploads/2015/11/247.png 479w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<p>Browsing tool yang tersedia</p>
+<p>Cutout Lab memiliki toolet yang dilengkapi dengan baik yang mencakup jendela roomy preview, toolbar zoom dan cutout, previewing dan cutout options. Zooming dan panning tool ditemukan di sisi kiri  Cutout Lab, memungkinkan Anda mengontrol tampilan gambar yang Anda pilih.<br />
+<strong>Zoom In</strong> tool (F2) dan <strong>Zoom Out</strong> tool (F3)  memungkinkan perubahan pembesaran inkremental di jendela preview. <strong>Pan</strong> tool serbaguna (H) juga berfungsi ganda sebagai zooming tool, dan tombol <strong>Normal</strong> (Ctrl+1) dan <strong>Fit To Window</strong>(F4) memungkinkan Anda mengatur ulang pengaturan zoom ke level tertentu.</p>
+<p><img class="size-full wp-image-10269 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/338.png" alt="3" width="272" height="155" /></p>
+<p>Di sisi kanan Cutout Lab,  Anda akan menemukan alat yang digunakan untuk menyoroti, mengisi, dan menghapus tepi elemen gambar yang ingin Anda gunting. Alat ini dilengkapi dengan alat merinci untuk memperbaiki tepi potongan Anda.</p>
+<p><img class="size-full wp-image-10271 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/440.png" alt="4" width="187" height="112" /></p>
+<p>Setelah Anda menentukan elemen gambar Anda, Anda bisa mengklik tombol  <strong>Preview</strong> (Ctrl+P) untuk melihat bagaimana hasil akhir akan muncul.</p>
+<p>Dengan menggunakan opsi preview, Anda dapat beralih di antara tampilan area Highlight, Fill, dan Original Image dari gambar yang sedang Anda kerjakan di jendela preview. Saat melihat-lihat area guntingan, Anda dapat melihat hasilnya melawan latar belakang abu-abu, putih matte, atau hitam matte, yang memungkinkan Anda memeriksa,  Mengevaluasi, atau memperbaiki hasil potongan sebelum Anda berkomitmen untuk mengubah citra Anda.</p>
+<p><img class="size-full wp-image-10273 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/536.png" alt="5" width="244" height="163" /></p>
+<p>Jika elemen gambar yang Anda gunting begitu rumit sehingga menentukan ujungnya memerlukan lebih dari beberapa goresan dengan <strong>Highlighter</strong> tool, Anda akan mengapresiasikan tombol <strong>Undo</strong>, <strong>Redo</strong>, dan <strong>Reset</strong> di sudut kiri bawah Cutout Lab. Mengklik tombol undo (Ctrl+Z) atau tombol Redo (Ctrl+Shift+Z) memungkinkan Anda menavigasi maju atau mundur melalui tindakan terbaru Anda. Selain itu, Anda bisa me-restart seluruh operasi dengan mengklik tombol Reset (Ctrl+R).<img class="alignnone size-full wp-image-10275" src="http://learn.corel.com/wp-content/uploads/2015/11/637.png" alt="6" width="159" height="46" /></p>
+<p style="text-align: left;">Bila Anda puas dengan definisi cutout, Anda dapat menggunakan opsi Hasil Potong untuk memilih cara menyiapkan area guntingan berdasarkan pada tepi yang telah Anda tentukan. Anda dapat menggunakan opsi default<strong>Cutout</strong> untuk membuat objek mengambang baru dari area yang Anda tentukan. Untuk operasi guntingan yang lebih mudah, Anda bisa memilih salah satu dari dua opsi lainnya:  <strong>Cutout and original image</strong>, atau <strong>Cutout as clip mask</strong>.</p>
+<p style="text-align: left;"><img class="size-full wp-image-10277 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/734.png" alt="7" width="255" height="114" /></p>
+<p style="text-align: left;">Pertama mari kita buat tipikal guntingan. Anda akan melihat seberapa cepat dan mudahnya menggunakan tool di Cutout Lab.</p>
+<p>&nbsp;</p>
+<h4><span id="Cutting_out_a_picture_element" class="mw-headline">Memotong elemen gambar</span></h4>
+<p style="text-align: left;">Jika Anda belum pernah menggunakan Cutout Lab sebelumnya dan Anda bertanya-tanya apa ribut-ributnya, Anda dapat bergabung dengan saya untuk berjalan-jalan melalui operasi pemotong yang khas. Jika Anda ingin mengikuti gambar digital Anda sendiri, pilihlah gambar berkualitas yang mencakup elemen gambar dengan tepi yang terdefinisi dengan baik.</p>
+<p style="text-align: left;">1. Dengan foto digital Anda terbuka di Corel PHOTO-PAINT, klik Image &gt; Cutout Lab.</p>
+<p style="text-align: left;">Cutout Lab akan terbuka dan menampilkan jendela preview foto digital lengkap Anda..</p>
+<p style="text-align: left;">2. Pilih Highlight tool (F5) dari Cutout toolbar.</p>
+<p style="text-align: left;">Perhatikan bahwa penunjuk melingkar muncul saat Anda menunjuk ke gambar.</p>
+<p>3. iameter ukuran pointer dikendalikan oleh ukuran nib dan diukur dalam piksel. Untuk menentukan tepi elemen gambar dengan lebih mudah, atur diameter penunjuk dengan menggunakan kotak Nib Size. Pilihan ini juga mengontrol ukuran penunjuk alat Eraser (X).</p>
+<p><img class="size-full wp-image-10278 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/828.png" alt="8" width="241" height="82" /></p>
+<p style="text-align: left;">4. Untuk membantu meningkatkan visibilitas goresan Highlighter Anda, pilih warna ubah suaian dari pemilih<strong style="font-weight: 600;">Warna sorot</strong>. Warna sorot tidak mengubah warna elemen gambar atau latar belakang gambar Anda.</p>
+<p style="text-align: left;"><img class="size-full wp-image-10279 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/927.png" alt="9" width="216" height="170" /></p>
+<p style="text-align: left;">5.  Dengan menggunakan <strong>Highlight</strong> tool, Dengan menggunakan alat Highlight, lacak elemen gambar yang ingin Anda gunting. Trace tepi sehingga stroke mengangkangi tepi elemen gambar Anda, dan lampirkan itu. Salah satu cara untuk mengetahui apakah Anda telah berhasil menentukan keseluruhan elemen gambar Anda sehingga membentuk area tertutup adalah untuk memeriksa apakah <strong>Fill</strong> tool (F) tersedia. Ini hanya aktif setelah Anda mendefinisikan area tertutup.</p>
+<p>Jika elemen gambar yang Anda pilih mencakup ruang negatif tempat latar belakang muncul, lacak ujung-ujungnya juga. Jika perlu, Anda bisa menggunakan <strong>Eraser</strong> tool (X) untuk merapikan goresan apapun yang tidak sesuai harapan Anda. Pada contoh di bawah ini, tepi perenang disorot.<img class="size-medium wp-image-10280 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/1011-300x219.jpg" alt="10" width="300" height="219" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1011-300x219.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/1011.jpg 378w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<p style="text-align: left;">6. Tentukan sisi batas tepi mana yang harus dipotong, di dalam atau di luar, dan lakukan salah satu dari yang berikut:</p>
+<ul>
+<li style="text-align: left;">Untuk memilih area yang terlampir dari elemen gambar Anda sebagai area potongan, klik di dalam batas tepi dengan Fill tool.<img class="size-medium wp-image-10282 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/1116-300x198.jpg" alt="11" width="300" height="198" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1116-300x198.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/1116.jpg 443w" sizes="(max-width: 300px) 100vw, 300px" /></li>
+<li style="text-align: left;">Untuk memilih area di luar area terlampir elemen gambar Anda sebagai area guntingan, klik di luar batas tepi dengan Fill tool.<img class="size-medium wp-image-10283 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/1216-300x201.jpg" alt="12" width="300" height="201" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1216-300x201.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/1216.jpg 443w" sizes="(max-width: 300px) 100vw, 300px" /></li>
+</ul>
+<p>7. Anda dapat memperbaiki tepi atau mengisi area dengan menggunakan kembali  <strong>Highlighter</strong>, <strong>Fill</strong>, atau <strong>Eraser</strong> tool. Alat ini tidak tersedia saat Anda melihat  preview cutout pada langkah berikutnya.</p>
+<p>8. Klik tombol <strong>Preview</strong> (Ctrl+P) untuk melihat kemajuan cutout di jendela preview. Gunakan <strong>Zoom</strong> dan <strong>Pan</strong> toolntuk memeriksa hasil operasi cutout. Anda akan melihat bahwa efek bulu yang transparan secara otomatis diterapkan pada tepi yang ditentukan.</p>
+<p><img class="size-medium wp-image-10287 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/1316-300x202.jpg" alt="13" width="300" height="202" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1316-300x202.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/1316.jpg 443w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<p>9. Jika tepi batas yang tepat tidak dapat dideteksi, gunakan <strong style="font-weight: 600;">Add Detail</strong> tool (A) atau <strong style="font-weight: 600;">Remove Detail</strong> tool (R) ntuk melakukan penyetelan kecil. Batas yang tidak terdeteksi dapat terjadi bila tepi yang ditentukan secara signifikan tidak fokus, sangat putih, atau memiliki nilai intensitas warna sangat rendah. Kedua alat ini menerapkan bulu transparan.</p>
+<p>10. Dengan area cutout Anda selesai, tetap pilih <strong style="font-weight: 600;">Cutout</strong> diaktifkan di area Hasil cutout, dan klik <strong style="font-weight: 600;">OK</strong> untuk mengembalikan jendela dokumen Anda, di mana area cutout muncul sebagai objek mengambang. Dari situ, Anda bisa menggunakan elemen gambar guntingan yang Anda pilih.</p>
+<p><img class="size-full wp-image-10289 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/1421.png" alt="14" width="297" height="196" /></p>
+<h4><span id="Understanding_cutout_options" class="mw-headline">Memahami pilihan cutout</span></h4>
+<p>Tentu saja, Lab cutout memungkinkan Anda melakukan lebih dari sekadar membuat objek mengambang dasar dari elemen gambar Anda atau latar belakang yang mengelilinginya. Anda dapat menggunakan opsi Hasil cutout untuk memilih bagaimana Anda ingin cutout Anda disiapkan saat Anda keluar dari Lab cutout.</p>
+<p><img class="size-full wp-image-10290 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/1518.png" alt="15" width="240" height="109" /></p>
+<p>Memilih opsi <strong>Cutout</strong> menghasilkan objek mengambang baru dari cutout Anda dan menghapus gambar aslinya. Anda dapat menyimpan versi gambar asli dan tidak berubah dengan menggunakan perintah <strong>File &gt; Save As</strong>. Sebagai alternatif, Anda dapat menyalin dan menempelkan elemen gambar mengambang secara langsung ke dokumen tujuan, seperti foto komposit, lalu tutup yang asli tanpa menyimpan perubahan.</p>
+<p>Memilih opsi <strong>Cutout dan Original Image</strong> menghasilkan elemen elemen gambar mengambang baru, namun tetap mempertahankan gambar aslinya. Saat Anda kembali ke jendela dokumen, salinan cutout diposisikan dan dipesan langsung di area yang dipotong.</p>
+<p><img class="size-medium wp-image-10292 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/1615-300x202.png" alt="16" width="300" height="202" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1615-300x202.png 300w, http://learn.corel.com/wp-content/uploads/2015/11/1615.png 424w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<p>Jika Anda memilih opsi ketiga,  <strong>Cutout sebagai Clip Mask,</strong> sebuah objek baru dibuat dengan clip mask di atas area tersembunyi. Opsi ini melindungi area yang awalnya mask, memungkinkan Anda membuat efek kompleks lainnya dengan memanipulasi atau menghapus klip klip. Corel PHOTO-PAINT memungkinkan Anda mengubah properti clip mask dengan menggunakan <strong>Object Manager</strong> docker atau dengan mengklik kanan mask untuk mengakses perintah dalam menu konteks.</p>
+<p><img class="size-medium wp-image-10293 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/1714-253x300.png" alt="17" width="253" height="300" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1714-253x300.png 253w, http://learn.corel.com/wp-content/uploads/2015/11/1714.png 395w" sizes="(max-width: 253px) 100vw, 253px" /></p>
+<p>Cutout Lab menawarkan kontrol intuitif dan kebebasan kreatif untuk mengisolasi elemen gambar yang rumit dan melestarikan detail, menghemat waktu pengeditan yang berharga dan menghasilkan hasil yang jauh lebih baik.</p>
+<p>Steve Bain adalah ilustrator dan perancang penghargaan, dan penulis hampir selusin buku, termasuk CorelDRAW®: Panduan Resmi.</p>
+
+
+                                <script src='../js/colpick.js'></script>
+                                <script src="../js/colorpicker.js"></script>
+
+                                </div>
+                            </div>
+
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane animated fadeIn in" id="tab-2">
+                    <div id="contenttab2"></div>
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane animated fadeIn" id="tab-3" style="margin-top:-20px;margin-left:-20px;margin-right:-20px;background:#ffffff">
+
+                    </div>
+
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- Page Loader -->
+        <div class="page-loader">
+            <div class="preloader" style="text-align:center;">
+                <svg class="pl-circular" viewBox="25 25 50 50">
+                    <circle class="plc-path" cx="50" cy="50" r="20" />
+                </svg><br/><br/>
+                <div style="font-size:8px;margin-left:-80px;width:200px" class="demo"></div>
+            </div>
+        </div>
+
+        <div style="margin-bottom:10px;"><footer id="footer">
+            Copyright &copy; 2017 IDWEBDesigner<br/><a href="index.html">Back to <i class="zmdi zmdi-home"></i> Homepage</a>
+        </footer></div>
+
+        <!-- Javascript Libraries -->
+        <script src="../vendors/bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="../vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+        <script src="../vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="../vendors/bower_components/Waves/dist/waves.min.js"></script>
+        <script src="../vendors/bootstrap-growl/bootstrap-growl.min.js"></script>
+        <script src="../vendors/bower_components/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="../vendors/bower_components/lightgallery/dist/js/lightgallery-all.min.js"></script>
+        <script src="../vendors/bootgrid/jquery.bootgrid.updated.min.js"></script>
+
+        <!-- Placeholder for IE9 -->
+        <!--[if IE 9 ]>
+            <script src="vendors/bower_components/jquery-placeholder/jquery.placeholder.min.js"></script>
+        <![endif]-->
+
+        <script src="../js/app.min.js"></script>
+
+        <!-- Data Table -->
+        <script>
+            $(function()
+            {
+              $("#grid-basic").bootgrid({
+                  caseSensitive: false,
+                    css: {
+                        icon: 'zmdi icon',
+                        iconColumns: 'zmdi-view-module',
+                        iconDown: 'zmdi-sort-amount-desc',
+                        iconRefresh: 'zmdi-refresh',
+                        iconUp: 'zmdi-sort-amount-asc'
+                    },
+              }
+              )
+            });
+        </script>
+
+        <script type="text/javascript">
+            //Basic
+            $('#sa-basic').click(function(e){
+                e.preventDefault();
+                var link = $(this).attr('href');
+
+                swal({
+                    title: "Get Inspire Profesional Logos",
+                    text: "More logos sparately on our Learn Apps: Javascript, NoSQL Database, Virtual Reality, and more...",
+                    showCancelButton: true,
+                    allowOutsideClick: true,
+                },
+                function(){
+                    window.location.href = 'market://details?id=id.web.designer.learn.javascript';
+                });
+            });
+        </script>
+
+    <script type="text/javascript">
+        function rateApp() {
+            android.rateApp();
+       }
+    </script>
+
+    </body>
+
+</html>

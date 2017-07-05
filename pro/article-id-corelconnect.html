@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Tutorial CorelDraw Pro</title>
+
+         <script type="text/javascript">
+          <!--
+          if (screen.width >= 2800) {
+            window.location = "http://designer.web.id";
+          }
+          //-->
+        </script>
+
+        <!-- Vendor CSS -->
+        <link href="../vendors/bower_components/animate.css/animate.min.css" rel="stylesheet">
+        <link href="../vendors/bower_components/sweetalert/dist/sweetalert.css" rel="stylesheet">
+        <link href="../vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
+        <link href="../vendors/bower_components/lightgallery/dist/css/lightgallery.min.css" rel="stylesheet">
+        <link href="../vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+        <link href="../vendors/bootgrid/jquery.bootgrid.min.css" rel="stylesheet">
+
+        <!-- CSS -->
+        <link href="../css/app_1.min.css" rel="stylesheet">
+        <link href="../css/app_2.min.css" rel="stylesheet">
+
+        <script src="../js/h5utils.js"></script>
+        <script src="../js/jquery-2.1.0.min.js"></script>
+        <script src="../js/jquery.jscroll.min.js"></script>
+        <script>$(function(){
+        $("#contentloader1").load("http://app.coreldraw.designer.web.id/content-message.html"); $("#contentloader2").load("http://app.coreldraw.designer.web.id/pro/content-right-pro.html");
+        $("#contenttab1").load("http://app.coreldraw.designer.web.id/pro/contenttab2.html");
+        $("#contenttab2").load("http://app.coreldraw.designer.web.id/pro/contenttab2.html");
+        });</script>
+
+        <style>.videoWrapper {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 */
+        padding-top: 25px;
+        height: 0;}
+        .videoWrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;}
+        .lcb-navigation a{background:#999999}
+        </style>
+    </head>
+    <body style="background:#ffffff">
+
+        <!-- Page Loader -->
+        <div class="page-loader">
+            <div class="preloader pls-white">
+                <svg class="pl-circular" viewBox="25 25 50 50">
+                    <circle class="plc-path" cx="50" cy="50" r="20" />
+                </svg>
+            </div>
+
+        </div>
+
+        <header id="header" class="clearfix container">
+            <ul class="h-inner">
+
+                <li class="hi-trigger ma-trigger" data-ma-action="sidebar-open" data-ma-target="#sidebar">
+                    <div class="line-wrap">
+                        <div class="line top"></div>
+                        <div class="line center"></div>
+                        <div class="line bottom"></div>
+                    </div>
+                </li>
+
+                <li class="hi-logo" data-ma-action="sidebar-open" data-ma-target="#sidebar" style="margin-top:8px;">
+                    <span style="font-size:15px;color:#ffffff;"> Tutorial CorelDRAW<sup>&reg;</sup><span>
+                </li>
+
+                <li class="pull-right">
+                    <ul class="hi-menu">
+
+                        <li style="margin-right:-15px;" class="dropdown">
+                            <a data-toggle="dropdown" href="#">
+                                <i class="him-icon zmdi zmdi-notifications-none"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-lg pull-right">
+                                <div class="list-group list-group-light">
+                                    <div class="lg-header">
+                                        LIVE DEVELOPER MESSAGES
+                                    </div>
+
+                                    <article>
+                                      <p style="text-align:center;font-size:1em;"><span id="status"><span id="status"></span></p>
+                                      <ol id="state"></ol>
+                                    </article>
+                                    <script>
+                                    var statusElem  = document.getElementById('status'),
+                                        state               = document.getElementById('state');
+
+                                    function online(event) {
+                                      statusElem.className = navigator.onLine ? 'online' : 'offline';
+                                      statusElem.innerHTML = navigator.onLine ? '' : '<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You&#39;re offline, check network connection.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;content required internet access.';
+                                      state.innerHTML += '&nbsp;';
+                                    }
+
+                                    addEvent(window, 'online', online);
+                                    addEvent(window, 'offline', online);
+                                    online({ type: 'ready' });
+                                    </script>
+
+                                    <div style="margin-top:-30px;" id="contentloader1"></div>
+                                    <a class="view-more view-more-light" href="idwebdesigner.html">Powered by IDWEBDesigner</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li style="margin-right:-15px;" class="ma-trigger" data-ma-action="sidebar-open" data-ma-target="#chat">
+                            <a data-toggle="dropdown" href="#">
+                                <i class="him-icon zmdi zmdi-favorite-outline"></i>
+                            </a>
+                        </li>
+                        <li style="margin-right:-5px;" class="dropdown">
+                            <a data-toggle="dropdown" href="#"><i class="him-icon zmdi zmdi-more-vert"></i></a>
+                            <ul class="dropdown-menu dm-icon pull-right">
+                                <li class="hidden-xs">
+                                    <a data-ma-action="fullscreen" href="#"><i class="zmdi zmdi-fullscreen"></i> Fullscreen</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:window.location.reload();"><i class="zmdi zmdi-refresh-sync"></i> Refresh</a>
+                                </li>
+                                <li>
+                                    <a id="rate-app" onClick="rateApp()">Rate 5 Stars</a>
+                                </li>
+                                <li>
+                                    <a href="update.html"><i class="zmdi zmdi-download"></i>Check update</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="help.html"><i class="zmdi zmdi-help"></i> Help</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="hidden-xs ma-trigger" data-ma-action="sidebar-open" data-ma-target="#chat">
+                            <a href="#"><i class="him-icon zmdi zmdi-comment-alt-text"></i></a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="tab-nav tn-justified tn-icon" role="tablist" style="width:100%">
+                                        <li role="presentation">
+                                            <a class="col-sx-4" href="index.html">
+                                                INDONESIA
+                                            </a>
+                                        </li>
+                                        <li role="presentation" class="active">
+                                            <a class="col-xs-4" href="#tab-2" aria-controls="tab-2" role="tab" data-toggle="tab">
+                                                ENGLISH (PRO)
+                                            </a>
+                                        </li>
+
+                                    </ul>
+        </header>
+
+        <section id="main">
+            <ol class="breadcrumb" style="margin-left:-10px;">
+                <li><a href="developer.html">designer.web.id</a></li>
+                <li><a href="index.html">learn</a></li>
+                <li class="active">virtualreality</li>
+            </ol>
+
+            <aside id="sidebar" class="sidebar c-overflow" style="position:fixed;z-index:1000;margin-top:-70px;height:100%;background:white">
+                <ul class="main-menu">
+                    <li class="mm-profile sub-menu">
+                        <a href="#" data-ma-action="submenu-toggle" class="media">
+                            <img class="pull-left" src="../img/coreldraw.green.png" alt="" height="25px" style="margin-left:-40px;">
+                            <div class="media-body">
+                            <div>Tutorial CorelDRAW<sup>&reg;</sup></div>
+                            <span style="font-size:11px;">Experience by IDWEBDesigner<br/>dev@designer.web.id</span>
+                            </div>
+                        </a>
+
+                        <ul>
+                            <li>
+                                <a href="developer.html">Indonesia Web Designer</a>
+                            </li>
+                            <li>
+                                <div style="margin-left:65px;margin-bottom:10px;font-size:10px;color:#888888;padding-right:20px;">Jl. Wahid Hasyim No.3 Gaten Condongcatur Depok Sleman Yogyakarta, Indonesia.</div>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-info"></i> About CorelDraw</a>
+                        <div style="margin-left:65px;margin-bottom:10px;font-size:12px;color:#579706;"><a href="basics.html">What's is CorelDraw?<br/>Basics Learn</a></div>
+                    </li>
+
+                    <li><a href="index.html"><i class="zmdi zmdi-flag"></i> Tutorial Bahasa Indonesia</a></li>
+                    <li class="sub-menu toggled active">
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-android"></i> Featured Apps</a>
+                        <div style="margin-left:65px;margin-top:10px;font-size:10px;color:#888888;padding-right:20px;">Color Docker: This docker allows you to choose fill and outline colors from a color picker, color sliders, and color palettes. Found with dockers and in the Toolbox.</div>
+
+                        <ul>
+
+                            <li><a href="language.html">Bahasa Indonesia</a></li>
+                            <li style="display:none;"><a href="upgrade.html"><i class="zmdi zmdi-shopping-cart"></i>&nbsp;&nbsp;Upgrade</a></li>
+                            <li class="divider"></li>
+
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-code"></i> Developer</a>
+
+                        <ul>
+                            <li><a href="developer.html">dev@designer.web.id<br/>designer.web.id</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </aside>
+
+            <aside id="chat" class="sidebar">
+
+                                    <article>
+                                      <p style="margin-top:30px;margin-left:15px;font-size:0.7em;"><span id="status2"><span id="status"></span></p>
+                                      <ol id="state2"></ol>
+                                    </article>
+                                    <script>
+                                    var statusElem  = document.getElementById('status2'),
+                                        state               = document.getElementById('state2');
+
+                                    function online(event) {
+                                      statusElem.className = navigator.onLine ? 'online' : 'offline';
+                                      statusElem.innerHTML = navigator.onLine ? '' : '<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You&#39;re offline, check network connection.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;content required internet access.';
+                                      state.innerHTML += '&nbsp;';
+                                    }
+
+                                    addEvent(window, 'online', online);
+                                    addEvent(window, 'offline', online);
+                                    online({ type: 'ready' });
+                                    </script>
+
+                <div style="margin-top:-30px; width:100%" id="contentloader2"></div>
+
+
+
+            </aside>
+
+            <section id="content" style="margin-bottom:-40px;">
+                <div class="container" style="margin-top:-55px;margin-left:-20px;padding-right:0px;">
+                    <div class="tab-content p-20" style="background:#ffffff;">
+
+                    <div role="tabpanel" class="tab-pane animated fadeIn in active" id="tab-1">
+
+                            <!-- Blog Posts -->
+                            <div class="card blog-post" style="margin-bottom:-0px;">
+
+                                <div class="videoWrapper">
+                                <img width="100%" src="../images/green.png" frameborder="0" allowfullscreen></img>
+                                </div>
+
+                                <a class="card-header ch-alt">
+                                    <h2><small>Dalam tutorial ini  Anda akan belajar bagaimana menggunakan beragam konten yang tersedia melalui Corel CONNECT untuk membuat proyek liburan di CorelDRAW, seperti kartu ucapan. Kami akan memandu Anda melalui setiap langkah desain, menunjukkan beberapa trik yang dapat Anda terapkan untuk membuat kartu pribadi. Ini adalah proyek hebat yang dapat Anda lakukan dengan anak-anak Dan Anda bisa menerapkan teknik ini pada proyek desain lainnya juga!</small></h2>
+                                </a>
+
+                                <div class="card-body card-padding">
+
+                                <h4>Menggunakan Corel CONNECT untuk Proyek Liburan</h4>
+                                 <br/>
+
+			<p>Dalam tutorial ini saya ingin menunjukkan kepada Anda bagaimana menggunakan kekayaan konten yang termasuk dalam CorelDRAW Graphics Suite untuk membuat kartu ucapan. Anda dapat dengan mudah menggunakan konten ini dan teknik-teknik ini untuk berbagai proyek liburan lainnya, seperti membuat undangan pesta, buletin liburan, dan banyak lagi.</p>
+<p><img class="alignnone size-full wp-image-25805" src="http://learn.corel.com/wp-content/uploads/2016/12/Fig_01_FinalCard.jpg" alt="fig_01_finalcard" width="650" height="423" srcset="http://learn.corel.com/wp-content/uploads/2016/12/Fig_01_FinalCard.jpg 650w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_01_FinalCard-300x195.jpg 300w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_01_FinalCard-600x390.jpg 600w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_01_FinalCard-500x325.jpg 500w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_01_FinalCard-480x312.jpg 480w" sizes="(max-width: 650px) 100vw, 650px" /></p>
+<p><strong>Langkah 1. Mengumpulkan gambar di Corel CONNECT</strong></p>
+<p>Kami akan memulai dengan mengumpulkan gambar yang mungkin sesuai untuk kartu yang akan dibuat dengan menggunakan kata kunci di Corel CONNECT untuk mencari konten.</p>
+<p>Luncurkan Corel CONNECT, baik sebagai aplikasi mandiri, atau dengan membuka penghubung <strong>Connect</strong> dan <strong>Tray dockers</strong> di CorelDRAW (<strong>Window</strong> &gt; <strong>Dockers</strong> &gt; <strong>Connect and Tray dockers</strong>). Dengan semua filter diaktifkan (<strong>Folders, Vectors, Bitmaps and Fonts</strong>), di bidang alamat di bagian atas jenis jendela pada kata pencarian pertama &#8216;snow&#8217;. Tekan Enter.</p>
+<p>Bergantung pada lokasi pencarian mana yang diaktifkan di panel <strong>Libraries</strong> dan <strong>Favorites</strong> di sebelah kiri, CONNECT sekarang akan menampilkan pilihan gambar bertema salju dan gambar vektor. Jika Anda memiliki foto taman bersalju yang ingin Anda gunakan, bisa diseret dari luar Corel CONNECT ke <strong>Tray</strong>.</p>
+<p>&nbsp;</p>
+<p><img class="alignnone size-full wp-image-25806" src="http://learn.corel.com/wp-content/uploads/2016/12/Fig_02_CONNECT.jpg" alt="fig_02_connect" width="600" height="337" srcset="http://learn.corel.com/wp-content/uploads/2016/12/Fig_02_CONNECT.jpg 600w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_02_CONNECT-300x169.jpg 300w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_02_CONNECT-500x281.jpg 500w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_02_CONNECT-480x270.jpg 480w" sizes="(max-width: 600px) 100vw, 600px" /></p>
+<p>Seret elemen yang mungkin ingin Anda gunakan ke <strong>collection tray</strong> di bagian bawah layar. (Catatan: Gambar dan Clipart yang membawa <strong>S-icon</strong> disertakan dalam  <strong>Standard CorelDRAW Membership</strong>, mereka yang memiliki ikon P hanya tersedia untuk pelanggan dengan  <strong>Premium Membership</strong>).</p>
+<p>Mari kita cari dengan mengganti kata pencarian &#8216;snow&#8217; dengan &#8216;Santa&#8217;. Seret setiap gambar clipart yang sesuai <strong>Tray</strong>.</p>
+<p>Saya mengambil elemen dari folder <strong>Clipart</strong> lainnya, menyeretnya ke <strong>Tray</strong> dan diakhiri dengan koleksi grafis dan gambar, sebagian besar dari Konten Ekstra CorelDRAW Graphics Suite dan stok foto untuk bereksperimen.</p>
+<p>&nbsp;</p>
+<p><img class="alignnone size-full wp-image-25807" src="http://learn.corel.com/wp-content/uploads/2016/12/Fig_03_CollectionTray.png" alt="fig_03_collectiontray" width="550" height="58" srcset="http://learn.corel.com/wp-content/uploads/2016/12/Fig_03_CollectionTray.png 550w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_03_CollectionTray-300x32.png 300w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_03_CollectionTray-500x53.png 500w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_03_CollectionTray-480x51.png 480w" sizes="(max-width: 550px) 100vw, 550px" /></p>
+<p><strong>Langkah 2. Membuat desain kartu di CorelDRAW</strong></p>
+<p>Setelah kita memiliki semua gambar kreatif, saatnya memulai desain kartu.</p>
+<p>Buka file baru di CorelDRAW: <strong>File</strong> &gt; <strong>New…</strong> (<strong>Ctrl+N</strong>).</p>
+<p>Dalam kasus ini, saya telah memilih ukuran halaman kartu foto dalam format Landscape, namun tentu saja Anda dapat memilih ukuran kertas yang paling sesuai yang Anda inginkan.</p>
+<p>&nbsp;</p>
+<p><img class="alignnone size-full wp-image-25808" src="http://learn.corel.com/wp-content/uploads/2016/12/Fig_04_NewDocument.png" alt="fig_04_newdocument" width="450" height="515" srcset="http://learn.corel.com/wp-content/uploads/2016/12/Fig_04_NewDocument.png 450w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_04_NewDocument-262x300.png 262w" sizes="(max-width: 450px) 100vw, 450px" /></p>
+<p>Di CorelDRAW, klik pada ikon <strong>Quick Customize</strong> untuk membuka pilihan  <strong>Dockers</strong> dan atur cek di sebelah <strong>Tray</strong> docker untuk membukanya.</p>
+<p>&nbsp;</p>
+<p><img class="alignnone size-full wp-image-25809" src="http://learn.corel.com/wp-content/uploads/2016/12/Fig_05_Tray.jpg" alt="fig_05_tray" width="300" height="696" srcset="http://learn.corel.com/wp-content/uploads/2016/12/Fig_05_Tray.jpg 300w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_05_Tray-129x300.jpg 129w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<p>Pertama Saya mengimpor gambar latar belakang dengan menyeret gambar dari <strong>Tray</strong> ke dokumen.</p>
+<p>Gambarnya jauh lebih besar dari kartu saya dan perlu dipasang kembali dengan mengklik <strong>Bitmaps</strong> &gt; <strong>Resample</strong>.</p>
+<p>Di kotak dialog <strong>Resample </strong>, saya mengatur resolusi  <strong>300 dpi</strong>.</p>
+<p>Sekarang mengubah <strong>dimensi gambar</strong> lebar dan tinggi), kira-kira sesuai dengan ukuran kartu. Saya tidak menghapus centang pada kotak untuk menjaga <strong>aspek rasio</strong>, karena ini bisa mengakibatkan gambar menjadi terdistorsi. Saya mengatur lebar menjadi sekitar 7”.</p>
+<p>&nbsp;</p>
+<p><img class="alignnone size-full wp-image-25810" src="http://learn.corel.com/wp-content/uploads/2016/12/Fig_06_Resample.png" alt="fig_06_resample" width="400" height="283" srcset="http://learn.corel.com/wp-content/uploads/2016/12/Fig_06_Resample.png 400w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_06_Resample-300x212.png 300w" sizes="(max-width: 400px) 100vw, 400px" /></p>
+<p>Klik <strong>OK</strong> lalu tekan <strong>&#8216;P&#8217;</strong> pada keyboard untuk memusatkan gambar yang dipasang kembali pada halaman.</p>
+<p>Sekarang masuk ke tampilan  <strong>Wireframe</strong> (<strong>View</strong> &gt; <strong>Wireframe</strong>), dan gunakan <strong>Crop tool</strong> (<strong>Toolbox</strong> &gt; <strong>Crop tool</strong>), dan potong gambar dengan ukuran halaman (Di <strong>Standard toolbar</strong> di bagian atas layar di bawah <strong>Menu bar</strong>, matikan <strong>Snap To</strong> &gt; <strong>Objects</strong> untuk ini, dan periksa snap ke <strong>Page</strong>). Setelah itu, nonaktifkan snap ke  <strong>Halaman</strong> dan periksa ulang ke <strong>Objek</strong>.</p>
+<p>Sekarang membuat batas gelap di sekitar gambar yang akan menjadi latar belakang bingkai dekoratif. Klik dua kali pada <strong>Rectangle tool</strong> (<strong>Toolbox</strong> &gt; <strong>Rectangle tool</strong>), untuk membuat bingkai halaman.</p>
+<p>Dalam <strong>Object Manager docker</strong> Anda bisa melihat bahwa frame tersebut berada di bawah bitmap. Seret ke atas bitmap.</p>
+<p>Dengan menggunakan <strong>Color Eyedropper tool</strong> di <strong>Toolbox</strong>, saya mencoba salah satu warna abu-abu gelap di gambar latar belakang lalu klik di dalam bingkai untuk memberi warna.</p>
+<p>Tekan tombol <strong>&#8216;+&#8217;  </strong> pada keypad numerik (atau gunakan <strong>Ctrl+C/Ctrl+V</strong> untuk menyalin dan menempelkan kotak kembali). Isi persegi panjang kedua dengan warna putih dan tahan tombol <strong>Shift+</strong>, ubah ukurannya ke dalam untuk membuat batas abu-abu.</p>
+<p>Pilih kedua persegi panjang dan klik pada perintah <strong>Simplify</strong> dari <strong>Property</strong> bar.</p>
+<p>&nbsp;</p>
+<p><img class="alignnone size-full wp-image-25811" src="http://learn.corel.com/wp-content/uploads/2016/12/Fig_07_Simplify.png" alt="fig_07_simplify" width="397" height="138" srcset="http://learn.corel.com/wp-content/uploads/2016/12/Fig_07_Simplify.png 397w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_07_Simplify-300x104.png 300w" sizes="(max-width: 397px) 100vw, 397px" /></p>
+<p>Setelah menyederhanakan, keluarkan kotak putih dari bingkai abu-abu.</p>
+<p>&nbsp;</p>
+<p><img class="alignnone size-full wp-image-25812" src="http://learn.corel.com/wp-content/uploads/2016/12/Fig_08_Border.jpg" alt="fig_08_border" width="550" height="359" srcset="http://learn.corel.com/wp-content/uploads/2016/12/Fig_08_Border.jpg 550w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_08_Border-300x196.jpg 300w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_08_Border-500x326.jpg 500w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_08_Border-480x313.jpg 480w" sizes="(max-width: 550px) 100vw, 550px" /></p>
+<p>&nbsp;</p>
+<p>Sekarang menambahkan bingkai meriah ke desain, jadi tarik bingkai vektor yang ada di Corel CONNECT ke halaman.</p>
+<p>Bingkai ini tentu saja terlalu besar dan dalam format potret, namun sebagai vektor, saya dapat menambahkan <strong> rotasi 90°</strong> di <strong>Property bar</strong> &gt; tekan <strong>&#8216;P&#8217;</strong> untuk memusatkan bingkai pada halaman &gt; lalu tahan tombol  <strong>Shift</strong>, saya dapat kembali pada ukuran frame tanpa kehilangan kualitas.</p>
+<p>&nbsp;</p>
+<p><img class="alignnone size-full wp-image-25813" src="http://learn.corel.com/wp-content/uploads/2016/12/Fig_09_Frame.jpg" alt="fig_09_frame" width="600" height="412" srcset="http://learn.corel.com/wp-content/uploads/2016/12/Fig_09_Frame.jpg 600w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_09_Frame-300x206.jpg 300w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_09_Frame-500x343.jpg 500w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_09_Frame-480x330.jpg 480w" sizes="(max-width: 600px) 100vw, 600px" /></p>
+<p>&nbsp;</p>
+<p>Berikut bingkai setelah memutar 90 ° dan mengubah ukurannya.</p>
+<p>&nbsp;</p>
+<p><img class="alignnone size-full wp-image-25815" src="http://learn.corel.com/wp-content/uploads/2016/12/Fig_10_Frameresized.jpg" alt="fig_10_frameresized" width="550" height="360" srcset="http://learn.corel.com/wp-content/uploads/2016/12/Fig_10_Frameresized.jpg 550w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_10_Frameresized-300x196.jpg 300w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_10_Frameresized-500x327.jpg 500w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_10_Frameresized-480x314.jpg 480w" sizes="(max-width: 550px) 100vw, 550px" /></p>
+<p>&nbsp;</p>
+<p>Mengganti warna daun di perbatasan, yang sama sekali tidak sesuai dengan nada latar belakang, dengan warna lain yang lebih sesuai dengan menggunakan perintah Find and Replace (<strong>Edit</strong> &gt; <strong>Find and Replace</strong> &gt; <strong>Find Objects</strong>…).</p>
+<p>&nbsp;</p>
+<p><img class="alignnone size-full wp-image-25816" src="http://learn.corel.com/wp-content/uploads/2016/12/Fig_11_FindandReplace.jpg" alt="fig_11_findandreplace" width="480" height="361" srcset="http://learn.corel.com/wp-content/uploads/2016/12/Fig_11_FindandReplace.jpg 480w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_11_FindandReplace-300x226.jpg 300w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_11_FindandReplace-463x348.jpg 463w" sizes="(max-width: 480px) 100vw, 480px" /></p>
+<p>&nbsp;</p>
+<p>Pada kotak <strong>Find and Replace</strong>, pilih <strong>Begin a New Search</strong> &gt; <strong>Next</strong>.</p>
+<p>Klik pada tab <strong>Fills </strong> dan pilih <strong>Uniform Color</strong>.</p>
+<p>Pada halaman berikutnya klik pada  <strong>Specific Uniform Color Fill</strong> dan gunakan <strong>Eyedropper tool</strong> untuk mengambil daun hijau di bingkai (ini adalah warna yang akan diganti).</p>
+<p>&nbsp;</p>
+<p><img class="alignnone size-full wp-image-25817" src="http://learn.corel.com/wp-content/uploads/2016/12/Fig_12_SpecifyFill.jpg" alt="fig_12_specifyfill" width="580" height="376" srcset="http://learn.corel.com/wp-content/uploads/2016/12/Fig_12_SpecifyFill.jpg 580w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_12_SpecifyFill-300x194.jpg 300w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_12_SpecifyFill-500x324.jpg 500w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_12_SpecifyFill-480x311.jpg 480w" sizes="(max-width: 580px) 100vw, 580px" /></p>
+<p>Klik <strong>Next</strong> &gt; <strong>Finish</strong> &gt; <strong>Find All</strong> &gt; katakan <strong>Yes</strong> saat ditanya apakah benda bisa dikelompokkan.</p>
+<p>Dengan semua benda daun hijau sekarang dipilih, pilih warna hijau yang lebih gelap dan lebih pas dari <strong>Warna Palette</strong>.</p>
+<p>&nbsp;</p>
+<p><img class="alignnone size-full wp-image-25818" src="http://learn.corel.com/wp-content/uploads/2016/12/Fig_13_ColorChange.jpg" alt="fig_13_colorchange" width="580" height="285" srcset="http://learn.corel.com/wp-content/uploads/2016/12/Fig_13_ColorChange.jpg 580w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_13_ColorChange-300x147.jpg 300w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_13_ColorChange-500x246.jpg 500w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_13_ColorChange-480x236.jpg 480w" sizes="(max-width: 580px) 100vw, 580px" /></p>
+<p>&nbsp;</p>
+<p>Jangan lupa untuk menyimpan dokumen Anda sekarang (<strong>Ctrl+S</strong>), terutama saat mengerjakan proyek yang lebih panjang.</p>
+<p>Karena semua elemen desain terlihat agak &#8216;rata&#8217;, saya ingin menambahkan sedikit lebih dalam ke dalamnya, saya akan memilih batas abu-abu dan memilih <strong>Drop Shadow tool</strong> dari <strong>Toolbox</strong>, saya akan menerapkan Bayangan ke atasnya (<strong>Flat Bottom Right</strong>).</p>
+<p>&nbsp;</p>
+<p><img class="alignnone size-full wp-image-25819" src="http://learn.corel.com/wp-content/uploads/2016/12/Fig_14_DropShadow.png" alt="fig_14_dropshadow" width="280" height="449" srcset="http://learn.corel.com/wp-content/uploads/2016/12/Fig_14_DropShadow.png 280w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_14_DropShadow-187x300.png 187w" sizes="(max-width: 280px) 100vw, 280px" /></p>
+<p>&nbsp;</p>
+<p>Dengan menggunakan perintah <strong>CTRL+K</strong> untuk memecahkan  <strong>bayangan dan perbatasannya</strong>. Ini akan mengubah ukuran dan reposisi bayangan, sehingga hanya muncul di bagian dalam perbatasan, tidak di sekitar bagian luar saja. Setelah memecahkan bayangan terpisah, mengubah ukuran dan memusatkannya, sekarang bayangan ada di sepanjang tepi dalam perbatasan.</p>
+<p>&nbsp;</p>
+<p><img class="alignnone size-full wp-image-25820" src="http://learn.corel.com/wp-content/uploads/2016/12/Fig_15_Breakshadowapart.jpg" alt="fig_15_breakshadowapart" width="450" height="294" srcset="http://learn.corel.com/wp-content/uploads/2016/12/Fig_15_Breakshadowapart.jpg 450w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_15_Breakshadowapart-300x196.jpg 300w" sizes="(max-width: 450px) 100vw, 450px" /></p>
+<p>&nbsp;</p>
+<p>Langkah selanjutnya adalah menarik gambar clipart yang lain dari <strong>Tray docker</strong> – Santa!</p>
+<p>Kembali ke <strong>Drop Shadow tool</strong>, dan Santa diubah ukurannya dan dipilih, misalnyA memilih bayangan <strong>Perspective Bottom Right</strong> dari daftar drop-down di <strong>Property bar</strong>, menyesuaikan pegangan interaktif sampai bayangan berada pada posisi yang tepat.</p>
+<p>&nbsp;</p>
+<p><img class="alignnone size-full wp-image-25821" src="http://learn.corel.com/wp-content/uploads/2016/12/Fig_16_Santa.jpg" alt="fig_16_santa" width="550" height="510" srcset="http://learn.corel.com/wp-content/uploads/2016/12/Fig_16_Santa.jpg 550w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_16_Santa-300x278.jpg 300w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_16_Santa-500x464.jpg 500w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_16_Santa-480x445.jpg 480w" sizes="(max-width: 550px) 100vw, 550px" /></p>
+<p>&nbsp;</p>
+<p>Sekarang saatnya menambahkan beberapa teks ke desain. Untuk menemukan font terbaik, buka <strong>Font Playground</strong> docker yang baru dengan mengklik salah satu: <strong>Text</strong> &gt; <strong>Font Playground</strong>, atau hanya membuka docker secara langsung menggunakan tombol  <strong>Quick Customize</strong> pada  <strong>panel docker</strong>.</p>
+<p>Setelah terbuka, ganti teks default di <strong>Font Playground</strong> misalnya:  “Seasons Greetings!”</p>
+<p>&nbsp;</p>
+<p><img class="alignnone size-full wp-image-25822" src="http://learn.corel.com/wp-content/uploads/2016/12/Fig_17_FontPlayground.png" alt="fig_17_fontplayground" width="400" height="667" srcset="http://learn.corel.com/wp-content/uploads/2016/12/Fig_17_FontPlayground.png 400w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_17_FontPlayground-180x300.png 180w" sizes="(max-width: 400px) 100vw, 400px" /></p>
+<p>&nbsp;</p>
+<p>Sekarang saya dapat memilih setiap panel font dan memilih font alternatif dari <strong>Font List</strong>.</p>
+<p>&nbsp;</p>
+<p><img class="alignnone size-full wp-image-25823" src="http://learn.corel.com/wp-content/uploads/2016/12/Fig_18_ChoosingFont.jpg" alt="fig_18_choosingfont" width="550" height="473" srcset="http://learn.corel.com/wp-content/uploads/2016/12/Fig_18_ChoosingFont.jpg 550w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_18_ChoosingFont-300x258.jpg 300w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_18_ChoosingFont-500x430.jpg 500w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_18_ChoosingFont-480x413.jpg 480w" sizes="(max-width: 550px) 100vw, 550px" /></p>
+<p>&nbsp;</p>
+<p>Dua font yang saya pilih ̶ Alize dan Gabriola ̶ menawarkan beberapa set gaya alternatif (rangkaian gaya alternatif yang tersedia dalam font OpenType, bergantung pada pembuat font yang ada pada font tertentu).</p>
+<p>Untuk melihat gaya mana yang tersedia, pilih teks dan mengklik panah hitam yang muncul di bawahnya. (Catatan! Anda hanya dapat memilih satu baris teks pada saat menerapkan perangkat alternatif).</p>
+<p>&nbsp;</p>
+<p><img class="alignnone size-full wp-image-25824" src="http://learn.corel.com/wp-content/uploads/2016/12/Fig_19_OpenType.jpg" alt="fig_19_opentype" width="600" height="686" srcset="http://learn.corel.com/wp-content/uploads/2016/12/Fig_19_OpenType.jpg 600w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_19_OpenType-262x300.jpg 262w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_19_OpenType-500x572.jpg 500w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_19_OpenType-480x549.jpg 480w" sizes="(max-width: 600px) 100vw, 600px" /></p>
+<p>&nbsp;</p>
+<p>Pilih <strong>Gabriola</strong> &gt; <strong>Stylistic Set 7</strong> dan menghapus contoh teks lainnya.</p>
+<p>&nbsp;</p>
+<p><img class="alignnone size-full wp-image-25826" src="http://learn.corel.com/wp-content/uploads/2016/12/Fig_20_StylisticSet7.jpg" alt="fig_20_stylisticset7" width="550" height="427" srcset="http://learn.corel.com/wp-content/uploads/2016/12/Fig_20_StylisticSet7.jpg 550w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_20_StylisticSet7-300x233.jpg 300w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_20_StylisticSet7-500x388.jpg 500w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_20_StylisticSet7-480x373.jpg 480w" sizes="(max-width: 550px) 100vw, 550px" /></p>
+<p>&nbsp;</p>
+<p>Akhirnya, untuk membuat teks itu keluar sedikit lagi, kembali ke <strong>Drop Shadow</strong> tool, dan pilih <strong>Small Glow</strong> dari <strong>Presets</strong> di <strong>Property Bar</strong>.</p>
+<p>Naikkan <strong>Drop Shadow Opacity</strong> menjadi <strong>100%</strong>, namun menurunkan <strong>Shadow feathering</strong> menjadi <strong>8</strong>, dan mengubah warna bercahaya menjadi <strong>putih</strong>, untuk mendapatkan bayangan yang lebih jelas.</p>
+<p>&nbsp;</p>
+<p><img class="alignnone size-full wp-image-25827" src="http://learn.corel.com/wp-content/uploads/2016/12/Fig_21_SmallGlow.jpg" alt="fig_21_smallglow" width="550" height="218" srcset="http://learn.corel.com/wp-content/uploads/2016/12/Fig_21_SmallGlow.jpg 550w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_21_SmallGlow-300x119.jpg 300w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_21_SmallGlow-500x198.jpg 500w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_21_SmallGlow-480x190.jpg 480w" sizes="(max-width: 550px) 100vw, 550px" /></p>
+<p>&nbsp;</p>
+<p>Selesai!</p>
+<p>&nbsp;</p>
+<p><img class="alignnone size-full wp-image-25805" src="http://learn.corel.com/wp-content/uploads/2016/12/Fig_01_FinalCard.jpg" alt="fig_01_finalcard" width="650" height="423" srcset="http://learn.corel.com/wp-content/uploads/2016/12/Fig_01_FinalCard.jpg 650w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_01_FinalCard-300x195.jpg 300w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_01_FinalCard-600x390.jpg 600w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_01_FinalCard-500x325.jpg 500w, http://learn.corel.com/wp-content/uploads/2016/12/Fig_01_FinalCard-480x312.jpg 480w" sizes="(max-width: 650px) 100vw, 650px" /></p>
+
+
+
+                                <script src='../js/colpick.js'></script>
+                                <script src="../js/colorpicker.js"></script>
+
+                                </div>
+                            </div>
+
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane animated fadeIn in" id="tab-2">
+                    <div id="contenttab2"></div>
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane animated fadeIn" id="tab-3" style="margin-top:-20px;margin-left:-20px;margin-right:-20px;background:#ffffff">
+
+                    </div>
+
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- Page Loader -->
+        <div class="page-loader">
+            <div class="preloader" style="text-align:center;">
+                <svg class="pl-circular" viewBox="25 25 50 50">
+                    <circle class="plc-path" cx="50" cy="50" r="20" />
+                </svg><br/><br/>
+                <div style="font-size:8px;margin-left:-80px;width:200px" class="demo"></div>
+            </div>
+        </div>
+
+        <div style="margin-bottom:10px;"><footer id="footer">
+            Copyright &copy; 2017 IDWEBDesigner<br/><a href="index.html">Back to <i class="zmdi zmdi-home"></i> Homepage</a>
+        </footer></div>
+
+        <!-- Javascript Libraries -->
+        <script src="../vendors/bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="../vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+        <script src="../vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="../vendors/bower_components/Waves/dist/waves.min.js"></script>
+        <script src="../vendors/bootstrap-growl/bootstrap-growl.min.js"></script>
+        <script src="../vendors/bower_components/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="../vendors/bower_components/lightgallery/dist/js/lightgallery-all.min.js"></script>
+        <script src="../vendors/bootgrid/jquery.bootgrid.updated.min.js"></script>
+
+        <!-- Placeholder for IE9 -->
+        <!--[if IE 9 ]>
+            <script src="vendors/bower_components/jquery-placeholder/jquery.placeholder.min.js"></script>
+        <![endif]-->
+
+        <script src="../js/app.min.js"></script>
+
+        <!-- Data Table -->
+        <script>
+            $(function()
+            {
+              $("#grid-basic").bootgrid({
+                  caseSensitive: false,
+                    css: {
+                        icon: 'zmdi icon',
+                        iconColumns: 'zmdi-view-module',
+                        iconDown: 'zmdi-sort-amount-desc',
+                        iconRefresh: 'zmdi-refresh',
+                        iconUp: 'zmdi-sort-amount-asc'
+                    },
+              }
+              )
+            });
+        </script>
+
+        <script type="text/javascript">
+            //Basic
+            $('#sa-basic').click(function(e){
+                e.preventDefault();
+                var link = $(this).attr('href');
+
+                swal({
+                    title: "Get Inspire Profesional Logos",
+                    text: "More logos sparately on our Learn Apps: Javascript, NoSQL Database, Virtual Reality, and more...",
+                    showCancelButton: true,
+                    allowOutsideClick: true,
+                },
+                function(){
+                    window.location.href = 'market://details?id=id.web.designer.learn.javascript';
+                });
+            });
+        </script>
+
+    <script type="text/javascript">
+        function rateApp() {
+            android.rateApp();
+       }
+    </script>
+
+    </body>
+
+</html>

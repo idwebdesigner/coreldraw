@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Tutorial CorelDraw Pro</title>
+
+         <script type="text/javascript">
+          <!--
+          if (screen.width >= 2800) {
+            window.location = "http://designer.web.id";
+          }
+          //-->
+        </script>
+
+        <!-- Vendor CSS -->
+        <link href="../vendors/bower_components/animate.css/animate.min.css" rel="stylesheet">
+        <link href="../vendors/bower_components/sweetalert/dist/sweetalert.css" rel="stylesheet">
+        <link href="../vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
+        <link href="../vendors/bower_components/lightgallery/dist/css/lightgallery.min.css" rel="stylesheet">
+        <link href="../vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+        <link href="../vendors/bootgrid/jquery.bootgrid.min.css" rel="stylesheet">
+
+        <!-- CSS -->
+        <link href="../css/app_1.min.css" rel="stylesheet">
+        <link href="../css/app_2.min.css" rel="stylesheet">
+
+        <script src="../js/h5utils.js"></script>
+        <script src="../js/jquery-2.1.0.min.js"></script>
+        <script src="../js/jquery.jscroll.min.js"></script>
+        <script>$(function(){
+        $("#contentloader1").load("http://app.coreldraw.designer.web.id/content-message.html"); $("#contentloader2").load("http://app.coreldraw.designer.web.id/pro/content-right-pro.html");
+        $("#contenttab1").load("http://app.coreldraw.designer.web.id/pro/contenttab2.html");
+        $("#contenttab2").load("http://app.coreldraw.designer.web.id/pro/contenttab2.html");
+        });</script>
+
+        <style>.videoWrapper {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 */
+        padding-top: 25px;
+        height: 0;}
+        .videoWrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;}
+        .lcb-navigation a{background:#999999}
+        </style>
+    </head>
+    <body style="background:#ffffff">
+
+        <!-- Page Loader -->
+        <div class="page-loader">
+            <div class="preloader pls-white">
+                <svg class="pl-circular" viewBox="25 25 50 50">
+                    <circle class="plc-path" cx="50" cy="50" r="20" />
+                </svg>
+            </div>
+
+        </div>
+
+        <header id="header" class="clearfix container">
+            <ul class="h-inner">
+
+                <li class="hi-trigger ma-trigger" data-ma-action="sidebar-open" data-ma-target="#sidebar">
+                    <div class="line-wrap">
+                        <div class="line top"></div>
+                        <div class="line center"></div>
+                        <div class="line bottom"></div>
+                    </div>
+                </li>
+
+                <li class="hi-logo" data-ma-action="sidebar-open" data-ma-target="#sidebar" style="margin-top:8px;">
+                    <span style="font-size:15px;color:#ffffff;"> Tutorial CorelDRAW<sup>&reg;</sup><span>
+                </li>
+
+                <li class="pull-right">
+                    <ul class="hi-menu">
+
+                        <li style="margin-right:-15px;" class="dropdown">
+                            <a data-toggle="dropdown" href="#">
+                                <i class="him-icon zmdi zmdi-notifications-none"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-lg pull-right">
+                                <div class="list-group list-group-light">
+                                    <div class="lg-header">
+                                        LIVE DEVELOPER MESSAGES
+                                    </div>
+
+                                    <article>
+                                      <p style="text-align:center;font-size:1em;"><span id="status"><span id="status"></span></p>
+                                      <ol id="state"></ol>
+                                    </article>
+                                    <script>
+                                    var statusElem  = document.getElementById('status'),
+                                        state               = document.getElementById('state');
+
+                                    function online(event) {
+                                      statusElem.className = navigator.onLine ? 'online' : 'offline';
+                                      statusElem.innerHTML = navigator.onLine ? '' : '<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You&#39;re offline, check network connection.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;content required internet access.';
+                                      state.innerHTML += '&nbsp;';
+                                    }
+
+                                    addEvent(window, 'online', online);
+                                    addEvent(window, 'offline', online);
+                                    online({ type: 'ready' });
+                                    </script>
+
+                                    <div style="margin-top:-30px;" id="contentloader1"></div>
+                                    <a class="view-more view-more-light" href="idwebdesigner.html">Powered by IDWEBDesigner</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li style="margin-right:-15px;" class="ma-trigger" data-ma-action="sidebar-open" data-ma-target="#chat">
+                            <a data-toggle="dropdown" href="#">
+                                <i class="him-icon zmdi zmdi-favorite-outline"></i>
+                            </a>
+                        </li>
+                        <li style="margin-right:-5px;" class="dropdown">
+                            <a data-toggle="dropdown" href="#"><i class="him-icon zmdi zmdi-more-vert"></i></a>
+                            <ul class="dropdown-menu dm-icon pull-right">
+                                <li class="hidden-xs">
+                                    <a data-ma-action="fullscreen" href="#"><i class="zmdi zmdi-fullscreen"></i> Fullscreen</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:window.location.reload();"><i class="zmdi zmdi-refresh-sync"></i> Refresh</a>
+                                </li>
+                                <li>
+                                    <a id="rate-app" onClick="rateApp()">Rate 5 Stars</a>
+                                </li>
+                                <li>
+                                    <a href="update.html"><i class="zmdi zmdi-download"></i>Check update</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="help.html"><i class="zmdi zmdi-help"></i> Help</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="hidden-xs ma-trigger" data-ma-action="sidebar-open" data-ma-target="#chat">
+                            <a href="#"><i class="him-icon zmdi zmdi-comment-alt-text"></i></a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="tab-nav tn-justified tn-icon" role="tablist" style="width:100%">
+                                        <li role="presentation">
+                                            <a class="col-sx-4" href="index.html">
+                                                INDONESIA
+                                            </a>
+                                        </li>
+                                        <li role="presentation" class="active">
+                                            <a class="col-xs-4" href="#tab-2" aria-controls="tab-2" role="tab" data-toggle="tab">
+                                                ENGLISH (PRO)
+                                            </a>
+                                        </li>
+
+                                    </ul>
+        </header>
+
+        <section id="main">
+            <ol class="breadcrumb" style="margin-left:-10px;">
+                <li><a href="developer.html">designer.web.id</a></li>
+                <li><a href="index.html">learn</a></li>
+                <li class="active">virtualreality</li>
+            </ol>
+
+            <aside id="sidebar" class="sidebar c-overflow" style="position:fixed;z-index:1000;margin-top:-70px;height:100%;background:white">
+                <ul class="main-menu">
+                    <li class="mm-profile sub-menu">
+                        <a href="#" data-ma-action="submenu-toggle" class="media">
+                            <img class="pull-left" src="../img/coreldraw.green.png" alt="" height="25px" style="margin-left:-40px;">
+                            <div class="media-body">
+                            <div>Tutorial CorelDRAW<sup>&reg;</sup></div>
+                            <span style="font-size:11px;">Experience by IDWEBDesigner<br/>dev@designer.web.id</span>
+                            </div>
+                        </a>
+
+                        <ul>
+                            <li>
+                                <a href="developer.html">Indonesia Web Designer</a>
+                            </li>
+                            <li>
+                                <div style="margin-left:65px;margin-bottom:10px;font-size:10px;color:#888888;padding-right:20px;">Jl. Wahid Hasyim No.3 Gaten Condongcatur Depok Sleman Yogyakarta, Indonesia.</div>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-info"></i> About CorelDraw</a>
+                        <div style="margin-left:65px;margin-bottom:10px;font-size:12px;color:#579706;"><a href="basics.html">What's is CorelDraw?<br/>Basics Learn</a></div>
+                    </li>
+
+                    <li><a href="index.html"><i class="zmdi zmdi-flag"></i> Tutorial Bahasa Indonesia</a></li>
+                    <li class="sub-menu toggled active">
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-android"></i> Featured Apps</a>
+                        <div style="margin-left:65px;margin-top:10px;font-size:10px;color:#888888;padding-right:20px;">Color Docker: This docker allows you to choose fill and outline colors from a color picker, color sliders, and color palettes. Found with dockers and in the Toolbox.</div>
+
+                        <ul>
+
+                            <li><a href="language.html">Bahasa Indonesia</a></li>
+                            <li style="display:none;"><a href="upgrade.html"><i class="zmdi zmdi-shopping-cart"></i>&nbsp;&nbsp;Upgrade</a></li>
+                            <li class="divider"></li>
+
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-code"></i> Developer</a>
+
+                        <ul>
+                            <li><a href="developer.html">dev@designer.web.id<br/>designer.web.id</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </aside>
+
+            <aside id="chat" class="sidebar">
+
+                                    <article>
+                                      <p style="margin-top:30px;margin-left:15px;font-size:0.7em;"><span id="status2"><span id="status"></span></p>
+                                      <ol id="state2"></ol>
+                                    </article>
+                                    <script>
+                                    var statusElem  = document.getElementById('status2'),
+                                        state               = document.getElementById('state2');
+
+                                    function online(event) {
+                                      statusElem.className = navigator.onLine ? 'online' : 'offline';
+                                      statusElem.innerHTML = navigator.onLine ? '' : '<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You&#39;re offline, check network connection.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;content required internet access.';
+                                      state.innerHTML += '&nbsp;';
+                                    }
+
+                                    addEvent(window, 'online', online);
+                                    addEvent(window, 'offline', online);
+                                    online({ type: 'ready' });
+                                    </script>
+
+                <div style="margin-top:-30px; width:100%" id="contentloader2"></div>
+
+
+
+            </aside>
+
+            <section id="content" style="margin-bottom:-40px;">
+                <div class="container" style="margin-top:-55px;margin-left:-20px;padding-right:0px;">
+                    <div class="tab-content p-20" style="background:#ffffff;">
+
+                    <div role="tabpanel" class="tab-pane animated fadeIn in active" id="tab-1">
+
+                            <!-- Blog Posts -->
+                            <div class="card blog-post" style="margin-bottom:-0px;">
+
+                                <div class="videoWrapper">
+                                <img width="100%" src="../images/green.png" frameborder="0" allowfullscreen></img>
+                                </div>
+
+                                <a class="card-header ch-alt">
+                                    <h2><small>Tutorial ini menunjukkan cara membuat teka-teki dari setiap gambar di perpustakaan Anda. Dalam beberapa langkah sederhana, Anda bisa memecah gambar di CorelDRAW untuk menciptakan efek 'puzzle'.</small></h2>
+                                </a>
+
+                                <div class="card-body card-padding">
+
+                                <h4>Cara Membuat Puzzle dari Foto</h4>
+                                 <br/>
+
+			<p>Untuk contoh pertama, potongan 'puzzle' akan menjadi bentuk persegi panjang biasa.</p>
+<p>Di CorelDRAW, buka atau impor gambar yang akan terfragmentasi. Kemudian, pada properti bar, gunakan kotak ukuran <strong>Object </strong>untuk menyesuaikan ukuran akhir gambar.</p>
+<div class="center">
+<div class="floatnone"><img class="size-medium wp-image-10308 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/1101-300x188.png" alt="1" width="300" height="188" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1101-300x188.png 300w, http://learn.corel.com/wp-content/uploads/2015/11/1101-600x375.png 600w, http://learn.corel.com/wp-content/uploads/2015/11/1101.png 737w" sizes="(max-width: 300px) 100vw, 300px" /></div>
+</div>
+<p>Die toolbox, klik panah flyout pada  <strong>Polygon </strong>tool dan pilih <strong>Graph Paper </strong>dari menu flyout (atau press  <strong>D</strong>).</p>
+<div class="center">
+<div class="floatnone"><img class="size-medium wp-image-10309 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/248-300x179.png" alt="2" width="300" height="179" srcset="http://learn.corel.com/wp-content/uploads/2015/11/248-300x179.png 300w, http://learn.corel.com/wp-content/uploads/2015/11/248.png 507w" sizes="(max-width: 300px) 100vw, 300px" /></div>
+</div>
+<p>Di property bar, gunakan kotak <strong>Rows and column </strong>untuk menentukan bagaimana memecah gambar.</p>
+<p>Dalam contoh ini, saya menggunakan 9 buah total, atau 3 baris3 kolom.</p>
+<div class="center">
+<div class="floatnone"><img class="size-medium wp-image-10310 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/339-300x188.png" alt="3" width="300" height="188" srcset="http://learn.corel.com/wp-content/uploads/2015/11/339-300x188.png 300w, http://learn.corel.com/wp-content/uploads/2015/11/339.png 327w" sizes="(max-width: 300px) 100vw, 300px" /></div>
+</div>
+<p><strong>Catatan: </strong>Berhati-hatilah agar tidak berlebihan saat menentukan jumlah potongan &#8216;puzzle&#8217; Dengan gambar bitmap, ukuran akhir file Anda dapat meningkat secara dramatis. Simulasi ini tidak 'memecah' gambar menjadi beberapa bagian. Ini menciptakan salinan dari gambar asli, bagian yang akan 'tersembunyi' oleh fungsi PowerClip. Jadi, dalam contoh ini, foto itu diduplikasi sebanyak 9 kali. Jika Anda menggunakan gambar vektor, perbedaannya dengan ukuran file final akan minimal.</p>
+<p>Dengan <strong>Graph Paper </strong>tool yang dipilih, seret untuk membuat kotak. Cobalah untuk membuat grid ukuran foto yang tepat, atau bahkan sedikit lebih kecil, sehingga gambar  &#8216;bleeds&#8217; keluar dari batas grid.</p>
+<div class="center">
+<div class="floatnone"><img class="size-medium wp-image-10311 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/442-300x189.png" alt="4" width="300" height="189" srcset="http://learn.corel.com/wp-content/uploads/2015/11/442-300x189.png 300w, http://learn.corel.com/wp-content/uploads/2015/11/442-600x379.png 600w, http://learn.corel.com/wp-content/uploads/2015/11/442.png 653w" sizes="(max-width: 300px) 100vw, 300px" /></div>
+</div>
+<p>Selanjutnya, seret foto keluar dari grid, klik kanan foto dan pilih  <strong>PowerClip Inside</strong>.</p>
+<div class="center">
+<div class="floatnone"><img class="size-medium wp-image-10312 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/537-300x245.png" alt="5" width="300" height="245" srcset="http://learn.corel.com/wp-content/uploads/2015/11/537-300x245.png 300w, http://learn.corel.com/wp-content/uploads/2015/11/537.png 523w" sizes="(max-width: 300px) 100vw, 300px" /></div>
+</div>
+<p>Perhatikan bahwa kursor telah berubah menjadi panah hitam besar. Klik pada tepi grid untuk menempatkan foto di dalam grid.</p>
+<div class="center">
+<div class="floatnone"><img class="size-medium wp-image-10313 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/638-300x240.png" alt="6" width="300" height="240" srcset="http://learn.corel.com/wp-content/uploads/2015/11/638-300x240.png 300w, http://learn.corel.com/wp-content/uploads/2015/11/638.png 434w" sizes="(max-width: 300px) 100vw, 300px" /></div>
+</div>
+<p>Klik pada gambar dan kemudian klik tombol <strong>Edit PowerClip </strong>.</p>
+<div class="center">
+<div class="floatnone"><img class="size-full wp-image-10314 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/735.png" alt="7" width="278" height="227" /></div>
+</div>
+<p>Sekarang klik foto dan seret untuk memasukkannya ke dalam grid. Perhatikan bahwa bagian dari gambar yang berada di luar grid tidak akan muncul pada potongan  &#8216;puzzle&#8217;.</p>
+<p>Setelah selesai, klik tombol <strong>Stop Editing Contents </strong>.</p>
+<div class="center">
+<div class="floatnone"><img class="size-medium wp-image-10315 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/829-300x212.png" alt="8" width="300" height="212" srcset="http://learn.corel.com/wp-content/uploads/2015/11/829-300x212.png 300w, http://learn.corel.com/wp-content/uploads/2015/11/829-600x424.png 600w, http://learn.corel.com/wp-content/uploads/2015/11/829.png 656w" sizes="(max-width: 300px) 100vw, 300px" /></div>
+</div>
+<p>Selanjutnya, pilih semua objek (<strong>Ctrl+A</strong>) lalu klik <strong>Ungroup All </strong>untuk memisahkan 9 buah &#8216;puzzle&#8217;.</p>
+<div class="center">
+<div class="floatnone"><img class="size-medium wp-image-10316 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/928-300x172.png" alt="9" width="300" height="172" srcset="http://learn.corel.com/wp-content/uploads/2015/11/928-300x172.png 300w, http://learn.corel.com/wp-content/uploads/2015/11/928.png 573w" sizes="(max-width: 300px) 100vw, 300px" /></div>
+</div>
+<p>Klik pada setiap fragmen gambar dan seret dan pisahkan sesuai keinginan.</p>
+<div class="center">
+<div class="floatnone"><img class="size-medium wp-image-10317 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/1024-300x190.png" alt="10" width="300" height="190" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1024-300x190.png 300w, http://learn.corel.com/wp-content/uploads/2015/11/1024-600x381.png 600w, http://learn.corel.com/wp-content/uploads/2015/11/1024.png 679w" sizes="(max-width: 300px) 100vw, 300px" /></div>
+</div>
+<p>Jika Anda ingin menyorot bagian tertentu, klik dua kali fragmen yang dipilih dan putar dengan menggunakan salah satu pegangan rotasi kecil untuk menentukan sudut yang diinginkan.</p>
+<div class="center">
+<div class="floatnone"><img class="size-medium wp-image-10318 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/1134-300x214.png" alt="11" width="300" height="214" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1134-300x214.png 300w, http://learn.corel.com/wp-content/uploads/2015/11/1134-600x428.png 600w, http://learn.corel.com/wp-content/uploads/2015/11/1134.png 601w" sizes="(max-width: 300px) 100vw, 300px" /></div>
+</div>
+<p>Opsional, Anda juga bisa menerapkan drop shadow ke fragmen untuk memberikan penekanan khusus. Pertama, pilih fragmen yang diinginkan. Kemudian, di toolbox, klik panah flyout pada tool <strong>Blend </strong>dan pilih <strong>Drop Shadow </strong>dari menu flyout.</p>
+<p>Sekarang klik fragmen dan drag untuk menerapkan efek drop shadow. Di bar properti, sesuaikan intensitas <strong>Opacity </strong>dan <strong>Feathering</strong>. Untuk memesan fragmen di atas semua fragmen lainnya, pilih dan tekan <strong>Shift+Page Up</strong>.</p>
+<div class="center">
+<div class="floatnone"><img class="size-medium wp-image-10319 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/1230-300x106.png" alt="12" width="300" height="106" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1230-300x106.png 300w, http://learn.corel.com/wp-content/uploads/2015/11/1230-600x211.png 600w, http://learn.corel.com/wp-content/uploads/2015/11/1230.png 744w" sizes="(max-width: 300px) 100vw, 300px" /></div>
+</div>
+<h3><span id="Using_an_irregular_shape" class="mw-headline">Menggunakan bentuk yang tidak beraturan</span></h3>
+<p>Untuk contoh kedua, kita akan menggunakan bentuk tidak beraturan untuk mensimulasikan efek &#8216;puzzle&#8217; Langkah-langkahnya sangat mirip dengan contoh pertama, hanya mengubah cara membangun grid &#8216;puzzle&#8217;.</p>
+<p>Di toolbox, klik <strong>Freehand </strong>tool (atau <strong>Smart Drawing </strong>tool) dan gambarlah bentuk hati. Kemudian, gunakan <strong>Graph Paper </strong>tool untuk menerapkan grid 22 seperti yang Anda lakukan untuk grid 33 contoh sebelumnya.</p>
+<div class="center">
+<div class="floatnone"><img class="size-medium wp-image-10320 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/1323-300x287.png" alt="13" width="300" height="287" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1323-300x287.png 300w, http://learn.corel.com/wp-content/uploads/2015/11/1323-600x575.png 600w, http://learn.corel.com/wp-content/uploads/2015/11/1323.png 668w" sizes="(max-width: 300px) 100vw, 300px" /></div>
+</div>
+<p>Di toolbox, klik <strong>Smart Fill </strong>tool.</p>
+<div class="center">
+<div class="floatnone"><img class="size-full wp-image-10321 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/1422.png" alt="14" width="277" height="145" /></div>
+</div>
+<p>Klik di dalam sepotong hati yang terfragmentasi dan kemudian klik swatch color pada palet<strong>Warna </strong>. Untuk contoh ini, saya mengisi setiap bagian hati dengan berbagai warna.</p>
+<div class="center">
+<div class="floatnone"><img class="size-medium wp-image-10322 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/1519-300x292.png" alt="15" width="300" height="292" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1519-300x292.png 300w, http://learn.corel.com/wp-content/uploads/2015/11/1519-600x584.png 600w, http://learn.corel.com/wp-content/uploads/2015/11/1519-50x50.png 50w, http://learn.corel.com/wp-content/uploads/2015/11/1519.png 662w" sizes="(max-width: 300px) 100vw, 300px" /></div>
+</div>
+<p>Dengan <strong>Pick </strong>tool yang dipilih, tahan <strong>Shift </strong>lalu klik masing-masing bagian hati yang berwarna. Kemudian tekan <strong>Ctrl+G </strong>untuk mengelompokkan mereka. Klik grid dan tekan <strong>Delete</strong>.</p>
+<div class="center">
+<div class="floatnone"><img class="size-medium wp-image-10323 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/1616-300x276.png" alt="16" width="300" height="276" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1616-300x276.png 300w, http://learn.corel.com/wp-content/uploads/2015/11/1616-600x553.png 600w, http://learn.corel.com/wp-content/uploads/2015/11/1616.png 675w" sizes="(max-width: 300px) 100vw, 300px" /></div>
+</div>
+<p>Impor foto.</p>
+<div class="center">
+<div class="floatnone"><img class="size-medium wp-image-10324 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/1715-300x226.png" alt="17" width="300" height="226" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1715-300x226.png 300w, http://learn.corel.com/wp-content/uploads/2015/11/1715-600x453.png 600w, http://learn.corel.com/wp-content/uploads/2015/11/1715-463x348.png 463w, http://learn.corel.com/wp-content/uploads/2015/11/1715.png 664w" sizes="(max-width: 300px) 100vw, 300px" /></div>
+</div>
+<p>Klik kanan foto dan pilih <strong>PowerClip Inside</strong>. Klik pada hati untuk menempatkan foto di dalam bentuknya. Arahkan kursor ke foto dan klik tombol <strong>Edit PowerClip </strong>Seret untuk mengatur foto di dalam bentuk dan kemudian klik tombol <strong>Stop Editing Contents </strong>. Tekan <strong>Ctrl+A </strong>untuk memilih semua objek lalu klik <strong>Ungroup All</strong>. Kemudian klik setiap fragmen dan seret, atur ulang, putar, terapkan efek sesuai keinginan.</p>
+<p>Dan akhirnya, inilah puzzle berbentuk hati yang lengkap.</p>
+<div class="center">
+<div class="floatnone"><img class="size-medium wp-image-10325 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/1812-300x297.png" alt="18" width="300" height="297" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1812-300x297.png 300w, http://learn.corel.com/wp-content/uploads/2015/11/1812-150x150.png 150w, http://learn.corel.com/wp-content/uploads/2015/11/1812-600x594.png 600w, http://learn.corel.com/wp-content/uploads/2015/11/1812-85x85.png 85w, http://learn.corel.com/wp-content/uploads/2015/11/1812-50x50.png 50w, http://learn.corel.com/wp-content/uploads/2015/11/1812.png 658w" sizes="(max-width: 300px) 100vw, 300px" /></div>
+</div>
+
+
+
+
+                                <script src='../js/colpick.js'></script>
+                                <script src="../js/colorpicker.js"></script>
+
+                                </div>
+                            </div>
+
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane animated fadeIn in" id="tab-2">
+                    <div id="contenttab2"></div>
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane animated fadeIn" id="tab-3" style="margin-top:-20px;margin-left:-20px;margin-right:-20px;background:#ffffff">
+
+                    </div>
+
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- Page Loader -->
+        <div class="page-loader">
+            <div class="preloader" style="text-align:center;">
+                <svg class="pl-circular" viewBox="25 25 50 50">
+                    <circle class="plc-path" cx="50" cy="50" r="20" />
+                </svg><br/><br/>
+                <div style="font-size:8px;margin-left:-80px;width:200px" class="demo"></div>
+            </div>
+        </div>
+
+        <div style="margin-bottom:10px;"><footer id="footer">
+            Copyright &copy; 2017 IDWEBDesigner<br/><a href="index.html">Back to <i class="zmdi zmdi-home"></i> Homepage</a>
+        </footer></div>
+
+        <!-- Javascript Libraries -->
+        <script src="../vendors/bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="../vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+        <script src="../vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="../vendors/bower_components/Waves/dist/waves.min.js"></script>
+        <script src="../vendors/bootstrap-growl/bootstrap-growl.min.js"></script>
+        <script src="../vendors/bower_components/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="../vendors/bower_components/lightgallery/dist/js/lightgallery-all.min.js"></script>
+        <script src="../vendors/bootgrid/jquery.bootgrid.updated.min.js"></script>
+
+        <!-- Placeholder for IE9 -->
+        <!--[if IE 9 ]>
+            <script src="vendors/bower_components/jquery-placeholder/jquery.placeholder.min.js"></script>
+        <![endif]-->
+
+        <script src="../js/app.min.js"></script>
+
+        <!-- Data Table -->
+        <script>
+            $(function()
+            {
+              $("#grid-basic").bootgrid({
+                  caseSensitive: false,
+                    css: {
+                        icon: 'zmdi icon',
+                        iconColumns: 'zmdi-view-module',
+                        iconDown: 'zmdi-sort-amount-desc',
+                        iconRefresh: 'zmdi-refresh',
+                        iconUp: 'zmdi-sort-amount-asc'
+                    },
+              }
+              )
+            });
+        </script>
+
+        <script type="text/javascript">
+            //Basic
+            $('#sa-basic').click(function(e){
+                e.preventDefault();
+                var link = $(this).attr('href');
+
+                swal({
+                    title: "Get Inspire Profesional Logos",
+                    text: "More logos sparately on our Learn Apps: Javascript, NoSQL Database, Virtual Reality, and more...",
+                    showCancelButton: true,
+                    allowOutsideClick: true,
+                },
+                function(){
+                    window.location.href = 'market://details?id=id.web.designer.learn.javascript';
+                });
+            });
+        </script>
+
+    <script type="text/javascript">
+        function rateApp() {
+            android.rateApp();
+       }
+    </script>
+
+    </body>
+
+</html>

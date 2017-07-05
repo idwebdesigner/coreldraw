@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Tutorial CorelDraw Pro</title>
+
+         <script type="text/javascript">
+          <!--
+          if (screen.width >= 2800) {
+            window.location = "http://designer.web.id";
+          }
+          //-->
+        </script>
+
+        <!-- Vendor CSS -->
+        <link href="../vendors/bower_components/animate.css/animate.min.css" rel="stylesheet">
+        <link href="../vendors/bower_components/sweetalert/dist/sweetalert.css" rel="stylesheet">
+        <link href="../vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
+        <link href="../vendors/bower_components/lightgallery/dist/css/lightgallery.min.css" rel="stylesheet">
+        <link href="../vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+        <link href="../vendors/bootgrid/jquery.bootgrid.min.css" rel="stylesheet">
+
+        <!-- CSS -->
+        <link href="../css/app_1.min.css" rel="stylesheet">
+        <link href="../css/app_2.min.css" rel="stylesheet">
+
+        <script src="../js/h5utils.js"></script>
+        <script src="../js/jquery-2.1.0.min.js"></script>
+        <script src="../js/jquery.jscroll.min.js"></script>
+        <script>$(function(){
+        $("#contentloader1").load("http://app.coreldraw.designer.web.id/content-message.html"); $("#contentloader2").load("http://app.coreldraw.designer.web.id/pro/content-right-pro.html");
+        $("#contenttab1").load("http://app.coreldraw.designer.web.id/pro/contenttab2.html");
+        $("#contenttab2").load("http://app.coreldraw.designer.web.id/pro/contenttab2.html");
+        });</script>
+
+        <style>.videoWrapper {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 */
+        padding-top: 25px;
+        height: 0;}
+        .videoWrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;}
+        .lcb-navigation a{background:#999999}
+        </style>
+    </head>
+    <body style="background:#ffffff">
+
+        <!-- Page Loader -->
+        <div class="page-loader">
+            <div class="preloader pls-white">
+                <svg class="pl-circular" viewBox="25 25 50 50">
+                    <circle class="plc-path" cx="50" cy="50" r="20" />
+                </svg>
+            </div>
+
+        </div>
+
+        <header id="header" class="clearfix container">
+            <ul class="h-inner">
+
+                <li class="hi-trigger ma-trigger" data-ma-action="sidebar-open" data-ma-target="#sidebar">
+                    <div class="line-wrap">
+                        <div class="line top"></div>
+                        <div class="line center"></div>
+                        <div class="line bottom"></div>
+                    </div>
+                </li>
+
+                <li class="hi-logo" data-ma-action="sidebar-open" data-ma-target="#sidebar" style="margin-top:8px;">
+                    <span style="font-size:15px;color:#ffffff;"> Tutorial CorelDRAW<sup>&reg;</sup><span>
+                </li>
+
+                <li class="pull-right">
+                    <ul class="hi-menu">
+
+                        <li style="margin-right:-15px;" class="dropdown">
+                            <a data-toggle="dropdown" href="#">
+                                <i class="him-icon zmdi zmdi-notifications-none"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-lg pull-right">
+                                <div class="list-group list-group-light">
+                                    <div class="lg-header">
+                                        LIVE DEVELOPER MESSAGES
+                                    </div>
+
+                                    <article>
+                                      <p style="text-align:center;font-size:1em;"><span id="status"><span id="status"></span></p>
+                                      <ol id="state"></ol>
+                                    </article>
+                                    <script>
+                                    var statusElem  = document.getElementById('status'),
+                                        state               = document.getElementById('state');
+
+                                    function online(event) {
+                                      statusElem.className = navigator.onLine ? 'online' : 'offline';
+                                      statusElem.innerHTML = navigator.onLine ? '' : '<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You&#39;re offline, check network connection.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;content required internet access.';
+                                      state.innerHTML += '&nbsp;';
+                                    }
+
+                                    addEvent(window, 'online', online);
+                                    addEvent(window, 'offline', online);
+                                    online({ type: 'ready' });
+                                    </script>
+
+                                    <div style="margin-top:-30px;" id="contentloader1"></div>
+                                    <a class="view-more view-more-light" href="idwebdesigner.html">Powered by IDWEBDesigner</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li style="margin-right:-15px;" class="ma-trigger" data-ma-action="sidebar-open" data-ma-target="#chat">
+                            <a data-toggle="dropdown" href="#">
+                                <i class="him-icon zmdi zmdi-favorite-outline"></i>
+                            </a>
+                        </li>
+                        <li style="margin-right:-5px;" class="dropdown">
+                            <a data-toggle="dropdown" href="#"><i class="him-icon zmdi zmdi-more-vert"></i></a>
+                            <ul class="dropdown-menu dm-icon pull-right">
+                                <li class="hidden-xs">
+                                    <a data-ma-action="fullscreen" href="#"><i class="zmdi zmdi-fullscreen"></i> Fullscreen</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:window.location.reload();"><i class="zmdi zmdi-refresh-sync"></i> Refresh</a>
+                                </li>
+                                <li>
+                                    <a id="rate-app" onClick="rateApp()">Rate 5 Stars</a>
+                                </li>
+                                <li>
+                                    <a href="update.html"><i class="zmdi zmdi-download"></i>Check update</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="help.html"><i class="zmdi zmdi-help"></i> Help</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="hidden-xs ma-trigger" data-ma-action="sidebar-open" data-ma-target="#chat">
+                            <a href="#"><i class="him-icon zmdi zmdi-comment-alt-text"></i></a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="tab-nav tn-justified tn-icon" role="tablist" style="width:100%">
+                                        <li role="presentation">
+                                            <a class="col-sx-4" href="index.html">
+                                                INDONESIA
+                                            </a>
+                                        </li>
+                                        <li role="presentation" class="active">
+                                            <a class="col-xs-4" href="#tab-2" aria-controls="tab-2" role="tab" data-toggle="tab">
+                                                ENGLISH (PRO)
+                                            </a>
+                                        </li>
+
+                                    </ul>
+        </header>
+
+        <section id="main">
+            <ol class="breadcrumb" style="margin-left:-10px;">
+                <li><a href="developer.html">designer.web.id</a></li>
+                <li><a href="index.html">learn</a></li>
+                <li class="active">virtualreality</li>
+            </ol>
+
+            <aside id="sidebar" class="sidebar c-overflow" style="position:fixed;z-index:1000;margin-top:-70px;height:100%;background:white">
+                <ul class="main-menu">
+                    <li class="mm-profile sub-menu">
+                        <a href="#" data-ma-action="submenu-toggle" class="media">
+                            <img class="pull-left" src="../img/coreldraw.green.png" alt="" height="25px" style="margin-left:-40px;">
+                            <div class="media-body">
+                            <div>Tutorial CorelDRAW<sup>&reg;</sup></div>
+                            <span style="font-size:11px;">Experience by IDWEBDesigner<br/>dev@designer.web.id</span>
+                            </div>
+                        </a>
+
+                        <ul>
+                            <li>
+                                <a href="developer.html">Indonesia Web Designer</a>
+                            </li>
+                            <li>
+                                <div style="margin-left:65px;margin-bottom:10px;font-size:10px;color:#888888;padding-right:20px;">Jl. Wahid Hasyim No.3 Gaten Condongcatur Depok Sleman Yogyakarta, Indonesia.</div>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-info"></i> About CorelDraw</a>
+                        <div style="margin-left:65px;margin-bottom:10px;font-size:12px;color:#579706;"><a href="basics.html">What's is CorelDraw?<br/>Basics Learn</a></div>
+                    </li>
+
+                    <li><a href="index.html"><i class="zmdi zmdi-flag"></i> Tutorial Bahasa Indonesia</a></li>
+                    <li class="sub-menu toggled active">
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-android"></i> Featured Apps</a>
+                        <div style="margin-left:65px;margin-top:10px;font-size:10px;color:#888888;padding-right:20px;">Color Docker: This docker allows you to choose fill and outline colors from a color picker, color sliders, and color palettes. Found with dockers and in the Toolbox.</div>
+
+                        <ul>
+
+                            <li><a href="language.html">Bahasa Indonesia</a></li>
+                            <li style="display:none;"><a href="upgrade.html"><i class="zmdi zmdi-shopping-cart"></i>&nbsp;&nbsp;Upgrade</a></li>
+                            <li class="divider"></li>
+
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-code"></i> Developer</a>
+
+                        <ul>
+                            <li><a href="developer.html">dev@designer.web.id<br/>designer.web.id</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </aside>
+
+            <aside id="chat" class="sidebar">
+
+                                    <article>
+                                      <p style="margin-top:30px;margin-left:15px;font-size:0.7em;"><span id="status2"><span id="status"></span></p>
+                                      <ol id="state2"></ol>
+                                    </article>
+                                    <script>
+                                    var statusElem  = document.getElementById('status2'),
+                                        state               = document.getElementById('state2');
+
+                                    function online(event) {
+                                      statusElem.className = navigator.onLine ? 'online' : 'offline';
+                                      statusElem.innerHTML = navigator.onLine ? '' : '<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You&#39;re offline, check network connection.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;content required internet access.';
+                                      state.innerHTML += '&nbsp;';
+                                    }
+
+                                    addEvent(window, 'online', online);
+                                    addEvent(window, 'offline', online);
+                                    online({ type: 'ready' });
+                                    </script>
+
+                <div style="margin-top:-30px; width:100%" id="contentloader2"></div>
+
+
+
+            </aside>
+
+            <section id="content" style="margin-bottom:-40px;">
+                <div class="container" style="margin-top:-55px;margin-left:-20px;padding-right:0px;">
+                    <div class="tab-content p-20" style="background:#ffffff;">
+
+                    <div role="tabpanel" class="tab-pane animated fadeIn in active" id="tab-1">
+
+                            <!-- Blog Posts -->
+                            <div class="card blog-post" style="margin-bottom:-0px;">
+
+                                <div class="videoWrapper">
+                                <img width="100%" src="../images/green.png" frameborder="0" allowfullscreen></img>
+                                </div>
+
+                                <a class="card-header ch-alt">
+                                    <h2><small>Dalam tutorial ini tertulis, Anda akan belajar bagaimana membuat selebaran di CorelDRAW® Graphics Suite menggunakan Table Tool dan Live Text Preview.  Table tool adalah teknik hemat waktu yang kuat. Jika Anda hanya merancang brosur Anda dengan cara yang biasa, dengan menggunakan panduan, maka setiap kali Anda menambahkan atau mengubah elemen, Anda harus menyesuaikan keseluruhan desain. Dengan menggunakan  table tool, Anda akan membuat pengeditan atau penggunaan ulang desain lebih cepat dan mudah.</small></h2>
+                                </a>
+
+                                <div class="card-body card-padding">
+
+                                <h4>Desain Flyer Menggunakan Table Tool dan Live Text Preview</h4>
+                                 <br/>
+
+
+			<p>Cara yang paling umum untuk membuat layout adalah dengan menggunakan panduan untuk menyelaraskan semua elemen dalam dokumen. Tapi ketika Anda perlu mengubah tata letak (misalnya, untuk menambahkan baris tambahan gambar), Anda harus melakukan tata letak sekali lagi.</p>
+<p>Anda akan menghemat banyak waktu dan usaha dengan menggunakan fitur table di CorelDRAW untuk menyusun dokumen Anda. Dalam tutorial ini, Anda akan menggunakan fitur table untuk membuat flyer.</p>
+<p><img class="aligncenter wp-image-10480 size-medium" src="http://learn.corel.com/wp-content/uploads/2015/11/177-213x300.jpg" alt="Flyer Design with CorelDRAW" width="213" height="300" srcset="http://learn.corel.com/wp-content/uploads/2015/11/177-213x300.jpg 213w, http://learn.corel.com/wp-content/uploads/2015/11/177.jpg 355w" sizes="(max-width: 213px) 100vw, 213px" /></p>
+<p>1. Mulailah dengan membuat sketsa flyer, dengan menggunakan pensil dan kertas, atau <strong style="font-weight: 600;">Smart drawing</strong> tool di CorelDRAW. <strong style="font-weight: 600;">Smart drawing</strong> tool secara otomatis mengubah garis kasar bentuk digambar tangan menjadi garis lurus atau kurva halus. Saat sketsa sudah siap, hitung jumlah kolom dan baris yang Anda butuhkan untuk tata letak.</p>
+<p><img class="size-medium wp-image-10481 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/238-212x300.jpg" alt="2" width="212" height="300" srcset="http://learn.corel.com/wp-content/uploads/2015/11/238-212x300.jpg 212w, http://learn.corel.com/wp-content/uploads/2015/11/238.jpg 354w" sizes="(max-width: 212px) 100vw, 212px" /></p>
+<p>2. Buat tabel dengan pengaturan yang ditunjukkan di bawah ini dengan melakukan salah satu tindakan berikut:</p>
+<ul>
+<li>Klik <strong>Table</strong> tool di toolbox, dan seret pada halaman untuk membuat tabel.</li>
+<li>Klik <strong>Table &gt; Create new table</strong>. di kotak dialog <strong>Create new table</strong>, ketik jumlah kolom dan baris, serta ukuran keseluruhan tabel.</li>
+</ul>
+<p>&nbsp;</p>
+<p><img class="size-full wp-image-10482 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/340.png" alt="3" width="286" height="208" /></p>
+<p>3. Klik <strong style="font-weight: 600;">Table</strong> tool di toolbox, dan ubah ukuran sel tabel sesuai kebutuhan dengan cara menyeret garis sel agar sesuai dengan tata letak. Anda dapat menarik garis saat kursor berubah menjadi panah ganda.</p>
+<p><img class="aligncenter wp-image-10483 size-medium" src="http://learn.corel.com/wp-content/uploads/2015/11/427-231x300.jpg" alt="How to Make a Flyer with CorelDRAW" width="231" height="300" srcset="http://learn.corel.com/wp-content/uploads/2015/11/427-231x300.jpg 231w, http://learn.corel.com/wp-content/uploads/2015/11/427.jpg 326w" sizes="(max-width: 231px) 100vw, 231px" /></p>
+<p>4. Gabungkan sel bersama sesuai kebutuhan. Untuk melakukan itu, tarik melintasi sel untuk memilihnya (sel yang dipilih muncul dengan pola penetasan), lalu klik kanan dan pilih <strong style="font-weight: 600;">Merge cells</strong> di menu popup.</p>
+<p><img class="size-medium wp-image-10484 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/525-300x185.jpg" alt="5" width="300" height="185" srcset="http://learn.corel.com/wp-content/uploads/2015/11/525-300x185.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/525.jpg 416w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<p>Pada tabel layout di bawah ini, beberapa sel digabung untuk menampung gambar dan teks.</p>
+<p><img class="aligncenter wp-image-10485 size-medium" src="http://learn.corel.com/wp-content/uploads/2015/11/623-224x300.jpg" alt="How to Design a Flyer" width="224" height="300" srcset="http://learn.corel.com/wp-content/uploads/2015/11/623-224x300.jpg 224w, http://learn.corel.com/wp-content/uploads/2015/11/623.jpg 317w" sizes="(max-width: 224px) 100vw, 224px" /></p>
+<p>Sekarang Anda siap mengisi sel dengan konten.</p>
+<p>5. Untuk menambahkan teks ke sel, klik <strong>Text</strong> tool di toolbox, klik di dalam sel, dan ketik. Untuk mengubah ukuran font atau font, pilih teks dengan <strong>Text</strong> tool, lalu gulir ke bawah kotak<strong> Daftar Font</strong> untuk menemukan font yang paling sesuai. Fitur <strong>Live Text Preview</strong> memungkinkan Anda melihat dulu perubahan teks yang Anda pilih dengan segera. Pada ilustrasi di bawah ini, ketika font <strong>Impact</strong> dipilih, teks yang dipilih diformat ulang dengan font baru.</p>
+<p><img class="aligncenter wp-image-10487 size-medium" src="http://learn.corel.com/wp-content/uploads/2015/11/736-277x300.png" alt="How to Make a Flyer" width="277" height="300" srcset="http://learn.corel.com/wp-content/uploads/2015/11/736-277x300.png 277w, http://learn.corel.com/wp-content/uploads/2015/11/736.png 491w" sizes="(max-width: 277px) 100vw, 277px" /></p>
+<p>6. Untuk mengimpor gambar ke desain selebaran, klik <strong>Pick</strong> tool, Klik <strong>File &gt; Import</strong>, cari file gambar di komputer Anda, dan klik  <strong>Import</strong>. Klik halaman untuk menyisipkan gambar. Anda kemudian dapat memindahkan gambar ke sel tertentu dengan menyeret gambar dengan tombol mouse sebelah kanan. Saat sel target disorot, lepaskan tombol mouse dan pilih <strong>Place inside cell</strong> dari menu popup. Anda kemudian dapat menyesuaikan posisi dan ukuran gambar dengan menyeret gambar atau menyeret pegangan sudut.<br />
+7. Akhirnya, hapus baris dari tabel. Untuk melakukannya, pilih tabel dengan <strong>Pick</strong> tool. Pada area Border di property bar, pilih <strong>All</strong> dari daftar kotak <strong>Pilihan Border</strong>, dan pilih <strong>None</strong> dari daftar kotak <strong>Outline width</strong>.</p>
+<p><img class="size-medium wp-image-10488 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/830-300x224.png" alt="8" width="300" height="224" srcset="http://learn.corel.com/wp-content/uploads/2015/11/830-300x224.png 300w, http://learn.corel.com/wp-content/uploads/2015/11/830.png 350w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+
+
+
+                                <script src='../js/colpick.js'></script>
+                                <script src="../js/colorpicker.js"></script>
+
+                                </div>
+                            </div>
+
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane animated fadeIn in" id="tab-2">
+                    <div id="contenttab2"></div>
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane animated fadeIn" id="tab-3" style="margin-top:-20px;margin-left:-20px;margin-right:-20px;background:#ffffff">
+
+                    </div>
+
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- Page Loader -->
+        <div class="page-loader">
+            <div class="preloader" style="text-align:center;">
+                <svg class="pl-circular" viewBox="25 25 50 50">
+                    <circle class="plc-path" cx="50" cy="50" r="20" />
+                </svg><br/><br/>
+                <div style="font-size:8px;margin-left:-80px;width:200px" class="demo"></div>
+            </div>
+        </div>
+
+        <div style="margin-bottom:10px;"><footer id="footer">
+            Copyright &copy; 2017 IDWEBDesigner<br/><a href="index.html">Back to <i class="zmdi zmdi-home"></i> Homepage</a>
+        </footer></div>
+
+        <!-- Javascript Libraries -->
+        <script src="../vendors/bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="../vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+        <script src="../vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="../vendors/bower_components/Waves/dist/waves.min.js"></script>
+        <script src="../vendors/bootstrap-growl/bootstrap-growl.min.js"></script>
+        <script src="../vendors/bower_components/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="../vendors/bower_components/lightgallery/dist/js/lightgallery-all.min.js"></script>
+        <script src="../vendors/bootgrid/jquery.bootgrid.updated.min.js"></script>
+
+        <!-- Placeholder for IE9 -->
+        <!--[if IE 9 ]>
+            <script src="vendors/bower_components/jquery-placeholder/jquery.placeholder.min.js"></script>
+        <![endif]-->
+
+        <script src="../js/app.min.js"></script>
+
+        <!-- Data Table -->
+        <script>
+            $(function()
+            {
+              $("#grid-basic").bootgrid({
+                  caseSensitive: false,
+                    css: {
+                        icon: 'zmdi icon',
+                        iconColumns: 'zmdi-view-module',
+                        iconDown: 'zmdi-sort-amount-desc',
+                        iconRefresh: 'zmdi-refresh',
+                        iconUp: 'zmdi-sort-amount-asc'
+                    },
+              }
+              )
+            });
+        </script>
+
+        <script type="text/javascript">
+            //Basic
+            $('#sa-basic').click(function(e){
+                e.preventDefault();
+                var link = $(this).attr('href');
+
+                swal({
+                    title: "Get Inspire Profesional Logos",
+                    text: "More logos sparately on our Learn Apps: Javascript, NoSQL Database, Virtual Reality, and more...",
+                    showCancelButton: true,
+                    allowOutsideClick: true,
+                },
+                function(){
+                    window.location.href = 'market://details?id=id.web.designer.learn.javascript';
+                });
+            });
+        </script>
+
+    <script type="text/javascript">
+        function rateApp() {
+            android.rateApp();
+       }
+    </script>
+
+    </body>
+
+</html>

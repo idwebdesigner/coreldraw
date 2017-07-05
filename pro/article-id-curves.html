@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Tutorial CorelDraw Pro</title>
+
+         <script type="text/javascript">
+          <!--
+          if (screen.width >= 2800) {
+            window.location = "http://designer.web.id";
+          }
+          //-->
+        </script>
+
+        <!-- Vendor CSS -->
+        <link href="../vendors/bower_components/animate.css/animate.min.css" rel="stylesheet">
+        <link href="../vendors/bower_components/sweetalert/dist/sweetalert.css" rel="stylesheet">
+        <link href="../vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
+        <link href="../vendors/bower_components/lightgallery/dist/css/lightgallery.min.css" rel="stylesheet">
+        <link href="../vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+        <link href="../vendors/bootgrid/jquery.bootgrid.min.css" rel="stylesheet">
+
+        <!-- CSS -->
+        <link href="../css/app_1.min.css" rel="stylesheet">
+        <link href="../css/app_2.min.css" rel="stylesheet">
+
+        <script src="../js/h5utils.js"></script>
+        <script src="../js/jquery-2.1.0.min.js"></script>
+        <script src="../js/jquery.jscroll.min.js"></script>
+        <script>$(function(){
+        $("#contentloader1").load("http://app.coreldraw.designer.web.id/content-message.html"); $("#contentloader2").load("http://app.coreldraw.designer.web.id/pro/content-right-pro.html");
+        $("#contenttab1").load("http://app.coreldraw.designer.web.id/pro/contenttab2.html");
+        $("#contenttab2").load("http://app.coreldraw.designer.web.id/pro/contenttab2.html");
+        });</script>
+
+        <style>.videoWrapper {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 */
+        padding-top: 25px;
+        height: 0;}
+        .videoWrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;}
+        .lcb-navigation a{background:#999999}
+        </style>
+    </head>
+    <body style="background:#ffffff">
+
+        <!-- Page Loader -->
+        <div class="page-loader">
+            <div class="preloader pls-white">
+                <svg class="pl-circular" viewBox="25 25 50 50">
+                    <circle class="plc-path" cx="50" cy="50" r="20" />
+                </svg>
+            </div>
+
+        </div>
+
+        <header id="header" class="clearfix container">
+            <ul class="h-inner">
+
+                <li class="hi-trigger ma-trigger" data-ma-action="sidebar-open" data-ma-target="#sidebar">
+                    <div class="line-wrap">
+                        <div class="line top"></div>
+                        <div class="line center"></div>
+                        <div class="line bottom"></div>
+                    </div>
+                </li>
+
+                <li class="hi-logo" data-ma-action="sidebar-open" data-ma-target="#sidebar" style="margin-top:8px;">
+                    <span style="font-size:15px;color:#ffffff;"> Tutorial CorelDRAW<sup>&reg;</sup><span>
+                </li>
+
+                <li class="pull-right">
+                    <ul class="hi-menu">
+
+                        <li style="margin-right:-15px;" class="dropdown">
+                            <a data-toggle="dropdown" href="#">
+                                <i class="him-icon zmdi zmdi-notifications-none"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-lg pull-right">
+                                <div class="list-group list-group-light">
+                                    <div class="lg-header">
+                                        LIVE DEVELOPER MESSAGES
+                                    </div>
+
+                                    <article>
+                                      <p style="text-align:center;font-size:1em;"><span id="status"><span id="status"></span></p>
+                                      <ol id="state"></ol>
+                                    </article>
+                                    <script>
+                                    var statusElem  = document.getElementById('status'),
+                                        state               = document.getElementById('state');
+
+                                    function online(event) {
+                                      statusElem.className = navigator.onLine ? 'online' : 'offline';
+                                      statusElem.innerHTML = navigator.onLine ? '' : '<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You&#39;re offline, check network connection.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;content required internet access.';
+                                      state.innerHTML += '&nbsp;';
+                                    }
+
+                                    addEvent(window, 'online', online);
+                                    addEvent(window, 'offline', online);
+                                    online({ type: 'ready' });
+                                    </script>
+
+                                    <div style="margin-top:-30px;" id="contentloader1"></div>
+                                    <a class="view-more view-more-light" href="idwebdesigner.html">Powered by IDWEBDesigner</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li style="margin-right:-15px;" class="ma-trigger" data-ma-action="sidebar-open" data-ma-target="#chat">
+                            <a data-toggle="dropdown" href="#">
+                                <i class="him-icon zmdi zmdi-favorite-outline"></i>
+                            </a>
+                        </li>
+                        <li style="margin-right:-5px;" class="dropdown">
+                            <a data-toggle="dropdown" href="#"><i class="him-icon zmdi zmdi-more-vert"></i></a>
+                            <ul class="dropdown-menu dm-icon pull-right">
+                                <li class="hidden-xs">
+                                    <a data-ma-action="fullscreen" href="#"><i class="zmdi zmdi-fullscreen"></i> Fullscreen</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:window.location.reload();"><i class="zmdi zmdi-refresh-sync"></i> Refresh</a>
+                                </li>
+                                <li>
+                                    <a id="rate-app" onClick="rateApp()">Rate 5 Stars</a>
+                                </li>
+                                <li>
+                                    <a href="update.html"><i class="zmdi zmdi-download"></i>Check update</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="help.html"><i class="zmdi zmdi-help"></i> Help</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="hidden-xs ma-trigger" data-ma-action="sidebar-open" data-ma-target="#chat">
+                            <a href="#"><i class="him-icon zmdi zmdi-comment-alt-text"></i></a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="tab-nav tn-justified tn-icon" role="tablist" style="width:100%">
+                                        <li role="presentation" class="active">
+                                            <a class="col-sx-4" href="index.html">
+                                                &nbsp;
+                                            </a>
+                                        </li>
+
+                                    </ul>
+        </header>
+
+        <section id="main">
+            <ol class="breadcrumb" style="margin-left:-10px;">
+                <li><a href="developer.html">designer.web.id</a></li>
+                <li><a href="index.html">learn</a></li>
+                <li class="active">virtualreality</li>
+            </ol>
+
+            <aside id="sidebar" class="sidebar c-overflow" style="position:fixed;z-index:1000;margin-top:-70px;height:100%;background:white">
+                <ul class="main-menu">
+                    <li class="mm-profile sub-menu">
+                        <a href="#" data-ma-action="submenu-toggle" class="media">
+                            <img class="pull-left" src="../img/coreldraw.green.png" alt="" height="25px" style="margin-left:-40px;">
+                            <div class="media-body">
+                            <div>Tutorial CorelDRAW<sup>&reg;</sup></div>
+                            <span style="font-size:11px;">Experience by IDWEBDesigner<br/>dev@designer.web.id</span>
+                            </div>
+                        </a>
+
+                        <ul>
+                            <li>
+                                <a href="developer.html">Indonesia Web Designer</a>
+                            </li>
+                            <li>
+                                <div style="margin-left:65px;margin-bottom:10px;font-size:10px;color:#888888;padding-right:20px;">Jl. Wahid Hasyim No.3 Gaten Condongcatur Depok Sleman Yogyakarta, Indonesia.</div>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-info"></i> About CorelDraw</a>
+                        <div style="margin-left:65px;margin-bottom:10px;font-size:12px;color:#579706;"><a href="basics.html">What's is CorelDraw?<br/>Basics Learn</a></div>
+                    </li>
+
+                    <li><a href="index.html"><i class="zmdi zmdi-flag"></i> Tutorial Bahasa Indonesia</a></li>
+                    <li class="sub-menu toggled active">
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-android"></i> Featured Apps</a>
+                        <div style="margin-left:65px;margin-top:10px;font-size:10px;color:#888888;padding-right:20px;">Color Docker: This docker allows you to choose fill and outline colors from a color picker, color sliders, and color palettes. Found with dockers and in the Toolbox.</div>
+
+                        <ul>
+
+                            <li><a href="language.html">Bahasa Indonesia</a></li>
+                            <li style="display:none;"><a href="upgrade.html"><i class="zmdi zmdi-shopping-cart"></i>&nbsp;&nbsp;Upgrade</a></li>
+                            <li class="divider"></li>
+
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-code"></i> Developer</a>
+
+                        <ul>
+                            <li><a href="developer.html">dev@designer.web.id<br/>designer.web.id</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </aside>
+
+            <aside id="chat" class="sidebar">
+
+                                    <article>
+                                      <p style="margin-top:30px;margin-left:15px;font-size:0.7em;"><span id="status2"><span id="status"></span></p>
+                                      <ol id="state2"></ol>
+                                    </article>
+                                    <script>
+                                    var statusElem  = document.getElementById('status2'),
+                                        state               = document.getElementById('state2');
+
+                                    function online(event) {
+                                      statusElem.className = navigator.onLine ? 'online' : 'offline';
+                                      statusElem.innerHTML = navigator.onLine ? '' : '<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You&#39;re offline, check network connection.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;content required internet access.';
+                                      state.innerHTML += '&nbsp;';
+                                    }
+
+                                    addEvent(window, 'online', online);
+                                    addEvent(window, 'offline', online);
+                                    online({ type: 'ready' });
+                                    </script>
+
+                <div style="margin-top:-30px; width:100%" id="contentloader2"></div>
+
+
+
+            </aside>
+
+            <section id="content" style="margin-bottom:-40px;">
+                <div class="container" style="margin-top:-55px;margin-left:-20px;padding-right:0px;">
+                    <div class="tab-content p-20" style="background:#ffffff;">
+
+                    <div role="tabpanel" class="tab-pane animated fadeIn in active" id="tab-1">
+
+                            <!-- Blog Posts -->
+                            <div class="card blog-post" style="margin-bottom:-0px;">
+
+                                <div class="videoWrapper">
+                                <img width="100%" src="../images/green.png" frameborder="0" allowfullscreen></img>
+                                </div>
+
+                                <a class="card-header ch-alt">
+                                    <h2><small>Dalam tutorial ini, kita akan melihat Curve Tool Flyout. Setelah dikuasai dengan benar, penggunaan alat ini akan membuat desain kreasi sederhana dan akurat.</small></h2>
+                                </a>
+
+                                <div class="card-body card-padding">
+
+                                <h4>Kurva Desain</h4>
+                                 <br/>
+<p>Anda akan belajar tentang:</p>
+<ul>
+<li>Freehand tool</li>
+<li>2-Point Line tool</li>
+<li>Bezier tool</li>
+<li>Artistic Media tool</li>
+<li>Pen tool</li>
+<li>B-Spline tool</li>
+<li>Polyline tool</li>
+<li>3-Point Curve tool</li>
+</ul>
+
+<p>Menggambar benda di CorelDRAW dilakukan dengan menggunakan berbagai alat yang ditemukan di Toolbox. Dalam tutorial ini, Anda akan belajar tentang jenis node (simpul), Curve Tool dan cara membuat ulang bitmap sebagai kurva.</p>
+<p><img class="size-full wp-image-10228 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/2014-11-03_0851.png" alt="2014-11-03_0851" width="259" height="67" /></p>
+<h3 style="font-weight: 400;"></h3>
+<h3 style="font-weight: 400;">Jenis Node (Simpul)</h3>
+<p>Sebelum melihat berbagai Curve Tool (alat kurva) yang tersedia di CorelDRAW, kita harus melihat jenis simpul yang bisa dibuat, dan bagaimana pengontrolnya. Gambar di bawah menunjukkan seperti apa simpul ketika dipilih dengan <strong style="font-weight: 600;">Shape</strong> tool.<strong style="font-weight: 600;"> Shape</strong> tool Adalah alat standar untuk memindahkan dan memanipulasi node. Simpul yang digambarkan di sini adalah simpul cusp.</p>
+<p>&nbsp;</p>
+<p><img class="size-full wp-image-10230 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/RtaImage0bc7.jpg" alt="RtaImage0bc7" width="330" height="196" srcset="http://learn.corel.com/wp-content/uploads/2015/11/RtaImage0bc7.jpg 330w, http://learn.corel.com/wp-content/uploads/2015/11/RtaImage0bc7-300x178.jpg 300w" sizes="(max-width: 330px) 100vw, 330px" /><br />
+<strong style="font-weight: 600;">Cusp nodes </strong></p>
+<p>Simpul Cusp membiarkan Anda membuat transisi tajam, seperti sudut atau sudut tajam, pada objek kurva. Anda dapat memindahkan pegangan kontrol di simpul cusp secara independen satu sama lain, mengubah garis hanya di satu sisi simpul.</p>
+<p><strong style="font-weight: 600;">Smooth nodes</strong></p>
+<p>Dengan smooth nodes, garis yang melewati simpul mengambil bentuk kurva, menghasilkan transisi yang mulus antara segmen garis. Kontrol menangani smooth nodes selalu berhadapan satu sama lain, namun jaraknya berbeda dari simpul.</p>
+<p><strong style="font-weight: 600;">Symmetrical nodes (simpul simetris)</strong></p>
+<p>Simpul simetris mirip dengan smooth nodes. Mereka menciptakan transisi yang mulus antara segmen garis, namun juga memungkinkan Anda memberi garis pada kedua sisi simpul dengan penampilan melengkung yang sama. Kendala kontrol simpul simetris saling berhadapan satu sama lain dan pada jarak yang sama dari simpul.</p>
+<p><strong style="font-weight: 600;">Line nodes (simpul garis)</strong></p>
+<p>Simpul garis membiarkan Anda membentuk objek kurva dengan mengubah bentuk segmennya. Anda bisa membuat segmen melengkung lurus atau lurus melengkung lurus. Membuat segmen lurus melengkung tidak terasa mengubah tampilan segmen, namun ini akan membuat kontroler yang bisa Anda ubah untuk mengubah bentuk segmen.</p>
+<p><img class="size-full wp-image-10235 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/RtaImagef2a7.jpg" alt="RtaImagef2a7" width="560" height="248" srcset="http://learn.corel.com/wp-content/uploads/2015/11/RtaImagef2a7.jpg 560w, http://learn.corel.com/wp-content/uploads/2015/11/RtaImagef2a7-300x133.jpg 300w" sizes="(max-width: 560px) 100vw, 560px" /></p>
+<p>Kini setelah kita memahami berbagai jenis node di CorelDRAW, kita bisa melihat alat yang digunakan untuk menggambar garis dan lekukan.</p>
+<p>&nbsp;</p>
+<h4 style="font-weight: 400;"></h4>
+<h4 style="font-weight: 400;">Curve tools (alat kurva)</h4>
+<p>Flyout Curve Tools memungkinkan Anda membuat segmen melengkung dan garis lurus.</p>
+<p><strong style="font-weight: 600;">Freehand and Polyline tools</strong></p>
+<p><strong style="font-weight: 600;">Freehand</strong> tool memungkinkan Anda mengontrol kelancaran garis melengkung yang Anda gambar sekaligus menambahkan segmen ke garis yang ada. Namun, <strong style="font-weight: 600;">Polyline</strong> tool lebih mudah digunakan untuk menggambar dengan cepat garis kompleks yang terdiri dari segmen melengkung dan lurus bolak-balik dan memungkinkan Anda menggambar dalam mode pratinjau.</p>
+<p><strong style="font-weight: 600;">2-Point Line tool</strong></p>
+<p>Anda bisa menggambar garis lurus dengan menggunakan  <strong style="font-weight: 600;">2-Point Line</strong> tool. Alat ini juga memungkinkan Anda membuat garis lurus yang tegak lurus atau bersinggungan dengan objek.</p>
+<p><strong style="font-weight: 600;">Bézier and Pen tools</strong></p>
+<p><strong style="font-weight: 600;">Bézier</strong> and <strong style="font-weight: 600;">Pen</strong> tools memungkinkan Anda menggambar garis satu segmen pada satu waktu dengan menempatkan setiap simpul dengan presisi dan mengendalikan bentuk setiap segmen melengkung. <strong style="font-weight: 600;">Pen</strong> tool memberi Anda kemampuan tambahan untuk melihat pratinjau segmen garis saat Anda menggambar.</p>
+<p><strong style="font-weight: 600;">B-Spline tool</strong></p>
+<p><strong style="font-weight: 600;">B-spline</strong> tool memungkinkan Anda menggambar garis melengkung dengan menyetel titik kontrol yang membentuk kurva tanpa memecahnya menjadi beberapa segmen.</p>
+<p><img class="size-full wp-image-10234 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/RtaImagedfa9.jpg" alt="RtaImagedfa9" width="560" height="330" srcset="http://learn.corel.com/wp-content/uploads/2015/11/RtaImagedfa9.jpg 560w, http://learn.corel.com/wp-content/uploads/2015/11/RtaImagedfa9-300x177.jpg 300w" sizes="(max-width: 560px) 100vw, 560px" /></p>
+<p><strong style="font-weight: 600;">3-Point Curve tool</strong></p>
+<p><strong style="font-weight: 600;">3-Point Curve</strong> tool memungkinkan Anda menggambar garis melengkung sederhana dengan menentukan lebar dan tinggi mereka. Anda bisa menggunakan alat ini untuk membuat bentuk busur dengan cepat tanpa memanipulasi node.</p>
+<p><strong style="font-weight: 600;">Smart Drawing tool</strong></p>
+<p>Anda bisa menggunakan <strong style="font-weight: 600;">Smart Drawing</strong> tool untuk menggambar stroke freehand yang bisa dikenali dan diubah menjadi bentuk dasar. Jika sebuah benda tidak diubah menjadi bentuk, benda tersebut akan dihaluskan. Anda dapat mengatur tingkat di mana CorelDRAW mengenali bentuk dan mengubahnya menjadi objek.</p>
+<p><img class="size-full wp-image-10229 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/2014-11-03_0906.png" alt="2014-11-03_0906" width="687" height="292" srcset="http://learn.corel.com/wp-content/uploads/2015/11/2014-11-03_0906.png 687w, http://learn.corel.com/wp-content/uploads/2015/11/2014-11-03_0906-300x128.png 300w, http://learn.corel.com/wp-content/uploads/2015/11/2014-11-03_0906-600x255.png 600w" sizes="(max-width: 687px) 100vw, 687px" /></p>
+<h3 style="font-weight: 400;">Menciptakan sebuah bitmap sebagai kurva</h3>
+<p>Kita akan menggunakan <strong style="font-weight: 600;">Freehand</strong> tool untuk membuat ulang logo dari bitmap resolusi rendah (72 dpi). Menciptakan tepi bitmap yang tidak rata sebagai kurva vektor akan membuat bentuknya halus dan mudah dikendalikan, dibentuk ulang, atau diubah ukurannya.</p>
+<p>Dengan <strong style="font-weight: 600;">Freehand</strong> tool, Kita klik bagian atas huruf &#8220;C&#8221; dari logo (seperti yang ditunjukkan oleh huruf &#8220;A&#8221; dalam ilustrasi di bawah ini). Selanjutnya, kita ikuti tepinya huruf lurus, klik dua kali di akhir setiap segmen. Satu klik berakhir kurva.</p>
+<p><img class="size-full wp-image-10231 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/RtaImage6c2f.jpg" alt="RtaImage6c2f" width="560" height="139" srcset="http://learn.corel.com/wp-content/uploads/2015/11/RtaImage6c2f.jpg 560w, http://learn.corel.com/wp-content/uploads/2015/11/RtaImage6c2f-300x74.jpg 300w" sizes="(max-width: 560px) 100vw, 560px" /><br />
+Saat objek telah dibuat, kita memilih empat node pada garis vertikal kiri dengan <strong style="font-weight: 600;">Shape</strong> tool dan klik <strong style="font-weight: 600;">Convert to curve</strong> pada panel properti.</p>
+<p><img class="size-full wp-image-10236" src="http://learn.corel.com/wp-content/uploads/2015/11/RtaImage7d4b.jpg" alt="CorelCONNECT" width="55" height="55" srcset="http://learn.corel.com/wp-content/uploads/2015/11/RtaImage7d4b.jpg 55w, http://learn.corel.com/wp-content/uploads/2015/11/RtaImage7d4b-50x50.jpg 50w" sizes="(max-width: 55px) 100vw, 55px" /></p>
+<p>Hal ini memungkinkan kita menggunakan <strong style="font-weight: 600;">Shape</strong> tool untuk menyeret control handles out untuk mencocokkan kelengkungan itu.</p>
+<p><img class="size-full wp-image-10233 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/RtaImage364f.jpg" alt="RtaImage364f" width="560" height="139" srcset="http://learn.corel.com/wp-content/uploads/2015/11/RtaImage364f.jpg 560w, http://learn.corel.com/wp-content/uploads/2015/11/RtaImage364f-300x74.jpg 300w" sizes="(max-width: 560px) 100vw, 560px" /></p>
+<p>Begitu kita puas dengan pembentukan jalur di sekitar teks itu, kita berikan warna kontras yang solid, yang membuatnya lebih mudah untuk melihat kemajuan kita. Kita kemudian bisa beralih ke karakter berikutnya.</p>
+<p>Saat membuat karakter atau objek yang terdiri dari beberapa jalur atau area, seperti huruf A, a, B, b, D, d, O, o, P, p, Q, q atau R, ingatlah bahwa objek Perlu dikombinasikan begitu mereka diciptakan. Hal ini bisa dilakukan dengan memilih objek dan mengklik <strong style="font-weight: 600;">Object &gt; Combine.</strong></p>
+<p><img class="size-full wp-image-10232 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/RtaImage38ab.jpg" alt="RtaImage38ab" width="560" height="139" srcset="http://learn.corel.com/wp-content/uploads/2015/11/RtaImage38ab.jpg 560w, http://learn.corel.com/wp-content/uploads/2015/11/RtaImage38ab-300x74.jpg 300w" sizes="(max-width: 560px) 100vw, 560px" /></p>
+<p>Menggunakan proses ini memudahkan untuk menciptakan hampir semua gambar yang Anda inginkan. Beberapa mungkin memerlukan waktu sedikit lebih lama dari yang lain, namun pada akhirnya Anda akan memiliki karya seni yang akan mengingatkan Anda betapa mudahnya menggambar kurva di CorelDRAW Graphics Suite.</p>
+
+
+                                <script src='../js/colpick.js'></script>
+                                <script src="../js/colorpicker.js"></script>
+
+                                </div>
+                            </div>
+
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane animated fadeIn in" id="tab-2">
+                    <div id="contenttab2"></div>
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane animated fadeIn" id="tab-3" style="margin-top:-20px;margin-left:-20px;margin-right:-20px;background:#ffffff">
+
+                    </div>
+
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- Page Loader -->
+        <div class="page-loader">
+            <div class="preloader" style="text-align:center;">
+                <svg class="pl-circular" viewBox="25 25 50 50">
+                    <circle class="plc-path" cx="50" cy="50" r="20" />
+                </svg><br/><br/>
+                <div style="font-size:8px;margin-left:-80px;width:200px" class="demo"></div>
+            </div>
+        </div>
+
+        <div style="margin-bottom:10px;"><footer id="footer">
+            Copyright &copy; 2017 IDWEBDesigner<br/><a href="index.html">Back to <i class="zmdi zmdi-home"></i> Homepage</a>
+        </footer></div>
+
+        <!-- Javascript Libraries -->
+        <script src="../vendors/bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="../vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+        <script src="../vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="../vendors/bower_components/Waves/dist/waves.min.js"></script>
+        <script src="../vendors/bootstrap-growl/bootstrap-growl.min.js"></script>
+        <script src="../vendors/bower_components/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="../vendors/bower_components/lightgallery/dist/js/lightgallery-all.min.js"></script>
+        <script src="../vendors/bootgrid/jquery.bootgrid.updated.min.js"></script>
+
+        <!-- Placeholder for IE9 -->
+        <!--[if IE 9 ]>
+            <script src="vendors/bower_components/jquery-placeholder/jquery.placeholder.min.js"></script>
+        <![endif]-->
+
+        <script src="../js/app.min.js"></script>
+
+        <!-- Data Table -->
+        <script>
+            $(function()
+            {
+              $("#grid-basic").bootgrid({
+                  caseSensitive: false,
+                    css: {
+                        icon: 'zmdi icon',
+                        iconColumns: 'zmdi-view-module',
+                        iconDown: 'zmdi-sort-amount-desc',
+                        iconRefresh: 'zmdi-refresh',
+                        iconUp: 'zmdi-sort-amount-asc'
+                    },
+              }
+              )
+            });
+        </script>
+
+        <script type="text/javascript">
+            //Basic
+            $('#sa-basic').click(function(e){
+                e.preventDefault();
+                var link = $(this).attr('href');
+
+                swal({
+                    title: "Get Inspire Profesional Logos",
+                    text: "More logos sparately on our Learn Apps: Javascript, NoSQL Database, Virtual Reality, and more...",
+                    showCancelButton: true,
+                    allowOutsideClick: true,
+                },
+                function(){
+                    window.location.href = 'market://details?id=id.web.designer.learn.javascript';
+                });
+            });
+        </script>
+
+    <script type="text/javascript">
+        function rateApp() {
+            android.rateApp();
+       }
+    </script>
+
+    </body>
+
+</html>

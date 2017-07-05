@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Tutorial CorelDraw Pro</title>
+
+         <script type="text/javascript">
+          <!--
+          if (screen.width >= 2800) {
+            window.location = "http://designer.web.id";
+          }
+          //-->
+        </script>
+
+        <!-- Vendor CSS -->
+        <link href="../vendors/bower_components/animate.css/animate.min.css" rel="stylesheet">
+        <link href="../vendors/bower_components/sweetalert/dist/sweetalert.css" rel="stylesheet">
+        <link href="../vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
+        <link href="../vendors/bower_components/lightgallery/dist/css/lightgallery.min.css" rel="stylesheet">
+        <link href="../vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+        <link href="../vendors/bootgrid/jquery.bootgrid.min.css" rel="stylesheet">
+
+        <!-- CSS -->
+        <link href="../css/app_1.min.css" rel="stylesheet">
+        <link href="../css/app_2.min.css" rel="stylesheet">
+
+        <script src="../js/h5utils.js"></script>
+        <script src="../js/jquery-2.1.0.min.js"></script>
+        <script src="../js/jquery.jscroll.min.js"></script>
+        <script>$(function(){
+        $("#contentloader1").load("http://app.coreldraw.designer.web.id/content-message.html"); $("#contentloader2").load("http://app.coreldraw.designer.web.id/pro/content-right-pro.html");
+        $("#contenttab1").load("http://app.coreldraw.designer.web.id/pro/contenttab2.html");
+        $("#contenttab2").load("http://app.coreldraw.designer.web.id/pro/contenttab2.html");
+        });</script>
+
+        <style>.videoWrapper {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 */
+        padding-top: 25px;
+        height: 0;}
+        .videoWrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;}
+        .lcb-navigation a{background:#999999}
+        </style>
+    </head>
+    <body style="background:#ffffff">
+
+        <!-- Page Loader -->
+        <div class="page-loader">
+            <div class="preloader pls-white">
+                <svg class="pl-circular" viewBox="25 25 50 50">
+                    <circle class="plc-path" cx="50" cy="50" r="20" />
+                </svg>
+            </div>
+
+        </div>
+
+        <header id="header" class="clearfix container">
+            <ul class="h-inner">
+
+                <li class="hi-trigger ma-trigger" data-ma-action="sidebar-open" data-ma-target="#sidebar">
+                    <div class="line-wrap">
+                        <div class="line top"></div>
+                        <div class="line center"></div>
+                        <div class="line bottom"></div>
+                    </div>
+                </li>
+
+                <li class="hi-logo" data-ma-action="sidebar-open" data-ma-target="#sidebar" style="margin-top:8px;">
+                    <span style="font-size:15px;color:#ffffff;"> Tutorial CorelDRAW<sup>&reg;</sup><span>
+                </li>
+
+                <li class="pull-right">
+                    <ul class="hi-menu">
+
+                        <li style="margin-right:-15px;" class="dropdown">
+                            <a data-toggle="dropdown" href="#">
+                                <i class="him-icon zmdi zmdi-notifications-none"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-lg pull-right">
+                                <div class="list-group list-group-light">
+                                    <div class="lg-header">
+                                        LIVE DEVELOPER MESSAGES
+                                    </div>
+
+                                    <article>
+                                      <p style="text-align:center;font-size:1em;"><span id="status"><span id="status"></span></p>
+                                      <ol id="state"></ol>
+                                    </article>
+                                    <script>
+                                    var statusElem  = document.getElementById('status'),
+                                        state               = document.getElementById('state');
+
+                                    function online(event) {
+                                      statusElem.className = navigator.onLine ? 'online' : 'offline';
+                                      statusElem.innerHTML = navigator.onLine ? '' : '<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You&#39;re offline, check network connection.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;content required internet access.';
+                                      state.innerHTML += '&nbsp;';
+                                    }
+
+                                    addEvent(window, 'online', online);
+                                    addEvent(window, 'offline', online);
+                                    online({ type: 'ready' });
+                                    </script>
+
+                                    <div style="margin-top:-30px;" id="contentloader1"></div>
+                                    <a class="view-more view-more-light" href="idwebdesigner.html">Powered by IDWEBDesigner</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li style="margin-right:-15px;" class="ma-trigger" data-ma-action="sidebar-open" data-ma-target="#chat">
+                            <a data-toggle="dropdown" href="#">
+                                <i class="him-icon zmdi zmdi-favorite-outline"></i>
+                            </a>
+                        </li>
+                        <li style="margin-right:-5px;" class="dropdown">
+                            <a data-toggle="dropdown" href="#"><i class="him-icon zmdi zmdi-more-vert"></i></a>
+                            <ul class="dropdown-menu dm-icon pull-right">
+                                <li class="hidden-xs">
+                                    <a data-ma-action="fullscreen" href="#"><i class="zmdi zmdi-fullscreen"></i> Fullscreen</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:window.location.reload();"><i class="zmdi zmdi-refresh-sync"></i> Refresh</a>
+                                </li>
+                                <li>
+                                    <a id="rate-app" onClick="rateApp()">Rate 5 Stars</a>
+                                </li>
+                                <li>
+                                    <a href="update.html"><i class="zmdi zmdi-download"></i>Check update</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="help.html"><i class="zmdi zmdi-help"></i> Help</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="hidden-xs ma-trigger" data-ma-action="sidebar-open" data-ma-target="#chat">
+                            <a href="#"><i class="him-icon zmdi zmdi-comment-alt-text"></i></a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="tab-nav tn-justified tn-icon" role="tablist" style="width:100%">
+                                        <li role="presentation" class="active">
+                                            <a class="col-sx-4" href="index.html">
+                                                &nbsp;
+                                            </a>
+                                        </li>
+
+                                    </ul>
+        </header>
+
+        <section id="main">
+            <ol class="breadcrumb" style="margin-left:-10px;">
+                <li><a href="developer.html">designer.web.id</a></li>
+                <li><a href="index.html">learn</a></li>
+                <li class="active">virtualreality</li>
+            </ol>
+
+            <aside id="sidebar" class="sidebar c-overflow" style="position:fixed;z-index:1000;margin-top:-70px;height:100%;background:white">
+                <ul class="main-menu">
+                    <li class="mm-profile sub-menu">
+                        <a href="#" data-ma-action="submenu-toggle" class="media">
+                            <img class="pull-left" src="../img/coreldraw.green.png" alt="" height="25px" style="margin-left:-40px;">
+                            <div class="media-body">
+                            <div>Tutorial CorelDRAW<sup>&reg;</sup></div>
+                            <span style="font-size:11px;">Experience by IDWEBDesigner<br/>dev@designer.web.id</span>
+                            </div>
+                        </a>
+
+                        <ul>
+                            <li>
+                                <a href="developer.html">Indonesia Web Designer</a>
+                            </li>
+                            <li>
+                                <div style="margin-left:65px;margin-bottom:10px;font-size:10px;color:#888888;padding-right:20px;">Jl. Wahid Hasyim No.3 Gaten Condongcatur Depok Sleman Yogyakarta, Indonesia.</div>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-info"></i> About CorelDraw</a>
+                        <div style="margin-left:65px;margin-bottom:10px;font-size:12px;color:#579706;"><a href="basics.html">What's is CorelDraw?<br/>Basics Learn</a></div>
+                    </li>
+
+                    <li><a href="index.html"><i class="zmdi zmdi-flag"></i> Tutorial Bahasa Indonesia</a></li>
+                    <li class="sub-menu toggled active">
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-android"></i> Featured Apps</a>
+                        <div style="margin-left:65px;margin-top:10px;font-size:10px;color:#888888;padding-right:20px;">Color Docker: This docker allows you to choose fill and outline colors from a color picker, color sliders, and color palettes. Found with dockers and in the Toolbox.</div>
+
+                        <ul>
+
+                            <li><a href="language.html">Bahasa Indonesia</a></li>
+                            <li style="display:none;"><a href="upgrade.html"><i class="zmdi zmdi-shopping-cart"></i>&nbsp;&nbsp;Upgrade</a></li>
+                            <li class="divider"></li>
+
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-code"></i> Developer</a>
+
+                        <ul>
+                            <li><a href="developer.html">dev@designer.web.id<br/>designer.web.id</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </aside>
+
+            <aside id="chat" class="sidebar">
+
+                                    <article>
+                                      <p style="margin-top:30px;margin-left:15px;font-size:0.7em;"><span id="status2"><span id="status"></span></p>
+                                      <ol id="state2"></ol>
+                                    </article>
+                                    <script>
+                                    var statusElem  = document.getElementById('status2'),
+                                        state               = document.getElementById('state2');
+
+                                    function online(event) {
+                                      statusElem.className = navigator.onLine ? 'online' : 'offline';
+                                      statusElem.innerHTML = navigator.onLine ? '' : '<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You&#39;re offline, check network connection.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;content required internet access.';
+                                      state.innerHTML += '&nbsp;';
+                                    }
+
+                                    addEvent(window, 'online', online);
+                                    addEvent(window, 'offline', online);
+                                    online({ type: 'ready' });
+                                    </script>
+
+                <div style="margin-top:-30px; width:100%" id="contentloader2"></div>
+
+
+
+            </aside>
+
+            <section id="content" style="margin-bottom:-40px;">
+                <div class="container" style="margin-top:-55px;margin-left:-20px;padding-right:0px;">
+                    <div class="tab-content p-20" style="background:#ffffff;">
+
+                    <div role="tabpanel" class="tab-pane animated fadeIn in active" id="tab-1">
+
+                            <!-- Blog Posts -->
+                            <div class="card blog-post" style="margin-bottom:-0px;">
+
+                                <div class="videoWrapper">
+                                <img width="100%" src="../images/green.png" frameborder="0" allowfullscreen></img>
+                                </div>
+
+                                <a class="card-header ch-alt">
+                                    <h2><small>Dalam tutorial ini, kita akan mengeksplorasi banyak manfaat menggunakan  lenses dan masks untuk membuat penyesuaian gambar di CorelDRAW. Kita juga akan melihat cara membuat efek tonal khusus.
+</small></h2>
+                                </a>
+
+                                <div class="card-body card-padding">
+
+                                <h4>Bekerja dengan Lensa dan Efek di PHOTOPAINT</h4>
+                                 <br/>
+
+			<p>Dalam tutorial ini, kita akan mengeksplorasi banyak manfaat menggunakan lenses dan masks untuk membuat penyesuaian gambar di CorelDRAW. Kita juga akan melihat cara membuat efek tonal khusus.</p>
+<h3 style="font-weight: 400;">Bekerja dengan Lensa</h3>
+<p>Lensa, yang setara dengan lapisan penyesuaian di Photoshop®, memungkinkan Anda melihat efek khusus dan penyesuaian gambar tanpa mengubah piksel gambar secara permanen. Anda bisa memasang lensa ke seluruh gambar atau ke area yang dapat diedit dari mask. Saat menerapkan lensa ke area  mask, Anda bisa menggunakan <strong style="font-weight: 600;">Object Pick</strong> tool untuk memposisikan kedua mask dan lensa di dalam gambar.</p>
+<p>Lensa juga menawarkan keuntungan untuk disesuaikan dengan cepat. Anda dapat melakukan penyesuaian terhadap lensa setiap saat.</p>
+<p>Karena lensa berada di atas gambar latar belakang pada lapisannya sendiri, Anda dapat dengan mudah melepaskan lapisan lensa yang tidak diinginkan dengan mengklik tombol <strong style="font-weight: 600;">Delete</strong> di sudut kanan bawah <strong style="font-weight: 600;">Object Manager</strong> docker.</p>
+<p><strong style="font-weight: 600;">Catatan</strong>: Saat menyimpan gambar yang memiliki efek lensa yang diterapkan padanya, perhatikan bahwa banyak format file akan menggabungkan lapisan yang ada ke satu lapisan. Dalam kasus ini, efek lensa tidak dapat diedit lagi saat gambar dibuka kembali. Untuk mempertahankan kemampuan mengedit lensa, simpan file ini terlebih dahulu dalam format CPT, yang akan mempertahankan struktur lapisan. Anda kemudian dapat mengekspor gambar dalam format gambar yang dibutuhkan, seperti JPEG, PNG, BMP, dll.</p>
+<p>&nbsp;</p>
+<p><strong style="font-weight: 600;">Menerapkan lensa pada gambar</strong></p>
+<p>1. Klik <strong style="font-weight: 600;">File</strong>&gt; <strong style="font-weight: 600;">Open</strong>, arahkan ke gambar Anda, dan klik <strong style="font-weight: 600;">Open</strong>.</p>
+<p><img class="size-medium wp-image-10801 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/1105-300x247.png" alt="1" width="300" height="247" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1105-300x247.png 300w, http://learn.corel.com/wp-content/uploads/2015/11/1105-500x411.png 500w, http://learn.corel.com/wp-content/uploads/2015/11/1105.png 545w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<p>2. Klik <strong style="font-weight: 600;">Object</strong>&gt; <strong style="font-weight: 600;">Create</strong>&gt; <strong style="font-weight: 600;">New Lens</strong>.</p>
+<p>3. Di kotak dialog <strong style="font-weight: 600;">New Lens</strong>, pilih <strong style="font-weight: 600;">Scatter</strong>, dan klik <strong style="font-weight: 600;">OK</strong>. Lensa ini 'menyebarkan' piksel gambar, menciptakan tampilan yang dicat mirip dengan Pointillism.</p>
+<p><img class="size-medium wp-image-10802 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/256-233x300.png" alt="2" width="233" height="300" srcset="http://learn.corel.com/wp-content/uploads/2015/11/256-233x300.png 233w, http://learn.corel.com/wp-content/uploads/2015/11/256.png 322w" sizes="(max-width: 233px) 100vw, 233px" /></p>
+<p>4. Di kotak dialog <strong style="font-weight: 600;">Scatter</strong>, lakukan percobaan dengan <strong style="font-weight: 600;">Vertical</strong> dan <strong style="font-weight: 600;">Horizontal</strong> sampai Anda mencapai efek yang diinginkan, dan klik <strong style="font-weight: 600;">OK</strong>.</p>
+<p><img class="size-medium wp-image-10803 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/345-300x90.png" alt="3" width="300" height="90" srcset="http://learn.corel.com/wp-content/uploads/2015/11/345-300x90.png 300w, http://learn.corel.com/wp-content/uploads/2015/11/345-500x150.png 500w, http://learn.corel.com/wp-content/uploads/2015/11/345-560x170.png 560w, http://learn.corel.com/wp-content/uploads/2015/11/345.png 566w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<p><img class="size-medium wp-image-10804 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/446-300x245.png" alt="4" width="300" height="245" srcset="http://learn.corel.com/wp-content/uploads/2015/11/446-300x245.png 300w, http://learn.corel.com/wp-content/uploads/2015/11/446-500x409.png 500w, http://learn.corel.com/wp-content/uploads/2015/11/446.png 559w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<p>5. Untuk menyesuaikan kembali pengaturan lensa, klik dua kali ikon lensa di <strong style="font-weight: 600;">Object Manager</strong> docker, dan lakukan penyesuaian yang diperlukan pada kotak dialog <strong style="font-weight: 600;">Scatter</strong>.</p>
+<p><img class="size-medium wp-image-10805 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/543-283x300.png" alt="5" width="283" height="300" srcset="http://learn.corel.com/wp-content/uploads/2015/11/543-283x300.png 283w, http://learn.corel.com/wp-content/uploads/2015/11/543.png 298w" sizes="(max-width: 283px) 100vw, 283px" /></p>
+<p><strong>Menerapkan lensa ke area mask</strong></p>
+<p>1. Buka gambar.</p>
+<p><img class="size-medium wp-image-10806 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/643-300x204.png" alt="6" width="300" height="204" srcset="http://learn.corel.com/wp-content/uploads/2015/11/643-300x204.png 300w, http://learn.corel.com/wp-content/uploads/2015/11/643-600x408.png 600w, http://learn.corel.com/wp-content/uploads/2015/11/643-500x340.png 500w, http://learn.corel.com/wp-content/uploads/2015/11/643.png 642w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<p>2. Di toolbox, klik <strong style="font-weight: 600;">Rectangle Mask</strong>tool.</p>
+<p>3. Di property bar, atur putaran kebiru-biruan  mask dengan mengetikkan nilai di kotak <strong style="font-weight: 600;">Corner Radius</strong>.</p>
+<p><img class="size-full wp-image-10807 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/740.png" alt="7" width="292" height="52" /></p>
+<p>4. Tarik untuk menggambar mask persegi panjang pada area gambar.</p>
+<p><img class="size-medium wp-image-10808 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/832-300x204.png" alt="8" width="300" height="204" srcset="http://learn.corel.com/wp-content/uploads/2015/11/832-300x204.png 300w, http://learn.corel.com/wp-content/uploads/2015/11/832-600x408.png 600w, http://learn.corel.com/wp-content/uploads/2015/11/832-500x340.png 500w, http://learn.corel.com/wp-content/uploads/2015/11/832.png 643w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<p>5. Untuk memberi mask tepi yang lebih lembut, klik <strong style="font-weight: 600;">Mask &gt; Mask Outline &gt; Feather</strong>. Di kotak dialog <strong style="font-weight: 600;">Feather</strong>, ketik nilai pada kotak  <strong style="font-weight: 600;">Width</strong>, pilih <strong style="font-weight: 600;">Outside</strong> dari daftar kotak <strong style="font-weight: 600;">Direction</strong>, pilih <strong style="font-weight: 600;">Linear</strong> dari daftar kotak <strong style="font-weight: 600;">Edges</strong>, dan klik <strong style="font-weight: 600;">OK</strong>. Ringan tepi luar mask akan melunakkan transisi antara area mask dan gambar latar belakang.</p>
+<p><img class="size-medium wp-image-10809 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/931-300x111.png" alt="9" width="300" height="111" srcset="http://learn.corel.com/wp-content/uploads/2015/11/931-300x111.png 300w, http://learn.corel.com/wp-content/uploads/2015/11/931.png 406w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<p>6. Klik <strong>Object &gt; Create &gt; New Lens</strong>. Di kotak dialog <strong>New Lens</strong>, perhatikan bahwa opsi  <strong>Create lens</strong> <strong>dari mask</strong> sekarang diaktifkan secara otomatis.</p>
+<p><img class="size-medium wp-image-10810 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/1027-235x300.png" alt="10" width="235" height="300" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1027-235x300.png 235w, http://learn.corel.com/wp-content/uploads/2015/11/1027.png 310w" sizes="(max-width: 235px) 100vw, 235px" /></p>
+<p>7. Pilih <strong style="font-weight: 600;">Gradient Map</strong>, dan klik <strong style="font-weight: 600;">OK</strong>. Gradient Map lens memungkinkan Anda untuk menerapkan warna pada gambar hitam-putih, atau untuk mengubah warna pada gambar berwarna.</p>
+<p><img class="size-medium wp-image-10811 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/1136-300x129.png" alt="11" width="300" height="129" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1136-300x129.png 300w, http://learn.corel.com/wp-content/uploads/2015/11/1136-500x215.png 500w, http://learn.corel.com/wp-content/uploads/2015/11/1136.png 586w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<p><img class="size-medium wp-image-10812 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/1232-300x199.png" alt="12" width="300" height="199" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1232-300x199.png 300w, http://learn.corel.com/wp-content/uploads/2015/11/1232-600x398.png 600w, http://learn.corel.com/wp-content/uploads/2015/11/1232-500x332.png 500w, http://learn.corel.com/wp-content/uploads/2015/11/1232.png 653w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<p>8. Di kotak dialog <strong style="font-weight: 600;">Gradient Map</strong>, klik dua kali tepi atas bilah warna gradien untuk menambahkan penanda warna baru, dan pilih warna baru dari <strong style="font-weight: 600;">Color</strong> picker.</p>
+<p><img class="size-medium wp-image-10813 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/1325-300x120.png" alt="13" width="300" height="120" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1325-300x120.png 300w, http://learn.corel.com/wp-content/uploads/2015/11/1325-500x199.png 500w, http://learn.corel.com/wp-content/uploads/2015/11/1325-560x226.png 560w, http://learn.corel.com/wp-content/uploads/2015/11/1325.png 567w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<p><img class="size-medium wp-image-10814 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/1425-300x201.png" alt="14" width="300" height="201" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1425-300x201.png 300w, http://learn.corel.com/wp-content/uploads/2015/11/1425-600x401.png 600w, http://learn.corel.com/wp-content/uploads/2015/11/1425-500x334.png 500w, http://learn.corel.com/wp-content/uploads/2015/11/1425.png 637w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<p>9. Lanjutkan menambahkan lebih banyak spidol warna sesuai kebutuhan, lalu klik <strong style="font-weight: 600;">OK</strong>.</p>
+<p><img class="size-medium wp-image-10815 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/1521-300x117.png" alt="15" width="300" height="117" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1521-300x117.png 300w, http://learn.corel.com/wp-content/uploads/2015/11/1521-500x195.png 500w, http://learn.corel.com/wp-content/uploads/2015/11/1521.png 570w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<p><img class="size-medium wp-image-10816 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/1618-300x203.png" alt="16" width="300" height="203" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1618-300x203.png 300w, http://learn.corel.com/wp-content/uploads/2015/11/1618-600x405.png 600w, http://learn.corel.com/wp-content/uploads/2015/11/1618-500x338.png 500w, http://learn.corel.com/wp-content/uploads/2015/11/1618.png 641w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<p>10. Untuk memposisikan kembali mask (dan lemsa), klik <strong style="font-weight: 600;">Object Pick</strong> tool lalu seret  mask ke posisi baru.</p>
+<p><img class="size-medium wp-image-10817 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/1719-300x199.png" alt="17" width="300" height="199" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1719-300x199.png 300w, http://learn.corel.com/wp-content/uploads/2015/11/1719-600x399.png 600w, http://learn.corel.com/wp-content/uploads/2015/11/1719-500x332.png 500w, http://learn.corel.com/wp-content/uploads/2015/11/1719.png 644w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<p>11. Untuk menyesuaikan kembali pengaturan lensa, klik dua kali ikon lensa di <strong>Object Manager</strong> docker.</p>
+<p><img class="size-medium wp-image-10818 aligncenter" src="http://learn.corel.com/wp-content/uploads/2015/11/1815-280x300.png" alt="18" width="280" height="300" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1815-280x300.png 280w, http://learn.corel.com/wp-content/uploads/2015/11/1815.png 299w" sizes="(max-width: 280px) 100vw, 280px" /></p>
+
+
+
+
+                                <script src='../js/colpick.js'></script>
+                                <script src="../js/colorpicker.js"></script>
+
+                                </div>
+                            </div>
+
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane animated fadeIn in" id="tab-2">
+                    <div id="contenttab2"></div>
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane animated fadeIn" id="tab-3" style="margin-top:-20px;margin-left:-20px;margin-right:-20px;background:#ffffff">
+
+                    </div>
+
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- Page Loader -->
+        <div class="page-loader">
+            <div class="preloader" style="text-align:center;">
+                <svg class="pl-circular" viewBox="25 25 50 50">
+                    <circle class="plc-path" cx="50" cy="50" r="20" />
+                </svg><br/><br/>
+                <div style="font-size:8px;margin-left:-80px;width:200px" class="demo"></div>
+            </div>
+        </div>
+
+        <div style="margin-bottom:10px;"><footer id="footer">
+            Copyright &copy; 2017 IDWEBDesigner<br/><a href="index.html">Back to <i class="zmdi zmdi-home"></i> Homepage</a>
+        </footer></div>
+
+        <!-- Javascript Libraries -->
+        <script src="../vendors/bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="../vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+        <script src="../vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="../vendors/bower_components/Waves/dist/waves.min.js"></script>
+        <script src="../vendors/bootstrap-growl/bootstrap-growl.min.js"></script>
+        <script src="../vendors/bower_components/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="../vendors/bower_components/lightgallery/dist/js/lightgallery-all.min.js"></script>
+        <script src="../vendors/bootgrid/jquery.bootgrid.updated.min.js"></script>
+
+        <!-- Placeholder for IE9 -->
+        <!--[if IE 9 ]>
+            <script src="vendors/bower_components/jquery-placeholder/jquery.placeholder.min.js"></script>
+        <![endif]-->
+
+        <script src="../js/app.min.js"></script>
+
+        <!-- Data Table -->
+        <script>
+            $(function()
+            {
+              $("#grid-basic").bootgrid({
+                  caseSensitive: false,
+                    css: {
+                        icon: 'zmdi icon',
+                        iconColumns: 'zmdi-view-module',
+                        iconDown: 'zmdi-sort-amount-desc',
+                        iconRefresh: 'zmdi-refresh',
+                        iconUp: 'zmdi-sort-amount-asc'
+                    },
+              }
+              )
+            });
+        </script>
+
+        <script type="text/javascript">
+            //Basic
+            $('#sa-basic').click(function(e){
+                e.preventDefault();
+                var link = $(this).attr('href');
+
+                swal({
+                    title: "Get Inspire Profesional Logos",
+                    text: "More logos sparately on our Learn Apps: Javascript, NoSQL Database, Virtual Reality, and more...",
+                    showCancelButton: true,
+                    allowOutsideClick: true,
+                },
+                function(){
+                    window.location.href = 'market://details?id=id.web.designer.learn.javascript';
+                });
+            });
+        </script>
+
+    <script type="text/javascript">
+        function rateApp() {
+            android.rateApp();
+       }
+    </script>
+
+    </body>
+
+</html>

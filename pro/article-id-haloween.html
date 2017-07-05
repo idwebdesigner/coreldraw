@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Tutorial CorelDraw Pro</title>
+
+         <script type="text/javascript">
+          <!--
+          if (screen.width >= 2800) {
+            window.location = "http://designer.web.id";
+          }
+          //-->
+        </script>
+
+        <!-- Vendor CSS -->
+        <link href="../vendors/bower_components/animate.css/animate.min.css" rel="stylesheet">
+        <link href="../vendors/bower_components/sweetalert/dist/sweetalert.css" rel="stylesheet">
+        <link href="../vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
+        <link href="../vendors/bower_components/lightgallery/dist/css/lightgallery.min.css" rel="stylesheet">
+        <link href="../vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+        <link href="../vendors/bootgrid/jquery.bootgrid.min.css" rel="stylesheet">
+
+        <!-- CSS -->
+        <link href="../css/app_1.min.css" rel="stylesheet">
+        <link href="../css/app_2.min.css" rel="stylesheet">
+
+        <script src="../js/h5utils.js"></script>
+        <script src="../js/jquery-2.1.0.min.js"></script>
+        <script src="../js/jquery.jscroll.min.js"></script>
+        <script>$(function(){
+        $("#contentloader1").load("http://app.coreldraw.designer.web.id/content-message.html"); $("#contentloader2").load("http://app.coreldraw.designer.web.id/pro/content-right-pro.html");
+        $("#contenttab1").load("http://app.coreldraw.designer.web.id/pro/contenttab2.html");
+        $("#contenttab2").load("http://app.coreldraw.designer.web.id/pro/contenttab2.html");
+        });</script>
+
+        <style>.videoWrapper {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 */
+        padding-top: 25px;
+        height: 0;}
+        .videoWrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;}
+        .lcb-navigation a{background:#999999}
+        </style>
+    </head>
+    <body style="background:#ffffff">
+
+        <!-- Page Loader -->
+        <div class="page-loader">
+            <div class="preloader pls-white">
+                <svg class="pl-circular" viewBox="25 25 50 50">
+                    <circle class="plc-path" cx="50" cy="50" r="20" />
+                </svg>
+            </div>
+
+        </div>
+
+        <header id="header" class="clearfix container">
+            <ul class="h-inner">
+
+                <li class="hi-trigger ma-trigger" data-ma-action="sidebar-open" data-ma-target="#sidebar">
+                    <div class="line-wrap">
+                        <div class="line top"></div>
+                        <div class="line center"></div>
+                        <div class="line bottom"></div>
+                    </div>
+                </li>
+
+                <li class="hi-logo" data-ma-action="sidebar-open" data-ma-target="#sidebar" style="margin-top:8px;">
+                    <span style="font-size:15px;color:#ffffff;"> Tutorial CorelDRAW<sup>&reg;</sup><span>
+                </li>
+
+                <li class="pull-right">
+                    <ul class="hi-menu">
+
+                        <li style="margin-right:-15px;" class="dropdown">
+                            <a data-toggle="dropdown" href="#">
+                                <i class="him-icon zmdi zmdi-notifications-none"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-lg pull-right">
+                                <div class="list-group list-group-light">
+                                    <div class="lg-header">
+                                        LIVE DEVELOPER MESSAGES
+                                    </div>
+
+                                    <article>
+                                      <p style="text-align:center;font-size:1em;"><span id="status"><span id="status"></span></p>
+                                      <ol id="state"></ol>
+                                    </article>
+                                    <script>
+                                    var statusElem  = document.getElementById('status'),
+                                        state               = document.getElementById('state');
+
+                                    function online(event) {
+                                      statusElem.className = navigator.onLine ? 'online' : 'offline';
+                                      statusElem.innerHTML = navigator.onLine ? '' : '<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You&#39;re offline, check network connection.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;content required internet access.';
+                                      state.innerHTML += '&nbsp;';
+                                    }
+
+                                    addEvent(window, 'online', online);
+                                    addEvent(window, 'offline', online);
+                                    online({ type: 'ready' });
+                                    </script>
+
+                                    <div style="margin-top:-30px;" id="contentloader1"></div>
+                                    <a class="view-more view-more-light" href="idwebdesigner.html">Powered by IDWEBDesigner</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li style="margin-right:-15px;" class="ma-trigger" data-ma-action="sidebar-open" data-ma-target="#chat">
+                            <a data-toggle="dropdown" href="#">
+                                <i class="him-icon zmdi zmdi-favorite-outline"></i>
+                            </a>
+                        </li>
+                        <li style="margin-right:-5px;" class="dropdown">
+                            <a data-toggle="dropdown" href="#"><i class="him-icon zmdi zmdi-more-vert"></i></a>
+                            <ul class="dropdown-menu dm-icon pull-right">
+                                <li class="hidden-xs">
+                                    <a data-ma-action="fullscreen" href="#"><i class="zmdi zmdi-fullscreen"></i> Fullscreen</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:window.location.reload();"><i class="zmdi zmdi-refresh-sync"></i> Refresh</a>
+                                </li>
+                                <li>
+                                    <a id="rate-app" onClick="rateApp()">Rate 5 Stars</a>
+                                </li>
+                                <li>
+                                    <a href="update.html"><i class="zmdi zmdi-download"></i>Check update</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="help.html"><i class="zmdi zmdi-help"></i> Help</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="hidden-xs ma-trigger" data-ma-action="sidebar-open" data-ma-target="#chat">
+                            <a href="#"><i class="him-icon zmdi zmdi-comment-alt-text"></i></a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="tab-nav tn-justified tn-icon" role="tablist" style="width:100%">
+                                        <li role="presentation">
+                                            <a class="col-sx-4" href="index.html">
+                                                INDONESIA
+                                            </a>
+                                        </li>
+                                        <li role="presentation" class="active">
+                                            <a class="col-xs-4" href="#tab-2" aria-controls="tab-2" role="tab" data-toggle="tab">
+                                                ENGLISH (PRO)
+                                            </a>
+                                        </li>
+
+                                    </ul>
+        </header>
+
+        <section id="main">
+            <ol class="breadcrumb" style="margin-left:-10px;">
+                <li><a href="developer.html">designer.web.id</a></li>
+                <li><a href="index.html">learn</a></li>
+                <li class="active">virtualreality</li>
+            </ol>
+
+            <aside id="sidebar" class="sidebar c-overflow" style="position:fixed;z-index:1000;margin-top:-70px;height:100%;background:white">
+                <ul class="main-menu">
+                    <li class="mm-profile sub-menu">
+                        <a href="#" data-ma-action="submenu-toggle" class="media">
+                            <img class="pull-left" src="../img/coreldraw.green.png" alt="" height="25px" style="margin-left:-40px;">
+                            <div class="media-body">
+                            <div>Tutorial CorelDRAW<sup>&reg;</sup></div>
+                            <span style="font-size:11px;">Experience by IDWEBDesigner<br/>dev@designer.web.id</span>
+                            </div>
+                        </a>
+
+                        <ul>
+                            <li>
+                                <a href="developer.html">Indonesia Web Designer</a>
+                            </li>
+                            <li>
+                                <div style="margin-left:65px;margin-bottom:10px;font-size:10px;color:#888888;padding-right:20px;">Jl. Wahid Hasyim No.3 Gaten Condongcatur Depok Sleman Yogyakarta, Indonesia.</div>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-info"></i> About CorelDraw</a>
+                        <div style="margin-left:65px;margin-bottom:10px;font-size:12px;color:#579706;"><a href="basics.html">What's is CorelDraw?<br/>Basics Learn</a></div>
+                    </li>
+
+                    <li><a href="index.html"><i class="zmdi zmdi-flag"></i> Tutorial Bahasa Indonesia</a></li>
+                    <li class="sub-menu toggled active">
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-android"></i> Featured Apps</a>
+                        <div style="margin-left:65px;margin-top:10px;font-size:10px;color:#888888;padding-right:20px;">Color Docker: This docker allows you to choose fill and outline colors from a color picker, color sliders, and color palettes. Found with dockers and in the Toolbox.</div>
+
+                        <ul>
+
+                            <li><a href="language.html">Bahasa Indonesia</a></li>
+                            <li style="display:none;"><a href="upgrade.html"><i class="zmdi zmdi-shopping-cart"></i>&nbsp;&nbsp;Upgrade</a></li>
+                            <li class="divider"></li>
+
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-code"></i> Developer</a>
+
+                        <ul>
+                            <li><a href="developer.html">dev@designer.web.id<br/>designer.web.id</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </aside>
+
+            <aside id="chat" class="sidebar">
+
+                                    <article>
+                                      <p style="margin-top:30px;margin-left:15px;font-size:0.7em;"><span id="status2"><span id="status"></span></p>
+                                      <ol id="state2"></ol>
+                                    </article>
+                                    <script>
+                                    var statusElem  = document.getElementById('status2'),
+                                        state               = document.getElementById('state2');
+
+                                    function online(event) {
+                                      statusElem.className = navigator.onLine ? 'online' : 'offline';
+                                      statusElem.innerHTML = navigator.onLine ? '' : '<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You&#39;re offline, check network connection.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;content required internet access.';
+                                      state.innerHTML += '&nbsp;';
+                                    }
+
+                                    addEvent(window, 'online', online);
+                                    addEvent(window, 'offline', online);
+                                    online({ type: 'ready' });
+                                    </script>
+
+                <div style="margin-top:-30px; width:100%" id="contentloader2"></div>
+
+
+
+            </aside>
+
+            <section id="content" style="margin-bottom:-40px;">
+                <div class="container" style="margin-top:-55px;margin-left:-20px;padding-right:0px;">
+                    <div class="tab-content p-20" style="background:#ffffff;">
+
+                    <div role="tabpanel" class="tab-pane animated fadeIn in active" id="tab-1">
+
+                            <!-- Blog Posts -->
+                            <div class="card blog-post" style="margin-bottom:-0px;">
+
+                                <div class="videoWrapper">
+                                <img width="100%" src="../images/green.png" frameborder="0" allowfullscreen></img>
+                                </div>
+
+                                <a class="card-header ch-alt">
+                                    <h2><small>Dalam tutorial ini tertulis, Anda akan belajar membuat kartu Halloween di CorelDRAW. Kami akan memandu Anda melewati setiap langkah desain, menunjukkan beberapa trik rapi yang bisa Anda terapkan untuk membuat kartu Haloween buatan sendiri. Ini adalah proyek hebat yang dapat Anda lakukan dengan anak-anak Anda!</small></h2>
+                                </a>
+
+                                <div class="card-body card-padding">
+
+                                <h4>Membuat Kartu Halloween</h4>
+                                 <br/>
+
+
+<p>Dalam tutorial ini kita akan menunjukkan cara cepat membuat kartu Halloween yang menyeramkan. Kami akan menggunakan banyak desain gratis yang tersedia di CorelDRAW Graphic Suite sehingga kami tidak perlu menggambar semuanya di halaman ini. Mari kita mulai!</p>
+<p>Mulailah dengan membuka dokumen baru di CorelDRAW dengan mengklik tab <strong>‘+’</strong>.</p>
+<p><img class="alignnone size-full wp-image-24346" src="http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image2.jpg" alt="halloween_card-image2" width="619" height="306" srcset="http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image2.jpg 619w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image2-300x148.jpg 300w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image2-600x297.jpg 600w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image2-500x247.jpg 500w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image2-480x237.jpg 480w" sizes="(max-width: 619px) 100vw, 619px" /></p>
+<p>Dengan dokumen baru Anda terbuka, pastikan Anda berada dalam mode  <strong>Landscape</strong> dengan mengklik tombol ini:</p>
+<p><img class="alignnone size-full wp-image-24347" src="http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image3.jpg" alt="halloween_card-image3" width="546" height="197" srcset="http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image3.jpg 546w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image3-300x108.jpg 300w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image3-500x180.jpg 500w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image3-480x173.jpg 480w" sizes="(max-width: 546px) 100vw, 546px" /></p>
+<p>Kita sekarang akan membuat persegi panjang sebesar halaman kita. Untuk melakukan ini, cukup klik dua kali pada  <strong>Rectangle</strong> tool di <strong>Toolbox</strong> (F6).</p>
+<p><img class="alignnone size-full wp-image-24348" src="http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image4.jpg" alt="halloween_card-image4" width="999" height="684" srcset="http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image4.jpg 999w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image4-300x205.jpg 300w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image4-768x526.jpg 768w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image4-600x411.jpg 600w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image4-500x342.jpg 500w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image4-480x329.jpg 480w" sizes="(max-width: 999px) 100vw, 999px" /></p>
+<p>Sekarang kita akan mengisi persegi panjang kita dengan mengisi air mancur dimana satu warna akan berbaur dengan yang lain.<br />
+Klik pada tab <strong>Object Properties</strong> docker di sebelah kanan. Kemudian klik pada icon <strong>Fill</strong>. Pada panel <strong>Fill</strong>, Klik <strong>Fountain Fill</strong>.</p>
+<p><img class="alignnone size-full wp-image-24349" src="http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image5.jpg" alt="halloween_card-image5" width="719" height="735" srcset="http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image5.jpg 719w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image5-293x300.jpg 293w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image5-600x613.jpg 600w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image5-500x511.jpg 500w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image5-480x491.jpg 480w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image5-50x50.jpg 50w" sizes="(max-width: 719px) 100vw, 719px" /></p>
+<p>Kita sekarang akan menyeret hitam dan biru tua dari  <strong>Palet warna</strong>, ke nodus warna untuk menciptakan efek langit malam yang menyenangkan.</p>
+<p><img class="alignnone size-large wp-image-24350" src="http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image6-1024x557.jpg" alt="halloween_card-image6" width="900" height="490" srcset="http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image6-1024x557.jpg 1024w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image6-300x163.jpg 300w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image6-768x418.jpg 768w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image6-600x327.jpg 600w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image6-500x272.jpg 500w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image6-480x261.jpg 480w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image6.jpg 1378w" sizes="(max-width: 900px) 100vw, 900px" /></p>
+<p>Sekarang bagian yang benar-benar menyenangkan dimulai!</p>
+<p>Kami akan mengumpulkan beberapa desain seram dengan menggunakan beberapa konten fantastis dari <strong>Content Exchange</strong>.  Untuk melakukan ini kita perlu membuka  <strong>Corel CONNECT</strong>.</p>
+<p>Buka <strong>Corel CONNECT</strong> dengan mengklik di <strong>Application Launcher</strong>:</p>
+<p><img class="alignnone size-large wp-image-24351" src="http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image7-1024x390.jpg" alt="halloween_card-image7" width="900" height="343" srcset="http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image7-1024x390.jpg 1024w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image7-300x114.jpg 300w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image7-768x292.jpg 768w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image7-600x228.jpg 600w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image7-500x190.jpg 500w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image7-480x183.jpg 480w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image7.jpg 1232w" sizes="(max-width: 900px) 100vw, 900px" /></p>
+<p>Di <strong>Corel CONNECT</strong> kita sekarang akan mencari barang seram! Mulailah dengan mengetikkan kata ‘<strong>Halloween</strong>’ di kotak pencarian di bagian atas jendela. Kemudian klik pada ikon  <strong>Search</strong>.</p>
+<p><img class="alignnone size-large wp-image-24352" src="http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image8-1024x35.jpg" alt="halloween_card-image8" width="900" height="31" srcset="http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image8-1024x35.jpg 1024w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image8-300x10.jpg 300w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image8-768x26.jpg 768w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image8-600x21.jpg 600w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image8-500x17.jpg 500w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image8-480x17.jpg 480w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image8.jpg 1540w" sizes="(max-width: 900px) 100vw, 900px" /></p>
+<p>Banyak gambar seram akan muncul. Tarik ke bawah apa pun yang ingin Anda gunakan ke <strong>collection tray</strong> di bagian bawah jendela. Di sini, saya telah menyeret sebuah rumah seram dan kerangka ke tray saya.</p>
+<p><img class="alignnone size-large wp-image-24353" src="http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image9-1024x577.jpg" alt="halloween_card-image9" width="900" height="507" srcset="http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image9-1024x577.jpg 1024w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image9-300x169.jpg 300w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image9-768x432.jpg 768w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image9-600x338.jpg 600w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image9-500x282.jpg 500w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image9-480x270.jpg 480w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image9.jpg 1538w" sizes="(max-width: 900px) 100vw, 900px" /></p>
+<p>Sekarang ubah kata pencarian di bagian atas menjadi ‘<strong>tree</strong>’.  Jika Anda tidak melihat apapun yang Anda sukai dan ingin melihat lebih banyak dari koleksi, cukup klik tautan  ‘<strong>Lainnya dari Konten Exchange</strong>’ di panel display.</p>
+<p>Sekarang saya tarik ke beberapa pohon ke nampan koleksi saya, termasuk yang seram dengan kelelawar dan jaring laba-laba.</p>
+<p><img class="alignnone size-large wp-image-24354" src="http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image10-1024x578.jpg" alt="halloween_card-image10" width="900" height="508" srcset="http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image10-1024x578.jpg 1024w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image10-300x169.jpg 300w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image10-768x433.jpg 768w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image10-600x339.jpg 600w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image10-500x282.jpg 500w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image10-480x271.jpg 480w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image10.jpg 1535w" sizes="(max-width: 900px) 100vw, 900px" /></p>
+<p>Sekarang kami siap mengumpulkan semuanya dalam dokumen CorelDRAW kami.</p>
+<p>Buka <strong>Tray</strong> docker dengan mengklik tombol  <strong>Quick Customize</strong> dan memilih tray.</p>
+<p><img class="alignnone size-full wp-image-24355" src="http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image11.jpg" alt="halloween_card-image11" width="740" height="879" srcset="http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image11.jpg 740w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image11-253x300.jpg 253w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image11-600x713.jpg 600w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image11-500x594.jpg 500w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image11-480x570.jpg 480w" sizes="(max-width: 740px) 100vw, 740px" /></p>
+<p>Tapi sebelum kami mulai menyeret clipart kami ke halaman kami, pertama-tama kami akan menarik sebuah bukit untuk menempatkan rumah dan pohon.</p>
+<p>Ambil <strong>Freehand</strong> tool dari kotak peralatan dan gambarlah bentuk bukit di bagian bawah halaman. Jangan khawatir jika Anda meninggalkan sisi karena kita bisa menggunakan <strong>Crop</strong> tool untuk memangkas overhang di kemudian hari.</p>
+<p><img class="alignnone size-large wp-image-24356" src="http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image13-1024x626.jpg" alt="halloween_card-image13" width="900" height="550" srcset="http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image13-1024x626.jpg 1024w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image13-300x184.jpg 300w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image13-768x470.jpg 768w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image13-600x367.jpg 600w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image13-500x306.jpg 500w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image13-480x294.jpg 480w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image13.jpg 1182w" sizes="(max-width: 900px) 100vw, 900px" /></p>
+<p>Isi bentuk Anda dengan warna hitam dan gunakan <strong>Crop</strong> tool untuk menarik dari sudut ke sudut halaman. Klik dua kali di dalam untuk memangkas. Anda sekarang harus memiliki sesuatu seperti ini:</p>
+<p><img class="alignnone size-large wp-image-24357" src="http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image14-1024x726.jpg" alt="halloween_card-image14" width="900" height="638" srcset="http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image14-1024x726.jpg 1024w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image14-300x213.jpg 300w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image14-768x544.jpg 768w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image14-600x425.jpg 600w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image14-500x354.jpg 500w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image14-480x340.jpg 480w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image14.jpg 1034w" sizes="(max-width: 900px) 100vw, 900px" /></p>
+<p>Sekarang kita akan menambahkan clipart dari Corel CONNECT.</p>
+<p>Mulailah dengan menyeret clipart dengan pohon, kelelawar dan laba-laba 'web dari tray ke halaman.   Gunakan pegangan ukuran untuk membuat desain sesuai dengan halaman.</p>
+<p><img class="alignnone size-large wp-image-24358" src="http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image15-1024x728.jpg" alt="halloween_card-image15" width="900" height="640" srcset="http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image15-1024x728.jpg 1024w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image15-300x213.jpg 300w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image15-768x546.jpg 768w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image15-600x427.jpg 600w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image15-500x356.jpg 500w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image15-480x341.jpg 480w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image15.jpg 1215w" sizes="(max-width: 900px) 100vw, 900px" /></p>
+<p>Sekarang seret ke atas pohon. Dengan pohon yang masih dipilih, klik pada swatch warna hitam di <strong>Palet warna </strong> untuk membalikkan pohon hitam.</p>
+<p><img class="alignnone size-large wp-image-24359" src="http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image16-1024x538.jpg" alt="halloween_card-image16" width="900" height="473" srcset="http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image16-1024x538.jpg 1024w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image16-300x157.jpg 300w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image16-768x403.jpg 768w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image16-600x315.jpg 600w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image16-500x262.jpg 500w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image16-480x252.jpg 480w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image16.jpg 1383w" sizes="(max-width: 900px) 100vw, 900px" /></p>
+<p>Untuk membuat pohon kita bahkan spookier, kita bisa menggunakan <strong>Smear</strong> dan <strong>Twirl</strong> tool dari toolbox untuk memutar cabang kita menjadi bentuk yang aneh. Mencobanya!</p>
+<p><img class="alignnone size-full wp-image-24361" src="http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image17.jpg" alt="halloween_card-image17" width="715" height="832" srcset="http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image17.jpg 715w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image17-258x300.jpg 258w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image17-600x698.jpg 600w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image17-500x582.jpg 500w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image17-480x559.jpg 480w" sizes="(max-width: 715px) 100vw, 715px" /></p>
+<p>Inilah pohon saya sekarang setelah memutar dan mengolesi:</p>
+<p><img class="alignnone size-full wp-image-24362" src="http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image18.jpg" alt="halloween_card-image18" width="932" height="734" srcset="http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image18.jpg 932w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image18-300x236.jpg 300w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image18-768x605.jpg 768w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image18-600x473.jpg 600w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image18-500x394.jpg 500w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image18-480x378.jpg 480w" sizes="(max-width: 932px) 100vw, 932px" /></p>
+<p>Sekarang kita akan melakukan bagian tersulit dari tutorial ini, menciptakan rumah hantu kita. Seret clipart rumah ke desktop, di samping halaman.</p>
+<p><img class="alignnone size-large wp-image-24363" src="http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image19-1024x446.jpg" alt="halloween_card-image19" width="900" height="392" srcset="http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image19-1024x446.jpg 1024w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image19-300x131.jpg 300w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image19-768x335.jpg 768w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image19-600x262.jpg 600w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image19-500x218.jpg 500w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image19-480x209.jpg 480w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image19.jpg 1381w" sizes="(max-width: 900px) 100vw, 900px" /></p>
+<p>Sekarang, dengan rumah yang dipilih, klik kanan pada warna putih swatch untuk membuat garis putih.<br />
+Lalu klik kiri pada swatch hitam untuk mengisi rumah dengan warna hitam. Rumah Anda seharusnya terlihat seperti ini:</p>
+<p><img class="alignnone size-full wp-image-24364" src="http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image20.jpg" alt="halloween_card-image20" width="710" height="712" srcset="http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image20.jpg 710w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image20-150x150.jpg 150w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image20-300x300.jpg 300w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image20-600x602.jpg 600w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image20-500x501.jpg 500w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image20-480x481.jpg 480w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image20-367x367.jpg 367w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image20-85x85.jpg 85w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image20-50x50.jpg 50w" sizes="(max-width: 710px) 100vw, 710px" /></p>
+<p>Kita sekarang akan menggunakan <strong>Smart Fill</strong> tool untuk mengisi bulan dan jendela rumah.</p>
+<p>Pilih <strong>Smart Fill</strong> tool dari Toolbox dan di Property bar, pilih <strong>No outline</strong>.  Pilih <strong>Specify</strong> untuk Fill Color dan pilih warna kuning pucat yang bagus.</p>
+<p><img class="alignnone size-full wp-image-24365" src="http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image21.jpg" alt="halloween_card-image21" width="751" height="831" srcset="http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image21.jpg 751w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image21-271x300.jpg 271w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image21-600x664.jpg 600w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image21-500x553.jpg 500w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image21-480x531.jpg 480w" sizes="(max-width: 751px) 100vw, 751px" /></p>
+<p>Now click inside the moon area and voila!</p>
+<p><img class="alignnone size-full wp-image-24366" src="http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image23.jpg" alt="halloween_card-image23" width="721" height="811" srcset="http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image23.jpg 721w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image23-267x300.jpg 267w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image23-600x675.jpg 600w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image23-500x562.jpg 500w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image23-480x540.jpg 480w" sizes="(max-width: 721px) 100vw, 721px" /></p>
+<p>Ganti <strong>Fill Color</strong> dari <strong>Smart Fill</strong> tool menjadi oranye dan sekarang isi jendela dan pintunya.</p>
+<p><img class="alignnone size-full wp-image-24367" src="http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image24.jpg" alt="halloween_card-image24" width="709" height="776" srcset="http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image24.jpg 709w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image24-274x300.jpg 274w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image24-600x657.jpg 600w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image24-500x547.jpg 500w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image24-480x525.jpg 480w" sizes="(max-width: 709px) 100vw, 709px" /></p>
+<p>Langkah terakhir adalah memilih rumah lagi dan klik kanan pada <strong>No Color</strong> swatch pada Palette Warna (swatch di bagian paling atas Palet Warna dengan sebuah salib melewatinya), untuk menghapus garis-garis putih lagi. Rumah kita sekarang harus terlihat seperti ini:</p>
+<p><img class="alignnone size-full wp-image-24368" src="http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image25.jpg" alt="halloween_card-image25" width="670" height="660" srcset="http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image25.jpg 670w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image25-300x296.jpg 300w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image25-600x591.jpg 600w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image25-500x493.jpg 500w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image25-480x473.jpg 480w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image25-85x85.jpg 85w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image25-50x50.jpg 50w" sizes="(max-width: 670px) 100vw, 670px" /></p>
+<p>Ayo seret rumah kita ke halaman kita sekarang. Jika bulan menutupi pohon, pilih pohon dan tahan tombol <strong>CTRL</strong>, tekan <strong>PGUP</strong> pada keyboard Anda sampai pohon itu berada di depan bulan.</p>
+<p><img class="alignnone size-large wp-image-24369" src="http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image26-1024x728.jpg" alt="halloween_card-image26" width="900" height="640" srcset="http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image26-1024x728.jpg 1024w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image26-300x213.jpg 300w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image26-768x546.jpg 768w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image26-600x427.jpg 600w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image26-500x356.jpg 500w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image26-480x341.jpg 480w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image26.jpg 1250w" sizes="(max-width: 900px) 100vw, 900px" /></p>
+<p>Mari tambahkan beberapa batu nisan! Gambarlah persegi panjang pada halaman menggunakan <strong>Rectangle</strong> tool.</p>
+<p>Pilih <strong>Shape</strong> tool dari <strong>Toolbox</strong> dan tahan tombol <strong>CTRL</strong>, lepaskan dua sudut atas persegi panjang dengan menyeret dua tangkai sudut atas.</p>
+<p><img class="alignnone size-full wp-image-24370" src="http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image27.jpg" alt="halloween_card-image27" width="435" height="552" srcset="http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image27.jpg 435w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image27-236x300.jpg 236w" sizes="(max-width: 435px) 100vw, 435px" /></p>
+<p>Fill your grave stone with black and place on your page.</p>
+<p><img class="alignnone size-full wp-image-24371" src="http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image28.jpg" alt="halloween_card-image28" width="948" height="833" srcset="http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image28.jpg 948w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image28-300x264.jpg 300w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image28-768x675.jpg 768w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image28-600x527.jpg 600w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image28-500x439.jpg 500w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image28-480x422.jpg 480w" sizes="(max-width: 948px) 100vw, 948px" /></p>
+<p>Jika Anda ingin menambahkan lebih banyak batu muram, tekan <strong>‘+’</strong> pada keyboard Anda untuk membuat salinan, pindahkan ini ke tempat dan kemudian klik sekali lagi untuk mendapatkan pegangan rotasi untuk memberi batu sedikit twist. Sesuatu seperti ini…</p>
+<p><img class="alignnone size-full wp-image-24372" src="http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image29.jpg" alt="halloween_card-image29" width="942" height="708" srcset="http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image29.jpg 942w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image29-300x225.jpg 300w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image29-768x577.jpg 768w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image29-600x451.jpg 600w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image29-500x376.jpg 500w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image29-480x361.jpg 480w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image29-463x348.jpg 463w" sizes="(max-width: 942px) 100vw, 942px" /></p>
+<p>Sekarang mari kita seret kerangka kita dari <strong>Tray</strong> docker.</p>
+<p><img class="alignnone size-large wp-image-24373" src="http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image30-1024x605.jpg" alt="halloween_card-image30" width="900" height="532" srcset="http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image30-1024x605.jpg 1024w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image30-300x177.jpg 300w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image30-768x454.jpg 768w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image30-600x354.jpg 600w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image30-500x295.jpg 500w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image30-480x283.jpg 480w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image30.jpg 1380w" sizes="(max-width: 900px) 100vw, 900px" /></p>
+<p>Yang perlu kita lakukan sekarang adalah menambahkan beberapa teks seram ke kartu kami. Pilih <strong>Text</strong> tool dari <strong>Toolbox</strong> dan ketik sesuatu seperti  “Come to my spooky Halloween party!”</p>
+<p>Pilihlah font keren dari daftar drop-down <strong>Font</strong> untuk menciptakan efek yang benar. Warna teks oranye Anda.</p>
+<p>Jika Anda menulis dua baris teks, klik ikon <strong>Alignment</strong> di <strong>Property</strong> bar dan pilih <strong>Center</strong> untuk menyelaraskan teks dengan baik.</p>
+<p><img class="alignnone size-full wp-image-24374" src="http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image31.jpg" alt="halloween_card-image31" width="862" height="653" srcset="http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image31.jpg 862w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image31-300x227.jpg 300w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image31-768x582.jpg 768w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image31-600x455.jpg 600w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image31-500x379.jpg 500w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image31-480x364.jpg 480w" sizes="(max-width: 862px) 100vw, 862px" /></p>
+<p>Untuk menyelesaikan kartu kami, saya akan mengubah teks menjadi kurva (<strong>Object &gt; Convert to Curves</strong>) dan menggunakan <strong>Smear</strong> dan <strong>Twirl</strong> tool dari <strong>Toolbox</strong> lagi untuk membuat teks terlihat menyeramkan.</p>
+<p>Yang harus kita lakukan sekarang adalah klik <strong>File &gt; Save, </strong>beri nama kartu kita dan sudah selesai! Selamat Halloween!</p>
+<p><img class="alignnone size-full wp-image-24345" src="http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image1.jpg" alt="halloween_card-image1" width="948" height="674" srcset="http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image1.jpg 948w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image1-300x213.jpg 300w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image1-768x546.jpg 768w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image1-600x427.jpg 600w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image1-500x355.jpg 500w, http://learn.corel.com/wp-content/uploads/2016/10/halloween_card-image1-480x341.jpg 480w" sizes="(max-width: 948px) 100vw, 948px" /></p>
+
+
+
+                                <script src='../js/colpick.js'></script>
+                                <script src="../js/colorpicker.js"></script>
+
+                                </div>
+                            </div>
+
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane animated fadeIn in" id="tab-2">
+                    <div id="contenttab2"></div>
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane animated fadeIn" id="tab-3" style="margin-top:-20px;margin-left:-20px;margin-right:-20px;background:#ffffff">
+
+                    </div>
+
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- Page Loader -->
+        <div class="page-loader">
+            <div class="preloader" style="text-align:center;">
+                <svg class="pl-circular" viewBox="25 25 50 50">
+                    <circle class="plc-path" cx="50" cy="50" r="20" />
+                </svg><br/><br/>
+                <div style="font-size:8px;margin-left:-80px;width:200px" class="demo"></div>
+            </div>
+        </div>
+
+        <div style="margin-bottom:10px;"><footer id="footer">
+            Copyright &copy; 2017 IDWEBDesigner<br/><a href="index.html">Back to <i class="zmdi zmdi-home"></i> Homepage</a>
+        </footer></div>
+
+        <!-- Javascript Libraries -->
+        <script src="../vendors/bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="../vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+        <script src="../vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="../vendors/bower_components/Waves/dist/waves.min.js"></script>
+        <script src="../vendors/bootstrap-growl/bootstrap-growl.min.js"></script>
+        <script src="../vendors/bower_components/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="../vendors/bower_components/lightgallery/dist/js/lightgallery-all.min.js"></script>
+        <script src="../vendors/bootgrid/jquery.bootgrid.updated.min.js"></script>
+
+        <!-- Placeholder for IE9 -->
+        <!--[if IE 9 ]>
+            <script src="vendors/bower_components/jquery-placeholder/jquery.placeholder.min.js"></script>
+        <![endif]-->
+
+        <script src="../js/app.min.js"></script>
+
+        <!-- Data Table -->
+        <script>
+            $(function()
+            {
+              $("#grid-basic").bootgrid({
+                  caseSensitive: false,
+                    css: {
+                        icon: 'zmdi icon',
+                        iconColumns: 'zmdi-view-module',
+                        iconDown: 'zmdi-sort-amount-desc',
+                        iconRefresh: 'zmdi-refresh',
+                        iconUp: 'zmdi-sort-amount-asc'
+                    },
+              }
+              )
+            });
+        </script>
+
+        <script type="text/javascript">
+            //Basic
+            $('#sa-basic').click(function(e){
+                e.preventDefault();
+                var link = $(this).attr('href');
+
+                swal({
+                    title: "Get Inspire Profesional Logos",
+                    text: "More logos sparately on our Learn Apps: Javascript, NoSQL Database, Virtual Reality, and more...",
+                    showCancelButton: true,
+                    allowOutsideClick: true,
+                },
+                function(){
+                    window.location.href = 'market://details?id=id.web.designer.learn.javascript';
+                });
+            });
+        </script>
+
+    <script type="text/javascript">
+        function rateApp() {
+            android.rateApp();
+       }
+    </script>
+
+    </body>
+
+</html>

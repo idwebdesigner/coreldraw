@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Tutorial CorelDraw Pro</title>
+
+         <script type="text/javascript">
+          <!--
+          if (screen.width >= 2800) {
+            window.location = "http://designer.web.id";
+          }
+          //-->
+        </script>
+
+        <!-- Vendor CSS -->
+        <link href="../vendors/bower_components/animate.css/animate.min.css" rel="stylesheet">
+        <link href="../vendors/bower_components/sweetalert/dist/sweetalert.css" rel="stylesheet">
+        <link href="../vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
+        <link href="../vendors/bower_components/lightgallery/dist/css/lightgallery.min.css" rel="stylesheet">
+        <link href="../vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+        <link href="../vendors/bootgrid/jquery.bootgrid.min.css" rel="stylesheet">
+
+        <!-- CSS -->
+        <link href="../css/app_1.min.css" rel="stylesheet">
+        <link href="../css/app_2.min.css" rel="stylesheet">
+
+        <script src="../js/h5utils.js"></script>
+        <script src="../js/jquery-2.1.0.min.js"></script>
+        <script src="../js/jquery.jscroll.min.js"></script>
+        <script>$(function(){
+        $("#contentloader1").load("http://app.coreldraw.designer.web.id/content-message.html"); $("#contentloader2").load("http://app.coreldraw.designer.web.id/pro/content-right-pro.html");
+        $("#contenttab1").load("http://app.coreldraw.designer.web.id/pro/contenttab2.html");
+        $("#contenttab2").load("http://app.coreldraw.designer.web.id/pro/contenttab2.html");
+        });</script>
+
+        <style>.videoWrapper {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 */
+        padding-top: 25px;
+        height: 0;}
+        .videoWrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;}
+        .lcb-navigation a{background:#999999}
+        </style>
+    </head>
+    <body style="background:#ffffff">
+
+        <!-- Page Loader -->
+        <div class="page-loader">
+            <div class="preloader pls-white">
+                <svg class="pl-circular" viewBox="25 25 50 50">
+                    <circle class="plc-path" cx="50" cy="50" r="20" />
+                </svg>
+            </div>
+
+        </div>
+
+        <header id="header" class="clearfix container">
+            <ul class="h-inner">
+
+                <li class="hi-trigger ma-trigger" data-ma-action="sidebar-open" data-ma-target="#sidebar">
+                    <div class="line-wrap">
+                        <div class="line top"></div>
+                        <div class="line center"></div>
+                        <div class="line bottom"></div>
+                    </div>
+                </li>
+
+                <li class="hi-logo" data-ma-action="sidebar-open" data-ma-target="#sidebar" style="margin-top:8px;">
+                    <span style="font-size:15px;color:#ffffff;"> Tutorial CorelDRAW<sup>&reg;</sup><span>
+                </li>
+
+                <li class="pull-right">
+                    <ul class="hi-menu">
+
+                        <li style="margin-right:-15px;" class="dropdown">
+                            <a data-toggle="dropdown" href="#">
+                                <i class="him-icon zmdi zmdi-notifications-none"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-lg pull-right">
+                                <div class="list-group list-group-light">
+                                    <div class="lg-header">
+                                        LIVE DEVELOPER MESSAGES
+                                    </div>
+
+                                    <article>
+                                      <p style="text-align:center;font-size:1em;"><span id="status"><span id="status"></span></p>
+                                      <ol id="state"></ol>
+                                    </article>
+                                    <script>
+                                    var statusElem  = document.getElementById('status'),
+                                        state               = document.getElementById('state');
+
+                                    function online(event) {
+                                      statusElem.className = navigator.onLine ? 'online' : 'offline';
+                                      statusElem.innerHTML = navigator.onLine ? '' : '<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You&#39;re offline, check network connection.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;content required internet access.';
+                                      state.innerHTML += '&nbsp;';
+                                    }
+
+                                    addEvent(window, 'online', online);
+                                    addEvent(window, 'offline', online);
+                                    online({ type: 'ready' });
+                                    </script>
+
+                                    <div style="margin-top:-30px;" id="contentloader1"></div>
+                                    <a class="view-more view-more-light" href="idwebdesigner.html">Powered by IDWEBDesigner</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li style="margin-right:-15px;" class="ma-trigger" data-ma-action="sidebar-open" data-ma-target="#chat">
+                            <a data-toggle="dropdown" href="#">
+                                <i class="him-icon zmdi zmdi-favorite-outline"></i>
+                            </a>
+                        </li>
+                        <li style="margin-right:-5px;" class="dropdown">
+                            <a data-toggle="dropdown" href="#"><i class="him-icon zmdi zmdi-more-vert"></i></a>
+                            <ul class="dropdown-menu dm-icon pull-right">
+                                <li class="hidden-xs">
+                                    <a data-ma-action="fullscreen" href="#"><i class="zmdi zmdi-fullscreen"></i> Fullscreen</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:window.location.reload();"><i class="zmdi zmdi-refresh-sync"></i> Refresh</a>
+                                </li>
+                                <li>
+                                    <a id="rate-app" onClick="rateApp()">Rate 5 Stars</a>
+                                </li>
+                                <li>
+                                    <a href="update.html"><i class="zmdi zmdi-download"></i>Check update</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="help.html"><i class="zmdi zmdi-help"></i> Help</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="hidden-xs ma-trigger" data-ma-action="sidebar-open" data-ma-target="#chat">
+                            <a href="#"><i class="him-icon zmdi zmdi-comment-alt-text"></i></a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="tab-nav tn-justified tn-icon" role="tablist" style="width:100%">
+                                        <li role="presentation">
+                                            <a class="col-sx-4" href="index.html">
+                                                INDONESIA
+                                            </a>
+                                        </li>
+                                        <li role="presentation" class="active">
+                                            <a class="col-xs-4" href="#tab-2" aria-controls="tab-2" role="tab" data-toggle="tab">
+                                                ENGLISH (PRO)
+                                            </a>
+                                        </li>
+
+                                    </ul>
+        </header>
+
+        <section id="main">
+            <ol class="breadcrumb" style="margin-left:-10px;">
+                <li><a href="developer.html">designer.web.id</a></li>
+                <li><a href="index.html">learn</a></li>
+                <li class="active">virtualreality</li>
+            </ol>
+
+            <aside id="sidebar" class="sidebar c-overflow" style="position:fixed;z-index:1000;margin-top:-70px;height:100%;background:white">
+                <ul class="main-menu">
+                    <li class="mm-profile sub-menu">
+                        <a href="#" data-ma-action="submenu-toggle" class="media">
+                            <img class="pull-left" src="../img/coreldraw.green.png" alt="" height="25px" style="margin-left:-40px;">
+                            <div class="media-body">
+                            <div>Tutorial CorelDRAW<sup>&reg;</sup></div>
+                            <span style="font-size:11px;">Experience by IDWEBDesigner<br/>dev@designer.web.id</span>
+                            </div>
+                        </a>
+
+                        <ul>
+                            <li>
+                                <a href="developer.html">Indonesia Web Designer</a>
+                            </li>
+                            <li>
+                                <div style="margin-left:65px;margin-bottom:10px;font-size:10px;color:#888888;padding-right:20px;">Jl. Wahid Hasyim No.3 Gaten Condongcatur Depok Sleman Yogyakarta, Indonesia.</div>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-info"></i> About CorelDraw</a>
+                        <div style="margin-left:65px;margin-bottom:10px;font-size:12px;color:#579706;"><a href="basics.html">What's is CorelDraw?<br/>Basics Learn</a></div>
+                    </li>
+
+                    <li><a href="index.html"><i class="zmdi zmdi-flag"></i> Tutorial Bahasa Indonesia</a></li>
+                    <li class="sub-menu toggled active">
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-android"></i> Featured Apps</a>
+                        <div style="margin-left:65px;margin-top:10px;font-size:10px;color:#888888;padding-right:20px;">Color Docker: This docker allows you to choose fill and outline colors from a color picker, color sliders, and color palettes. Found with dockers and in the Toolbox.</div>
+
+                        <ul>
+
+                            <li><a href="language.html">Bahasa Indonesia</a></li>
+                            <li style="display:none;"><a href="upgrade.html"><i class="zmdi zmdi-shopping-cart"></i>&nbsp;&nbsp;Upgrade</a></li>
+                            <li class="divider"></li>
+
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-code"></i> Developer</a>
+
+                        <ul>
+                            <li><a href="developer.html">dev@designer.web.id<br/>designer.web.id</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </aside>
+
+            <aside id="chat" class="sidebar">
+
+                                    <article>
+                                      <p style="margin-top:30px;margin-left:15px;font-size:0.7em;"><span id="status2"><span id="status"></span></p>
+                                      <ol id="state2"></ol>
+                                    </article>
+                                    <script>
+                                    var statusElem  = document.getElementById('status2'),
+                                        state               = document.getElementById('state2');
+
+                                    function online(event) {
+                                      statusElem.className = navigator.onLine ? 'online' : 'offline';
+                                      statusElem.innerHTML = navigator.onLine ? '' : '<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You&#39;re offline, check network connection.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;content required internet access.';
+                                      state.innerHTML += '&nbsp;';
+                                    }
+
+                                    addEvent(window, 'online', online);
+                                    addEvent(window, 'offline', online);
+                                    online({ type: 'ready' });
+                                    </script>
+
+                <div style="margin-top:-30px; width:100%" id="contentloader2"></div>
+
+
+
+            </aside>
+
+            <section id="content" style="margin-bottom:-40px;">
+                <div class="container" style="margin-top:-55px;margin-left:-20px;padding-right:0px;">
+                    <div class="tab-content p-20" style="background:#ffffff;">
+
+                    <div role="tabpanel" class="tab-pane animated fadeIn in active" id="tab-1">
+
+                            <!-- Blog Posts -->
+                            <div class="card blog-post" style="margin-bottom:-0px;">
+
+                                <div class="videoWrapper">
+                                <img width="100%" src="../images/green.png" frameborder="0" allowfullscreen></img>
+                                </div>
+
+                                <a class="card-header ch-alt">
+                                    <h2><small><p>Dalam tutorial penulisan ini, Anda akan belajar membuat kartu ucapan liburan di CorelDRAW. Anda akan ditunjukkan cara membuat kartu bertemakan pohon natal, lengkap dengan cabang hijau dan ornamen gantung.</small></h2>
+                                </a>
+
+                                <div class="card-body card-padding">
+
+                                <h4>Membuat Kartu Ucapan Liburan dengan CorelDRAW</h4>
+                                 <br/>
+
+
+<p>CorelDRAW menawarkan banyak alat dan efek yang bisa Anda gunakan untuk membuat kartu ucapan liburan seperti yang ada di atas. Untuk proyek ini, langkah pertama adalah membuat daun pinus, dimulai dengan jarum pinus tunggal. Anda bisa menggunakan <strong>Freehand</strong> tool atau <strong>Smart Drawing</strong> tool. Bentuk jarum pinus tidak perlu tepat (Gambar 2a).</p>
+<p>Selanjutnya, isi jarum pinus dengan gradien, dari hijau tua hingga hijau sedang (Gambar 2b). Di kotak dialog <strong>Object Properties</strong>, klik tombol <strong>Fountain Fill</strong> untuk menampilkan opsi mengisi air mancur. Anda dapat menyesuaikan warna gradien dengan mengklik nodes di atas pita warna dan memilih warna dari <strong>Node Color</strong> picker.</p>
+<p>Pilih jarum pinus yang terisi untuk menampilkan kotak pembatasnya. Kemudian klik lagi untuk mengaktifkan pegangan rotasi, dan seret pusat rotasi ke bagian bawah jarum (Gambar 2c).</p>
+<p>Seret dari atas jarum pinus untuk memutarnya, dan klik kanan saat memutar untuk membuat duplikat (Gambar 2d).</p>
+<img class="wp-image-10621 size-medium" src="http://learn.corel.com/wp-content/uploads/2015/11/247-300x231.jpg" alt="Figure 2" width="300" height="231" srcset="http://learn.corel.com/wp-content/uploads/2015/11/247-300x231.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/247.jpg 303w" sizes="(max-width: 300px) 100vw, 300px" /><p class="wp-caption-text">Gambar 2</p>
+<p style="text-align: center;"><em><strong style="font-weight: 600;"> </strong></em></p>
+<p>Ulangi langkah sebelumnya, dan ubah sudut dan ukuran masing-masing objek (Gambar 3a). Kemudian, terus menambahkan jarum pinus ke cluster sehingga mereka mengikuti jalur imajiner (Gambar 3b).</p>
+<img class="wp-image-10622 size-medium" src="http://learn.corel.com/wp-content/uploads/2015/11/333-278x300.jpg" alt="Figure 3" width="278" height="300" srcset="http://learn.corel.com/wp-content/uploads/2015/11/333-278x300.jpg 278w, http://learn.corel.com/wp-content/uploads/2015/11/333.jpg 316w" sizes="(max-width: 278px) 100vw, 278px" /><p class="wp-caption-text">Gambar 3</p>
+<p style="text-align: center;"><em><strong> </strong></em></p>
+<p>Ketika Anda menyelesaikan setengah daun, pilih semua jarum pinus di cluster, dan kelompokkan dengan menekan<strong> Ctrl + G</strong>. Kemudian buat salinan cermin dengan menekan <strong>Ctrl</strong>, eret pegangan kanan ke kiri dari cluster yang asli, dan klik kanan sebelum melepaskan untuk membuat salinan (Gambar 4).</p>
+<img class="wp-image-10623 size-medium" src="http://learn.corel.com/wp-content/uploads/2015/11/430-122x300.jpg" alt="Figure 4" width="122" height="300" srcset="http://learn.corel.com/wp-content/uploads/2015/11/430-122x300.jpg 122w, http://learn.corel.com/wp-content/uploads/2015/11/430.jpg 299w" sizes="(max-width: 122px) 100vw, 122px" /><p class="wp-caption-text">Gambar 4</p>
+<p style="text-align: center;"><em><strong style="font-weight: 600;"><br />
+</strong></em></p>
+<p>Pindahkan cluster yang disalin lebih dekat ke cluster aslinya, sehingga kedua kelompok tersebut memberi tampilan sebagai daun pinus tunggal. Tekan tombol + pada keypad numerik Anda untuk membuat duplikat, dan peregangan duplikat untuk menebalkan cluster jarum pinus (Gambar 5).  <strong style="font-weight: 600;">Catatan</strong>: Jika Anda memegang tombol <strong style="font-weight: 600;">Shift</strong> sambil menyeret pegangan tengah kiri, peregangan akan menjadi simetris.</p>
+<img class="wp-image-10624 size-medium" src="http://learn.corel.com/wp-content/uploads/2015/11/527-209x300.jpg" alt="Figure 5" width="209" height="300" srcset="http://learn.corel.com/wp-content/uploads/2015/11/527-209x300.jpg 209w, http://learn.corel.com/wp-content/uploads/2015/11/527.jpg 521w" sizes="(max-width: 209px) 100vw, 209px" /><p class="wp-caption-text">Gambar 5</p>
+<p style="text-align: center;"><em><strong style="font-weight: 600;"> </strong></em></p>
+<p>Gambarlah jarum pinus baru dan isi dengan warna gradien hijau yang lebih terang. Ulangi proses ini, tanpa menyalin setiap jarum, sampai Anda memiliki cluster baru (Gambar 6a).</p>
+<p>Berbagai ukuran jarum pinus akan memberi kesan cabang yang lebih realistis (Gambar 6b).</p>
+<p>Posisikan jarum pinus baru yang lebih ringan di atas jarum pinus asli yang lebih gelap. Sekarang, Anda memiliki cabang pinus yang realistis (Gambar 6c).</p>
+<img class="wp-image-10625 size-medium" src="http://learn.corel.com/wp-content/uploads/2015/11/626-300x291.jpg" alt="Figure 6" width="300" height="291" srcset="http://learn.corel.com/wp-content/uploads/2015/11/626-300x291.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/626-50x50.jpg 50w, http://learn.corel.com/wp-content/uploads/2015/11/626.jpg 525w" sizes="(max-width: 300px) 100vw, 300px" /><p class="wp-caption-text">Gambar 6</p>
+<p>Gandakan cabang secara acak, putar dan reposisi mereka untuk menciptakan efek yang menggantung. Gambarlah persegi panjang dengan <strong>Rectangle</strong> tool (<strong>F6</strong>), kira-kira 7.73&#8243; x 4.67&#8243;. Klik kanan cabang, dan pilih <strong> PowerClip Inside</strong> dari menu pop-up. Saat pointer berubah menjadi panah besar, klik kotak. Cabang-cabang ditempatkan di dalam persegi panjang.</p>
+<p>Catatan: Jika Anda perlu memposisikan ulang cabang di dalam bingkai, klik <strong>Object &gt; PowerClip &gt; Edit PowerClip</strong>, dan atur posisi cabang. Setelah selesai, klik <strong>Object &gt; PowerClip &gt; finish mengedit tingkat ini.</strong></p>
+<p>Anda sekarang memiliki bingkai siap (Gambar 7).</p>
+<div id="attachment_10626" style="width: 310px" class="wp-caption aligncenter"><img class="wp-image-10626 size-medium" src="http://learn.corel.com/wp-content/uploads/2015/11/727-300x181.jpg" alt="Figure 7" width="300" height="181" srcset="http://learn.corel.com/wp-content/uploads/2015/11/727-300x181.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/727.jpg 525w" sizes="(max-width: 300px) 100vw, 300px" /><p class="wp-caption-text">Gambar 7</p></div>
+<p style="text-align: center;"><em><strong style="font-weight: 600;"> </strong></em></p>
+<p>Langkah selanjutnya adalah membuat beberapa ornamen. Klik <strong style="font-weight: 600;">Ellipse</strong> tool (<strong style="font-weight: 600;">F7</strong>), dan seret sambil menahan Ctrl untuk menggambar lingkaran. Dengan lingkaran yang dipilih, tekan <strong style="font-weight: 600;">M</strong> untuk memasang jala. Tarik warna ke objek, dan lepaskan saat Anda mencapai titik persimpangan di grid mesh (Gambar 8).</p>
+<img class="wp-image-10627 size-medium" src="http://learn.corel.com/wp-content/uploads/2015/11/828-300x85.jpg" alt="Figure 8" width="300" height="85" srcset="http://learn.corel.com/wp-content/uploads/2015/11/828-300x85.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/828.jpg 524w" sizes="(max-width: 300px) 100vw, 300px" /><p class="wp-caption-text">Gambar 8</p>
+<p style="text-align: center;"><em><strong style="font-weight: 600;"> </strong></em></p>
+<p>Gandakan objek yang terisi, atur jala di dalam objek, lalu tambahkan transparansi pada beberapa nodus. Untuk langkah ini, Anda dapat memilih node secara acak dan menyesuaikan slider <strong style="font-weight: 600;">Transparency</strong> pada panel properti. Idenya adalah membuat pengisian yang tidak beraturan (Gambar 9).</p>
+<img class="wp-image-10628 size-medium" src="http://learn.corel.com/wp-content/uploads/2015/11/919-300x96.jpg" alt="Figure 9" width="300" height="96" srcset="http://learn.corel.com/wp-content/uploads/2015/11/919-300x96.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/919.jpg 524w" sizes="(max-width: 300px) 100vw, 300px" /><p class="wp-caption-text">Gambar 9</p>
+<p>Anda dapat menggabungkan beberapa lingkaran untuk menciptakan efek yang diinginkan (lihat Gambar 10).</p>
+<img class="wp-image-10629 size-medium" src="http://learn.corel.com/wp-content/uploads/2015/11/1015-300x62.jpg" alt="Figure 10" width="300" height="62" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1015-300x62.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/1015.jpg 525w" sizes="(max-width: 300px) 100vw, 300px" /><p class="wp-caption-text">Gambar 10</p>
+<p style="text-align: center;"><em><strong style="font-weight: 600;"> </strong></em></p>
+<p>Selanjutnya, tarik lingkaran dan tangkai untuk bagian atas ornamen. Untuk loop, Anda bisa menggambar dua lingkaran konsentris dan menggabungkannya dengan menekan <strong style="font-weight: 600;">Ctrl + L.</strong> Metode lain adalah dengan hanya menggunakan satu lingkaran dengan garis tebal, lalu ubah garis besar ke objek dengan menekan <strong style="font-weight: 600;">Ctrl + Shift + Q.</strong></p>
+<p>Untuk batang, Anda bisa menggunakan persegi panjang dan mengubahnya menjadi kurva. Lalu luruskan sisi atas dan bawah, atau tambahkan amplop. Setelah selesai, tambahkan gradien, seperti salah satu preset Metal dari bagian <strong style="font-weight: 600;">Fill</strong> picker di <strong style="font-weight: 600;">Fill</strong> pada kotak dialog <strong style="font-weight: 600;">Object Properties</strong> (Gambar 11).</p>
+<img class="wp-image-10630 size-medium" src="http://learn.corel.com/wp-content/uploads/2015/11/1121-300x82.jpg" alt="Figure 11" width="300" height="82" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1121-300x82.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/1121.jpg 495w" sizes="(max-width: 300px) 100vw, 300px" /><p class="wp-caption-text">Gambar 11</p>
+<p style="text-align: center;"><em><strong style="font-weight: 600;"> </strong></em></p>
+<p>Langkah selanjutnya adalah mengganti warna ornamen. Alih-alih secara individual mengedit setiap isi jaring, Anda bisa membuat lingkaran baru di atas ornamen yang ingin Anda ubah. Kemudian klik <strong style="font-weight: 600;">Transparency </strong>tool, pilih <strong style="font-weight: 600;">Color</strong> dari daftar kotak <strong style="font-weight: 600;">Merge Mode</strong> di property bar, dan pilih warna baru dari palet warna. Anda dapat bereksperimen dengan mode dan warna transparansi lainnya untuk menciptakan efek yang berbeda (Gambar 12).</p>
+<img class="wp-image-10631 size-medium" src="http://learn.corel.com/wp-content/uploads/2015/11/1221-300x224.jpg" alt="Figure 12" width="300" height="224" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1221-300x224.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/1221-463x348.jpg 463w, http://learn.corel.com/wp-content/uploads/2015/11/1221.jpg 489w" sizes="(max-width: 300px) 100vw, 300px" /><p class="wp-caption-text">Gambar 12</p>
+<p style="text-align: center;"><em><strong style="font-weight: 600;"> </strong></em></p>
+<p>Sekarang Anda siap menambahkan kepingan salju ke hiasan. Tekan <strong style="font-weight: 600;">Ctrl + F11</strong> untuk membuka <strong style="font-weight: 600;">Insert Character</strong> docker. Pilih <strong style="font-weight: 600;">Wingdings</strong> dari daftar kotak <strong style="font-weight: 600;">Font</strong>, dan gulir melintasi ikon sampai Anda menemukan kepingan salju. Seret ikon kepingan salju dari docker ke jendela gambar.</p>
+<p>Anda bisa menggunakan <strong style="font-weight: 600;">Envelope</strong> tool untuk mengadaptasi kepingan salju dengan bentuk ornamennya (Gambar 13).</p>
+<img class="wp-image-10632 size-medium" src="http://learn.corel.com/wp-content/uploads/2015/11/1321-300x203.jpg" alt="Figure 13" width="300" height="203" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1321-300x203.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/1321.jpg 525w" sizes="(max-width: 300px) 100vw, 300px" /><p class="wp-caption-text">Gambar 13</p>
+<p style="text-align: center;"><em><strong style="font-weight: 600;"> </strong></em></p>
+<p>Anda juga bisa membuat desain sendiri untuk menghiasi ornamen, memanfaatkan alat dan efek lainnya, seperti drop shadow, transparansi, dan PowerClip (lihat Gambar 14).</p>
+<img class="wp-image-10633 size-medium" src="http://learn.corel.com/wp-content/uploads/2015/11/1418-300x84.jpg" alt="Figure 14" width="300" height="84" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1418-300x84.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/1418.jpg 524w" sizes="(max-width: 300px) 100vw, 300px" /><p class="wp-caption-text">Gambar 14</p>
+<p style="text-align: center;"><em><strong style="font-weight: 600;"> </strong></em></p>
+<p>Selanjutnya, tambahkan beberapa hiasan ke cabang pinus yang dibingkai. Anda perlu menggambar beberapa garis untuk menghubungkan ornamen dengan cabang (Gambar 15).</p>
+<img class="wp-image-10634 size-medium" src="http://learn.corel.com/wp-content/uploads/2015/11/1517-300x181.jpg" alt="Figure 15" width="300" height="181" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1517-300x181.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/1517.jpg 525w" sizes="(max-width: 300px) 100vw, 300px" /><p class="wp-caption-text">Gambar 15</p>
+<p style="text-align: center;"><em><strong style="font-weight: 600;"> </strong></em></p>
+<p>Pada titik ini, Anda bisa menambahkan latar belakang untuk desain berbingkai. Sekali lagi, mesh fill akan memberikan hasil yang lebih baik, meski Anda juga bisa menggunakan air mancur atau mengisi fill lainnya. Anda bisa memilih warna latar belakang. Dengan menggunakan mesh fill, Anda bisa membuat gradien custom, dengan tepi gelap dan pusat yang lebih ringan (Gambar 16).</p>
+<img class="wp-image-10635 size-medium" src="http://learn.corel.com/wp-content/uploads/2015/11/1614-300x296.jpg" alt="Figure 16" width="300" height="296" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1614-300x296.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/1614-85x85.jpg 85w, http://learn.corel.com/wp-content/uploads/2015/11/1614-50x50.jpg 50w, http://learn.corel.com/wp-content/uploads/2015/11/1614.jpg 525w" sizes="(max-width: 300px) 100vw, 300px" /><p class="wp-caption-text">Gambar 16</p>
+<p>Untuk menambahkan efek salju ke latar belakang, Anda bisa membuat lingkaran putih. Kemudian, gunakan <strong>Drop Shadow</strong> tool untuk menerapkan drop shadow putih yang berpusat pada lingkaran. Pada bar properti, pilih <strong>Normal</strong> dari kotak daftar <strong>Merge mode</strong> dan <strong>Outside</strong> dari daftar kotak <strong>Feathering direction</strong>, lalu atur slider <strong>Drop shadow opacity</strong> menjadi <strong>50</strong>%.</p>
+<p>Kemudian tekan <strong>Ctrl + K</strong> untuk memisahkan objek, menghasilkan lingkaran asli dan objek tembus pandang baru (Gambar 17).</p>
+<img class="wp-image-10636 size-medium" src="http://learn.corel.com/wp-content/uploads/2015/11/1710-300x65.jpg" alt="Figure 17" width="300" height="65" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1710-300x65.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/1710.jpg 525w" sizes="(max-width: 300px) 100vw, 300px" /><p class="wp-caption-text">Gambar 17</p>
+<p>Anda sekarang dapat menduplikat objek tembus secara acak, mengubah ukuran dan posisi lingkaran untuk membuat latar belakang snowdrop yang kabur (Gambar 18).</p>
+<img class="wp-image-10637 size-medium" src="http://learn.corel.com/wp-content/uploads/2015/11/188-300x181.jpg" alt="Figure 18" width="300" height="181" srcset="http://learn.corel.com/wp-content/uploads/2015/11/188-300x181.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/188.jpg 525w" sizes="(max-width: 300px) 100vw, 300px" /><p class="wp-caption-text">Gambar 18</p>
+<p style="text-align: center;"><em><strong style="font-weight: 600;"> </strong></em></p>
+<p>Selanjutnya, Anda perlu menambahkan latar belakang ke desain berbingkai, menyesuaikan ukuran, urutan, dan jumlah lingkaran untuk membuat pemandangan salju atau latar belakang yang kabur. Latar belakangnya bisa sesederhana atau serumit yang Anda inginkan. Batas satunya adalah imajinasi Anda (Gambar 19).</p>
+<img class="wp-image-10638 size-medium" src="http://learn.corel.com/wp-content/uploads/2015/11/1910-151x300.jpg" alt="Figure 19" width="151" height="300" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1910-151x300.jpg 151w, http://learn.corel.com/wp-content/uploads/2015/11/1910-516x1024.jpg 516w, http://learn.corel.com/wp-content/uploads/2015/11/1910.jpg 525w" sizes="(max-width: 151px) 100vw, 151px" /><p class="wp-caption-text">Gambar 19</p>
+<p style="text-align: center;"><em><strong style="font-weight: 600;"> </strong></em></p>
+<p>Langkah terakhir adalah menambahkan teks untuk ucapan Anda, lalu cetak kartu Anda. Saya telah memilih font Candombe, tapi Anda bisa menggunakan font yang terinstal pada PC Anda (Gambar 20).</p>
+<p>Happy Holidays!</p>
+<img class="wp-image-10639 size-medium" src="http://learn.corel.com/wp-content/uploads/2015/11/206-300x218.jpg" alt="Figure 20" width="300" height="218" srcset="http://learn.corel.com/wp-content/uploads/2015/11/206-300x218.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/206.jpg 525w" sizes="(max-width: 300px) 100vw, 300px" /><p class="wp-caption-text">Gambar 20</p>
+<p style="text-align: center;"><em><strong> </strong></em></p>
+
+
+
+                                <script src='../js/colpick.js'></script>
+                                <script src="../js/colorpicker.js"></script>
+
+                                </div>
+                            </div>
+
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane animated fadeIn in" id="tab-2">
+                    <div id="contenttab2"></div>
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane animated fadeIn" id="tab-3" style="margin-top:-20px;margin-left:-20px;margin-right:-20px;background:#ffffff">
+
+                    </div>
+
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- Page Loader -->
+        <div class="page-loader">
+            <div class="preloader" style="text-align:center;">
+                <svg class="pl-circular" viewBox="25 25 50 50">
+                    <circle class="plc-path" cx="50" cy="50" r="20" />
+                </svg><br/><br/>
+                <div style="font-size:8px;margin-left:-80px;width:200px" class="demo"></div>
+            </div>
+        </div>
+
+        <div style="margin-bottom:10px;"><footer id="footer">
+            Copyright &copy; 2017 IDWEBDesigner<br/><a href="index.html">Back to <i class="zmdi zmdi-home"></i> Homepage</a>
+        </footer></div>
+
+        <!-- Javascript Libraries -->
+        <script src="../vendors/bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="../vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+        <script src="../vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="../vendors/bower_components/Waves/dist/waves.min.js"></script>
+        <script src="../vendors/bootstrap-growl/bootstrap-growl.min.js"></script>
+        <script src="../vendors/bower_components/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="../vendors/bower_components/lightgallery/dist/js/lightgallery-all.min.js"></script>
+        <script src="../vendors/bootgrid/jquery.bootgrid.updated.min.js"></script>
+
+        <!-- Placeholder for IE9 -->
+        <!--[if IE 9 ]>
+            <script src="vendors/bower_components/jquery-placeholder/jquery.placeholder.min.js"></script>
+        <![endif]-->
+
+        <script src="../js/app.min.js"></script>
+
+        <!-- Data Table -->
+        <script>
+            $(function()
+            {
+              $("#grid-basic").bootgrid({
+                  caseSensitive: false,
+                    css: {
+                        icon: 'zmdi icon',
+                        iconColumns: 'zmdi-view-module',
+                        iconDown: 'zmdi-sort-amount-desc',
+                        iconRefresh: 'zmdi-refresh',
+                        iconUp: 'zmdi-sort-amount-asc'
+                    },
+              }
+              )
+            });
+        </script>
+
+        <script type="text/javascript">
+            //Basic
+            $('#sa-basic').click(function(e){
+                e.preventDefault();
+                var link = $(this).attr('href');
+
+                swal({
+                    title: "Get Inspire Profesional Logos",
+                    text: "More logos sparately on our Learn Apps: Javascript, NoSQL Database, Virtual Reality, and more...",
+                    showCancelButton: true,
+                    allowOutsideClick: true,
+                },
+                function(){
+                    window.location.href = 'market://details?id=id.web.designer.learn.javascript';
+                });
+            });
+        </script>
+
+    <script type="text/javascript">
+        function rateApp() {
+            android.rateApp();
+       }
+    </script>
+
+    </body>
+
+</html>

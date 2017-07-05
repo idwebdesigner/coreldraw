@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Tutorial CorelDraw Pro</title>
+
+         <script type="text/javascript">
+          <!--
+          if (screen.width >= 2800) {
+            window.location = "http://designer.web.id";
+          }
+          //-->
+        </script>
+
+        <!-- Vendor CSS -->
+        <link href="../vendors/bower_components/animate.css/animate.min.css" rel="stylesheet">
+        <link href="../vendors/bower_components/sweetalert/dist/sweetalert.css" rel="stylesheet">
+        <link href="../vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
+        <link href="../vendors/bower_components/lightgallery/dist/css/lightgallery.min.css" rel="stylesheet">
+        <link href="../vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+        <link href="../vendors/bootgrid/jquery.bootgrid.min.css" rel="stylesheet">
+
+        <!-- CSS -->
+        <link href="../css/app_1.min.css" rel="stylesheet">
+        <link href="../css/app_2.min.css" rel="stylesheet">
+
+        <script src="../js/h5utils.js"></script>
+        <script src="../js/jquery-2.1.0.min.js"></script>
+        <script src="../js/jquery.jscroll.min.js"></script>
+        <script>$(function(){
+        $("#contentloader1").load("http://app.coreldraw.designer.web.id/content-message.html"); $("#contentloader2").load("http://app.coreldraw.designer.web.id/pro/content-right-pro.html");
+        $("#contenttab1").load("http://app.coreldraw.designer.web.id/pro/contenttab2.html");
+        $("#contenttab2").load("http://app.coreldraw.designer.web.id/pro/contenttab2.html");
+        });</script>
+
+        <style>.videoWrapper {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 */
+        padding-top: 25px;
+        height: 0;}
+        .videoWrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;}
+        .lcb-navigation a{background:#999999}
+        </style>
+    </head>
+    <body style="background:#ffffff">
+
+        <!-- Page Loader -->
+        <div class="page-loader">
+            <div class="preloader pls-white">
+                <svg class="pl-circular" viewBox="25 25 50 50">
+                    <circle class="plc-path" cx="50" cy="50" r="20" />
+                </svg>
+            </div>
+
+        </div>
+
+        <header id="header" class="clearfix container">
+            <ul class="h-inner">
+
+                <li class="hi-trigger ma-trigger" data-ma-action="sidebar-open" data-ma-target="#sidebar">
+                    <div class="line-wrap">
+                        <div class="line top"></div>
+                        <div class="line center"></div>
+                        <div class="line bottom"></div>
+                    </div>
+                </li>
+
+                <li class="hi-logo" data-ma-action="sidebar-open" data-ma-target="#sidebar" style="margin-top:8px;">
+                    <span style="font-size:15px;color:#ffffff;"> Tutorial CorelDRAW<sup>&reg;</sup><span>
+                </li>
+
+                <li class="pull-right">
+                    <ul class="hi-menu">
+
+                        <li style="margin-right:-15px;" class="dropdown">
+                            <a data-toggle="dropdown" href="#">
+                                <i class="him-icon zmdi zmdi-notifications-none"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-lg pull-right">
+                                <div class="list-group list-group-light">
+                                    <div class="lg-header">
+                                        LIVE DEVELOPER MESSAGES
+                                    </div>
+
+                                    <article>
+                                      <p style="text-align:center;font-size:1em;"><span id="status"><span id="status"></span></p>
+                                      <ol id="state"></ol>
+                                    </article>
+                                    <script>
+                                    var statusElem  = document.getElementById('status'),
+                                        state               = document.getElementById('state');
+
+                                    function online(event) {
+                                      statusElem.className = navigator.onLine ? 'online' : 'offline';
+                                      statusElem.innerHTML = navigator.onLine ? '' : '<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You&#39;re offline, check network connection.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;content required internet access.';
+                                      state.innerHTML += '&nbsp;';
+                                    }
+
+                                    addEvent(window, 'online', online);
+                                    addEvent(window, 'offline', online);
+                                    online({ type: 'ready' });
+                                    </script>
+
+                                    <div style="margin-top:-30px;" id="contentloader1"></div>
+                                    <a class="view-more view-more-light" href="idwebdesigner.html">Powered by IDWEBDesigner</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li style="margin-right:-15px;" class="ma-trigger" data-ma-action="sidebar-open" data-ma-target="#chat">
+                            <a data-toggle="dropdown" href="#">
+                                <i class="him-icon zmdi zmdi-favorite-outline"></i>
+                            </a>
+                        </li>
+                        <li style="margin-right:-5px;" class="dropdown">
+                            <a data-toggle="dropdown" href="#"><i class="him-icon zmdi zmdi-more-vert"></i></a>
+                            <ul class="dropdown-menu dm-icon pull-right">
+                                <li class="hidden-xs">
+                                    <a data-ma-action="fullscreen" href="#"><i class="zmdi zmdi-fullscreen"></i> Fullscreen</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:window.location.reload();"><i class="zmdi zmdi-refresh-sync"></i> Refresh</a>
+                                </li>
+                                <li>
+                                    <a id="rate-app" onClick="rateApp()">Rate 5 Stars</a>
+                                </li>
+                                <li>
+                                    <a href="update.html"><i class="zmdi zmdi-download"></i>Check update</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="help.html"><i class="zmdi zmdi-help"></i> Help</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="hidden-xs ma-trigger" data-ma-action="sidebar-open" data-ma-target="#chat">
+                            <a href="#"><i class="him-icon zmdi zmdi-comment-alt-text"></i></a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="tab-nav tn-justified tn-icon" role="tablist" style="width:100%">
+                                        <li role="presentation">
+                                            <a class="col-sx-4" href="index.html">
+                                                INDONESIA
+                                            </a>
+                                        </li>
+                                        <li role="presentation" class="active">
+                                            <a class="col-xs-4" href="#tab-2" aria-controls="tab-2" role="tab" data-toggle="tab">
+                                                ENGLISH (PRO)
+                                            </a>
+                                        </li>
+
+                                    </ul>
+        </header>
+
+        <section id="main">
+            <ol class="breadcrumb" style="margin-left:-10px;">
+                <li><a href="developer.html">designer.web.id</a></li>
+                <li><a href="index.html">learn</a></li>
+                <li class="active">virtualreality</li>
+            </ol>
+
+            <aside id="sidebar" class="sidebar c-overflow" style="position:fixed;z-index:1000;margin-top:-70px;height:100%;background:white">
+                <ul class="main-menu">
+                    <li class="mm-profile sub-menu">
+                        <a href="#" data-ma-action="submenu-toggle" class="media">
+                            <img class="pull-left" src="../img/coreldraw.green.png" alt="" height="25px" style="margin-left:-40px;">
+                            <div class="media-body">
+                            <div>Tutorial CorelDRAW<sup>&reg;</sup></div>
+                            <span style="font-size:11px;">Experience by IDWEBDesigner<br/>dev@designer.web.id</span>
+                            </div>
+                        </a>
+
+                        <ul>
+                            <li>
+                                <a href="developer.html">Indonesia Web Designer</a>
+                            </li>
+                            <li>
+                                <div style="margin-left:65px;margin-bottom:10px;font-size:10px;color:#888888;padding-right:20px;">Jl. Wahid Hasyim No.3 Gaten Condongcatur Depok Sleman Yogyakarta, Indonesia.</div>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-info"></i> About CorelDraw</a>
+                        <div style="margin-left:65px;margin-bottom:10px;font-size:12px;color:#579706;"><a href="basics.html">What's is CorelDraw?<br/>Basics Learn</a></div>
+                    </li>
+
+                    <li><a href="index.html"><i class="zmdi zmdi-flag"></i> Tutorial Bahasa Indonesia</a></li>
+                    <li class="sub-menu toggled active">
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-android"></i> Featured Apps</a>
+                        <div style="margin-left:65px;margin-top:10px;font-size:10px;color:#888888;padding-right:20px;">Color Docker: This docker allows you to choose fill and outline colors from a color picker, color sliders, and color palettes. Found with dockers and in the Toolbox.</div>
+
+                        <ul>
+
+                            <li><a href="language.html">Bahasa Indonesia</a></li>
+                            <li style="display:none;"><a href="upgrade.html"><i class="zmdi zmdi-shopping-cart"></i>&nbsp;&nbsp;Upgrade</a></li>
+                            <li class="divider"></li>
+
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-code"></i> Developer</a>
+
+                        <ul>
+                            <li><a href="developer.html">dev@designer.web.id<br/>designer.web.id</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </aside>
+
+            <aside id="chat" class="sidebar">
+
+                                    <article>
+                                      <p style="margin-top:30px;margin-left:15px;font-size:0.7em;"><span id="status2"><span id="status"></span></p>
+                                      <ol id="state2"></ol>
+                                    </article>
+                                    <script>
+                                    var statusElem  = document.getElementById('status2'),
+                                        state               = document.getElementById('state2');
+
+                                    function online(event) {
+                                      statusElem.className = navigator.onLine ? 'online' : 'offline';
+                                      statusElem.innerHTML = navigator.onLine ? '' : '<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You&#39;re offline, check network connection.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;content required internet access.';
+                                      state.innerHTML += '&nbsp;';
+                                    }
+
+                                    addEvent(window, 'online', online);
+                                    addEvent(window, 'offline', online);
+                                    online({ type: 'ready' });
+                                    </script>
+
+                <div style="margin-top:-30px; width:100%" id="contentloader2"></div>
+
+
+
+            </aside>
+
+            <section id="content" style="margin-bottom:-40px;">
+                <div class="container" style="margin-top:-55px;margin-left:-20px;padding-right:0px;">
+                    <div class="tab-content p-20" style="background:#ffffff;">
+
+                    <div role="tabpanel" class="tab-pane animated fadeIn in active" id="tab-1">
+
+                            <!-- Blog Posts -->
+                            <div class="card blog-post" style="margin-bottom:-0px;">
+
+                                <div class="videoWrapper">
+                                <img width="100%" src="../images/green.png" frameborder="0" allowfullscreen></img>
+                                </div>
+
+                                <a class="card-header ch-alt">
+                                    <h2><small>In this written tutorial, CorelDRAW Master Stefan Lindblad show you how to make a double exposure collage.  You will learn tips and techniques for combining multiple images into one object, using Merge Modes to apply and blend effects, removing backgrounds, working with masks and selections, and adding highlights.</small></h2>
+                                </a>
+
+                                <div class="card-body card-padding">
+
+                                <h4>Creating a Double Exposure Collage</h4>
+                                 <br/>
+
+			<p>Working with Double Exposure and Collage techniques − and in this case Double Exposure effects − can be very inspiring and make a strong visual impression. The cool thing about Collage, (apart from Pablo Picasso and Georges Braque being credited for coining the term Collage in European western art around 1912), is that it is primarily about assembling multiple images into one. Basically, it’s the same with the Double Exposure Effect technique, because the thinking behind it is similar − using multiple objects and images, to create one image. In this tutorial, we will be blending it all together.</p>
+<p>For this tutorial, I’ll be using photos included in Corel CONNECT X8 <strong>Content Exchange</strong>, part of CorelDRAW Graphics Suite X8, and my own created bitmap texture, to give it a worn-out postcard-ish feel.</p>
+<p>Create a New Image Document in Corel PHOTO-PAINT X8 (<strong>File &gt; New</strong>). Then import two photos via <strong>Corel CONNECT &gt; Content Exchange &gt; Photos &gt; Animals</strong>. One of a Bald Eagle and one of a Gorilla.</p>
+<p><strong><img class="alignnone size-full wp-image-28222" src="http://learn.corel.com/wp-content/uploads/2017/03/1-Eagle-Gorilla-CorelConnectImages.jpg" alt="1-Eagle-Gorilla-CorelConnectImages" width="450" height="348" srcset="http://learn.corel.com/wp-content/uploads/2017/03/1-Eagle-Gorilla-CorelConnectImages.jpg 450w, http://learn.corel.com/wp-content/uploads/2017/03/1-Eagle-Gorilla-CorelConnectImages-300x232.jpg 300w" sizes="(max-width: 450px) 100vw, 450px" /></strong></p>
+<p>&nbsp;</p>
+<p>Remove any irrelevant backgrounds. In this case the blue sky behind the Eagle, and areas around the Gorilla. When you’re finished, select the photos in the <strong>Object Manager Docker</strong>, and click the <strong>Combine Icon</strong> in the bottom of the Docker to combine both images into one object. Extend the object below, by using the <strong>Paint Tool (P)</strong>, and paint black underneath the area of the Eagle and Gorilla. You will use this entire area later, for your double exposure effect. I paint black right on the same object.</p>
+<p>I then use the <strong>Lightness Merge Mode</strong> in the <strong>Object Manager Docker</strong>, for blending the effect. With other photos, you might like to go with the <strong>Multiply Merge Mode</strong> effect. It all depends on your particular photo.</p>
+<p><img class="alignnone size-full wp-image-28223" src="http://learn.corel.com/wp-content/uploads/2017/03/2-PaintBlack-Extend-Object-Eagle-Gorilla.png" alt="2-PaintBlack-Extend-Object-Eagle-Gorilla" width="500" height="322" srcset="http://learn.corel.com/wp-content/uploads/2017/03/2-PaintBlack-Extend-Object-Eagle-Gorilla.png 500w, http://learn.corel.com/wp-content/uploads/2017/03/2-PaintBlack-Extend-Object-Eagle-Gorilla-300x193.png 300w, http://learn.corel.com/wp-content/uploads/2017/03/2-PaintBlack-Extend-Object-Eagle-Gorilla-480x309.png 480w" sizes="(max-width: 500px) 100vw, 500px" /></p>
+<p>&nbsp;</p>
+<p>It’s easy to remove backgrounds in Corel PHOTO-PAINT, and you can use different methods. One is quick and easy, and the other more elaborated and often used, using image adjustment effects. Both ways have their strengths.</p>
+<p>For the quick and easy method, use the <strong>Colour Transparency Tool</strong> (2), in the <strong>Toolbox</strong>. I use this method for this tutorial´s Double Exposure illustration. Remember to look at the <strong>Property Bar</strong> when you pick the <strong>Color Transparency</strong> tool. By default, the Property Bar values are set to Tolerance=10 and Smoothing=20. This works great for the Bald Eagle photo. Adjust the settings if needed.</p>
+<p><img class="alignnone size-full wp-image-28224" src="http://learn.corel.com/wp-content/uploads/2017/03/3-color-transparancy-tool.png" alt="3-color-transparancy-tool" width="200" height="89" /></p>
+<p>&nbsp;</p>
+<p>For the more elaborate method use a combo of <strong>Channels</strong> and <strong>Contrast</strong> <strong>Enhancement</strong> effects to create a good contrast. The goal is to isolate the area to keep, and remove the rest. You can also choose other adjustment tools. For example, the <strong>Greyscale Lens Object</strong> (Object &gt; Create &gt; New Lens &gt; Grayscale), which I would have used, in case the Colour Transparency tool didn’t produce a good enough job.</p>
+<p>So, when using a photo with a more complex background, rather than a plain-colored background, try the <strong>Greyscale Lens Object</strong> (you can also click on the <strong>New Lens</strong> icon in the <strong>Object Manager Docker</strong>). Or try the <strong>Desaturate Lens</strong> in combination with the <strong>Tone Curve Lens</strong>, or <strong>Contrast Enhancement Lens</strong>. Drag the handles to create a big black object. Then pick the <strong>Magic Wand Tool</strong> (W), to select the entire object. Select <strong>Invert Mask</strong> (Ctrl+Shift+I), on the Property Bar if needed, and click <strong>Delete</strong> on the keyboard. All this depends really on the complexity of your photos.</p>
+<p><strong>Tip! </strong>When using the <strong>Magic Wand</strong> tool and other <strong>Mask</strong> tools, explore the <strong>Tolerance</strong> level on the <strong>Property Bar</strong>. It can help you make a more detailed, closer mask selection. For the Eagle Photo object, I would set the tolerance level to 2.</p>
+<p><img class="alignnone size-full wp-image-28225" src="http://learn.corel.com/wp-content/uploads/2017/03/4-Mask-Tolerance-Level.jpg" alt="4-Mask-Tolerance Level" width="500" height="262" srcset="http://learn.corel.com/wp-content/uploads/2017/03/4-Mask-Tolerance-Level.jpg 500w, http://learn.corel.com/wp-content/uploads/2017/03/4-Mask-Tolerance-Level-300x157.jpg 300w, http://learn.corel.com/wp-content/uploads/2017/03/4-Mask-Tolerance-Level-480x252.jpg 480w" sizes="(max-width: 500px) 100vw, 500px" /></p>
+<p>&nbsp;</p>
+<p>Now import a new photo, people on bicycles for example, and place it below the Eagle and Gorilla object, just above the Background Object in the <strong>Object Manager Docker</strong>. I set the <strong>Merge Mode</strong> effect to <strong>Normal</strong>.</p>
+<p>Select the Eagle and Gorilla object by clicking <strong>Ctrl+M</strong> on the keyboard. This creates a mask</p>
+<p>Select the Bicycle photo. Right-click and choose <strong>Copy</strong>. Right-click again, and choose <strong>Paste &gt; Into Selection</strong>. This place a new object on top in the <strong>Object Manager Docker</strong>. Drag this object down, and place it just above the Background Object. It is now underneath the Eagle-Gorilla object.</p>
+<p><img class="alignnone size-full wp-image-28228" src="http://learn.corel.com/wp-content/uploads/2017/03/5-copy-paste-into-selection.jpg" alt="5-copy-paste-into-selection" width="200" height="46" /></p>
+<p>&nbsp;</p>
+<p><strong>Tip!</strong> For safety, make a duplicate of the Eagle-Gorilla Object and turn off the visibility by clicking on the eye icon −in case you change your mind later, and want to start anew.</p>
+<p>Select the original Eagle-Gorilla Object, and pick the <strong>Eraser Tool</strong> (X), and using a soft, fluffy nib, erase. I choose a fluffy type of nib to get a more natural, worn-out feel when erasing. This will basically uncover the bicycle photo underneath. A simple round, soft nib would have erased too much at once.</p>
+<p><img class="alignnone size-full wp-image-28230" src="http://learn.corel.com/wp-content/uploads/2017/03/6-china-bicycles.jpg" alt="6-china-bicycles" width="1000" height="667" srcset="http://learn.corel.com/wp-content/uploads/2017/03/6-china-bicycles.jpg 1000w, http://learn.corel.com/wp-content/uploads/2017/03/6-china-bicycles-300x200.jpg 300w, http://learn.corel.com/wp-content/uploads/2017/03/6-china-bicycles-768x512.jpg 768w, http://learn.corel.com/wp-content/uploads/2017/03/6-china-bicycles-600x400.jpg 600w, http://learn.corel.com/wp-content/uploads/2017/03/6-china-bicycles-500x334.jpg 500w, http://learn.corel.com/wp-content/uploads/2017/03/6-china-bicycles-480x320.jpg 480w" sizes="(max-width: 1000px) 100vw, 1000px" /></p>
+<p>&nbsp;</p>
+<p>To brighten the image, for example the people, bicycles etc. in the photo, simply create a new Object in the <strong>Object Manager Docker</strong> and place this underneath the bicycle photo object. Pick the <strong>Paint </strong>tool and paint white with a round, soft nib on the new object.</p>
+<p>Now we’re basically finished with the creation of the Double Exposure effect image.</p>
+<p>To finish it off, pick a yellow colour from the bicycle photo with the <strong>Eyedropper</strong> tool (E), and the <strong>Fill</strong> tool (F), and fill on a new object just above the Background Object.</p>
+<p>I add some text and my own created texture, covering the entire image, to give it a more worn-out and scratched feel.</p>
+<p>And a final touch of highlights to the gorilla’s teeth and the eagle’s nose, using the <strong>Effect Brush</strong> (V), from the <strong>Toolbox</strong> and selecting the <strong>Dodge &amp; Burn</strong> effect from the drop-down list on the Property Bar. I recommend before using the Dodge &amp; Burn effect on any object, to first create a duplicate of the Object (right-click the object in the Object Manager Docker and select <strong>Duplicate</strong>), and then turn it off for safe keeping, just in case you like to redo the effect, or not have an effect applied at all.</p>
+<p>Here is the finished double exposure collage.</p>
+<p><img class="alignnone size-full wp-image-28231" src="http://learn.corel.com/wp-content/uploads/2017/03/collage-doubleExposure-tutorial-stefan-lindblad.jpg" alt="collage-doubleExposure-tutorial-stefan-lindblad" width="600" height="413" srcset="http://learn.corel.com/wp-content/uploads/2017/03/collage-doubleExposure-tutorial-stefan-lindblad.jpg 600w, http://learn.corel.com/wp-content/uploads/2017/03/collage-doubleExposure-tutorial-stefan-lindblad-300x207.jpg 300w, http://learn.corel.com/wp-content/uploads/2017/03/collage-doubleExposure-tutorial-stefan-lindblad-500x344.jpg 500w, http://learn.corel.com/wp-content/uploads/2017/03/collage-doubleExposure-tutorial-stefan-lindblad-480x330.jpg 480w" sizes="(max-width: 600px) 100vw, 600px" /></p>
+
+
+
+                                <script src='../js/colpick.js'></script>
+                                <script src="../js/colorpicker.js"></script>
+
+                                </div>
+                            </div>
+
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane animated fadeIn in" id="tab-2">
+                    <div id="contenttab2"></div>
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane animated fadeIn" id="tab-3" style="margin-top:-20px;margin-left:-20px;margin-right:-20px;background:#ffffff">
+
+                    </div>
+
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- Page Loader -->
+        <div class="page-loader">
+            <div class="preloader" style="text-align:center;">
+                <svg class="pl-circular" viewBox="25 25 50 50">
+                    <circle class="plc-path" cx="50" cy="50" r="20" />
+                </svg><br/><br/>
+                <div style="font-size:8px;margin-left:-80px;width:200px" class="demo"></div>
+            </div>
+        </div>
+
+        <div style="margin-bottom:10px;"><footer id="footer">
+            Copyright &copy; 2017 IDWEBDesigner<br/><a href="index.html">Back to <i class="zmdi zmdi-home"></i> Homepage</a>
+        </footer></div>
+
+        <!-- Javascript Libraries -->
+        <script src="../vendors/bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="../vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+        <script src="../vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="../vendors/bower_components/Waves/dist/waves.min.js"></script>
+        <script src="../vendors/bootstrap-growl/bootstrap-growl.min.js"></script>
+        <script src="../vendors/bower_components/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="../vendors/bower_components/lightgallery/dist/js/lightgallery-all.min.js"></script>
+        <script src="../vendors/bootgrid/jquery.bootgrid.updated.min.js"></script>
+
+        <!-- Placeholder for IE9 -->
+        <!--[if IE 9 ]>
+            <script src="vendors/bower_components/jquery-placeholder/jquery.placeholder.min.js"></script>
+        <![endif]-->
+
+        <script src="../js/app.min.js"></script>
+
+        <!-- Data Table -->
+        <script>
+            $(function()
+            {
+              $("#grid-basic").bootgrid({
+                  caseSensitive: false,
+                    css: {
+                        icon: 'zmdi icon',
+                        iconColumns: 'zmdi-view-module',
+                        iconDown: 'zmdi-sort-amount-desc',
+                        iconRefresh: 'zmdi-refresh',
+                        iconUp: 'zmdi-sort-amount-asc'
+                    },
+              }
+              )
+            });
+        </script>
+
+        <script type="text/javascript">
+            //Basic
+            $('#sa-basic').click(function(e){
+                e.preventDefault();
+                var link = $(this).attr('href');
+
+                swal({
+                    title: "Get Inspire Profesional Logos",
+                    text: "More logos sparately on our Learn Apps: Javascript, NoSQL Database, Virtual Reality, and more...",
+                    showCancelButton: true,
+                    allowOutsideClick: true,
+                },
+                function(){
+                    window.location.href = 'market://details?id=id.web.designer.learn.javascript';
+                });
+            });
+        </script>
+
+    <script type="text/javascript">
+        function rateApp() {
+            android.rateApp();
+       }
+    </script>
+
+    </body>
+
+</html>

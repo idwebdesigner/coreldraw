@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Tutorial CorelDraw Pro</title>
+
+         <script type="text/javascript">
+          <!--
+          if (screen.width >= 2800) {
+            window.location = "http://designer.web.id";
+          }
+          //-->
+        </script>
+
+        <!-- Vendor CSS -->
+        <link href="../vendors/bower_components/animate.css/animate.min.css" rel="stylesheet">
+        <link href="../vendors/bower_components/sweetalert/dist/sweetalert.css" rel="stylesheet">
+        <link href="../vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
+        <link href="../vendors/bower_components/lightgallery/dist/css/lightgallery.min.css" rel="stylesheet">
+        <link href="../vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+        <link href="../vendors/bootgrid/jquery.bootgrid.min.css" rel="stylesheet">
+
+        <!-- CSS -->
+        <link href="../css/app_1.min.css" rel="stylesheet">
+        <link href="../css/app_2.min.css" rel="stylesheet">
+
+        <script src="../js/h5utils.js"></script>
+        <script src="../js/jquery-2.1.0.min.js"></script>
+        <script src="../js/jquery.jscroll.min.js"></script>
+        <script>$(function(){
+        $("#contentloader1").load("http://app.coreldraw.designer.web.id/content-message.html"); $("#contentloader2").load("http://app.coreldraw.designer.web.id/pro/content-right-pro.html");
+        $("#contenttab1").load("http://app.coreldraw.designer.web.id/pro/contenttab2.html");
+        $("#contenttab2").load("http://app.coreldraw.designer.web.id/pro/contenttab2.html");
+        });</script>
+
+        <style>.videoWrapper {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 */
+        padding-top: 25px;
+        height: 0;}
+        .videoWrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;}
+        .lcb-navigation a{background:#999999}
+        </style>
+    </head>
+    <body style="background:#ffffff">
+
+        <!-- Page Loader -->
+        <div class="page-loader">
+            <div class="preloader pls-white">
+                <svg class="pl-circular" viewBox="25 25 50 50">
+                    <circle class="plc-path" cx="50" cy="50" r="20" />
+                </svg>
+            </div>
+
+        </div>
+
+        <header id="header" class="clearfix container">
+            <ul class="h-inner">
+
+                <li class="hi-trigger ma-trigger" data-ma-action="sidebar-open" data-ma-target="#sidebar">
+                    <div class="line-wrap">
+                        <div class="line top"></div>
+                        <div class="line center"></div>
+                        <div class="line bottom"></div>
+                    </div>
+                </li>
+
+                <li class="hi-logo" data-ma-action="sidebar-open" data-ma-target="#sidebar" style="margin-top:8px;">
+                    <span style="font-size:15px;color:#ffffff;"> Tutorial CorelDRAW<sup>&reg;</sup><span>
+                </li>
+
+                <li class="pull-right">
+                    <ul class="hi-menu">
+
+                        <li style="margin-right:-15px;" class="dropdown">
+                            <a data-toggle="dropdown" href="#">
+                                <i class="him-icon zmdi zmdi-notifications-none"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-lg pull-right">
+                                <div class="list-group list-group-light">
+                                    <div class="lg-header">
+                                        LIVE DEVELOPER MESSAGES
+                                    </div>
+
+                                    <article>
+                                      <p style="text-align:center;font-size:1em;"><span id="status"><span id="status"></span></p>
+                                      <ol id="state"></ol>
+                                    </article>
+                                    <script>
+                                    var statusElem  = document.getElementById('status'),
+                                        state               = document.getElementById('state');
+
+                                    function online(event) {
+                                      statusElem.className = navigator.onLine ? 'online' : 'offline';
+                                      statusElem.innerHTML = navigator.onLine ? '' : '<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You&#39;re offline, check network connection.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;content required internet access.';
+                                      state.innerHTML += '&nbsp;';
+                                    }
+
+                                    addEvent(window, 'online', online);
+                                    addEvent(window, 'offline', online);
+                                    online({ type: 'ready' });
+                                    </script>
+
+                                    <div style="margin-top:-30px;" id="contentloader1"></div>
+                                    <a class="view-more view-more-light" href="idwebdesigner.html">Powered by IDWEBDesigner</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li style="margin-right:-15px;" class="ma-trigger" data-ma-action="sidebar-open" data-ma-target="#chat">
+                            <a data-toggle="dropdown" href="#">
+                                <i class="him-icon zmdi zmdi-favorite-outline"></i>
+                            </a>
+                        </li>
+                        <li style="margin-right:-5px;" class="dropdown">
+                            <a data-toggle="dropdown" href="#"><i class="him-icon zmdi zmdi-more-vert"></i></a>
+                            <ul class="dropdown-menu dm-icon pull-right">
+                                <li class="hidden-xs">
+                                    <a data-ma-action="fullscreen" href="#"><i class="zmdi zmdi-fullscreen"></i> Fullscreen</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:window.location.reload();"><i class="zmdi zmdi-refresh-sync"></i> Refresh</a>
+                                </li>
+                                <li>
+                                    <a id="rate-app" onClick="rateApp()">Rate 5 Stars</a>
+                                </li>
+                                <li>
+                                    <a href="update.html"><i class="zmdi zmdi-download"></i>Check update</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="help.html"><i class="zmdi zmdi-help"></i> Help</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="hidden-xs ma-trigger" data-ma-action="sidebar-open" data-ma-target="#chat">
+                            <a href="#"><i class="him-icon zmdi zmdi-comment-alt-text"></i></a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="tab-nav tn-justified tn-icon" role="tablist" style="width:100%">
+                                        <li role="presentation" class="active">
+                                            <a class="col-sx-4" href="index.html">
+                                                &nbsp;
+                                            </a>
+                                        </li>
+
+                                    </ul>
+        </header>
+
+        <section id="main">
+            <ol class="breadcrumb" style="margin-left:-10px;">
+                <li><a href="developer.html">designer.web.id</a></li>
+                <li><a href="index.html">learn</a></li>
+                <li class="active">virtualreality</li>
+            </ol>
+
+            <aside id="sidebar" class="sidebar c-overflow" style="position:fixed;z-index:1000;margin-top:-70px;height:100%;background:white">
+                <ul class="main-menu">
+                    <li class="mm-profile sub-menu">
+                        <a href="#" data-ma-action="submenu-toggle" class="media">
+                            <img class="pull-left" src="../img/coreldraw.green.png" alt="" height="25px" style="margin-left:-40px;">
+                            <div class="media-body">
+                            <div>Tutorial CorelDRAW<sup>&reg;</sup></div>
+                            <span style="font-size:11px;">Experience by IDWEBDesigner<br/>dev@designer.web.id</span>
+                            </div>
+                        </a>
+
+                        <ul>
+                            <li>
+                                <a href="developer.html">Indonesia Web Designer</a>
+                            </li>
+                            <li>
+                                <div style="margin-left:65px;margin-bottom:10px;font-size:10px;color:#888888;padding-right:20px;">Jl. Wahid Hasyim No.3 Gaten Condongcatur Depok Sleman Yogyakarta, Indonesia.</div>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-info"></i> About CorelDraw</a>
+                        <div style="margin-left:65px;margin-bottom:10px;font-size:12px;color:#579706;"><a href="basics.html">What's is CorelDraw?<br/>Basics Learn</a></div>
+                    </li>
+
+                    <li><a href="index.html"><i class="zmdi zmdi-flag"></i> Tutorial Bahasa Indonesia</a></li>
+                    <li class="sub-menu toggled active">
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-android"></i> Featured Apps</a>
+                        <div style="margin-left:65px;margin-top:10px;font-size:10px;color:#888888;padding-right:20px;">Color Docker: This docker allows you to choose fill and outline colors from a color picker, color sliders, and color palettes. Found with dockers and in the Toolbox.</div>
+
+                        <ul>
+
+                            <li><a href="language.html">Bahasa Indonesia</a></li>
+                            <li style="display:none;"><a href="upgrade.html"><i class="zmdi zmdi-shopping-cart"></i>&nbsp;&nbsp;Upgrade</a></li>
+                            <li class="divider"></li>
+
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-code"></i> Developer</a>
+
+                        <ul>
+                            <li><a href="developer.html">dev@designer.web.id<br/>designer.web.id</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </aside>
+
+            <aside id="chat" class="sidebar">
+
+                                    <article>
+                                      <p style="margin-top:30px;margin-left:15px;font-size:0.7em;"><span id="status2"><span id="status"></span></p>
+                                      <ol id="state2"></ol>
+                                    </article>
+                                    <script>
+                                    var statusElem  = document.getElementById('status2'),
+                                        state               = document.getElementById('state2');
+
+                                    function online(event) {
+                                      statusElem.className = navigator.onLine ? 'online' : 'offline';
+                                      statusElem.innerHTML = navigator.onLine ? '' : '<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You&#39;re offline, check network connection.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;content required internet access.';
+                                      state.innerHTML += '&nbsp;';
+                                    }
+
+                                    addEvent(window, 'online', online);
+                                    addEvent(window, 'offline', online);
+                                    online({ type: 'ready' });
+                                    </script>
+
+                <div style="margin-top:-30px; width:100%" id="contentloader2"></div>
+
+
+
+            </aside>
+
+            <section id="content" style="margin-bottom:-40px;">
+                <div class="container" style="margin-top:-55px;margin-left:-20px;padding-right:0px;">
+                    <div class="tab-content p-20" style="background:#ffffff;">
+
+                    <div role="tabpanel" class="tab-pane animated fadeIn in active" id="tab-1">
+
+                            <!-- Blog Posts -->
+                            <div class="card blog-post" style="margin-bottom:-0px;">
+
+                                <div class="videoWrapper">
+                                <img width="100%" src="../images/green.png" frameborder="0" allowfullscreen></img>
+                                </div>
+
+                                <a class="card-header ch-alt">
+                                    <h2><small>Tutorial ini menunjukkan kepada Anda bagaimana menggunakan tiga efek foto yang hebat di Corel PHOTOPAINT untuk memperbaiki gambar Anda. Efek Vibrance sangat bagus untuk menyeimbangkan saturasi warna. Ini menambah kekayaan pada warna dengan saturasi rendah sambil mempertahankan warna dengan saturasi tinggi. Efek Grayscale sangat ideal untuk menghilangkan saturasi objek, lapisan atau area foto. Ini juga memungkinkan Anda memilih warna yang digunakan dalam konversi grayscale. Efek Photo Filter memungkinkan Anda mensimulasikan hasil filter kamera yang terpasang saat gambar diambil. Kita juga akan melihat kurva Nada dan bagaimana cara menggunakannya untuk meningkatkan foto Anda.</small></h2>
+                                </a>
+
+                                <div class="card-body card-padding">
+
+                                <h4>Gunakan Efek Foto Agar Terlihat Seperti Foto Profesional</h4>
+                                 <br/>
+
+<p>Corel PHOTO-PAINT X5 telah menambahkan tiga fitur baru untuk memodifikasi foto Anda.  Efek <strong>Vibrance </strong> sangat bagus untuk menyeimbangkan saturasi warna. Ini menambah kekayaan pada warna dengan saturasi rendah sambil mempertahankan warna dengan saturasi tinggi. Efek <strong>Grayscale</strong> sangat ideal untuk menghilangkan saturasi benda, lapisan atau area foto. Ini juga memungkinkan Anda memilih warna yang digunakan dalam konversi grayscale.  <strong>Photo Filter effect</strong>mensimulasikan hasil filter kamera yang terpasang saat gambar diambil. Kita juga akan melihat kurva Nada dan bagaimana cara menggunakannya untuk meningkatkan foto Anda. Dengan alat ini, fotografer pemula bisa terlihat seperti seorang profesional!</p>
+<p>&nbsp;</p>
+<h3><span id="What_you_will_learn" class="mw-headline">Apa yang akan kamu pelajari</span></h3>
+<p>Dalam tutorial ini Anda akan belajar tentang:</p>
+<ul>
+<li>Vibrance</li>
+<li>Grayscale Adjustment</li>
+<li>Photo Filter</li>
+<li>Tone Curve</li>
+</ul>
+<h3><span id="Vibrance" class="mw-headline">Vibrance</span></h3>
+<div class="center">
+<div class="floatnone"><img class="alignnone size-medium wp-image-10763" src="http://learn.corel.com/wp-content/uploads/2015/11/1101-300x234.jpg" alt="1" width="300" height="234" srcset="http://learn.corel.com/wp-content/uploads/2015/11/1101-300x234.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/1101.jpg 460w" sizes="(max-width: 300px) 100vw, 300px" /></div>
+</div>
+<p>Filter Vibrance memungkinkan Anda meningkatkan saturasi dalam gambar RGB tanpa menyebabkan kliping atau meniup gambar. Kliping terjadi bila area gambar terlalu terang dan detail warna di area hilang, yang bisa terjadi saat Anda meningkatkan saturasi pada gambar tanpa pandang bulu. Filter Vibrance menyesuaikan saturasi secara proporsional dengan meningkatkan saturasi warna yang kurang jenuh lebih tinggi dari pada warna jenuh. Filter ini berguna untuk menyesuaikan kejenuhan gambar yang mencakup orang di depan latar belakang yang terperinci. Misalnya, ini memungkinkan Anda meningkatkan kejenuhan detail latar belakang tanpa mempengaruhi warna kulit orang dalam gambar.</p>
+<p>Dari menu <strong>Adjust</strong>, pilih <strong>Vibrance</strong>. Ada dua slider, satu untuk Vibrance dan satu lagi untuk Saturation. Ini hanya masalah memindahkan slider ini sampai Anda mendapatkan hasil yang Anda sukai.</p>
+<h3><span id="Grayscale" class="mw-headline" style="color: #000000;">Grayscale</span></h3>
+<p>Filter Grayscale memungkinkan Anda menghasilkan gambar hitam dan putih tanpa mengubah mode warna. Ini juga memungkinkan Anda menyesuaikan warna individual untuk konversi, yang mengubah intensitas nada abu-abu pada gambar saat dikonversi. Selain itu, Anda bisa mewarnai gambar dengan memodifikasi rona dan saturasi. Misalnya, Anda bisa menambahkan warna pada gambar untuk menghasilkan efek Sepia.</p>
+<p>&nbsp;</p>
+<div class="center">
+<div class="floatnone"><img class="alignnone size-medium wp-image-10764" src="http://learn.corel.com/wp-content/uploads/2015/11/2-280x300.gif" alt="2" width="280" height="300" srcset="http://learn.corel.com/wp-content/uploads/2015/11/2-280x300.gif 280w, http://learn.corel.com/wp-content/uploads/2015/11/2-500x535.gif 500w" sizes="(max-width: 280px) 100vw, 280px" /></div>
+</div>
+<p>Kotak dialog penyesuaian Grayscale sedikit lebih terlibat daripada penyesuaian Vibrance, namun sama mudahnya. Nah, satu hal yang harus saya buat disini adalah dengan menggunakan fitur ini untuk membuat gambar grayscale, tidak sama dengan pergi ke <strong>Image &gt; Convert to Grayscale</strong>. Image &gt; Convert to Grayscale menciptakan gambar 8-bit dimana penyesuaian Grayscale hanya bekerja pada gambar RGB 24 bit dan setelah diaplikasikan, gambar RGB 24-bit tetap.</p>
+<p>Dari menu <strong>Adjust</strong>, pilih <strong>Grayscale</strong>.Anda akan disuguhkan kotak dialog yang memungkinkan Anda untuk melihat pratinjau gambar Sebelum dan Sesudah. Ada enam slider yang menyesuaikan untuk berbagai channel warna, RGB &amp; CMY. Jika Anda memilihnya, Anda juga dapat menerapkan warna pada gambar dengan memilih kotak centang Tint. Ini kemudian memberi Anda kemampuan lebih lanjut untuk menyesuaikan slider <strong>Hue</strong> dan <strong>Saturation</strong>.</p>
+<h3><span id="Photo_Filter" class="mw-headline" style="color: #000000;">Photo Filter
+</span></h3>
+<p>Efek khusus Kamera memungkinkan Anda mensimulasikan efek yang dihasilkan oleh filter fotografi, seperti filter spot dan filter difusi. Anda juga bisa menambahkan efek pencahayaan, seperti flare matahari atau lampu spot. Filter Foto memungkinkan Anda mensimulasikan efek menempatkan filter berwarna di depan lensa kamera. Anda bisa memilih warna filter dan kemudian mengatur kerapatan warna Anda juga memiliki pilihan untuk melestarikan luminositas.</p>
+<p>&nbsp;</p>
+<div class="center">
+<div class="floatnone"><img class="alignnone size-medium wp-image-10765" src="http://learn.corel.com/wp-content/uploads/2015/11/336-300x252.jpg" alt="3" width="300" height="252" srcset="http://learn.corel.com/wp-content/uploads/2015/11/336-300x252.jpg 300w, http://learn.corel.com/wp-content/uploads/2015/11/336.jpg 460w" sizes="(max-width: 300px) 100vw, 300px" /></div>
+</div>
+<h3><span id="Tone_Curve" class="mw-headline"><br />
+<span style="color: #000000;"><strong>Tone Curve</strong></span></span></h3>
+<p>Filter tone curve memungkinkan Anda melakukan koreksi warna dan tonal dengan menyesuaikan saluran warna individual atau saluran gabungan (semua saluran digabungkan). Nilai piksel individual diplotkan sepanjang kurva nada yang muncul dalam grafik dan mewakili keseimbangan antara bayangan (bagian bawah grafik),  Midtones (tengah grafik), dan highlight (atas grafik). Sumbu x grafik mewakili nilai nada dari gambar asli; Sumbu y dari grafik mewakili nilai tonal yang disesuaikan.</p>
+<p>&nbsp;</p>
+<div class="center">
+<div class="floatnone"><img class="alignnone size-medium wp-image-10766" src="http://learn.corel.com/wp-content/uploads/2015/11/434-248x300.jpg" alt="4" width="248" height="300" srcset="http://learn.corel.com/wp-content/uploads/2015/11/434-248x300.jpg 248w, http://learn.corel.com/wp-content/uploads/2015/11/434.jpg 463w" sizes="(max-width: 248px) 100vw, 248px" /></div>
+</div>
+<p>Tone curve menunjukkan keseimbangan antara bayangan, midton, dan highlight dari sebuah gambar. Nilai piksel asli (x) dan disesuaikan (y) ditampilkan berdampingan saat Anda menyeret tone curve.</p>
+<p>Anda dapat memperbaiki area masalah dengan menambahkan node ke tone curve dan menyeret kurva. Jika Anda ingin menyesuaikan area tertentu dalam gambar, Anda dapat menggunakan alat pipet dan memilih area di jendela gambar. Anda kemudian dapat menyeret node yang muncul pada tone curve untuk mencapai efek yang Anda inginkan.</p>
+<p>Histogram memungkinkan Anda melihat rentang tonal range dan mengevaluasi hasilnya. Untuk informasi lebih lanjut tentang histogram, lihat &#8220;Menggunakan histogram dalam bantuan Online Corel PHOTO-PAINT.</p>
+<p>Untuk menyesuaikan penyesuaian Anda, Anda dapat memilih gaya kurva dari kotak daftar  <strong>Style</strong>. Misalnya, Anda bisa menggambar ulang kurva dengan menggunakan garis lurus atau segmen garis lurus.</p>
+<p>Anda dapat mengatur warna dan tone gambar dengan menerapkan preset. Untuk mengakses preset, klik tombol <strong>Open</strong> di sebelah kanan kotak Presets. Anda juga dapat menyimpan pengaturan tone sebagai preset untuk digunakan dengan gambar lainnya.</p>
+<p>Entah Anda seorang fotografer profesional yang ingin meningkatkan citra Anda, atau seorang amatir yang mencari hasil profesional, efek ini pasti membuat gambar Anda menonjol. Luangkan beberapa saat untuk bermain-main dengan mereka dan melihat betapa mudah dan efektifnya kemampuan mereka.</p>
+
+
+
+
+                                <script src='../js/colpick.js'></script>
+                                <script src="../js/colorpicker.js"></script>
+
+                                </div>
+                            </div>
+
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane animated fadeIn in" id="tab-2">
+                    <div id="contenttab2"></div>
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane animated fadeIn" id="tab-3" style="margin-top:-20px;margin-left:-20px;margin-right:-20px;background:#ffffff">
+
+                    </div>
+
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- Page Loader -->
+        <div class="page-loader">
+            <div class="preloader" style="text-align:center;">
+                <svg class="pl-circular" viewBox="25 25 50 50">
+                    <circle class="plc-path" cx="50" cy="50" r="20" />
+                </svg><br/><br/>
+                <div style="font-size:8px;margin-left:-80px;width:200px" class="demo"></div>
+            </div>
+        </div>
+
+        <div style="margin-bottom:10px;"><footer id="footer">
+            Copyright &copy; 2017 IDWEBDesigner<br/><a href="index.html">Back to <i class="zmdi zmdi-home"></i> Homepage</a>
+        </footer></div>
+
+        <!-- Javascript Libraries -->
+        <script src="../vendors/bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="../vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+        <script src="../vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="../vendors/bower_components/Waves/dist/waves.min.js"></script>
+        <script src="../vendors/bootstrap-growl/bootstrap-growl.min.js"></script>
+        <script src="../vendors/bower_components/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="../vendors/bower_components/lightgallery/dist/js/lightgallery-all.min.js"></script>
+        <script src="../vendors/bootgrid/jquery.bootgrid.updated.min.js"></script>
+
+        <!-- Placeholder for IE9 -->
+        <!--[if IE 9 ]>
+            <script src="vendors/bower_components/jquery-placeholder/jquery.placeholder.min.js"></script>
+        <![endif]-->
+
+        <script src="../js/app.min.js"></script>
+
+        <!-- Data Table -->
+        <script>
+            $(function()
+            {
+              $("#grid-basic").bootgrid({
+                  caseSensitive: false,
+                    css: {
+                        icon: 'zmdi icon',
+                        iconColumns: 'zmdi-view-module',
+                        iconDown: 'zmdi-sort-amount-desc',
+                        iconRefresh: 'zmdi-refresh',
+                        iconUp: 'zmdi-sort-amount-asc'
+                    },
+              }
+              )
+            });
+        </script>
+
+        <script type="text/javascript">
+            //Basic
+            $('#sa-basic').click(function(e){
+                e.preventDefault();
+                var link = $(this).attr('href');
+
+                swal({
+                    title: "Get Inspire Profesional Logos",
+                    text: "More logos sparately on our Learn Apps: Javascript, NoSQL Database, Virtual Reality, and more...",
+                    showCancelButton: true,
+                    allowOutsideClick: true,
+                },
+                function(){
+                    window.location.href = 'market://details?id=id.web.designer.learn.javascript';
+                });
+            });
+        </script>
+
+    <script type="text/javascript">
+        function rateApp() {
+            android.rateApp();
+       }
+    </script>
+
+    </body>
+
+</html>
